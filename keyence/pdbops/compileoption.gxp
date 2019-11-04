@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<proj:WinxassvProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.gaio.co.jp/cross/WinxassvProj WinxassvProjSchema.xsd" xmlns:proj="http://schemas.gaio.co.jp/cross/WinxassvProj" Version="102" Type="STD" Cpp="true">
+<Mpu Type="arm9e" MpuName="ARM9E-S (v5TE)" Use="true">
+<Option Name="-arch v5te -EL" Type="XCCV"/>
+<Option Name="-OPTARCH=5TE -OPTendian=little" Type="XASSV"/>
+<Option Name="-mpu ARM9ESL" Type="XDEBV"/>
+<Select Name="ARM9E-S (v5TE)" Index="0"/>
+<Select Name="LITTLE" Index="1"/>
+</Mpu>
+<Dirs>
+<Include>
+<Dir Path=".\inc"/>
+</Include>
+<Libary>
+<Dir Path="%INSTROOT\lib\arm9e\ARM\CS"/>
+<Dir Path="%INSTROOT\lib\arm9e\ARM\MATH"/>
+<Dir Path="%INSTROOT\lib\arm9e\ARM\STD"/>
+</Libary>
+<Grep>
+</Grep>
+<Startup>
+<Dir Path="%INSTROOT\lib\arm9e\ARM\STARTUP"/>
+</Startup>
+</Dirs>
+<Configs>
+<Config ConfigId="Config1">
+<All>
+<ToolXccv Flag="-d -regpara all -S -O t -ANSI -w -LW1 -LE2" LongName="true"/>
+<ToolXccppv Flag="--this -DEXCEPTION_HANDLING=0 -tlocal --no_distinct_template_signatures --xref --no_inlining"/>
+<ToolXassv Flag="-r -a -da" File=".\setting\btApp.opa" ErrMsg="true"/>
+<ToolXmacv Flag="-u"/>
+</All>
+<Other>
+<ToolXccv Flag="-d -ks -w -LW1 -LE2"/>
+<ToolXccppv Flag="--this --xref --no_inlining --no_remove_unneeded_entities --multibyte_chars"/>
+<ToolXassv Flag="-r -a -da" File=".\setting\btApp.opa"/>
+</Other>
+<Common>
+<ToolXdebv Flag="-sem" SemMode="2"/>
+<ToolXlnkv ObjFile="btApp.xlo" Flag="-d -l -s -m" PrmFile=".\setting\btApp.xls" PrmAuto="true"/>
+<ToolXoutv Flag="-t obj6,sym7"/>
+</Common>
+</Config>
+</Configs>
+<Files>
+<Include>
+</Include>
+<Source>
+</Source>
+<User/>
+</Files>
+</proj:WinxassvProject>

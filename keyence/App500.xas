@@ -1,0 +1,1113 @@
+%%TOOL	  'xcc-v V10.22	 9226' ,190302110107
+%%COMPILE language=C , source=App500,mode=0,cps=4,dps=4,newdebug
+;	Cross C	Compiler  XCC-V	 V10.22	(9226) -88011100:03FF-
+;		== ARM/ARM9E (V01.03c) 8b13 ==	
+;		=== arch:V5TE [ARM code] ===
+%%BFILE	  'C:\Users\11709931\Desktop\KEYENC~1\keyence\App500.c'	,190213114110,1
+C_App500	sect	code
+		code32
+%%REGPARA R0
+%%BFILE	  'C:\Users\11709931\Desktop\KEYENC~1\keyence\App500.h'	,190213103447,9
+%%BFILE	  'P:\pdrv\barlib\Keyence\nokbt1500.h' ,161112115905,309
+%%BFILE	  'C:\Users\11709931\Desktop\KEYENC~1\keyence\inc\btlib.h' ,181122094114,1243
+%%BFILE	  'C:\keyence\CPP\INCLUDE\string.h' ,000112113136,50
+%%BFILE	  'C:\keyence\CPP\INCLUDE\memory.h' ,000112113136,27
+%%TYP	  'void'	      ,	  0, 0,	0,   11111111b,	0,0,0
+%%TYP	  'char'	      ,	  1, 2,	1,   00111111b,	4,0,2
+%%TYP	  'unsigned char'     ,	  2, 2,	1,   01111111b,	4,0,2
+%%TYP	  'short'	      ,	  3, 3,	2,   00111111b,	4,0,2
+%%TYP	  'unsigned short'    ,	  4, 3,	2,   01111111b,	4,0,2
+%%TYP	  'int'		      ,	  5, 3,	4,   00111111b,	4,0,2
+%%TYP	  'unsigned int'      ,	  6, 3,	4,   01111111b,	4,0,2
+%%TYP	  'long'	      ,	  7, 3,	4,   00111111b,	4,0,2
+%%TYP	  'unsigned long'     ,	  8, 3,	4,   01111111b,	4,0,2
+%%TYP	  'float'	      ,	  9, 4,	4,   00000000b,	4,0,2
+%%TYP	  'double'	      ,	 10, 4,	8,   00000001b,	8,0,3
+%%TYP	  'enum'	      ,	 11, 8,	4,   00111111b,	4,0,2
+%%TYP	  'struct'	      ,	 12, 9,	0,   11111111b,	0,0,4
+%%TYP	  'union'	      ,	 13,10,	0,   11111111b,	0,0,4
+%%TYP	  'pointer'	      ,	 14,11,	4,   01111111b,	4,0,2
+%%EFILE	  
+%%EFILE	  
+%%BFILE	  'C:\keyence\CPP\INCLUDE\stdlib.h' ,000112113136,58
+%%EFILE	  
+%%EFILE	  
+%%BFILE	  'C:\Users\11709931\Desktop\KEYENC~1\keyence\inc\btext.h' ,150123134216,548
+%%EFILE	  
+%%EFILE	  
+%%BFILE	  'C:\Users\11709931\Desktop\KEYENC~1\keyence\Common.h'	,190302090540,60
+%%EFILE	  
+%%EFILE	  
+%%SYM	  _iobuf,9,type=12,id=1,size=16
+%%DDS	  
+%%SYM	  _cnt,7,type=5,val=0,size=4
+%%SYM	  _ptr,7,type=2,val=4,size=4
+%%DTY	  
+%%DPT	  
+%%ENDD	  
+%%SYM	  _base,7,type=2,val=8,size=4
+%%DTY	  
+%%DPT	  
+%%ENDD	  
+%%SYM	  _flag,7,type=3,val=12,size=2
+%%SYM	  _file,7,type=2,val=14,size=1
+%%ENDD	  
+%%SYM	  _dateinfo,9,type=12,id=2,size=4
+%%DDS	  
+%%SYM	  year,7,type=3,val=0,size=2
+%%SYM	  month,7,type=2,val=2,size=1
+%%SYM	  day,7,type=2,val=3,size=1
+%%ENDD	  
+%%SYM	  _timeinfo,9,type=12,id=3,size=4
+%%DDS	  
+%%SYM	  hour,7,type=2,val=0,size=1
+%%SYM	  min,7,type=2,val=1,size=1
+%%SYM	  sec,7,type=2,val=2,size=1
+%%SYM	  reserve,7,type=2,val=3,size=1
+%%ENDD	  
+%%SYM	  _tposition,9,type=12,id=4,size=4
+%%DDS	  
+%%SYM	  x,7,type=3,val=0,size=2
+%%SYM	  y,7,type=3,val=2,size=2
+%%ENDD	  
+%%SYM	  _gposition,9,type=12,id=5,size=4
+%%DDS	  
+%%SYM	  x,7,type=3,val=0,size=2
+%%SYM	  y,7,type=3,val=2,size=2
+%%ENDD	  
+%%SYM	  _dspattr,9,type=12,id=6,size=12
+%%DDS	  
+%%SYM	  tposition,7,sym=4,val=0,size=4
+%%SYM	  attribute,7,type=3,val=4,size=2
+%%SYM	  mag,7,type=3,val=6,size=2
+%%SYM	  fold,7,type=3,val=8,size=2
+%%ENDD	  
+%%SYM	  _dspattrg,9,type=12,id=7,size=12
+%%DDS	  
+%%SYM	  gposition,7,sym=5,val=0,size=4
+%%SYM	  attribute,7,type=3,val=4,size=2
+%%SYM	  mag,7,type=3,val=6,size=2
+%%SYM	  fold,7,type=3,val=8,size=2
+%%ENDD	  
+%%SYM	  _menuinfo,9,type=12,id=8,size=80
+%%DDS	  
+%%SYM	  rsv0,7,type=3,val=0,size=2
+%%SYM	  tenkeydirect,7,type=3,val=2,size=2
+%%SYM	  totalitem,7,type=3,val=4,size=2
+%%SYM	  inititem,7,type=3,val=6,size=2
+%%SYM	  menuitem,7,type=2,val=8,size=64
+%%DTY	  
+%%DPT	  
+%%DAR	  4,16
+%%ENDD	  
+%%SYM	  rsv1,7,type=3,val=72,size=2
+%%SYM	  rsv2,7,type=3,val=74,size=2
+%%SYM	  rsv3,7,type=3,val=76,size=2
+%%ENDD	  
+%%SYM	  _keyfunc,9,type=12,id=9,size=12
+%%DDS	  
+%%SYM	  F1,7,type=2,val=0,size=1
+%%SYM	  F2,7,type=2,val=1,size=1
+%%SYM	  F3,7,type=2,val=2,size=1
+%%SYM	  L,7,type=2,val=3,size=1
+%%SYM	  R,7,type=2,val=4,size=1
+%%SYM	  Trg,7,type=2,val=5,size=1
+%%SYM	  minus,7,type=2,val=6,size=3
+%%DTY	  
+%%DAR	  1,3
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _inputintegerattr,9,type=12,id=10,size=12
+%%DDS	  
+%%SYM	  inputtype,7,type=3,val=0,size=2
+%%SYM	  inputarea,7,type=3,val=2,size=2
+%%SYM	  minvalue,7,type=7,val=4,size=4
+%%SYM	  maxvalue,7,type=7,val=8,size=4
+%%ENDD	  
+%%SYM	  _inputdecimalattr,9,type=12,id=11,size=16
+%%DDS	  
+%%SYM	  inputtype,7,type=3,val=0,size=2
+%%SYM	  inputarea,7,type=3,val=2,size=2
+%%SYM	  minvalue,7,type=7,val=4,size=4
+%%SYM	  maxvalue,7,type=7,val=8,size=4
+%%SYM	  digit,7,type=3,val=12,size=2
+%%ENDD	  
+%%SYM	  _inputstrattr,9,type=12,id=12,size=8
+%%DDS	  
+%%SYM	  inputtype,7,type=3,val=0,size=2
+%%SYM	  inputarea,7,type=3,val=2,size=2
+%%SYM	  mindigit,7,type=3,val=4,size=2
+%%SYM	  maxdigit,7,type=3,val=6,size=2
+%%ENDD	  
+%%SYM	  _bcrconf,9,type=12,id=13,size=16
+%%DDS	  
+%%SYM	  mode,7,type=3,val=0,size=2
+%%SYM	  trial,7,type=3,val=2,size=2
+%%SYM	  overlap,7,type=3,val=4,size=2
+%%SYM	  comparecnt,7,type=3,val=6,size=2
+%%SYM	  rsv1,7,type=3,val=8,size=2
+%%SYM	  rsv2,7,type=3,val=10,size=2
+%%SYM	  rsv3,7,type=3,val=12,size=2
+%%SYM	  rsv4,7,type=3,val=14,size=2
+%%ENDD	  
+%%SYM	  _jancodeset,9,type=12,id=14,size=4
+%%DDS	  
+%%SYM	  flgset,7,type=4,val=0,size=2
+%%SYM	  AdGap_min,7,type=2,val=2,size=1
+%%SYM	  AdGap_max,7,type=2,val=3,size=1
+%%ENDD	  
+%%SYM	  _c39codeset,9,type=12,id=15,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%SYM	  rsv1,7,type=3,val=6,size=2
+%%ENDD	  
+%%SYM	  _e128codeset,9,type=12,id=16,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%SYM	  separator,7,type=2,val=6,size=1
+%%SYM	  rsv,7,type=2,val=7,size=1
+%%ENDD	  
+%%SYM	  _c128codeset,9,type=12,id=17,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%SYM	  rsv1,7,type=3,val=6,size=2
+%%ENDD	  
+%%SYM	  _itfcodeset,9,type=12,id=18,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%SYM	  rsv1,7,type=3,val=6,size=2
+%%ENDD	  
+%%SYM	  _nw7codeset,9,type=12,id=19,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%SYM	  rsv1,7,type=3,val=6,size=2
+%%ENDD	  
+%%SYM	  _c93codeset,9,type=12,id=20,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%SYM	  rsv1,7,type=3,val=6,size=2
+%%ENDD	  
+%%SYM	  _tofcodeset,9,type=12,id=21,size=4
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%ENDD	  
+%%SYM	  _coopcodeset,9,type=12,id=22,size=4
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%ENDD	  
+%%SYM	  _qrcodeset,9,type=12,id=23,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%ENDD	  
+%%SYM	  _pdfcodeset,9,type=12,id=24,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%ENDD	  
+%%SYM	  _dmcodeset,9,type=12,id=25,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%ENDD	  
+%%SYM	  _mccodeset,9,type=12,id=26,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%ENDD	  
+%%SYM	  _rsscodeset,9,type=12,id=27,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%ENDD	  
+%%SYM	  _compositeset,9,type=12,id=28,size=4
+%%DDS	  
+%%SYM	  flgset,7,type=4,val=0,size=2
+%%SYM	  separator,7,type=2,val=2,size=1
+%%SYM	  rsv,7,type=2,val=3,size=1
+%%ENDD	  
+%%SYM	  _bcrcodeset,9,type=12,id=29,size=60
+%%DDS	  
+%%SYM	  JAN,7,sym=14,val=0,size=4
+%%SYM	  CODE39,7,sym=15,val=4,size=8
+%%SYM	  EAN128,7,sym=16,val=12,size=8
+%%SYM	  CODE128,7,sym=17,val=20,size=8
+%%SYM	  ITF,7,sym=18,val=28,size=8
+%%SYM	  NW7,7,sym=19,val=36,size=8
+%%SYM	  CODE93,7,sym=20,val=44,size=8
+%%SYM	  TOF,7,sym=21,val=52,size=4
+%%SYM	  COOP,7,sym=22,val=56,size=4
+%%ENDD	  
+%%SYM	  _bcrinput,9,type=12,id=30,size=132
+%%DDS	  
+%%SYM	  keta,7,type=3,val=0,size=2
+%%SYM	  codetype,7,type=3,val=2,size=2
+%%SYM	  bcrdata,7,type=2,val=4,size=128
+%%DTY	  
+%%DAR	  1,128
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _bcr_result_report,9,type=12,id=31,size=12
+%%DDS	  
+%%SYM	  keta,7,type=3,val=0,size=2
+%%SYM	  codetype,7,type=3,val=2,size=2
+%%SYM	  composite,7,type=3,val=4,size=2
+%%SYM	  quality,7,type=3,val=6,size=2
+%%SYM	  extraType,7,type=2,val=8,size=1
+%%SYM	  codelink,7,type=2,val=9,size=1
+%%ENDD	  
+%%SYM	  _bcr_result_qr_report,9,type=12,id=32,size=8
+%%DDS	  
+%%SYM	  pos,7,type=3,val=0,size=2
+%%SYM	  parity,7,type=3,val=2,size=2
+%%SYM	  count,7,type=3,val=4,size=2
+%%ENDD	  
+%%SYM	  _bcr_fulldetection_column,9,type=12,id=33,size=4
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%ENDD	  
+%%SYM	  _bcr_fulldetection_codeset,9,type=12,id=34,size=20
+%%DDS	  
+%%SYM	  type,7,type=3,val=0,size=2
+%%SYM	  codecount,7,type=3,val=2,size=2
+%%SYM	  columneset,7,sym=33,val=4,size=16
+%%DTY	  
+%%DAR	  4,4
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _bcr_fulldetection_set,9,type=12,id=35,size=84
+%%DDS	  
+%%SYM	  typecount,7,type=3,val=0,size=2
+%%SYM	  rsv1,7,type=3,val=2,size=2
+%%SYM	  codeset,7,sym=34,val=4,size=80
+%%DTY	  
+%%DAR	  20,4
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _bcr_buzzer_action,9,type=12,id=36,size=12
+%%DDS	  
+%%SYM	  sw,7,type=3,val=0,size=2
+%%SYM	  ontime,7,type=3,val=2,size=2
+%%SYM	  offtime,7,type=3,val=4,size=2
+%%SYM	  cnt,7,type=3,val=6,size=2
+%%SYM	  pitch,7,type=3,val=8,size=2
+%%SYM	  rsv1,7,type=3,val=10,size=2
+%%ENDD	  
+%%SYM	  _bcr_led_action,9,type=12,id=37,size=12
+%%DDS	  
+%%SYM	  sw,7,type=3,val=0,size=2
+%%SYM	  ontime,7,type=3,val=2,size=2
+%%SYM	  offtime,7,type=3,val=4,size=2
+%%SYM	  cnt,7,type=3,val=6,size=2
+%%SYM	  color,7,type=3,val=8,size=2
+%%SYM	  rsv1,7,type=3,val=10,size=2
+%%ENDD	  
+%%SYM	  _bcr_vibrator_action,9,type=12,id=38,size=12
+%%DDS	  
+%%SYM	  sw,7,type=3,val=0,size=2
+%%SYM	  ontime,7,type=3,val=2,size=2
+%%SYM	  offtime,7,type=3,val=4,size=2
+%%SYM	  cnt,7,type=3,val=6,size=2
+%%SYM	  rsv1,7,type=3,val=8,size=2
+%%SYM	  rsv2,7,type=3,val=10,size=2
+%%ENDD	  
+%%SYM	  _file_info,9,type=12,id=39,size=272
+%%DDS	  
+%%SYM	  drive,7,type=2,val=0,size=2
+%%DTY	  
+%%DAR	  1,2
+%%ENDD	  
+%%SYM	  filename,7,type=2,val=2,size=254
+%%DTY	  
+%%DAR	  1,254
+%%ENDD	  
+%%SYM	  isDirectory,7,type=2,val=256,size=1
+%%SYM	  filesize,7,type=7,val=260,size=4
+%%SYM	  year,7,type=3,val=264,size=2
+%%SYM	  month,7,type=2,val=266,size=1
+%%SYM	  day,7,type=2,val=267,size=1
+%%SYM	  hour,7,type=2,val=268,size=1
+%%SYM	  min,7,type=2,val=269,size=1
+%%SYM	  rsv2,7,type=2,val=270,size=1
+%%SYM	  rsv3,7,type=2,val=271,size=1
+%%ENDD	  
+%%SYM	  _drive_info,9,type=12,id=40,size=16
+%%DDS	  
+%%SYM	  totalsize,7,type=7,val=0,size=4
+%%SYM	  freesize,7,type=7,val=4,size=4
+%%SYM	  invalidsize,7,type=7,val=8,size=4
+%%SYM	  filecnt,7,type=3,val=12,size=2
+%%ENDD	  
+%%SYM	  _master_index,9,type=12,id=41,size=28
+%%DDS	  
+%%SYM	  datatype,7,type=3,val=0,size=2
+%%SYM	  separator,7,type=2,val=2,size=1
+%%SYM	  fieldcnt,7,type=1,val=3,size=1
+%%SYM	  fieldlen,7,type=3,val=4,size=20
+%%DTY	  
+%%DAR	  2,10
+%%ENDD	  
+%%SYM	  rsv1,7,type=2,val=24,size=1
+%%SYM	  rsv2,7,type=2,val=25,size=1
+%%ENDD	  
+%%SYM	  _master_search,9,type=12,id=42,size=48
+%%DDS	  
+%%SYM	  ope,7,type=2,val=0,size=1
+%%SYM	  searchdata,7,type=2,val=4,size=40
+%%DTY	  
+%%DPT	  
+%%DAR	  4,10
+%%ENDD	  
+%%SYM	  incdeldata,7,type=2,val=44,size=1
+%%SYM	  rsv1,7,type=2,val=45,size=1
+%%ENDD	  
+%%SYM	  _alarm_pattern,9,type=12,id=43,size=76
+%%DDS	  
+%%SYM	  ontime,7,type=3,val=0,size=2
+%%SYM	  offtime,7,type=3,val=2,size=2
+%%SYM	  swBuzzer,7,type=3,val=4,size=2
+%%SYM	  swVibration,7,type=3,val=6,size=2
+%%SYM	  swLed,7,type=3,val=8,size=2
+%%SYM	  count,7,type=3,val=10,size=2
+%%SYM	  message,7,type=2,val=12,size=64
+%%DTY	  
+%%DAR	  1,64
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _lost_alarm,9,type=12,id=44,size=92
+%%DDS	  
+%%SYM	  sw,7,type=3,val=0,size=2
+%%SYM	  watchtime,7,type=3,val=2,size=2
+%%SYM	  timestart,7,sym=3,val=4,size=4
+%%SYM	  timestop,7,sym=3,val=8,size=4
+%%SYM	  interval,7,type=3,val=12,size=2
+%%SYM	  crsv1,7,type=2,val=14,size=2
+%%DTY	  
+%%DAR	  1,2
+%%ENDD	  
+%%SYM	  pattern,7,sym=43,val=16,size=76
+%%ENDD	  
+%%SYM	  _alarm,9,type=12,id=45,size=84
+%%DDS	  
+%%SYM	  sw,7,type=3,val=0,size=2
+%%SYM	  crsv1,7,type=2,val=2,size=2
+%%DTY	  
+%%DAR	  1,2
+%%ENDD	  
+%%SYM	  time,7,sym=3,val=4,size=4
+%%SYM	  pattern,7,sym=43,val=8,size=76
+%%ENDD	  
+%%SYM	  _schedule,9,type=12,id=46,size=268
+%%DDS	  
+%%SYM	  sw,7,type=3,val=0,size=2
+%%SYM	  crsv1,7,type=2,val=2,size=2
+%%DTY	  
+%%DAR	  1,2
+%%ENDD	  
+%%SYM	  time,7,sym=3,val=4,size=4
+%%SYM	  filename,7,type=2,val=8,size=260
+%%DTY	  
+%%DAR	  1,260
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _SEARCH_INDEX,9,type=12,id=47,size=48
+%%DDS	  
+%%SYM	  recordFormat,7,type=3,val=0,size=2
+%%SYM	  recordLength,7,type=3,val=2,size=2
+%%SYM	  separator,7,type=2,val=4,size=1
+%%SYM	  dmy,7,type=2,val=5,size=1
+%%SYM	  sortType,7,type=3,val=6,size=2
+%%SYM	  indexMode,7,type=3,val=8,size=2
+%%SYM	  indexNum,7,type=3,val=10,size=2
+%%SYM	  indexPosition,7,type=3,val=12,size=18
+%%DTY	  
+%%DAR	  2,9
+%%ENDD	  
+%%SYM	  indexLength,7,type=3,val=30,size=18
+%%DTY	  
+%%DAR	  2,9
+%%ENDD	  
+%%ENDD	  
+%%SYM	  WLanParam,8,type=11,id=48
+%%DEN	  
+%%SYM	  PRM_TERMINALIP,5,type=5,val='1'
+%%SYM	  PRM_SUBNETMASK,5,type=5,val='2'
+%%SYM	  PRM_GATEWAYIP,5,type=5,val='3'
+%%SYM	  PRM_HOSTIP,5,type=5,val='4'
+%%SYM	  PRM_DHCPENABLE,5,type=5,val='5'
+%%SYM	  PRM_TERMINALNAME,5,type=5,val='6'
+%%SYM	  PRM_PRI_DNS_ADDR,5,type=5,val='7'
+%%SYM	  PRM_SEC_DNS_ADDR,5,type=5,val='8'
+%%SYM	  PRM_FTP_PASV,5,type=5,val='9'
+%%SYM	  PRM_FTP_PORTMODE,5,type=5,val='10'
+%%SYM	  PRM_USE_FTPS,5,type=5,val='11'
+%%SYM	  PRM_SOCKET_NOTIFY,5,type=5,val='12'
+%%SYM	  PRM_FTP_TRANSMODE,5,type=5,val='13'
+%%SYM	  PRM_FTP_EPHEMERAL_PORT,5,type=5,val='14'
+%%SYM	  PRM_FTP_SIZECHECK,5,type=5,val='15'
+%%SYM	  PRM_FTP_TEMPDRIVE,5,type=5,val='16'
+%%SYM	  PRM_COMM_TRANSMODE,5,type=5,val='17'
+%%SYM	  PRM_PREAMBLETYPE,5,type=5,val='101'
+%%SYM	  PRM_RFRATE,5,type=5,val='102'
+%%SYM	  PRM_WEPAUTHENTICATIONTYPE,5,type=5,val='103'
+%%SYM	  PRM_WPAAUTHENTICATIONMODE,5,type=5,val='104'
+%%SYM	  PRM_BEACONLOSTCOUNT,5,type=5,val='105'
+%%SYM	  PRM_PWMODE,5,type=5,val='106'
+%%SYM	  PRM_POWERSAVETIME,5,type=5,val='107'
+%%SYM	  PRM_INFRASSID,5,type=5,val='108'
+%%SYM	  PRM_INFRAWEPINDEX,5,type=5,val='109'
+%%SYM	  PRM_INFRAWEP_1,5,type=5,val='110'
+%%SYM	  PRM_INFRAWEP_2,5,type=5,val='111'
+%%SYM	  PRM_INFRAWEP_3,5,type=5,val='112'
+%%SYM	  PRM_INFRAWEP_4,5,type=5,val='113'
+%%SYM	  PRM_ADHOCCHANNEL,5,type=5,val='114'
+%%SYM	  PRM_ADHOCSSID,5,type=5,val='115'
+%%SYM	  PRM_ADHOCWEPINDEX,5,type=5,val='116'
+%%SYM	  PRM_ADHOCWEP_1,5,type=5,val='117'
+%%SYM	  PRM_ADHOCWEP_2,5,type=5,val='118'
+%%SYM	  PRM_ADHOCWEP_3,5,type=5,val='119'
+%%SYM	  PRM_ADHOCWEP_4,5,type=5,val='120'
+%%SYM	  PRM_WPACIPHERMODE,5,type=5,val='121'
+%%SYM	  PRM_PRESHAREDKEY,5,type=5,val='122'
+%%SYM	  PRM_USERNAME,5,type=5,val='123'
+%%SYM	  PRM_PASSWORD,5,type=5,val='124'
+%%SYM	  PRM_ROOTCAFILENAME,5,type=5,val='125'
+%%SYM	  PRM_CERTFILENAME,5,type=5,val='126'
+%%SYM	  PRM_PRIVATEKEYFILENAME,5,type=5,val='127'
+%%SYM	  PRM_MAC_ADDR,5,type=5,val='128'
+%%SYM	  PRM_NETWORKMODE,5,type=5,val='129'
+%%SYM	  PRM_WLAN_READY,5,type=5,val='130'
+%%SYM	  PRM_RSSI_THRESH,5,type=5,val='131'
+%%SYM	  PRM_INFRACHANNEL,5,type=5,val='132'
+%%SYM	  PRM_RADIUS_LOGOFF,5,type=5,val='133'
+%%SYM	  PRM_WLAN_INFRA_802d11_MODE,5,type=5,val='134'
+%%SYM	  PRM_INFRACHANNEL_5G,5,type=5,val='135'
+%%SYM	  PRM_PINCODE,5,type=5,val='201'
+%%SYM	  PRM_LOCALDEVICENAME,5,type=5,val='202'
+%%SYM	  PRM_BD_ADDR,5,type=5,val='203'
+%%SYM	  PRM_CON_BD_ADDR,5,type=5,val='204'
+%%SYM	  PRM_SECURITYMODE,5,type=5,val='205'
+%%SYM	  PRM_BD_DTRMODE,5,type=5,val='206'
+%%SYM	  PRM_BLUE_SPPMODE,5,type=5,val='207'
+%%SYM	  PRM_LAST_TARGET_BD_ADDR,5,type=5,val='208'
+%%SYM	  PRM_TELNUMBER,5,type=5,val='301'
+%%SYM	  PRM_PPP_USERNAME,5,type=5,val='302'
+%%SYM	  PRM_PPP_PASSWORD,5,type=5,val='303'
+%%SYM	  PRM_USE_PAP,5,type=5,val='304'
+%%SYM	  PRM_USE_CHAP,5,type=5,val='305'
+%%SYM	  PRM_PPP_TIMEOUT,5,type=5,val='306'
+%%SYM	  PRM_PPP_HANGUP,5,type=5,val='307'
+%%SYM	  PRM_MODEM_ATCOMMAND,5,type=5,val='401'
+%%SYM	  PRM_MODEM_TELNUMBER,5,type=5,val='402'
+%%SYM	  PRM_MODEM_DIALTYPE,5,type=5,val='403'
+%%SYM	  PRM_MODEM_DIALTIMEOUT,5,type=5,val='404'
+%%SYM	  PRM_MODEM_REDIALCOUNT,5,type=5,val='405'
+%%SYM	  PRM_MODEM_REDIALINTERVAL,5,type=5,val='406'
+%%SYM	  PRM_MODEM_CRADLERATE,5,type=5,val='407'
+%%ENDD	  
+%%SYM	  _st_rf_configset,9,type=12,id=49,size=8
+%%DDS	  
+%%SYM	  NetworkMode,7,type=2,val=0,size=1
+%%SYM	  AdhocCh,7,type=2,val=1,size=1
+%%SYM	  Preamble,7,type=2,val=2,size=1
+%%SYM	  WepAuthtype,7,type=2,val=3,size=1
+%%SYM	  rate,7,type=2,val=4,size=1
+%%SYM	  PwMode,7,type=2,val=5,size=1
+%%SYM	  PowerSavetime,7,type=2,val=6,size=1
+%%SYM	  BeaconLostcount,7,type=2,val=7,size=1
+%%ENDD	  
+%%SYM	  _st_rf_connectioninfo,9,type=12,id=50,size=12
+%%DDS	  
+%%SYM	  AuthStatus,7,type=2,val=0,size=1
+%%SYM	  Ch,7,type=2,val=1,size=1
+%%SYM	  MacAddress,7,type=2,val=2,size=6
+%%DTY	  
+%%DAR	  1,6
+%%ENDD	  
+%%SYM	  Rssi,7,type=2,val=8,size=1
+%%ENDD	  
+%%SYM	  _st_wep_info,9,type=12,id=51,size=20
+%%DDS	  
+%%SYM	  size,7,type=7,val=0,size=4
+%%SYM	  wep,7,type=2,val=4,size=14
+%%DTY	  
+%%DAR	  1,14
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _st_rf_securityinfoset,9,type=12,id=52,size=96
+%%DDS	  
+%%SYM	  ssid,7,type=2,val=0,size=33
+%%DTY	  
+%%DAR	  1,33
+%%ENDD	  
+%%SYM	  ssid_size,7,type=2,val=33,size=1
+%%SYM	  wep_selected,7,type=2,val=34,size=1
+%%SYM	  wep_size,7,type=2,val=35,size=4
+%%DTY	  
+%%DAR	  1,4
+%%ENDD	  
+%%SYM	  wep,7,type=2,val=39,size=56
+%%DTY	  
+%%DAR	  1,4,14
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _st_rf_securityauthset,9,type=12,id=53,size=908
+%%DDS	  
+%%SYM	  psk_len,7,type=3,val=0,size=2
+%%SYM	  psk,7,type=2,val=2,size=64
+%%DTY	  
+%%DAR	  1,64
+%%ENDD	  
+%%SYM	  usr_id_len,7,type=3,val=66,size=2
+%%SYM	  usr_id,7,type=2,val=68,size=33
+%%DTY	  
+%%DAR	  1,33
+%%ENDD	  
+%%SYM	  usr_pass_len,7,type=3,val=102,size=2
+%%SYM	  usr_pass,7,type=2,val=104,size=33
+%%DTY	  
+%%DAR	  1,33
+%%ENDD	  
+%%SYM	  rootca_filename,7,type=2,val=137,size=256
+%%DTY	  
+%%DAR	  1,256
+%%ENDD	  
+%%SYM	  cert_filename,7,type=2,val=393,size=256
+%%DTY	  
+%%DAR	  1,256
+%%ENDD	  
+%%SYM	  prvkey_filename,7,type=2,val=649,size=256
+%%DTY	  
+%%DAR	  1,256
+%%ENDD	  
+%%ENDD	  
+%%SYM	  btsockaddr,9,type=12,id=54,size=16
+%%DDS	  
+%%SYM	  sa_family,7,type=4,val=0,size=2
+%%SYM	  sa_data,7,type=2,val=2,size=14
+%%DTY	  
+%%DAR	  1,14
+%%ENDD	  
+%%ENDD	  
+%%SYM	  btin_addr,9,type=12,id=55,size=4
+%%DDS	  
+%%SYM	  ,10,type=13,id=56,size=4
+%%DDS	  
+%%SYM	  ,9,type=12,id=57,size=4
+%%DDS	  
+%%SYM	  s_b1,7,type=2,val=0,size=1
+%%SYM	  s_b2,7,type=2,val=1,size=1
+%%SYM	  s_b3,7,type=2,val=2,size=1
+%%SYM	  s_b4,7,type=2,val=3,size=1
+%%ENDD	  
+%%SYM	  S_un_b,7,sym=57,val=0,size=4
+%%SYM	  ,9,type=12,id=58,size=4
+%%DDS	  
+%%SYM	  s_w1,7,type=4,val=0,size=2
+%%SYM	  s_w2,7,type=4,val=2,size=2
+%%ENDD	  
+%%SYM	  S_un_w,7,sym=58,val=0,size=4
+%%SYM	  S_addr,7,type=8,val=0,size=4
+%%ENDD	  
+%%SYM	  S_un,7,sym=56,val=0,size=4
+%%ENDD	  
+%%SYM	  btsockaddr_in,9,type=12,id=59,size=16
+%%DDS	  
+%%SYM	  sin_family,7,type=3,val=0,size=2
+%%SYM	  sin_port,7,type=4,val=2,size=2
+%%SYM	  sin_addr,7,sym=55,val=4,size=4
+%%SYM	  sin_zero,7,type=2,val=8,size=8
+%%DTY	  
+%%DAR	  1,8
+%%ENDD	  
+%%ENDD	  
+%%SYM	  btfd_set,9,type=12,id=60,size=260
+%%DDS	  
+%%SYM	  fd_count,7,type=6,val=0,size=4
+%%SYM	  fd_array,7,type=5,val=4,size=256
+%%DTY	  
+%%DAR	  4,64
+%%ENDD	  
+%%ENDD	  
+%%SYM	  bttimeval,9,type=12,id=61,size=8
+%%DDS	  
+%%SYM	  tv_sec,7,type=7,val=0,size=4
+%%SYM	  tv_usec,7,type=7,val=4,size=4
+%%ENDD	  
+%%SYM	  bthostent,9,type=12,id=62,size=24
+%%DDS	  
+%%SYM	  h_name,7,type=2,val=0,size=4
+%%DTY	  
+%%DPT	  
+%%ENDD	  
+%%SYM	  h_aliases,7,type=2,val=4,size=4
+%%DTY	  
+%%DPT	  
+%%DAR	  4,1
+%%ENDD	  
+%%SYM	  h_addrtype,7,type=4,val=8,size=2
+%%SYM	  h_length,7,type=4,val=10,size=2
+%%SYM	  h_addr_list,7,type=2,val=12,size=12
+%%DTY	  
+%%DPT	  
+%%DAR	  4,3
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _st_ftpconfig,9,type=12,id=63,size=404
+%%DDS	  
+%%SYM	  timeout,7,type=7,val=0,size=4
+%%SYM	  cancelkey,7,type=7,val=4,size=4
+%%SYM	  target_ip,7,type=8,val=8,size=4
+%%SYM	  ftp_portnum,7,type=4,val=12,size=2
+%%SYM	  rsv1,7,type=4,val=14,size=2
+%%SYM	  usrname,7,type=2,val=16,size=65
+%%DTY	  
+%%DAR	  1,65
+%%ENDD	  
+%%SYM	  password,7,type=2,val=81,size=65
+%%DTY	  
+%%DAR	  1,65
+%%ENDD	  
+%%SYM	  logfilename,7,type=2,val=146,size=256
+%%DTY	  
+%%DAR	  1,256
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _st_ftpsconfig,9,type=12,id=64,size=268
+%%DDS	  
+%%SYM	  ftps_protocol,7,type=5,val=0,size=4
+%%SYM	  ftps_data_encrypt,7,type=5,val=4,size=4
+%%SYM	  ftps_verify,7,type=5,val=8,size=4
+%%SYM	  ftps_certfile,7,type=2,val=12,size=256
+%%DTY	  
+%%DAR	  1,256
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _rfstatus,9,type=12,id=65,size=12
+%%DDS	  
+%%SYM	  ip_adr,7,type=2,val=0,size=4
+%%DTY	  
+%%DAR	  1,4
+%%ENDD	  
+%%SYM	  subnet,7,type=2,val=4,size=4
+%%DTY	  
+%%DAR	  1,4
+%%ENDD	  
+%%SYM	  defgate,7,type=2,val=8,size=4
+%%DTY	  
+%%DAR	  1,4
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _host_status,9,type=12,id=66,size=4
+%%DDS	  
+%%SYM	  ip_adr,7,type=2,val=0,size=4
+%%DTY	  
+%%DAR	  1,4
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _rfdatif,9,type=12,id=67,size=12
+%%DDS	  
+%%SYM	  ip,7,type=2,val=0,size=4
+%%DTY	  
+%%DAR	  1,4
+%%ENDD	  
+%%SYM	  cnt,7,type=8,val=4,size=4
+%%SYM	  buf,7,type=2,val=8,size=4
+%%DTY	  
+%%DPT	  
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _fileup_status,9,type=12,id=68,size=8
+%%DDS	  
+%%SYM	  len,7,type=8,val=0,size=4
+%%SYM	  ip_adr,7,type=2,val=4,size=4
+%%DTY	  
+%%DAR	  1,4
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _ess_status,9,type=12,id=69,size=36
+%%DDS	  
+%%SYM	  ess_len,7,type=8,val=0,size=4
+%%SYM	  ess_dat,7,type=2,val=4,size=32
+%%DTY	  
+%%DAR	  1,32
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _retry_status,9,type=12,id=70,size=4
+%%DDS	  
+%%SYM	  retry_count_max,7,type=2,val=0,size=1
+%%SYM	  retry_timer_init,7,type=2,val=1,size=1
+%%ENDD	  
+%%SYM	  ,9,type=12,id=71,size=324
+%%DDS	  
+%%SYM	  major_version,7,type=2,val=0,size=1
+%%SYM	  minor_version,7,type=2,val=1,size=1
+%%SYM	  comment,7,type=2,val=2,size=62
+%%DTY	  
+%%DAR	  1,62
+%%ENDD	  
+%%SYM	  filepath,7,type=2,val=64,size=260
+%%DTY	  
+%%DAR	  1,260
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _st_zgnconfig,9,type=12,id=72,size=152
+%%DDS	  
+%%SYM	  MaxTextSize,7,type=4,val=0,size=2
+%%SYM	  Timeout,7,type=4,val=2,size=2
+%%SYM	  DestIP,7,type=2,val=4,size=80
+%%DTY	  
+%%DAR	  1,80
+%%ENDD	  
+%%SYM	  DestPortNo,7,type=4,val=84,size=2
+%%SYM	  LocalPortNo,7,type=4,val=86,size=2
+%%SYM	  TcpConnectRetry,7,type=4,val=88,size=2
+%%SYM	  TtcRoundupInit,7,type=4,val=90,size=2
+%%SYM	  DefineMN,7,type=2,val=92,size=1
+%%SYM	  ZeroByteFile,7,type=2,val=93,size=1
+%%SYM	  TransDateCheck,7,type=2,val=94,size=1
+%%SYM	  TtcBranch,7,type=2,val=95,size=1
+%%SYM	  Hostcord,7,type=2,val=96,size=7
+%%DTY	  
+%%DAR	  1,7
+%%ENDD	  
+%%SYM	  Termcord,7,type=2,val=103,size=7
+%%DTY	  
+%%DAR	  1,7
+%%ENDD	  
+%%SYM	  Password,7,type=2,val=110,size=6
+%%DTY	  
+%%DAR	  1,6
+%%ENDD	  
+%%SYM	  Ext,7,type=2,val=116,size=34
+%%DTY	  
+%%DAR	  1,34
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _st_zgnfconfig,9,type=12,id=73,size=316
+%%DDS	  
+%%SYM	  FileName,7,type=2,val=0,size=256
+%%DTY	  
+%%DAR	  1,256
+%%ENDD	  
+%%SYM	  Mode,7,type=2,val=256,size=1
+%%SYM	  Branch,7,type=2,val=257,size=1
+%%SYM	  Pack,7,type=2,val=258,size=1
+%%SYM	  Derimita,7,type=2,val=259,size=1
+%%SYM	  Blocking,7,type=2,val=260,size=1
+%%SYM	  ChangeCodePtn,7,type=2,val=261,size=1
+%%SYM	  Cycle,7,type=2,val=262,size=1
+%%SYM	  VLRec,7,type=2,val=263,size=1
+%%SYM	  RecSize,7,type=4,val=264,size=2
+%%SYM	  ZFileName,7,type=2,val=266,size=12
+%%DTY	  
+%%DAR	  1,12
+%%ENDD	  
+%%SYM	  FileAccessKey,7,type=2,val=278,size=6
+%%DTY	  
+%%DAR	  1,6
+%%ENDD	  
+%%SYM	  FileSub,7,type=2,val=284,size=17
+%%DTY	  
+%%DAR	  1,17
+%%ENDD	  
+%%SYM	  FileExt,7,type=2,val=301,size=14
+%%DTY	  
+%%DAR	  1,14
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _apli_updateinfo,9,type=12,id=74,size=328
+%%DDS	  
+%%SYM	  apptype,7,type=2,val=0,size=1
+%%SYM	  filename,7,type=2,val=1,size=256
+%%DTY	  
+%%DAR	  1,256
+%%ENDD	  
+%%SYM	  title,7,type=2,val=257,size=65
+%%DTY	  
+%%DAR	  1,65
+%%ENDD	  
+%%SYM	  version,7,type=2,val=322,size=2
+%%DTY	  
+%%DAR	  1,2
+%%ENDD	  
+%%SYM	  priority,7,type=2,val=324,size=1
+%%ENDD	  
+%%SYM	  _st_comenv,9,type=12,id=75,size=12
+%%DDS	  
+%%SYM	  baudRate,7,type=8,val=0,size=4
+%%SYM	  stopBits,7,type=3,val=4,size=2
+%%SYM	  parity,7,type=3,val=6,size=2
+%%SYM	  dataLen,7,type=3,val=8,size=2
+%%ENDD	  
+%%SYM	  ,9,type=12,id=76,size=44
+%%DDS	  
+%%SYM	  ch,7,type=2,val=0,size=1
+%%SYM	  signallevel,7,type=2,val=1,size=1
+%%SYM	  macaddr,7,type=2,val=2,size=6
+%%DTY	  
+%%DAR	  1,6
+%%ENDD	  
+%%SYM	  ssidlen,7,type=2,val=8,size=1
+%%SYM	  ssid,7,type=2,val=9,size=32
+%%DTY	  
+%%DAR	  1,32
+%%ENDD	  
+%%SYM	  rsv1,7,type=2,val=41,size=3
+%%DTY	  
+%%DAR	  1,3
+%%ENDD	  
+%%ENDD	  
+%%SYM	  ,9,type=12,id=77,size=528
+%%DDS	  
+%%SYM	  apinfo,7,sym=76,val=0,size=528
+%%DTY	  
+%%DAR	  44,12
+%%ENDD	  
+%%ENDD	  
+%%SYM	  ,9,type=12,id=78,size=44
+%%DDS	  
+%%SYM	  devicename,7,type=2,val=0,size=32
+%%DTY	  
+%%DAR	  1,32
+%%ENDD	  
+%%SYM	  bd_address,7,type=2,val=32,size=12
+%%DTY	  
+%%DAR	  1,12
+%%ENDD	  
+%%ENDD	  
+%%SYM	  ,9,type=12,id=79,size=396
+%%DDS	  
+%%SYM	  bluetoothinfo,7,sym=78,val=0,size=396
+%%DTY	  
+%%DAR	  44,9
+%%ENDD	  
+%%ENDD	  
+%%SYM	  ,8,type=11,id=80
+%%DEN	  
+%%SYM	  BT_GUI_WT_CANVAS,5,type=5,val='0'
+%%SYM	  BT_GUI_WT_EDIT_FIELD,5,type=5,val='1'
+%%SYM	  BT_GUI_WT_ML_EDIT,5,type=5,val='2'
+%%SYM	  BT_GUI_WT_TEXTBOX,5,type=5,val='3'
+%%SYM	  BT_GUI_WT_GROUPBOX,5,type=5,val='4'
+%%SYM	  BT_GUI_WT_LISTBOX,5,type=5,val='5'
+%%SYM	  BT_GUI_WT_COMBOBOX,5,type=5,val='6'
+%%SYM	  BT_GUI_WT_CHECKBOX,5,type=5,val='7'
+%%SYM	  BT_GUI_WT_RADIOBUTTON,5,type=5,val='8'
+%%SYM	  BT_GUI_WT_BUTTON,5,type=5,val='9'
+%%SYM	  BT_GUI_WT_WINDOW,5,type=5,val='10'
+%%ENDD	  
+%%SYM	  ,8,type=11,id=81
+%%DEN	  
+%%SYM	  BT_GUI_PT_VISIBLE,5,type=5,val='0'
+%%SYM	  BT_GUI_PT_ENABLE,5,type=5,val='1'
+%%SYM	  BT_GUI_PT_FRAME,5,type=5,val='2'
+%%SYM	  BT_GUI_PT_BGCOLOR,5,type=5,val='3'
+%%SYM	  BT_GUI_PT_TEXTCOLOR,5,type=5,val='4'
+%%SYM	  BT_GUI_PT_SEL_BGCOLOR,5,type=5,val='5'
+%%SYM	  BT_GUI_PT_SEL_TEXTCOLOR,5,type=5,val='6'
+%%SYM	  BT_GUI_PT_EXCLUSIVE,5,type=5,val='7'
+%%SYM	  BT_GUI_PT_TEXTDATA,5,type=5,val='8'
+%%SYM	  BT_GUI_PT_IMAGE_FILE,5,type=5,val='9'
+%%SYM	  BT_GUI_PT_FONTSIZE,5,type=5,val='10'
+%%SYM	  BT_GUI_PT_TEXTALIGN,5,type=5,val='11'
+%%SYM	  BT_GUI_PT_HSCROLLBAR,5,type=5,val='12'
+%%SYM	  BT_GUI_PT_VSCROLLBAR,5,type=5,val='13'
+%%SYM	  BT_GUI_PT_STRLEN,5,type=5,val='14'
+%%SYM	  BT_GUI_PT_CHECKED,5,type=5,val='15'
+%%SYM	  BT_GUI_PT_INPUTMAX,5,type=5,val='16'
+%%SYM	  BT_GUI_PT_TRG_MODE,5,type=5,val='17'
+%%SYM	  BT_GUI_PT_F3KEY_MODE,5,type=5,val='18'
+%%SYM	  BT_GUI_PT_FOCUSIN_EDIT,5,type=5,val='19'
+%%SYM	  BT_GUI_PT_AUTOREAD_ENABLE,5,type=5,val='20'
+%%SYM	  BT_GUI_PT_KEYINPUT_ENABLE,5,type=5,val='21'
+%%SYM	  BT_GUI_PT_FOCUSINDICATOR,5,type=5,val='22'
+%%ENDD	  
+%%SYM	  _bt_gui_fontinfo,9,type=12,id=82,size=12
+%%DDS	  
+%%SYM	  sFontSize,7,type=3,val=0,size=2
+%%SYM	  sReserve1,7,type=3,val=2,size=2
+%%SYM	  ulTextColor,7,type=8,val=4,size=4
+%%SYM	  ulBkgColor,7,type=8,val=8,size=4
+%%ENDD	  
+%%SYM	  _bt_gui_drawex,9,type=12,id=83,size=32
+%%DDS	  
+%%SYM	  fontinfo,7,sym=82,val=0,size=12
+%%SYM	  gapx,7,type=3,val=12,size=2
+%%SYM	  gapy,7,type=3,val=14,size=2
+%%SYM	  type,7,type=3,val=16,size=2
+%%SYM	  sReserve1,7,type=3,val=18,size=2
+%%SYM	  attrg,7,sym=7,val=20,size=12
+%%ENDD	  
+%%SYM	  ,9,type=12,id=84,size=76
+%%DDS	  
+%%SYM	  anykey,7,type=5,val=0,size=4
+%%SYM	  key0,7,type=5,val=4,size=4
+%%SYM	  key1,7,type=5,val=8,size=4
+%%SYM	  key2,7,type=5,val=12,size=4
+%%SYM	  key3,7,type=5,val=16,size=4
+%%SYM	  key4,7,type=5,val=20,size=4
+%%SYM	  key5,7,type=5,val=24,size=4
+%%SYM	  key6,7,type=5,val=28,size=4
+%%SYM	  key7,7,type=5,val=32,size=4
+%%SYM	  key8,7,type=5,val=36,size=4
+%%SYM	  key9,7,type=5,val=40,size=4
+%%SYM	  keyEnt,7,type=5,val=44,size=4
+%%SYM	  keyEsc,7,type=5,val=48,size=4
+%%SYM	  keyFnUp,7,type=5,val=52,size=4
+%%SYM	  keyClr,7,type=5,val=56,size=4
+%%SYM	  keyL,7,type=5,val=60,size=4
+%%SYM	  keyR,7,type=5,val=64,size=4
+%%SYM	  keyUp,7,type=5,val=68,size=4
+%%SYM	  keyDown,7,type=5,val=72,size=4
+%%ENDD	  
+%%SYM	  ,9,type=12,id=85,size=244
+%%DDS	  
+%%SYM	  data,7,type=2,val=0,size=242
+%%DTY	  
+%%DAR	  1,11,22
+%%ENDD	  
+%%ENDD	  
+%%SYM	  ,9,type=12,id=86,size=24
+%%DDS	  
+%%SYM	  name,7,type=2,val=0,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%ENDD	  
+%%SYM	  ,9,type=12,id=87,size=384
+%%DDS	  
+%%SYM	  item,7,sym=86,val=0,size=384
+%%DTY	  
+%%DAR	  24,16
+%%ENDD	  
+%%ENDD	  
+%%SYM	  ,9,type=12,id=88,size=12
+%%DDS	  
+%%SYM	  year,7,type=3,val=0,size=2
+%%SYM	  month,7,type=3,val=2,size=2
+%%SYM	  day,7,type=3,val=4,size=2
+%%SYM	  hour,7,type=3,val=6,size=2
+%%SYM	  min,7,type=3,val=8,size=2
+%%SYM	  sec,7,type=3,val=10,size=2
+%%ENDD	  
+%%SYM	  ,9,type=12,id=89,size=232
+%%DDS	  
+%%SYM	  mode,7,type=5,val=0,size=4
+%%SYM	  title,7,type=2,val=4,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  l1,7,type=2,val=25,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  l2,7,type=2,val=46,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  l3,7,type=2,val=67,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  l4,7,type=2,val=88,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  l5,7,type=2,val=109,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  l6,7,type=2,val=130,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  l7,7,type=2,val=151,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  buffer,7,type=2,val=172,size=4
+%%DTY	  
+%%DPT	  
+%%ENDD	  
+%%SYM	  bufsize,7,type=6,val=176,size=4
+%%SYM	  emptyOK,7,type=5,val=180,size=4
+%%SYM	  upkey,7,type=5,val=184,size=4
+%%SYM	  downkey,7,type=5,val=188,size=4
+%%SYM	  bar_read,7,type=5,val=192,size=4
+%%SYM	  keychange,7,type=5,val=196,size=4
+%%SYM	  defdata,7,type=2,val=200,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  alpha,7,type=2,val=221,size=1
+%%SYM	  c1,7,type=2,val=222,size=1
+%%SYM	  c2,7,type=2,val=223,size=1
+%%SYM	  c3,7,type=2,val=224,size=1
+%%SYM	  c4,7,type=2,val=225,size=1
+%%SYM	  c5,7,type=2,val=226,size=1
+%%SYM	  c6,7,type=2,val=227,size=1
+%%SYM	  c7,7,type=2,val=228,size=1
+%%ENDD	  
+%%SYM	  ,9,type=12,id=90,size=48
+%%DDS	  
+%%SYM	  Name,7,type=2,val=0,size=30
+%%DTY	  
+%%DAR	  1,30
+%%ENDD	  
+%%SYM	  AdminSign,7,type=2,val=30,size=1
+%%SYM	  Location,7,type=2,val=31,size=3
+%%DTY	  
+%%DAR	  1,3
+%%ENDD	  
+%%SYM	  UserId,7,type=2,val=34,size=10
+%%DTY	  
+%%DAR	  1,10
+%%ENDD	  
+%%SYM	  None,7,type=2,val=44,size=1
+%%ENDD	  
+%%SYM	  ,9,type=12,id=91,size=100
+%%DDS	  
+%%SYM	  msg1,7,type=2,val=0,size=20
+%%DTY	  
+%%DAR	  1,20
+%%ENDD	  
+%%SYM	  msg2,7,type=2,val=20,size=20
+%%DTY	  
+%%DAR	  1,20
+%%ENDD	  
+%%SYM	  msg3,7,type=2,val=40,size=20
+%%DTY	  
+%%DAR	  1,20
+%%ENDD	  
+%%SYM	  msg4,7,type=2,val=60,size=20
+%%DTY	  
+%%DAR	  1,20
+%%ENDD	  
+%%SYM	  msg5,7,type=2,val=80,size=20
+%%DTY	  
+%%DAR	  1,20
+%%ENDD	  
+%%ENDD	  
+%%EFILE	  
+		end

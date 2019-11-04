@@ -1,0 +1,69 @@
+﻿Build started 11/4/2019 1:38:40 PM.
+     1>Project "P:\app_vnn\11-Warehouse\New\ForKeyence\keyence - (Official Version)\keyence\keyence.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating ".\Debug\keyence.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I./inc/ /I./src/ /I./Tool/ /I./ /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D TMAPP_EXPORTS /D PC_EMU /D BT1500 /D _CRT_NONSTDC_NO_DEPRECATE /D _CRT_SECURE_NO_DEPRECATE /D _VC80_UPGRADE=0x0710 /D _WINDLL /D _MBCS /Gm- /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug/" /Fd".\Debug/vc100.pdb" /Gd /TC /analyze- /errorReport:prompt App400.c
+         App400.c
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(7): warning C4101: 'tmp' : unreferenced local variable
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(7): warning C4101: 'boxes' : unreferenced local variable
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(52): warning C4101: 'tmp' : unreferenced local variable
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(52): warning C4101: 'boxes' : unreferenced local variable
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(737): warning C4554: '&' : check operator precedence for possible error; use parentheses to clarify precedence
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(740): warning C4554: '&' : check operator precedence for possible error; use parentheses to clarify precedence
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(903): warning C4102: 'INPUT_ETDHCM' : unreferenced label
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(852): warning C4102: 'INPUT_ETDVN' : unreferenced label
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(1003): warning C4101: 'dataSend' : unreferenced local variable
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(1002): warning C4101: 'boxes' : unreferenced local variable
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(1070): warning C4033: 'PrintShippingToSpecify' must return a value
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(1100): warning C4033: 'PrintShippingToSpecify' must return a value
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(1318): warning C4101: 'dataSend' : unreferenced local variable
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(1315): warning C4101: 'set' : unreferenced local variable
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(1401): warning C4101: 'set' : unreferenced local variable
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(1489): warning C4101: 'r' : unreferenced local variable
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(1597): warning C4101: 'set' : unreferenced local variable
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(1679): warning C4101: 'dataSend' : unreferenced local variable
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(1705): warning C4101: 'dataSend' : unreferenced local variable
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(1740): warning C4101: 'set' : unreferenced local variable
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(1738): warning C4101: 'r' : unreferenced local variable
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(45): warning C4715: 'ReturnBoxToProduction' : not all control paths return a value
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(97): warning C4715: 'BorrowBoxForOS' : not all control paths return a value
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(403): warning C4715: 'InStockWhenCheckInventory' : not all control paths return a value
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(503): warning C4715: 'SwitchBoxInPallete' : not all control paths return a value
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(604): warning C4715: 'AddBoxFromOutsideIntoShippingTo' : not all control paths return a value
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(690): warning C4715: 'ReturnBoxFromShippingToReceived' : not all control paths return a value
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(768): warning C4715: 'OSReturnBoxFromInstockToReceive' : not all control paths return a value
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(806): warning C4715: 'ORReturnBoxFromInstockToReceive' : not all control paths return a value
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(1228): warning C4715: 'PrintShippingToSpecify' : not all control paths return a value
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(1388): warning C4715: 'TranferNumPLT' : not all control paths return a value
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(1478): warning C4715: 'TransferPalleteTempInShippingTo' : not all control paths return a value
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(1584): warning C4715: 'TransferInstockToReserShip' : not all control paths return a value
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(1674): warning C4715: 'TransferAfterReser' : not all control paths return a value
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(1765): warning C4715: 'CheckStatusOfShippingTo' : not all control paths return a value
+     1>p:\app_vnn\11-warehouse\new\forkeyence\keyence - (official version)\keyence\app400.c(1822): warning C4715: 'WhPackageRecord' : not all control paths return a value
+         All outputs are up-to-date.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug\TmApp.dll" /INCREMENTAL:NO /NOLOGO odbc32.lib odbccp32.lib comctl32.lib Winmm.lib Shlwapi.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /DEF:".\TmApp.def" /MANIFEST /ManifestFile:".\Debug\TmApp.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:".\Debug/TmApp.pdb" /MAP:".\Debug/TmApp.map" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Debug/TmApp.lib" /MACHINE:X86 /DLL .\Debug/App200.obj
+         .\Debug/App300.obj
+         .\Debug/App400.obj
+         .\Debug/App500.obj
+         .\Debug/Common.obj
+         .\Debug/main.obj
+         .\Debug/version.obj
+         .\Debug/TmApp.obj
+         .\Debug/nokbt1500.obj
+         TmLib.lib
+     1>App200.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+     1>.\TmApp.def(4): warning LNK4017: DESCRIPTION statement not supported for the target platform; ignored
+            Creating library .\Debug/TmApp.lib and object .\Debug/TmApp.exp
+         keyence.vcxproj -> P:\app_vnn\11-Warehouse\New\ForKeyence\keyence - (Official Version)\keyence\.\Debug\TmApp.dll
+       Manifest:
+         c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:".\Debug\TmApp.dll;#2" /manifest .\Debug\TmApp.dll.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file ".\Debug\keyence.unsuccessfulbuild".
+         Touching ".\Debug\keyence.lastbuildstate".
+     1>Done Building Project "P:\app_vnn\11-Warehouse\New\ForKeyence\keyence - (Official Version)\keyence\keyence.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.48

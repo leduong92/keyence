@@ -1,0 +1,2580 @@
+%%TOOL	  'xcc-v V10.22	 9226' ,190103130527
+%%COMPILE language=C , source=Common,mode=0,cps=4,dps=4,newdebug
+;	Cross C	Compiler  XCC-V	 V10.22	(9226) -88011100:03FF-
+;		== ARM/ARM9E (V01.03c) 8b13 ==	
+;		=== arch:V5TE [ARM code] ===
+		extnal	  @btstrcpy
+		extnal	  @btstrlen
+		extnal	  @btmemcpy
+		extnal	  @btmemcmp
+		extnal	  @btmemset
+		extnal	  @btsprintf
+		extnal	  @LcdClear
+		extnal	  @Beep
+		extnal	  @Buzzer
+		extnal	  @get_nowtime
+		extnal	  @DspMsgBt
+		extnal	  @DspMsg
+		extnal	  @DataInputBt
+		extnal	  @OkNgDisp
+		extnal	  @WLAN_sendBt
+		extnal	  @MasterFind
+		extnal	  @MasterUpd
+		global	  @CheckAdminPassword
+		global	  @DataSend
+		global	  @ShowMessage
+		global	  @SetLocation
+		global	  @MakeDataToSend
+		global	  @CheckDataByType
+I_Common	sect	comm
+Itop		set	$
+S1:
+		db	  041h,075h,074h,068h,065h
+		db	  06eh,074h,069h,063h,061h
+		db	  074h,069h,06fh,06eh,0
+S2:
+		db	  050h,06ch,065h,061h,073h
+		db	  065h,020h,065h,06eh,074h
+		db	  065h,072h,0
+S3:
+		db	  020h,020h,041h,064h,06dh
+		db	  069h,06eh,020h,070h,061h
+		db	  073h,073h,077h,06fh,072h
+		db	  064h,02eh,0
+S4:
+		db	  072h,065h,074h,03dh,025h
+		db	  064h,0
+S5:
+		db	  056h,04eh,04eh,020h,04eh
+		db	  04fh,04bh,0
+S6:
+		db	  0
+S7:
+		db	  02ah,02ah,02ah,02ah,02ah
+		db	  02ah,02ah,02ah,02ah,02ah
+		db	  02ah,02ah,02ah,02ah,0
+S8:
+		db	  063h,06fh,06dh,020h,065h
+		db	  072h,072h,06fh,072h,02ch
+		db	  0
+S9:
+		db	  072h,065h,074h,072h,079h
+		db	  03fh,0
+S10:
+		db	  0
+S11:
+		db	  02ah,02ah,02ah,02ah,02ah
+		db	  02ah,02ah,02ah,02ah,02ah
+		db	  02ah,02ah,02ah,02ah,0
+S12:
+		db	  04eh,047h,0
+S13:
+		db	  056h,04eh,04eh,020h,04eh
+		db	  04fh,04bh,0
+S14:
+		db	  0
+S15:
+		db	  04fh,04bh,0
+S16:
+		db	  04fh,04bh,0
+S17:
+		db	  056h,04eh,04eh,020h,04eh
+		db	  04fh,04bh,0
+S18:
+		db	  0
+S19:
+		db	  0
+S20:
+		db	  06ch,06fh,063h,061h,074h
+		db	  069h,06fh,06eh,0
+S21:
+		db	  049h,06eh,070h,075h,074h
+		db	  020h,059h,06fh,075h,072h
+		db	  020h,04ch,06fh,063h,061h
+		db	  074h,069h,06fh,06eh,02eh
+		db	  0
+S22:
+		db	  044h,06fh,06eh,027h,074h
+		db	  020h,063h,068h,061h,06eh
+		db	  067h,065h,020h,02dh,03eh
+		db	  020h,045h,04eh,054h,0
+S23:
+		db	  025h,073h,0
+S24:
+		db	  04ch,06fh,063h,061h,074h
+		db	  069h,06fh,06eh,020h,053h
+		db	  065h,074h,074h,069h,06eh
+		db	  067h,0
+S25:
+		db	  04ch,06fh,063h,061h,074h
+		db	  069h,06fh,06eh,020h,03dh
+		db	  020h,025h,073h,0
+S26:
+		db	  020h,02ah,02ah,02ah,02ah
+		db	  02ah,020h,045h,072h,072h
+		db	  06fh,072h,020h,02ah,02ah
+		db	  02ah,02ah,02ah,0
+S27:
+		db	  04ch,06fh,063h,061h,074h
+		db	  069h,06fh,06eh,020h,069h
+		db	  073h,020h,0
+S28:
+		db	  06eh,06fh,074h,020h,063h
+		db	  06fh,072h,072h,065h,063h
+		db	  074h,02eh,028h,031h,029h
+		db	  0
+S29:
+		db	  0
+S30:
+		db	  0
+S31:
+		db	  06ch,06fh,063h,061h,074h
+		db	  069h,06fh,06eh,0
+S32:
+		db	  06ch,06fh,063h,061h,074h
+		db	  069h,06fh,06eh,0
+S33:
+		db	  075h,073h,065h,072h,0
+S34:
+		db	  0
+S35:
+		db	  025h,073h,024h,025h,073h
+		db	  024h,0
+S36:
+		db	  025h,073h,025h,073h,024h
+		db	  025h,073h,024h,025h,073h
+		db	  024h,025h,073h,024h,0
+S37:
+		db	  04ch,04fh,053h,0
+S38:
+		db	  04ch,04fh,052h,0
+S39:
+		db	  050h,04fh,053h,0
+S40:
+		db	  050h,04fh,052h,0
+S41:
+		db	  056h,042h,0
+S42:
+		db	  056h,043h,0
+S43:
+		db	  054h,04fh,053h,0
+S44:
+		db	  054h,04fh,052h,0
+S45:
+		db	  053h,04fh,053h,0
+S46:
+		db	  053h,04fh,052h,0
+S47:
+		db	  04fh,053h,031h,0
+S48:
+		db	  04fh,052h,031h,0
+		ds	  3			    ; bnd 4
+%%BFILE	  'C:\Users\11709931\Desktop\KEYENC~1\keyence\Common.c'	,181221181333,278
+C_Common	sect	code
+		code32
+%%REGPARA R0
+%%BFILE	  'C:\Users\11709931\Desktop\KEYENC~1\keyence\Common.h'	,181221181143,29
+%%BFILE	  'P:\pdrv\barlib\Keyence\nokbt1500.h' ,161112115905,309
+%%BFILE	  'C:\Users\11709931\Desktop\KEYENC~1\keyence\inc\btlib.h' ,181122094114,1243
+%%BFILE	  'C:\keyence\CPP\INCLUDE\string.h' ,000112113136,50
+%%BFILE	  'C:\keyence\CPP\INCLUDE\memory.h' ,000112113136,27
+%%TYP	  'void'	      ,	  0, 0,	0,   11111111b,	0,0,0
+%%TYP	  'char'	      ,	  1, 2,	1,   00111111b,	4,0,2
+%%TYP	  'unsigned char'     ,	  2, 2,	1,   01111111b,	4,0,2
+%%TYP	  'short'	      ,	  3, 3,	2,   00111111b,	4,0,2
+%%TYP	  'unsigned short'    ,	  4, 3,	2,   01111111b,	4,0,2
+%%TYP	  'int'		      ,	  5, 3,	4,   00111111b,	4,0,2
+%%TYP	  'unsigned int'      ,	  6, 3,	4,   01111111b,	4,0,2
+%%TYP	  'long'	      ,	  7, 3,	4,   00111111b,	4,0,2
+%%TYP	  'unsigned long'     ,	  8, 3,	4,   01111111b,	4,0,2
+%%TYP	  'float'	      ,	  9, 4,	4,   00000000b,	4,0,2
+%%TYP	  'double'	      ,	 10, 4,	8,   00000001b,	8,0,3
+%%TYP	  'enum'	      ,	 11, 8,	4,   00111111b,	4,0,2
+%%TYP	  'struct'	      ,	 12, 9,	0,   11111111b,	0,0,4
+%%TYP	  'union'	      ,	 13,10,	0,   11111111b,	0,0,4
+%%TYP	  'pointer'	      ,	 14,11,	4,   01111111b,	4,0,2
+%%EFILE	  
+%%EFILE	  
+%%BFILE	  'C:\keyence\CPP\INCLUDE\stdlib.h' ,000112113136,58
+%%EFILE	  
+%%EFILE	  
+%%BFILE	  'C:\Users\11709931\Desktop\KEYENC~1\keyence\inc\btext.h' ,150123134216,548
+%%EFILE	  
+%%EFILE	  
+%%EFILE	  
+%%SYM	  _iobuf,9,type=12,id=1,size=16
+%%DDS	  
+%%SYM	  _cnt,7,type=5,val=0,size=4
+%%SYM	  _ptr,7,type=2,val=4,size=4
+%%DTY	  
+%%DPT	  
+%%ENDD	  
+%%SYM	  _base,7,type=2,val=8,size=4
+%%DTY	  
+%%DPT	  
+%%ENDD	  
+%%SYM	  _flag,7,type=3,val=12,size=2
+%%SYM	  _file,7,type=2,val=14,size=1
+%%ENDD	  
+%%SYM	  _dateinfo,9,type=12,id=2,size=4
+%%DDS	  
+%%SYM	  year,7,type=3,val=0,size=2
+%%SYM	  month,7,type=2,val=2,size=1
+%%SYM	  day,7,type=2,val=3,size=1
+%%ENDD	  
+%%SYM	  _timeinfo,9,type=12,id=3,size=4
+%%DDS	  
+%%SYM	  hour,7,type=2,val=0,size=1
+%%SYM	  min,7,type=2,val=1,size=1
+%%SYM	  sec,7,type=2,val=2,size=1
+%%SYM	  reserve,7,type=2,val=3,size=1
+%%ENDD	  
+%%SYM	  _tposition,9,type=12,id=4,size=4
+%%DDS	  
+%%SYM	  x,7,type=3,val=0,size=2
+%%SYM	  y,7,type=3,val=2,size=2
+%%ENDD	  
+%%SYM	  _gposition,9,type=12,id=5,size=4
+%%DDS	  
+%%SYM	  x,7,type=3,val=0,size=2
+%%SYM	  y,7,type=3,val=2,size=2
+%%ENDD	  
+%%SYM	  _dspattr,9,type=12,id=6,size=12
+%%DDS	  
+%%SYM	  tposition,7,sym=4,val=0,size=4
+%%SYM	  attribute,7,type=3,val=4,size=2
+%%SYM	  mag,7,type=3,val=6,size=2
+%%SYM	  fold,7,type=3,val=8,size=2
+%%ENDD	  
+%%SYM	  _dspattrg,9,type=12,id=7,size=12
+%%DDS	  
+%%SYM	  gposition,7,sym=5,val=0,size=4
+%%SYM	  attribute,7,type=3,val=4,size=2
+%%SYM	  mag,7,type=3,val=6,size=2
+%%SYM	  fold,7,type=3,val=8,size=2
+%%ENDD	  
+%%SYM	  _menuinfo,9,type=12,id=8,size=80
+%%DDS	  
+%%SYM	  rsv0,7,type=3,val=0,size=2
+%%SYM	  tenkeydirect,7,type=3,val=2,size=2
+%%SYM	  totalitem,7,type=3,val=4,size=2
+%%SYM	  inititem,7,type=3,val=6,size=2
+%%SYM	  menuitem,7,type=2,val=8,size=64
+%%DTY	  
+%%DPT	  
+%%DAR	  4,16
+%%ENDD	  
+%%SYM	  rsv1,7,type=3,val=72,size=2
+%%SYM	  rsv2,7,type=3,val=74,size=2
+%%SYM	  rsv3,7,type=3,val=76,size=2
+%%ENDD	  
+%%SYM	  _keyfunc,9,type=12,id=9,size=12
+%%DDS	  
+%%SYM	  F1,7,type=2,val=0,size=1
+%%SYM	  F2,7,type=2,val=1,size=1
+%%SYM	  F3,7,type=2,val=2,size=1
+%%SYM	  L,7,type=2,val=3,size=1
+%%SYM	  R,7,type=2,val=4,size=1
+%%SYM	  Trg,7,type=2,val=5,size=1
+%%SYM	  minus,7,type=2,val=6,size=3
+%%DTY	  
+%%DAR	  1,3
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _inputintegerattr,9,type=12,id=10,size=12
+%%DDS	  
+%%SYM	  inputtype,7,type=3,val=0,size=2
+%%SYM	  inputarea,7,type=3,val=2,size=2
+%%SYM	  minvalue,7,type=7,val=4,size=4
+%%SYM	  maxvalue,7,type=7,val=8,size=4
+%%ENDD	  
+%%SYM	  _inputdecimalattr,9,type=12,id=11,size=16
+%%DDS	  
+%%SYM	  inputtype,7,type=3,val=0,size=2
+%%SYM	  inputarea,7,type=3,val=2,size=2
+%%SYM	  minvalue,7,type=7,val=4,size=4
+%%SYM	  maxvalue,7,type=7,val=8,size=4
+%%SYM	  digit,7,type=3,val=12,size=2
+%%ENDD	  
+%%SYM	  _inputstrattr,9,type=12,id=12,size=8
+%%DDS	  
+%%SYM	  inputtype,7,type=3,val=0,size=2
+%%SYM	  inputarea,7,type=3,val=2,size=2
+%%SYM	  mindigit,7,type=3,val=4,size=2
+%%SYM	  maxdigit,7,type=3,val=6,size=2
+%%ENDD	  
+%%SYM	  _bcrconf,9,type=12,id=13,size=16
+%%DDS	  
+%%SYM	  mode,7,type=3,val=0,size=2
+%%SYM	  trial,7,type=3,val=2,size=2
+%%SYM	  overlap,7,type=3,val=4,size=2
+%%SYM	  comparecnt,7,type=3,val=6,size=2
+%%SYM	  rsv1,7,type=3,val=8,size=2
+%%SYM	  rsv2,7,type=3,val=10,size=2
+%%SYM	  rsv3,7,type=3,val=12,size=2
+%%SYM	  rsv4,7,type=3,val=14,size=2
+%%ENDD	  
+%%SYM	  _jancodeset,9,type=12,id=14,size=4
+%%DDS	  
+%%SYM	  flgset,7,type=4,val=0,size=2
+%%SYM	  AdGap_min,7,type=2,val=2,size=1
+%%SYM	  AdGap_max,7,type=2,val=3,size=1
+%%ENDD	  
+%%SYM	  _c39codeset,9,type=12,id=15,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%SYM	  rsv1,7,type=3,val=6,size=2
+%%ENDD	  
+%%SYM	  _e128codeset,9,type=12,id=16,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%SYM	  separator,7,type=2,val=6,size=1
+%%SYM	  rsv,7,type=2,val=7,size=1
+%%ENDD	  
+%%SYM	  _c128codeset,9,type=12,id=17,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%SYM	  rsv1,7,type=3,val=6,size=2
+%%ENDD	  
+%%SYM	  _itfcodeset,9,type=12,id=18,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%SYM	  rsv1,7,type=3,val=6,size=2
+%%ENDD	  
+%%SYM	  _nw7codeset,9,type=12,id=19,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%SYM	  rsv1,7,type=3,val=6,size=2
+%%ENDD	  
+%%SYM	  _c93codeset,9,type=12,id=20,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%SYM	  rsv1,7,type=3,val=6,size=2
+%%ENDD	  
+%%SYM	  _tofcodeset,9,type=12,id=21,size=4
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%ENDD	  
+%%SYM	  _coopcodeset,9,type=12,id=22,size=4
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%ENDD	  
+%%SYM	  _qrcodeset,9,type=12,id=23,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%ENDD	  
+%%SYM	  _pdfcodeset,9,type=12,id=24,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%ENDD	  
+%%SYM	  _dmcodeset,9,type=12,id=25,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%ENDD	  
+%%SYM	  _mccodeset,9,type=12,id=26,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%ENDD	  
+%%SYM	  _rsscodeset,9,type=12,id=27,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%ENDD	  
+%%SYM	  _compositeset,9,type=12,id=28,size=4
+%%DDS	  
+%%SYM	  flgset,7,type=4,val=0,size=2
+%%SYM	  separator,7,type=2,val=2,size=1
+%%SYM	  rsv,7,type=2,val=3,size=1
+%%ENDD	  
+%%SYM	  _bcrcodeset,9,type=12,id=29,size=60
+%%DDS	  
+%%SYM	  JAN,7,sym=14,val=0,size=4
+%%SYM	  CODE39,7,sym=15,val=4,size=8
+%%SYM	  EAN128,7,sym=16,val=12,size=8
+%%SYM	  CODE128,7,sym=17,val=20,size=8
+%%SYM	  ITF,7,sym=18,val=28,size=8
+%%SYM	  NW7,7,sym=19,val=36,size=8
+%%SYM	  CODE93,7,sym=20,val=44,size=8
+%%SYM	  TOF,7,sym=21,val=52,size=4
+%%SYM	  COOP,7,sym=22,val=56,size=4
+%%ENDD	  
+%%SYM	  _bcrinput,9,type=12,id=30,size=132
+%%DDS	  
+%%SYM	  keta,7,type=3,val=0,size=2
+%%SYM	  codetype,7,type=3,val=2,size=2
+%%SYM	  bcrdata,7,type=2,val=4,size=128
+%%DTY	  
+%%DAR	  1,128
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _bcr_result_report,9,type=12,id=31,size=12
+%%DDS	  
+%%SYM	  keta,7,type=3,val=0,size=2
+%%SYM	  codetype,7,type=3,val=2,size=2
+%%SYM	  composite,7,type=3,val=4,size=2
+%%SYM	  quality,7,type=3,val=6,size=2
+%%SYM	  extraType,7,type=2,val=8,size=1
+%%SYM	  codelink,7,type=2,val=9,size=1
+%%ENDD	  
+%%SYM	  _bcr_result_qr_report,9,type=12,id=32,size=8
+%%DDS	  
+%%SYM	  pos,7,type=3,val=0,size=2
+%%SYM	  parity,7,type=3,val=2,size=2
+%%SYM	  count,7,type=3,val=4,size=2
+%%ENDD	  
+%%SYM	  _bcr_fulldetection_column,9,type=12,id=33,size=4
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%ENDD	  
+%%SYM	  _bcr_fulldetection_codeset,9,type=12,id=34,size=20
+%%DDS	  
+%%SYM	  type,7,type=3,val=0,size=2
+%%SYM	  codecount,7,type=3,val=2,size=2
+%%SYM	  columneset,7,sym=33,val=4,size=16
+%%DTY	  
+%%DAR	  4,4
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _bcr_fulldetection_set,9,type=12,id=35,size=84
+%%DDS	  
+%%SYM	  typecount,7,type=3,val=0,size=2
+%%SYM	  rsv1,7,type=3,val=2,size=2
+%%SYM	  codeset,7,sym=34,val=4,size=80
+%%DTY	  
+%%DAR	  20,4
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _bcr_buzzer_action,9,type=12,id=36,size=12
+%%DDS	  
+%%SYM	  sw,7,type=3,val=0,size=2
+%%SYM	  ontime,7,type=3,val=2,size=2
+%%SYM	  offtime,7,type=3,val=4,size=2
+%%SYM	  cnt,7,type=3,val=6,size=2
+%%SYM	  pitch,7,type=3,val=8,size=2
+%%SYM	  rsv1,7,type=3,val=10,size=2
+%%ENDD	  
+%%SYM	  _bcr_led_action,9,type=12,id=37,size=12
+%%DDS	  
+%%SYM	  sw,7,type=3,val=0,size=2
+%%SYM	  ontime,7,type=3,val=2,size=2
+%%SYM	  offtime,7,type=3,val=4,size=2
+%%SYM	  cnt,7,type=3,val=6,size=2
+%%SYM	  color,7,type=3,val=8,size=2
+%%SYM	  rsv1,7,type=3,val=10,size=2
+%%ENDD	  
+%%SYM	  _bcr_vibrator_action,9,type=12,id=38,size=12
+%%DDS	  
+%%SYM	  sw,7,type=3,val=0,size=2
+%%SYM	  ontime,7,type=3,val=2,size=2
+%%SYM	  offtime,7,type=3,val=4,size=2
+%%SYM	  cnt,7,type=3,val=6,size=2
+%%SYM	  rsv1,7,type=3,val=8,size=2
+%%SYM	  rsv2,7,type=3,val=10,size=2
+%%ENDD	  
+%%SYM	  _file_info,9,type=12,id=39,size=272
+%%DDS	  
+%%SYM	  drive,7,type=2,val=0,size=2
+%%DTY	  
+%%DAR	  1,2
+%%ENDD	  
+%%SYM	  filename,7,type=2,val=2,size=254
+%%DTY	  
+%%DAR	  1,254
+%%ENDD	  
+%%SYM	  isDirectory,7,type=2,val=256,size=1
+%%SYM	  filesize,7,type=7,val=260,size=4
+%%SYM	  year,7,type=3,val=264,size=2
+%%SYM	  month,7,type=2,val=266,size=1
+%%SYM	  day,7,type=2,val=267,size=1
+%%SYM	  hour,7,type=2,val=268,size=1
+%%SYM	  min,7,type=2,val=269,size=1
+%%SYM	  rsv2,7,type=2,val=270,size=1
+%%SYM	  rsv3,7,type=2,val=271,size=1
+%%ENDD	  
+%%SYM	  _drive_info,9,type=12,id=40,size=16
+%%DDS	  
+%%SYM	  totalsize,7,type=7,val=0,size=4
+%%SYM	  freesize,7,type=7,val=4,size=4
+%%SYM	  invalidsize,7,type=7,val=8,size=4
+%%SYM	  filecnt,7,type=3,val=12,size=2
+%%ENDD	  
+%%SYM	  _master_index,9,type=12,id=41,size=28
+%%DDS	  
+%%SYM	  datatype,7,type=3,val=0,size=2
+%%SYM	  separator,7,type=2,val=2,size=1
+%%SYM	  fieldcnt,7,type=1,val=3,size=1
+%%SYM	  fieldlen,7,type=3,val=4,size=20
+%%DTY	  
+%%DAR	  2,10
+%%ENDD	  
+%%SYM	  rsv1,7,type=2,val=24,size=1
+%%SYM	  rsv2,7,type=2,val=25,size=1
+%%ENDD	  
+%%SYM	  _master_search,9,type=12,id=42,size=48
+%%DDS	  
+%%SYM	  ope,7,type=2,val=0,size=1
+%%SYM	  searchdata,7,type=2,val=4,size=40
+%%DTY	  
+%%DPT	  
+%%DAR	  4,10
+%%ENDD	  
+%%SYM	  incdeldata,7,type=2,val=44,size=1
+%%SYM	  rsv1,7,type=2,val=45,size=1
+%%ENDD	  
+%%SYM	  _alarm_pattern,9,type=12,id=43,size=76
+%%DDS	  
+%%SYM	  ontime,7,type=3,val=0,size=2
+%%SYM	  offtime,7,type=3,val=2,size=2
+%%SYM	  swBuzzer,7,type=3,val=4,size=2
+%%SYM	  swVibration,7,type=3,val=6,size=2
+%%SYM	  swLed,7,type=3,val=8,size=2
+%%SYM	  count,7,type=3,val=10,size=2
+%%SYM	  message,7,type=2,val=12,size=64
+%%DTY	  
+%%DAR	  1,64
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _lost_alarm,9,type=12,id=44,size=92
+%%DDS	  
+%%SYM	  sw,7,type=3,val=0,size=2
+%%SYM	  watchtime,7,type=3,val=2,size=2
+%%SYM	  timestart,7,sym=3,val=4,size=4
+%%SYM	  timestop,7,sym=3,val=8,size=4
+%%SYM	  interval,7,type=3,val=12,size=2
+%%SYM	  crsv1,7,type=2,val=14,size=2
+%%DTY	  
+%%DAR	  1,2
+%%ENDD	  
+%%SYM	  pattern,7,sym=43,val=16,size=76
+%%ENDD	  
+%%SYM	  _alarm,9,type=12,id=45,size=84
+%%DDS	  
+%%SYM	  sw,7,type=3,val=0,size=2
+%%SYM	  crsv1,7,type=2,val=2,size=2
+%%DTY	  
+%%DAR	  1,2
+%%ENDD	  
+%%SYM	  time,7,sym=3,val=4,size=4
+%%SYM	  pattern,7,sym=43,val=8,size=76
+%%ENDD	  
+%%SYM	  _schedule,9,type=12,id=46,size=268
+%%DDS	  
+%%SYM	  sw,7,type=3,val=0,size=2
+%%SYM	  crsv1,7,type=2,val=2,size=2
+%%DTY	  
+%%DAR	  1,2
+%%ENDD	  
+%%SYM	  time,7,sym=3,val=4,size=4
+%%SYM	  filename,7,type=2,val=8,size=260
+%%DTY	  
+%%DAR	  1,260
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _SEARCH_INDEX,9,type=12,id=47,size=48
+%%DDS	  
+%%SYM	  recordFormat,7,type=3,val=0,size=2
+%%SYM	  recordLength,7,type=3,val=2,size=2
+%%SYM	  separator,7,type=2,val=4,size=1
+%%SYM	  dmy,7,type=2,val=5,size=1
+%%SYM	  sortType,7,type=3,val=6,size=2
+%%SYM	  indexMode,7,type=3,val=8,size=2
+%%SYM	  indexNum,7,type=3,val=10,size=2
+%%SYM	  indexPosition,7,type=3,val=12,size=18
+%%DTY	  
+%%DAR	  2,9
+%%ENDD	  
+%%SYM	  indexLength,7,type=3,val=30,size=18
+%%DTY	  
+%%DAR	  2,9
+%%ENDD	  
+%%ENDD	  
+%%SYM	  WLanParam,8,type=11,id=48
+%%DEN	  
+%%SYM	  PRM_TERMINALIP,5,type=5,val='1'
+%%SYM	  PRM_SUBNETMASK,5,type=5,val='2'
+%%SYM	  PRM_GATEWAYIP,5,type=5,val='3'
+%%SYM	  PRM_HOSTIP,5,type=5,val='4'
+%%SYM	  PRM_DHCPENABLE,5,type=5,val='5'
+%%SYM	  PRM_TERMINALNAME,5,type=5,val='6'
+%%SYM	  PRM_PRI_DNS_ADDR,5,type=5,val='7'
+%%SYM	  PRM_SEC_DNS_ADDR,5,type=5,val='8'
+%%SYM	  PRM_FTP_PASV,5,type=5,val='9'
+%%SYM	  PRM_FTP_PORTMODE,5,type=5,val='10'
+%%SYM	  PRM_USE_FTPS,5,type=5,val='11'
+%%SYM	  PRM_SOCKET_NOTIFY,5,type=5,val='12'
+%%SYM	  PRM_FTP_TRANSMODE,5,type=5,val='13'
+%%SYM	  PRM_FTP_EPHEMERAL_PORT,5,type=5,val='14'
+%%SYM	  PRM_FTP_SIZECHECK,5,type=5,val='15'
+%%SYM	  PRM_FTP_TEMPDRIVE,5,type=5,val='16'
+%%SYM	  PRM_COMM_TRANSMODE,5,type=5,val='17'
+%%SYM	  PRM_PREAMBLETYPE,5,type=5,val='101'
+%%SYM	  PRM_RFRATE,5,type=5,val='102'
+%%SYM	  PRM_WEPAUTHENTICATIONTYPE,5,type=5,val='103'
+%%SYM	  PRM_WPAAUTHENTICATIONMODE,5,type=5,val='104'
+%%SYM	  PRM_BEACONLOSTCOUNT,5,type=5,val='105'
+%%SYM	  PRM_PWMODE,5,type=5,val='106'
+%%SYM	  PRM_POWERSAVETIME,5,type=5,val='107'
+%%SYM	  PRM_INFRASSID,5,type=5,val='108'
+%%SYM	  PRM_INFRAWEPINDEX,5,type=5,val='109'
+%%SYM	  PRM_INFRAWEP_1,5,type=5,val='110'
+%%SYM	  PRM_INFRAWEP_2,5,type=5,val='111'
+%%SYM	  PRM_INFRAWEP_3,5,type=5,val='112'
+%%SYM	  PRM_INFRAWEP_4,5,type=5,val='113'
+%%SYM	  PRM_ADHOCCHANNEL,5,type=5,val='114'
+%%SYM	  PRM_ADHOCSSID,5,type=5,val='115'
+%%SYM	  PRM_ADHOCWEPINDEX,5,type=5,val='116'
+%%SYM	  PRM_ADHOCWEP_1,5,type=5,val='117'
+%%SYM	  PRM_ADHOCWEP_2,5,type=5,val='118'
+%%SYM	  PRM_ADHOCWEP_3,5,type=5,val='119'
+%%SYM	  PRM_ADHOCWEP_4,5,type=5,val='120'
+%%SYM	  PRM_WPACIPHERMODE,5,type=5,val='121'
+%%SYM	  PRM_PRESHAREDKEY,5,type=5,val='122'
+%%SYM	  PRM_USERNAME,5,type=5,val='123'
+%%SYM	  PRM_PASSWORD,5,type=5,val='124'
+%%SYM	  PRM_ROOTCAFILENAME,5,type=5,val='125'
+%%SYM	  PRM_CERTFILENAME,5,type=5,val='126'
+%%SYM	  PRM_PRIVATEKEYFILENAME,5,type=5,val='127'
+%%SYM	  PRM_MAC_ADDR,5,type=5,val='128'
+%%SYM	  PRM_NETWORKMODE,5,type=5,val='129'
+%%SYM	  PRM_WLAN_READY,5,type=5,val='130'
+%%SYM	  PRM_RSSI_THRESH,5,type=5,val='131'
+%%SYM	  PRM_INFRACHANNEL,5,type=5,val='132'
+%%SYM	  PRM_RADIUS_LOGOFF,5,type=5,val='133'
+%%SYM	  PRM_WLAN_INFRA_802d11_MODE,5,type=5,val='134'
+%%SYM	  PRM_INFRACHANNEL_5G,5,type=5,val='135'
+%%SYM	  PRM_PINCODE,5,type=5,val='201'
+%%SYM	  PRM_LOCALDEVICENAME,5,type=5,val='202'
+%%SYM	  PRM_BD_ADDR,5,type=5,val='203'
+%%SYM	  PRM_CON_BD_ADDR,5,type=5,val='204'
+%%SYM	  PRM_SECURITYMODE,5,type=5,val='205'
+%%SYM	  PRM_BD_DTRMODE,5,type=5,val='206'
+%%SYM	  PRM_BLUE_SPPMODE,5,type=5,val='207'
+%%SYM	  PRM_LAST_TARGET_BD_ADDR,5,type=5,val='208'
+%%SYM	  PRM_TELNUMBER,5,type=5,val='301'
+%%SYM	  PRM_PPP_USERNAME,5,type=5,val='302'
+%%SYM	  PRM_PPP_PASSWORD,5,type=5,val='303'
+%%SYM	  PRM_USE_PAP,5,type=5,val='304'
+%%SYM	  PRM_USE_CHAP,5,type=5,val='305'
+%%SYM	  PRM_PPP_TIMEOUT,5,type=5,val='306'
+%%SYM	  PRM_PPP_HANGUP,5,type=5,val='307'
+%%SYM	  PRM_MODEM_ATCOMMAND,5,type=5,val='401'
+%%SYM	  PRM_MODEM_TELNUMBER,5,type=5,val='402'
+%%SYM	  PRM_MODEM_DIALTYPE,5,type=5,val='403'
+%%SYM	  PRM_MODEM_DIALTIMEOUT,5,type=5,val='404'
+%%SYM	  PRM_MODEM_REDIALCOUNT,5,type=5,val='405'
+%%SYM	  PRM_MODEM_REDIALINTERVAL,5,type=5,val='406'
+%%SYM	  PRM_MODEM_CRADLERATE,5,type=5,val='407'
+%%ENDD	  
+%%SYM	  _st_rf_configset,9,type=12,id=49,size=8
+%%DDS	  
+%%SYM	  NetworkMode,7,type=2,val=0,size=1
+%%SYM	  AdhocCh,7,type=2,val=1,size=1
+%%SYM	  Preamble,7,type=2,val=2,size=1
+%%SYM	  WepAuthtype,7,type=2,val=3,size=1
+%%SYM	  rate,7,type=2,val=4,size=1
+%%SYM	  PwMode,7,type=2,val=5,size=1
+%%SYM	  PowerSavetime,7,type=2,val=6,size=1
+%%SYM	  BeaconLostcount,7,type=2,val=7,size=1
+%%ENDD	  
+%%SYM	  _st_rf_connectioninfo,9,type=12,id=50,size=12
+%%DDS	  
+%%SYM	  AuthStatus,7,type=2,val=0,size=1
+%%SYM	  Ch,7,type=2,val=1,size=1
+%%SYM	  MacAddress,7,type=2,val=2,size=6
+%%DTY	  
+%%DAR	  1,6
+%%ENDD	  
+%%SYM	  Rssi,7,type=2,val=8,size=1
+%%ENDD	  
+%%SYM	  _st_wep_info,9,type=12,id=51,size=20
+%%DDS	  
+%%SYM	  size,7,type=7,val=0,size=4
+%%SYM	  wep,7,type=2,val=4,size=14
+%%DTY	  
+%%DAR	  1,14
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _st_rf_securityinfoset,9,type=12,id=52,size=96
+%%DDS	  
+%%SYM	  ssid,7,type=2,val=0,size=33
+%%DTY	  
+%%DAR	  1,33
+%%ENDD	  
+%%SYM	  ssid_size,7,type=2,val=33,size=1
+%%SYM	  wep_selected,7,type=2,val=34,size=1
+%%SYM	  wep_size,7,type=2,val=35,size=4
+%%DTY	  
+%%DAR	  1,4
+%%ENDD	  
+%%SYM	  wep,7,type=2,val=39,size=56
+%%DTY	  
+%%DAR	  1,4,14
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _st_rf_securityauthset,9,type=12,id=53,size=908
+%%DDS	  
+%%SYM	  psk_len,7,type=3,val=0,size=2
+%%SYM	  psk,7,type=2,val=2,size=64
+%%DTY	  
+%%DAR	  1,64
+%%ENDD	  
+%%SYM	  usr_id_len,7,type=3,val=66,size=2
+%%SYM	  usr_id,7,type=2,val=68,size=33
+%%DTY	  
+%%DAR	  1,33
+%%ENDD	  
+%%SYM	  usr_pass_len,7,type=3,val=102,size=2
+%%SYM	  usr_pass,7,type=2,val=104,size=33
+%%DTY	  
+%%DAR	  1,33
+%%ENDD	  
+%%SYM	  rootca_filename,7,type=2,val=137,size=256
+%%DTY	  
+%%DAR	  1,256
+%%ENDD	  
+%%SYM	  cert_filename,7,type=2,val=393,size=256
+%%DTY	  
+%%DAR	  1,256
+%%ENDD	  
+%%SYM	  prvkey_filename,7,type=2,val=649,size=256
+%%DTY	  
+%%DAR	  1,256
+%%ENDD	  
+%%ENDD	  
+%%SYM	  btsockaddr,9,type=12,id=54,size=16
+%%DDS	  
+%%SYM	  sa_family,7,type=4,val=0,size=2
+%%SYM	  sa_data,7,type=2,val=2,size=14
+%%DTY	  
+%%DAR	  1,14
+%%ENDD	  
+%%ENDD	  
+%%SYM	  btin_addr,9,type=12,id=55,size=4
+%%DDS	  
+%%SYM	  ,10,type=13,id=56,size=4
+%%DDS	  
+%%SYM	  ,9,type=12,id=57,size=4
+%%DDS	  
+%%SYM	  s_b1,7,type=2,val=0,size=1
+%%SYM	  s_b2,7,type=2,val=1,size=1
+%%SYM	  s_b3,7,type=2,val=2,size=1
+%%SYM	  s_b4,7,type=2,val=3,size=1
+%%ENDD	  
+%%SYM	  S_un_b,7,sym=57,val=0,size=4
+%%SYM	  ,9,type=12,id=58,size=4
+%%DDS	  
+%%SYM	  s_w1,7,type=4,val=0,size=2
+%%SYM	  s_w2,7,type=4,val=2,size=2
+%%ENDD	  
+%%SYM	  S_un_w,7,sym=58,val=0,size=4
+%%SYM	  S_addr,7,type=8,val=0,size=4
+%%ENDD	  
+%%SYM	  S_un,7,sym=56,val=0,size=4
+%%ENDD	  
+%%SYM	  btsockaddr_in,9,type=12,id=59,size=16
+%%DDS	  
+%%SYM	  sin_family,7,type=3,val=0,size=2
+%%SYM	  sin_port,7,type=4,val=2,size=2
+%%SYM	  sin_addr,7,sym=55,val=4,size=4
+%%SYM	  sin_zero,7,type=2,val=8,size=8
+%%DTY	  
+%%DAR	  1,8
+%%ENDD	  
+%%ENDD	  
+%%SYM	  btfd_set,9,type=12,id=60,size=260
+%%DDS	  
+%%SYM	  fd_count,7,type=6,val=0,size=4
+%%SYM	  fd_array,7,type=5,val=4,size=256
+%%DTY	  
+%%DAR	  4,64
+%%ENDD	  
+%%ENDD	  
+%%SYM	  bttimeval,9,type=12,id=61,size=8
+%%DDS	  
+%%SYM	  tv_sec,7,type=7,val=0,size=4
+%%SYM	  tv_usec,7,type=7,val=4,size=4
+%%ENDD	  
+%%SYM	  bthostent,9,type=12,id=62,size=24
+%%DDS	  
+%%SYM	  h_name,7,type=2,val=0,size=4
+%%DTY	  
+%%DPT	  
+%%ENDD	  
+%%SYM	  h_aliases,7,type=2,val=4,size=4
+%%DTY	  
+%%DPT	  
+%%DAR	  4,1
+%%ENDD	  
+%%SYM	  h_addrtype,7,type=4,val=8,size=2
+%%SYM	  h_length,7,type=4,val=10,size=2
+%%SYM	  h_addr_list,7,type=2,val=12,size=12
+%%DTY	  
+%%DPT	  
+%%DAR	  4,3
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _st_ftpconfig,9,type=12,id=63,size=404
+%%DDS	  
+%%SYM	  timeout,7,type=7,val=0,size=4
+%%SYM	  cancelkey,7,type=7,val=4,size=4
+%%SYM	  target_ip,7,type=8,val=8,size=4
+%%SYM	  ftp_portnum,7,type=4,val=12,size=2
+%%SYM	  rsv1,7,type=4,val=14,size=2
+%%SYM	  usrname,7,type=2,val=16,size=65
+%%DTY	  
+%%DAR	  1,65
+%%ENDD	  
+%%SYM	  password,7,type=2,val=81,size=65
+%%DTY	  
+%%DAR	  1,65
+%%ENDD	  
+%%SYM	  logfilename,7,type=2,val=146,size=256
+%%DTY	  
+%%DAR	  1,256
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _st_ftpsconfig,9,type=12,id=64,size=268
+%%DDS	  
+%%SYM	  ftps_protocol,7,type=5,val=0,size=4
+%%SYM	  ftps_data_encrypt,7,type=5,val=4,size=4
+%%SYM	  ftps_verify,7,type=5,val=8,size=4
+%%SYM	  ftps_certfile,7,type=2,val=12,size=256
+%%DTY	  
+%%DAR	  1,256
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _rfstatus,9,type=12,id=65,size=12
+%%DDS	  
+%%SYM	  ip_adr,7,type=2,val=0,size=4
+%%DTY	  
+%%DAR	  1,4
+%%ENDD	  
+%%SYM	  subnet,7,type=2,val=4,size=4
+%%DTY	  
+%%DAR	  1,4
+%%ENDD	  
+%%SYM	  defgate,7,type=2,val=8,size=4
+%%DTY	  
+%%DAR	  1,4
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _host_status,9,type=12,id=66,size=4
+%%DDS	  
+%%SYM	  ip_adr,7,type=2,val=0,size=4
+%%DTY	  
+%%DAR	  1,4
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _rfdatif,9,type=12,id=67,size=12
+%%DDS	  
+%%SYM	  ip,7,type=2,val=0,size=4
+%%DTY	  
+%%DAR	  1,4
+%%ENDD	  
+%%SYM	  cnt,7,type=8,val=4,size=4
+%%SYM	  buf,7,type=2,val=8,size=4
+%%DTY	  
+%%DPT	  
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _fileup_status,9,type=12,id=68,size=8
+%%DDS	  
+%%SYM	  len,7,type=8,val=0,size=4
+%%SYM	  ip_adr,7,type=2,val=4,size=4
+%%DTY	  
+%%DAR	  1,4
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _ess_status,9,type=12,id=69,size=36
+%%DDS	  
+%%SYM	  ess_len,7,type=8,val=0,size=4
+%%SYM	  ess_dat,7,type=2,val=4,size=32
+%%DTY	  
+%%DAR	  1,32
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _retry_status,9,type=12,id=70,size=4
+%%DDS	  
+%%SYM	  retry_count_max,7,type=2,val=0,size=1
+%%SYM	  retry_timer_init,7,type=2,val=1,size=1
+%%ENDD	  
+%%SYM	  ,9,type=12,id=71,size=324
+%%DDS	  
+%%SYM	  major_version,7,type=2,val=0,size=1
+%%SYM	  minor_version,7,type=2,val=1,size=1
+%%SYM	  comment,7,type=2,val=2,size=62
+%%DTY	  
+%%DAR	  1,62
+%%ENDD	  
+%%SYM	  filepath,7,type=2,val=64,size=260
+%%DTY	  
+%%DAR	  1,260
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _st_zgnconfig,9,type=12,id=72,size=152
+%%DDS	  
+%%SYM	  MaxTextSize,7,type=4,val=0,size=2
+%%SYM	  Timeout,7,type=4,val=2,size=2
+%%SYM	  DestIP,7,type=2,val=4,size=80
+%%DTY	  
+%%DAR	  1,80
+%%ENDD	  
+%%SYM	  DestPortNo,7,type=4,val=84,size=2
+%%SYM	  LocalPortNo,7,type=4,val=86,size=2
+%%SYM	  TcpConnectRetry,7,type=4,val=88,size=2
+%%SYM	  TtcRoundupInit,7,type=4,val=90,size=2
+%%SYM	  DefineMN,7,type=2,val=92,size=1
+%%SYM	  ZeroByteFile,7,type=2,val=93,size=1
+%%SYM	  TransDateCheck,7,type=2,val=94,size=1
+%%SYM	  TtcBranch,7,type=2,val=95,size=1
+%%SYM	  Hostcord,7,type=2,val=96,size=7
+%%DTY	  
+%%DAR	  1,7
+%%ENDD	  
+%%SYM	  Termcord,7,type=2,val=103,size=7
+%%DTY	  
+%%DAR	  1,7
+%%ENDD	  
+%%SYM	  Password,7,type=2,val=110,size=6
+%%DTY	  
+%%DAR	  1,6
+%%ENDD	  
+%%SYM	  Ext,7,type=2,val=116,size=34
+%%DTY	  
+%%DAR	  1,34
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _st_zgnfconfig,9,type=12,id=73,size=316
+%%DDS	  
+%%SYM	  FileName,7,type=2,val=0,size=256
+%%DTY	  
+%%DAR	  1,256
+%%ENDD	  
+%%SYM	  Mode,7,type=2,val=256,size=1
+%%SYM	  Branch,7,type=2,val=257,size=1
+%%SYM	  Pack,7,type=2,val=258,size=1
+%%SYM	  Derimita,7,type=2,val=259,size=1
+%%SYM	  Blocking,7,type=2,val=260,size=1
+%%SYM	  ChangeCodePtn,7,type=2,val=261,size=1
+%%SYM	  Cycle,7,type=2,val=262,size=1
+%%SYM	  VLRec,7,type=2,val=263,size=1
+%%SYM	  RecSize,7,type=4,val=264,size=2
+%%SYM	  ZFileName,7,type=2,val=266,size=12
+%%DTY	  
+%%DAR	  1,12
+%%ENDD	  
+%%SYM	  FileAccessKey,7,type=2,val=278,size=6
+%%DTY	  
+%%DAR	  1,6
+%%ENDD	  
+%%SYM	  FileSub,7,type=2,val=284,size=17
+%%DTY	  
+%%DAR	  1,17
+%%ENDD	  
+%%SYM	  FileExt,7,type=2,val=301,size=14
+%%DTY	  
+%%DAR	  1,14
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _apli_updateinfo,9,type=12,id=74,size=328
+%%DDS	  
+%%SYM	  apptype,7,type=2,val=0,size=1
+%%SYM	  filename,7,type=2,val=1,size=256
+%%DTY	  
+%%DAR	  1,256
+%%ENDD	  
+%%SYM	  title,7,type=2,val=257,size=65
+%%DTY	  
+%%DAR	  1,65
+%%ENDD	  
+%%SYM	  version,7,type=2,val=322,size=2
+%%DTY	  
+%%DAR	  1,2
+%%ENDD	  
+%%SYM	  priority,7,type=2,val=324,size=1
+%%ENDD	  
+%%SYM	  _st_comenv,9,type=12,id=75,size=12
+%%DDS	  
+%%SYM	  baudRate,7,type=8,val=0,size=4
+%%SYM	  stopBits,7,type=3,val=4,size=2
+%%SYM	  parity,7,type=3,val=6,size=2
+%%SYM	  dataLen,7,type=3,val=8,size=2
+%%ENDD	  
+%%SYM	  ,9,type=12,id=76,size=44
+%%DDS	  
+%%SYM	  ch,7,type=2,val=0,size=1
+%%SYM	  signallevel,7,type=2,val=1,size=1
+%%SYM	  macaddr,7,type=2,val=2,size=6
+%%DTY	  
+%%DAR	  1,6
+%%ENDD	  
+%%SYM	  ssidlen,7,type=2,val=8,size=1
+%%SYM	  ssid,7,type=2,val=9,size=32
+%%DTY	  
+%%DAR	  1,32
+%%ENDD	  
+%%SYM	  rsv1,7,type=2,val=41,size=3
+%%DTY	  
+%%DAR	  1,3
+%%ENDD	  
+%%ENDD	  
+%%SYM	  ,9,type=12,id=77,size=528
+%%DDS	  
+%%SYM	  apinfo,7,sym=76,val=0,size=528
+%%DTY	  
+%%DAR	  44,12
+%%ENDD	  
+%%ENDD	  
+%%SYM	  ,9,type=12,id=78,size=44
+%%DDS	  
+%%SYM	  devicename,7,type=2,val=0,size=32
+%%DTY	  
+%%DAR	  1,32
+%%ENDD	  
+%%SYM	  bd_address,7,type=2,val=32,size=12
+%%DTY	  
+%%DAR	  1,12
+%%ENDD	  
+%%ENDD	  
+%%SYM	  ,9,type=12,id=79,size=396
+%%DDS	  
+%%SYM	  bluetoothinfo,7,sym=78,val=0,size=396
+%%DTY	  
+%%DAR	  44,9
+%%ENDD	  
+%%ENDD	  
+%%SYM	  ,8,type=11,id=80
+%%DEN	  
+%%SYM	  BT_GUI_WT_CANVAS,5,type=5,val='0'
+%%SYM	  BT_GUI_WT_EDIT_FIELD,5,type=5,val='1'
+%%SYM	  BT_GUI_WT_ML_EDIT,5,type=5,val='2'
+%%SYM	  BT_GUI_WT_TEXTBOX,5,type=5,val='3'
+%%SYM	  BT_GUI_WT_GROUPBOX,5,type=5,val='4'
+%%SYM	  BT_GUI_WT_LISTBOX,5,type=5,val='5'
+%%SYM	  BT_GUI_WT_COMBOBOX,5,type=5,val='6'
+%%SYM	  BT_GUI_WT_CHECKBOX,5,type=5,val='7'
+%%SYM	  BT_GUI_WT_RADIOBUTTON,5,type=5,val='8'
+%%SYM	  BT_GUI_WT_BUTTON,5,type=5,val='9'
+%%SYM	  BT_GUI_WT_WINDOW,5,type=5,val='10'
+%%ENDD	  
+%%SYM	  ,8,type=11,id=81
+%%DEN	  
+%%SYM	  BT_GUI_PT_VISIBLE,5,type=5,val='0'
+%%SYM	  BT_GUI_PT_ENABLE,5,type=5,val='1'
+%%SYM	  BT_GUI_PT_FRAME,5,type=5,val='2'
+%%SYM	  BT_GUI_PT_BGCOLOR,5,type=5,val='3'
+%%SYM	  BT_GUI_PT_TEXTCOLOR,5,type=5,val='4'
+%%SYM	  BT_GUI_PT_SEL_BGCOLOR,5,type=5,val='5'
+%%SYM	  BT_GUI_PT_SEL_TEXTCOLOR,5,type=5,val='6'
+%%SYM	  BT_GUI_PT_EXCLUSIVE,5,type=5,val='7'
+%%SYM	  BT_GUI_PT_TEXTDATA,5,type=5,val='8'
+%%SYM	  BT_GUI_PT_IMAGE_FILE,5,type=5,val='9'
+%%SYM	  BT_GUI_PT_FONTSIZE,5,type=5,val='10'
+%%SYM	  BT_GUI_PT_TEXTALIGN,5,type=5,val='11'
+%%SYM	  BT_GUI_PT_HSCROLLBAR,5,type=5,val='12'
+%%SYM	  BT_GUI_PT_VSCROLLBAR,5,type=5,val='13'
+%%SYM	  BT_GUI_PT_STRLEN,5,type=5,val='14'
+%%SYM	  BT_GUI_PT_CHECKED,5,type=5,val='15'
+%%SYM	  BT_GUI_PT_INPUTMAX,5,type=5,val='16'
+%%SYM	  BT_GUI_PT_TRG_MODE,5,type=5,val='17'
+%%SYM	  BT_GUI_PT_F3KEY_MODE,5,type=5,val='18'
+%%SYM	  BT_GUI_PT_FOCUSIN_EDIT,5,type=5,val='19'
+%%SYM	  BT_GUI_PT_AUTOREAD_ENABLE,5,type=5,val='20'
+%%SYM	  BT_GUI_PT_KEYINPUT_ENABLE,5,type=5,val='21'
+%%SYM	  BT_GUI_PT_FOCUSINDICATOR,5,type=5,val='22'
+%%ENDD	  
+%%SYM	  _bt_gui_fontinfo,9,type=12,id=82,size=12
+%%DDS	  
+%%SYM	  sFontSize,7,type=3,val=0,size=2
+%%SYM	  sReserve1,7,type=3,val=2,size=2
+%%SYM	  ulTextColor,7,type=8,val=4,size=4
+%%SYM	  ulBkgColor,7,type=8,val=8,size=4
+%%ENDD	  
+%%SYM	  _bt_gui_drawex,9,type=12,id=83,size=32
+%%DDS	  
+%%SYM	  fontinfo,7,sym=82,val=0,size=12
+%%SYM	  gapx,7,type=3,val=12,size=2
+%%SYM	  gapy,7,type=3,val=14,size=2
+%%SYM	  type,7,type=3,val=16,size=2
+%%SYM	  sReserve1,7,type=3,val=18,size=2
+%%SYM	  attrg,7,sym=7,val=20,size=12
+%%ENDD	  
+%%SYM	  ,9,type=12,id=84,size=76
+%%DDS	  
+%%SYM	  anykey,7,type=5,val=0,size=4
+%%SYM	  key0,7,type=5,val=4,size=4
+%%SYM	  key1,7,type=5,val=8,size=4
+%%SYM	  key2,7,type=5,val=12,size=4
+%%SYM	  key3,7,type=5,val=16,size=4
+%%SYM	  key4,7,type=5,val=20,size=4
+%%SYM	  key5,7,type=5,val=24,size=4
+%%SYM	  key6,7,type=5,val=28,size=4
+%%SYM	  key7,7,type=5,val=32,size=4
+%%SYM	  key8,7,type=5,val=36,size=4
+%%SYM	  key9,7,type=5,val=40,size=4
+%%SYM	  keyEnt,7,type=5,val=44,size=4
+%%SYM	  keyEsc,7,type=5,val=48,size=4
+%%SYM	  keyFnUp,7,type=5,val=52,size=4
+%%SYM	  keyClr,7,type=5,val=56,size=4
+%%SYM	  keyL,7,type=5,val=60,size=4
+%%SYM	  keyR,7,type=5,val=64,size=4
+%%SYM	  keyUp,7,type=5,val=68,size=4
+%%SYM	  keyDown,7,type=5,val=72,size=4
+%%ENDD	  
+%%SYM	  ,9,type=12,id=85,size=244
+%%DDS	  
+%%SYM	  data,7,type=2,val=0,size=242
+%%DTY	  
+%%DAR	  1,11,22
+%%ENDD	  
+%%ENDD	  
+%%SYM	  ,9,type=12,id=86,size=24
+%%DDS	  
+%%SYM	  name,7,type=2,val=0,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%ENDD	  
+%%SYM	  ,9,type=12,id=87,size=384
+%%DDS	  
+%%SYM	  item,7,sym=86,val=0,size=384
+%%DTY	  
+%%DAR	  24,16
+%%ENDD	  
+%%ENDD	  
+%%SYM	  ,9,type=12,id=88,size=12
+%%DDS	  
+%%SYM	  year,7,type=3,val=0,size=2
+%%SYM	  month,7,type=3,val=2,size=2
+%%SYM	  day,7,type=3,val=4,size=2
+%%SYM	  hour,7,type=3,val=6,size=2
+%%SYM	  min,7,type=3,val=8,size=2
+%%SYM	  sec,7,type=3,val=10,size=2
+%%ENDD	  
+%%SYM	  ,9,type=12,id=89,size=232
+%%DDS	  
+%%SYM	  mode,7,type=5,val=0,size=4
+%%SYM	  title,7,type=2,val=4,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  l1,7,type=2,val=25,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  l2,7,type=2,val=46,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  l3,7,type=2,val=67,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  l4,7,type=2,val=88,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  l5,7,type=2,val=109,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  l6,7,type=2,val=130,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  l7,7,type=2,val=151,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  buffer,7,type=2,val=172,size=4
+%%DTY	  
+%%DPT	  
+%%ENDD	  
+%%SYM	  bufsize,7,type=6,val=176,size=4
+%%SYM	  emptyOK,7,type=5,val=180,size=4
+%%SYM	  upkey,7,type=5,val=184,size=4
+%%SYM	  downkey,7,type=5,val=188,size=4
+%%SYM	  bar_read,7,type=5,val=192,size=4
+%%SYM	  keychange,7,type=5,val=196,size=4
+%%SYM	  defdata,7,type=2,val=200,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  alpha,7,type=2,val=221,size=1
+%%SYM	  c1,7,type=2,val=222,size=1
+%%SYM	  c2,7,type=2,val=223,size=1
+%%SYM	  c3,7,type=2,val=224,size=1
+%%SYM	  c4,7,type=2,val=225,size=1
+%%SYM	  c5,7,type=2,val=226,size=1
+%%SYM	  c6,7,type=2,val=227,size=1
+%%SYM	  c7,7,type=2,val=228,size=1
+%%ENDD	  
+%%SYM	  ,9,type=12,id=90,size=48
+%%DDS	  
+%%SYM	  Name,7,type=2,val=0,size=30
+%%DTY	  
+%%DAR	  1,30
+%%ENDD	  
+%%SYM	  AdminSign,7,type=2,val=30,size=1
+%%SYM	  Location,7,type=2,val=31,size=3
+%%DTY	  
+%%DAR	  1,3
+%%ENDD	  
+%%SYM	  UserId,7,type=2,val=34,size=10
+%%DTY	  
+%%DAR	  1,10
+%%ENDD	  
+%%SYM	  None,7,type=2,val=44,size=1
+%%ENDD	  
+%%SYM	  ,9,type=12,id=91,size=100
+%%DDS	  
+%%SYM	  msg1,7,type=2,val=0,size=20
+%%DTY	  
+%%DAR	  1,20
+%%ENDD	  
+%%SYM	  msg2,7,type=2,val=20,size=20
+%%DTY	  
+%%DAR	  1,20
+%%ENDD	  
+%%SYM	  msg3,7,type=2,val=40,size=20
+%%DTY	  
+%%DAR	  1,20
+%%ENDD	  
+%%SYM	  msg4,7,type=2,val=60,size=20
+%%DTY	  
+%%DAR	  1,20
+%%ENDD	  
+%%SYM	  msg5,7,type=2,val=80,size=20
+%%DTY	  
+%%DAR	  1,20
+%%ENDD	  
+%%ENDD	  
+%%LINE	  000004
+%%FUNC	  CheckAdminPassword,3,cls=2,type=5,ftype=1
+%%RVALUE  kind=direct,register=R0,atype=2
+@CheckAdminPassword: ;entry
+		stmfd	  sp!,{r6,r7,r10,r11,r12,lr}
+		mov	  r11,sp
+%%SAVE	R6,kind=direct,base=R11,offset=0,atype=6
+%%SAVE	R7,kind=direct,base=R11,offset=4,atype=6
+%%SAVE	R10,kind=direct,base=R11,offset=8,atype=6
+%%SAVE	R12,kind=direct,base=R11,offset=16,atype=6
+		sub	  sp,#404
+AS@CheckAdminPassword	set	404		; stack	frame total size
+%%BF	  
+%%SYM	  set,0,sym=89,cls=6,val=-276,size=232
+%%SYM	  ret,0,type=5,size=4,cls=6,val=0,delete 
+%%SYM	  buf,0,type=2,cls=6,val=-404,size=128
+%%DTY	  
+%%DAR	  1,128
+%%ENDD	  
+%%SYM	  sday,0,type=2,cls=6,val=-44,size=30
+%%DTY	  
+%%DAR	  1,30
+%%ENDD	  
+%%SYM	  now,0,type=2,cls=6,val=-12,size=10
+%%DTY	  
+%%DAR	  1,10
+%%ENDD	  
+%%SCOPE	  init
+		adrl	  r7,sp,AS@CheckAdminPassword-404
+;Expr(9): 10
+%%SCOPE	  init
+		mov	  r10,#0
+		adrl	  r6,sp,AS@CheckAdminPassword-276
+%%LINE	  000011
+;Expr(11): get_nowtime(now,8)	
+		mov	  r1,#8
+		adrl	  r0,sp,AS@CheckAdminPassword-12
+%%CALL
+		bl	  @get_nowtime
+%%LINE	  000012
+;Expr(12): btmemset(sday,0,sizeof(sday))	
+		mov	  r2,#30
+		mov	  r1,r10
+		adrl	  r0,sp,AS@CheckAdminPassword-44
+%%CALL
+		bl	  @btmemset
+%%LINE	  000013
+;Expr(13): btmemcpy(sday,now+ 4,4)	
+		adrl	  r1,sp,AS@CheckAdminPassword-8
+		mov	  r2,#4
+		adrl	  r0,sp,AS@CheckAdminPassword-44
+%%CALL
+		bl	  @btmemcpy
+%%LINE	  000016
+;Expr(16): btmemset(&set,0,sizeof(set))	
+		mov	  r2,#232
+		mov	  r1,r10
+		mov	  r0,r6
+%%CALL
+		bl	  @btmemset
+%%LINE	  000017
+;Expr(17): set.mode=0	
+		str	  r10,[r6,#0]
+%%LINE	  000018
+;Expr(18): set.buffer=buf	
+		str	  r7,[r6,#172]
+%%LINE	  000019
+;Expr(19): set.bufsize=sizeof(buf)	
+		mov	  r0,#128
+		str	  r0,[r6,#176]
+%%LINE	  000020
+;Expr(20): btstrcpy(set.l1,"Authentication")	
+		adds	  r0,r6,#25
+		ldr	  r1,S_S1
+%%CALL
+		bl	  @btstrcpy
+%%LINE	  000021
+;Expr(21): btstrcpy(set.l2,"Please enter")	
+		adds	  r0,r6,#46
+		ldr	  r1,S_S2
+%%CALL
+		bl	  @btstrcpy
+%%LINE	  000022
+;Expr(22): btstrcpy(set.l2,"  Admin password.")	
+		adds	  r0,r6,#46
+		ldr	  r1,S_S3
+%%CALL
+		bl	  @btstrcpy
+%%LINE	  000023
+;Expr(23): set.c2=1	
+		mov	  r0,#1
+		strb	  r0,[r6,#223]
+%%LINE	  000024
+;Expr(24): set.alpha=1	
+		strb	  r0,[r6,#221]
+%%LINE	  000027
+;Expr(27): btmemset(buf,0,sizeof(buf))	
+		mov	  r2,#128
+		mov	  r1,r10
+		mov	  r0,r7
+%%CALL
+		bl	  @btmemset
+%%LINE	  000028
+;Expr(28): ret=DataInputBt(&set)	 - if -
+		mov	  r0,r6
+%%CALL
+		bl	  @DataInputBt
+%%LINE	  000030
+;Expr(30): ret	
+		cmp	  r0,#0
+; - then - - return -
+%%LINE	  000031
+;Expr(31): (- 1)	
+%%SCOPE	  init
+		mvnne	  r0,#0
+		bne.x	  L13
+; - endif - - if -
+%%LINE	  000036
+;Expr(36): btmemcmp(buf,sday,4)||btstrlen(buf)!=4	
+%%SCOPE	  init
+		mov	  r2,#4
+		adrl	  r1,sp,AS@CheckAdminPassword-44
+		mov	  r0,r7
+%%CALL
+		bl	  @btmemcmp
+		cmp	  r0,#0
+		bne.x	  L8
+%%SCOPE	  init
+		mov	  r0,r7
+%%CALL
+		bl	  @btstrlen
+		cmp	  r0,#4
+		beq.x	  L11
+L8:
+; - then - - return -
+%%LINE	  000037
+;Expr(37): (- 2)	
+%%SCOPE	  init
+		mvn	  r0,#1
+		b.x	  L13
+L11:
+; - endif - - return -
+%%LINE	  000040
+;Expr(40): (0)	
+%%SCOPE	  init
+		mov	  r0,#0
+L13:
+; RET
+%%LINE	  000041
+%%SCOPE	init
+%%EF	  
+		add	  sp,#404
+%%RESTORE	R6
+%%RESTORE	R7
+%%RESTORE	R10
+%%RESTORE	R12
+%%RETURN
+		ldmfd	  sp!,{r6,r7,r10,r11,r12,pc}
+		bnd	  4
+%%FEND	  
+;	now -> offset -12	 array
+;	sday ->	offset -44	 array
+;	set -> offset -276	 struct
+;	buf -> offset -404	 array
+%%LINE	  000054
+%%FUNC	  DataSend,3,cls=2,type=5,ftype=1
+%%RVALUE  kind=direct,register=R0,atype=2
+@DataSend: ;entry
+		stmfd	  sp!,{r6,r7,r10,r11,r12,lr}
+		mov	  r11,sp
+%%SAVE	R6,kind=direct,base=R11,offset=0,atype=6
+%%SAVE	R7,kind=direct,base=R11,offset=4,atype=6
+%%SAVE	R10,kind=direct,base=R11,offset=8,atype=6
+%%SAVE	R12,kind=direct,base=R11,offset=16,atype=6
+		sub	  sp,#104
+AS@DataSend	set	104		; stack	frame total size
+AP@DataSend	set	AS@DataSend+0	; argment offset adjust
+%%DFP	  5
+%%SYM	  data,14,type=2,cls=1,reg=R6,val=0,size=4
+%%DTY	  
+%%DPT	  
+%%ENDD	  
+%%SYM	  size,14,type=5,cls=1,reg=R7,val=0,size=4
+%%SYM	  rcv,14,type=2,cls=1,reg=R10,val=0,size=4
+%%DTY	  
+%%DPT	  
+%%ENDD	  
+%%SYM	  rsize,14,type=5,cls=1,reg=R12,val=0,size=4
+%%SYM	  ok_disp,14,type=5,cls=6,val=24,size=4
+%%ENDD	  
+%%BF	  
+%%SYM	  key,0,sym=84,cls=6,val=-84,size=76
+%%SYM	  ret,0,type=5,cls=6,val=-4,size=4
+%%SYM	  buf,0,type=2,cls=6,val=-104,size=20
+%%DTY	  
+%%DAR	  1,20
+%%ENDD	  
+%%SCOPE	  init
+		mov	  r6,r0
+%%SCOPE	  on,data
+		mov	  r7,r1
+%%SCOPE	  on,size
+		mov	  r10,r2
+%%SCOPE	  on,rcv
+		mov	  r12,r3
+;Expr(57): 20
+%%LINE	  000059
+;Expr(59): btmemset(&key,0,sizeof(ENABLE_WAITKEYS))	
+%%SCOPE	  init,rsize,rcv,size,data
+		mov	  r2,#76
+		mov	  r1,#0
+		adrl	  r0,sp,AS@DataSend-84
+%%CALL
+		bl	  @btmemset
+%%LINE	  000060
+;Expr(60): key.keyL=(1)	
+		mov	  r0,#1
+		str	  r0,[sp,#AS@DataSend-24]
+%%LINE	  000061
+;Expr(61): key.keyR=(1)	
+		str	  r0,[sp,#AS@DataSend-20]
+%%LINE	  000063
+;Expr(63): btmemset(rcv,0,rsize)	
+		mov	  r2,r12
+		mov	  r1,#0
+		mov	  r0,r10
+%%CALL
+		bl	  @btmemset
+L18:
+; - do -
+%%LINE	  000071
+;Expr(71): 0	
+%%BB	  line=67
+%%SYM	  len,0,type=5,cls=6,val=-8,size=4
+%%SCOPE	  init,rsize,rcv,size,data
+		mov	  r0,#0
+		str	  r0,[sp,#AS@DataSend-8]
+%%LINE	  000072
+;Expr(72): ret=WLAN_sendBt(data,size,rcv,rsize,&len,10,180)	 - if -
+		mov	  r1,#180
+		stmfd	  sp!,{r1}
+		mov	  r2,#10
+		stmfd	  sp!,{r2}
+		adrl	  r0,sp,AS@DataSend-8+8
+		stmfd	  sp!,{r0}
+		mov	  r3,r12
+		mov	  r2,r10
+		mov	  r1,r7
+		mov	  r0,r6
+%%CALL
+		bl	  @WLAN_sendBt
+		str	  r0,[sp,#AS@DataSend-4+12]
+%%LINE	  000075
+;Expr(75): ret	
+		add	  sp,#12
+		cmp	  r0,#0
+		beq.x	  L26
+; - then -
+%%LINE	  000077
+;Expr(77): btsprintf(buf,"ret=%d",ret)	
+%%SCOPE	  init,rsize,rcv,size,data
+		stmfd	  sp!,{r0}
+		ldr	  r1,S_S4
+		stmfd	  sp!,{r1}
+		adrl	  r2,sp,AS@DataSend-104+8
+		stmfd	  sp!,{r2}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000078
+;Expr(78): Buzzer()	 - if -
+%%CALL
+		bl	  @Buzzer
+%%LINE	  000080
+;Expr(80): DspMsgBt("VNN NOK",3,"","**************","com error,","retry?","","**************",buf,&key)	
+		adrl	  r0,sp,AS@DataSend-84+12
+		stmfd	  sp!,{r0}
+		adrl	  r1,sp,AS@DataSend-104+16
+		stmfd	  sp!,{r1}
+		ldr	  r2,S_S11
+		stmfd	  sp!,{r2}
+		sub	  r0,r2,#1		; ldr r0,S_S10
+		stmfd	  sp!,{r0}
+		sub	  r1,r2,#8		; ldr r1,S_S9
+		stmfd	  sp!,{r1}
+		sub	  r2,r2,#19		; ldr r2,S_S8
+		stmfd	  sp!,{r2}
+		sub	  r3,r0,#33		; ldr r3,S_S7
+		sub	  r2,r2,#16		; ldr r2,S_S6
+		mov	  r1,#3
+		sub	  r0,r0,#42		; ldr r0,S_S5
+%%CALL
+		bl	  @DspMsgBt
+		add	  sp,#36
+		cmp	  r0,#0
+; - then - - return -
+%%LINE	  000082
+;Expr(82): (- 1)	
+%%SCOPE	  init
+		mvnne	  r0,#0
+		bne.x	  L46
+L26:
+%%LINE	  000085
+;Expr(85): ret	
+%%SCOPE	  init,rsize,rcv,size,data
+		ldr	  r1,[sp,#AS@DataSend-4]
+		cmp	  r1,#0
+		bne.x	  L18
+; - if -
+%%LINE	  000088
+;Expr(88): !btmemcmp(rcv,"NG",2)	
+%%EB	  
+%%SCOPE	  init,rcv
+		mov	  r2,#2
+		ldr	  r1,S_S12
+		mov	  r0,r10
+%%CALL
+		bl	  @btmemcmp
+		cmp	  r0,#0
+		bne.x	  L33
+; - then -
+%%LINE	  000091
+;Expr(91): ShowMessage("VNN NOK",(BCR_MSG*)&rcv[2],"",(1),2)	 - return -
+%%SCOPE	  init,rcv
+		mov	  r1,#2
+		stmfd	  sp!,{r1}
+		adds	  r1,r10,#2
+%%SCOPE	  off,rcv
+		mov	  r3,#1
+		ldr	  r2,S_S14
+		sub	  r0,r2,#8		; ldr r0,S_S13
+%%CALL
+		bl	  @ShowMessage
+%%LINE	  000092
+;Expr(92): (1)	
+		add	  sp,#4
+		mov	  r0,#1
+		b.x	  L46
+L33:
+; - endif - - if -
+%%LINE	  000096
+;Expr(96): btmemcmp(rcv,"OK",2)	
+%%SCOPE	  init,rcv
+		mov	  r2,#2
+		ldr	  r1,S_S15
+		mov	  r0,r10
+%%CALL
+		bl	  @btmemcmp
+		cmp	  r0,#0
+; - then - - return -
+%%LINE	  000098
+;Expr(98): (2)	
+%%SCOPE	  init
+		movne	  r0,#2
+		bne.x	  L46
+; - endif - - if -
+%%LINE	  000102
+;Expr(102): !btmemcmp(rcv,"OK",2)	
+%%SCOPE	  init,rcv
+		mov	  r2,#2
+		ldr	  r1,S_S16
+		mov	  r0,r10
+%%CALL
+		bl	  @btmemcmp
+		cmp	  r0,#0
+		bne.x	  L41
+; - then -
+%%LINE	  000104
+;Expr(104): ShowMessage("VNN NOK",(BCR_MSG*)&rcv[2],"",(1),0)	 - return -
+%%SCOPE	  init,rcv
+		mov	  r1,#0
+		stmfd	  sp!,{r1}
+		adds	  r1,r10,#2
+%%SCOPE	  off,rcv
+		mov	  r3,#1
+		ldr	  r2,S_S18
+		sub	  r0,r2,#8		; ldr r0,S_S17
+%%CALL
+		bl	  @ShowMessage
+%%LINE	  000105
+		add	  sp,#4
+		b.x	  L47
+L41:
+; - endif - - if -
+%%LINE	  000110
+;Expr(110): ok_disp	
+%%SCOPE	  init
+		ldr	  r0,[sp,#AP@DataSend+24]
+		cmp	  r0,#0
+; - then -
+%%LINE	  000111
+;Expr(111): OkNgDisp((1),3000)	
+%%SCOPE	  init
+		ldrne	  r1,S_3000
+		movne	  r0,#1
+%%CALL
+		blne	  @OkNgDisp
+L47:
+;winch object
+;Expr(113): (0)	
+%%SCOPE	  init
+		mov	  r0,#0
+L46:
+; RET
+%%LINE	  000115
+%%SCOPE	init
+%%EF	  
+		add	  sp,#104
+%%RESTORE	R6
+%%RESTORE	R7
+%%RESTORE	R10
+%%RESTORE	R12
+%%RETURN
+		ldmfd	  sp!,{r6,r7,r10,r11,r12,pc}
+		bnd	  4
+%%FEND	  
+;	rsize -> regid	13	 int
+;	rcv -> regid  11	 pointer
+;	len -> offset -8	 int
+;	size ->	regid  8	 int
+;	data ->	regid  7	 pointer
+;	ret -> offset -4	 int
+;	ok_disp	-> offset 24	 int
+;	key -> offset -84	 struct
+;	buf -> offset -104	 array
+%%LINE	  000118
+%%FUNC	  ShowMessage,3,cls=2,type=0,ftype=1
+@ShowMessage: ;entry
+		stmfd	  sp!,{r6,r7,r10,r11,r12,lr}
+		mov	  r11,sp
+%%SAVE	R6,kind=direct,base=R11,offset=0,atype=6
+%%SAVE	R7,kind=direct,base=R11,offset=4,atype=6
+%%SAVE	R10,kind=direct,base=R11,offset=8,atype=6
+%%SAVE	R12,kind=direct,base=R11,offset=16,atype=6
+		sub	  sp,#196
+AS@ShowMessage	set	196		; stack	frame total size
+AP@ShowMessage	set	AS@ShowMessage+0	; argment offset adjust
+%%DFP	  5
+%%SYM	  title,14,type=2,cls=1,reg=R6,val=0,size=4
+%%DTY	  
+%%DPT	  
+%%ENDD	  
+%%SYM	  hmsg,14,sym=91,cls=1,reg=R7,val=0,size=4
+%%DTY	  
+%%DPT	  
+%%ENDD	  
+%%SYM	  line5,14,type=2,cls=1,reg=R10,val=0,size=4
+%%DTY	  
+%%DPT	  
+%%ENDD	  
+%%SYM	  buzzer,14,type=5,cls=1,reg=R12,val=0,size=4
+%%SYM	  beepMode,14,type=5,cls=6,val=24,size=4
+%%ENDD	  
+%%BF	  
+%%SYM	  l1,0,type=2,cls=6,val=-100,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  l2,0,type=2,cls=6,val=-124,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  l3,0,type=2,cls=6,val=-148,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  l4,0,type=2,cls=6,val=-172,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  l5,0,type=2,cls=6,val=-196,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  key,0,sym=84,cls=6,val=-76,size=76
+%%SCOPE	  init
+		mov	  r6,r0
+%%SCOPE	  on,title
+		mov	  r7,r1
+%%SCOPE	  on,hmsg
+		mov	  r10,r2
+%%SCOPE	  on,line5
+		mov	  r12,r3
+;Expr(119): 20+	1
+%%LINE	  000122
+;Expr(122): btmemset(&key,0,sizeof(ENABLE_WAITKEYS))	
+%%SCOPE	  init,hmsg,buzzer,line5,title
+		mov	  r2,#76
+		mov	  r1,#0
+		adrl	  r0,sp,AS@ShowMessage-76
+%%CALL
+		bl	  @btmemset
+%%LINE	  000123
+;Expr(123): key.key1=(1)	
+		mov	  r0,#1
+		str	  r0,[sp,#AS@ShowMessage-68]
+%%LINE	  000125
+;Expr(125): btmemset(l1,0,sizeof(l1))	
+		mov	  r2,#21
+		mov	  r1,#0
+		adrl	  r0,sp,AS@ShowMessage-100
+%%CALL
+		bl	  @btmemset
+%%LINE	  000126
+;Expr(126): btmemcpy(l1,hmsg->msg1,20)	
+		mov	  r2,#20
+		mov	  r1,r7
+		adrl	  r0,sp,AS@ShowMessage-100
+%%CALL
+		bl	  @btmemcpy
+%%LINE	  000128
+;Expr(128): btmemset(l2,0,sizeof(l2))	
+		mov	  r2,#21
+		mov	  r1,#0
+		adrl	  r0,sp,AS@ShowMessage-124
+%%CALL
+		bl	  @btmemset
+%%LINE	  000129
+;Expr(129): btmemcpy(l2,hmsg->msg2,20)	
+		adds	  r1,r7,#20
+		mov	  r2,#20
+		adrl	  r0,sp,AS@ShowMessage-124
+%%CALL
+		bl	  @btmemcpy
+%%LINE	  000131
+;Expr(131): btmemset(l3,0,sizeof(l3))	
+		mov	  r2,#21
+		mov	  r1,#0
+		adrl	  r0,sp,AS@ShowMessage-148
+%%CALL
+		bl	  @btmemset
+%%LINE	  000132
+;Expr(132): btmemcpy(l3,hmsg->msg3,20)	
+		adds	  r1,r7,#40
+		mov	  r2,#20
+		adrl	  r0,sp,AS@ShowMessage-148
+%%CALL
+		bl	  @btmemcpy
+%%LINE	  000134
+;Expr(134): btmemset(l4,0,sizeof(l4))	
+		mov	  r2,#21
+		mov	  r1,#0
+		adrl	  r0,sp,AS@ShowMessage-172
+%%CALL
+		bl	  @btmemset
+%%LINE	  000135
+;Expr(135): btmemcpy(l4,hmsg->msg4,20)	
+		adds	  r1,r7,#60
+		mov	  r2,#20
+		adrl	  r0,sp,AS@ShowMessage-172
+%%CALL
+		bl	  @btmemcpy
+%%LINE	  000137
+;Expr(137): btmemset(l5,0,sizeof(l5))	
+		mov	  r2,#21
+		mov	  r1,#0
+		adrl	  r0,sp,AS@ShowMessage-196
+%%CALL
+		bl	  @btmemset
+%%LINE	  000138
+;Expr(138): btmemcpy(l5,hmsg->msg5,20)	 - if -
+		adds	  r1,r7,#80
+%%SCOPE	  off,hmsg
+		mov	  r2,#20
+		adrl	  r0,sp,AS@ShowMessage-196
+%%CALL
+		bl	  @btmemcpy
+%%LINE	  000140
+;Expr(140): buzzer	
+		cmp	  r12,#0
+; - then -
+%%LINE	  000141
+;Expr(141): Beep(beepMode)	
+%%SCOPE	  init,line5,title
+		ldrne	  r0,[sp,#AP@ShowMessage+24]
+%%CALL
+		blne	  @Beep
+; - endif -
+%%LINE	  000143
+;Expr(143): DspMsgBt(title,5,l1,l2,l3,l4,l5,"",line5,&key)	
+%%SCOPE	  init,line5,title
+		adrl	  r0,sp,AS@ShowMessage-76
+		stmfd	  sp!,{r0}
+		stmfd	  sp!,{r10}
+%%SCOPE	  off,line5
+		ldr	  r1,S_S19
+		stmfd	  sp!,{r1}
+		adrl	  r2,sp,AS@ShowMessage-196+12
+		stmfd	  sp!,{r2}
+		adrl	  r0,sp,AS@ShowMessage-172+16
+		stmfd	  sp!,{r0}
+		adrl	  r1,sp,AS@ShowMessage-148+20
+		stmfd	  sp!,{r1}
+		adrl	  r3,sp,AS@ShowMessage-124+24
+		adrl	  r2,sp,AS@ShowMessage-100+24
+		mov	  r1,#5
+		mov	  r0,r6
+%%SCOPE	  off,title
+%%CALL
+		bl	  @DspMsgBt
+%%LINE	  000144
+%%SCOPE	init
+%%EF	  
+		add	  sp,#220
+%%RESTORE	R6
+%%RESTORE	R7
+%%RESTORE	R10
+%%RESTORE	R12
+%%RETURN
+		ldmfd	  sp!,{r6,r7,r10,r11,r12,pc}
+		bnd	  4
+%%FEND	  
+;	hmsg ->	regid  8	 pointer
+;	buzzer -> regid	 13	 int
+;	beepMode -> offset 24	 int
+;	line5 -> regid	11	 pointer
+;	title -> regid	7	 pointer
+;	key -> offset -76	 struct
+;	l1 -> offset -100	 array
+;	l2 -> offset -124	 array
+;	l3 -> offset -148	 array
+;	l4 -> offset -172	 array
+;	l5 -> offset -196	 array
+%%LINE	  000149
+%%FUNC	  SetLocation,3,cls=2,type=5,ftype=1
+%%RVALUE  kind=direct,register=R0,atype=2
+@SetLocation: ;entry
+		stmfd	  sp!,{r6,r7,r10,r11,r12,lr}
+		mov	  r11,sp
+%%SAVE	R6,kind=direct,base=R11,offset=0,atype=6
+%%SAVE	R7,kind=direct,base=R11,offset=4,atype=6
+%%SAVE	R10,kind=direct,base=R11,offset=8,atype=6
+%%SAVE	R12,kind=direct,base=R11,offset=16,atype=6
+		sub	  sp,#288
+AS@SetLocation	set	288		; stack	frame total size
+%%BF	  
+%%SYM	  loc,0,type=2,cls=6,val=-4,size=4
+%%DTY	  
+%%DAR	  1,4
+%%ENDD	  
+%%SYM	  dat,0,type=2,cls=6,val=-288,size=50
+%%DTY	  
+%%DAR	  1,50
+%%ENDD	  
+%%SYM	  ret,0,type=5,cls=1,reg=R6,val=0,size=4
+%%SYM	  st,0,sym=89,cls=6,val=-236,size=232
+%%SCOPE	  init
+		adrl	  r12,sp,AS@SetLocation-4
+		adrl	  r10,sp,AS@SetLocation-288
+		adrl	  r7,sp,AS@SetLocation-236
+;Expr(150): 50
+%%LINE	  000155
+;Expr(155): btmemset(loc,0,sizeof(loc))	
+%%SCOPE	  init
+		mov	  r2,#4
+		mov	  r1,#0
+		mov	  r0,r12
+%%CALL
+		bl	  @btmemset
+%%LINE	  000156
+;Expr(156): MasterFind("location",loc)	
+		mov	  r1,r12
+		ldr	  r0,S_S20
+%%CALL
+		bl	  @MasterFind
+%%LINE	  000158
+;Expr(158): LcdClear()	
+%%CALL
+		bl	  @LcdClear
+%%LINE	  000159
+;Expr(159): btmemset(&st,0,sizeof(st))	
+		mov	  r2,#232
+		mov	  r1,#0
+		mov	  r0,r7
+%%CALL
+		bl	  @btmemset
+%%LINE	  000160
+;Expr(160): st.mode=0	
+		mov	  r0,#0
+		str	  r0,[r7,#0]
+%%LINE	  000161
+;Expr(161): st.alpha=1	
+		mov	  r1,#1
+		strb	  r1,[r7,#221]
+%%LINE	  000162
+;Expr(162): btstrcpy(st.title,"Input Your Location.")	 - if -
+		adds	  r0,r7,#4
+		ldr	  r1,S_S21
+%%CALL
+		bl	  @btstrcpy
+%%LINE	  000164
+;Expr(164): btstrlen(loc)	
+		mov	  r0,r12
+%%CALL
+		bl	  @btstrlen
+		cmp	  r0,#0
+		beq.x	  L60
+; - then -
+%%LINE	  000165
+;Expr(165): btstrcpy(st.l5,"Don't change -> ENT")	
+%%SCOPE	  init
+		adds	  r0,r7,#109
+		ldr	  r1,S_S22
+%%CALL
+		bl	  @btstrcpy
+L60:
+%%LINE	  000167
+;Expr(167): btsprintf(st.l1,"%s","Location Setting")	
+%%SCOPE	  init
+		ldr	  r0,S_S24
+		stmfd	  sp!,{r0}
+		sub	  r1,r0,#3		; ldr r1,S_S23
+		stmfd	  sp!,{r1}
+		adds	  r2,r7,#25
+		stmfd	  sp!,{r2}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000168
+;Expr(168): btsprintf(st.l2,"Location =	%s",loc)	
+		stmfd	  sp!,{r12}
+		ldr	  r0,S_S25
+		stmfd	  sp!,{r0}
+		adds	  r1,r7,#46
+		stmfd	  sp!,{r1}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000169
+;Expr(169): st.c2=1	
+		mov	  r0,#1
+		strb	  r0,[r7,#223]
+%%LINE	  000172
+;Expr(172): st.buffer=dat	
+		str	  r10,[r7,#172]
+%%LINE	  000173
+;Expr(173): st.bufsize=sizeof(dat)- 1	
+		mov	  r1,#49
+		str	  r1,[r7,#176]
+%%LINE	  000174
+;Expr(174): st.emptyOK=(1)	
+		str	  r0,[r7,#180]
+%%LINE	  000176
+;Expr(176): btmemset(dat,0,sizeof(dat))	
+		mov	  r2,#50
+		mov	  r1,#0
+		mov	  r0,r10
+%%CALL
+		bl	  @btmemset
+		add	  sp,#24
+L62:
+%%LINE	  000180
+;Expr(180): ret=DataInputBt(&st)	 - if -
+%%SCOPE	  init
+		mov	  r0,r7
+%%CALL
+		bl	  @DataInputBt
+		mov	  r6,r0
+%%LINE	  000182
+;Expr(182): btstrlen(loc)&&ret==- 101	
+%%SCOPE	  on,ret
+		mov	  r0,r12
+%%CALL
+		bl	  @btstrlen
+		cmp	  r0,#0
+		beq.x	  L66
+%%SCOPE	  init,ret
+		mvn	  r1,#100
+		cmp	  r6,r1
+		bne.x	  L66
+; - then -
+%%LINE	  000183
+;Expr(183): btstrcpy(dat,loc)	
+%%SCOPE	  init
+		mov	  r1,r12
+		mov	  r0,r10
+%%CALL
+		bl	  @btstrcpy
+L66:
+; - endif - - if -
+%%LINE	  000185
+;Expr(185): !btstrlen(dat)	
+%%SCOPE	  init
+		mov	  r0,r10
+%%CALL
+		bl	  @btstrlen
+		cmp	  r0,#0
+		beq.x	  L62
+; - endif - - if -
+%%LINE	  000188
+;Expr(188): btstrlen(dat)!=3	
+%%SCOPE	  init
+		mov	  r0,r10
+%%CALL
+		bl	  @btstrlen
+		cmp	  r0,#3
+		beq.x	  L74
+; - then -
+%%LINE	  000190
+;Expr(190): DspMsg(" ***** Error *****",0,"Location is ","not correct.(1)",dat,"","",0)	 - continue -
+%%SCOPE	  init
+		mov	  r1,#0
+		stmfd	  sp!,{r1}
+		ldr	  r0,S_S30
+		stmfd	  sp!,{r0}
+		sub	  r2,r0,#1		; ldr r2,S_S29
+		stmfd	  sp!,{r2}
+		stmfd	  sp!,{r10}
+		sub	  r3,r0,#17		; ldr r3,S_S28
+		sub	  r2,r2,#29		; ldr r2,S_S27
+		mov	  r1,#0
+		sub	  r0,r0,#49		; ldr r0,S_S26
+%%CALL
+		bl	  @DspMsg
+%%LINE	  000191
+		add	  sp,#16
+		b.x	  L62
+L74:
+; - else -
+%%LINE	  000195
+;Expr(195): MasterUpd("location",dat)	 - break -
+%%SCOPE	  init
+		mov	  r1,r10
+		ldr	  r0,S_S31
+%%CALL
+		bl	  @MasterUpd
+; RET
+%%LINE	  000200
+;Expr(200): 0	
+%%SCOPE	  init
+		mov	  r0,#0
+%%LINE	  000201
+%%SCOPE	init
+%%EF	  
+		add	  sp,#288
+%%RESTORE	R6
+%%RESTORE	R7
+%%RESTORE	R10
+%%RESTORE	R12
+%%RETURN
+		ldmfd	  sp!,{r6,r7,r10,r11,r12,pc}
+		bnd	  4
+%%FEND	  
+;	ret -> regid  7	 int
+;	loc -> offset -4	 array
+;	st -> offset -236	 struct
+;	dat -> offset -288	 array
+%%LINE	  000204
+%%FUNC	  MakeDataToSend,3,cls=2,type=5,ftype=1
+%%RVALUE  kind=direct,register=R0,atype=2
+@MakeDataToSend: ;entry
+		stmfd	  sp!,{r6,r7,r10,r11,r12,lr}
+		mov	  r11,sp
+%%SAVE	R6,kind=direct,base=R11,offset=0,atype=6
+%%SAVE	R7,kind=direct,base=R11,offset=4,atype=6
+%%SAVE	R10,kind=direct,base=R11,offset=8,atype=6
+%%SAVE	R12,kind=direct,base=R11,offset=16,atype=6
+		sub	  sp,#16
+		sub	  sp,#20480
+AS@MakeDataToSend	set	20496		; stack	frame total size
+%%DFP	  4
+%%SYM	  cmd,14,type=2,cls=1,reg=R6,val=0,size=4
+%%DTY	  
+%%DPT	  
+%%ENDD	  
+%%SYM	  sub,14,type=2,cls=1,reg=R7,val=0,size=4
+%%DTY	  
+%%DPT	  
+%%ENDD	  
+%%SYM	  data,14,type=2,cls=1,reg=R10,val=0,size=4
+%%DTY	  
+%%DPT	  
+%%ENDD	  
+%%SYM	  sendData,14,type=2,cls=1,reg=R12,val=0,size=4
+%%DTY	  
+%%DPT	  
+%%ENDD	  
+%%ENDD	  
+%%BF	  
+%%SYM	  loc,0,type=2,cls=6,val=-4,size=4
+%%DTY	  
+%%DAR	  1,4
+%%ENDD	  
+%%SYM	  userId,0,type=2,cls=6,val=-16,size=10
+%%DTY	  
+%%DAR	  1,10
+%%ENDD	  
+%%SYM	  send,0,type=2,cls=6,val=-20496,size=20480
+%%DTY	  
+%%DAR	  1,20480
+%%ENDD	  
+%%SCOPE	  init
+		mov	  r6,r0
+%%SCOPE	  on,cmd
+		mov	  r7,r1
+%%SCOPE	  on,sub
+		mov	  r10,r2
+%%SCOPE	  on,data
+		mov	  r12,r3
+;Expr(206): 20480
+%%LINE	  000208
+;Expr(208): btmemset(loc,0,sizeof(loc))	
+%%SCOPE	  init,data,cmd,sub,sendData
+		mov	  r2,#4
+		mov	  r1,#0
+		adrl	  r0,sp,AS@MakeDataToSend-4
+%%CALL
+		bl	  @btmemset
+%%LINE	  000209
+;Expr(209): btmemset(userId,0,sizeof(userId))	
+		mov	  r2,#10
+		mov	  r1,#0
+		adrl	  r0,sp,AS@MakeDataToSend-16
+%%CALL
+		bl	  @btmemset
+%%LINE	  000211
+;Expr(211): MasterFind("location",loc)	
+		adrl	  r1,sp,AS@MakeDataToSend-4
+		ldr	  r0,S_S32
+%%CALL
+		bl	  @MasterFind
+%%LINE	  000212
+;Expr(212): MasterFind("user",userId)	 - if -
+		adrl	  r1,sp,AS@MakeDataToSend-16
+		ldr	  r0,S_S33
+%%CALL
+		bl	  @MasterFind
+%%LINE	  000214
+;Expr(214): !btmemcmp(data,"",1)	
+		mov	  r2,#1
+		ldr	  r1,S_S34
+		mov	  r0,r10
+%%CALL
+		bl	  @btmemcmp
+		cmp	  r0,#0
+		bne.x	  L86
+; - then -
+%%LINE	  000215
+;Expr(215): btsprintf(send,"%s$%s$",cmd,userId)	
+%%SCOPE	  init,cmd,sendData
+		adrl	  r1,sp,AS@MakeDataToSend-16
+		stmfd	  sp!,{r1}
+		stmfd	  sp!,{r6}
+%%SCOPE	  off,cmd
+		ldr	  r0,S_S35
+		stmfd	  sp!,{r0}
+		adrl	  r2,sp,AS@MakeDataToSend-20496+12
+		stmfd	  sp!,{r2}
+%%CALL
+		bl	  @btsprintf
+		add	  sp,#16
+		b.x	  L89
+L86:
+; - else -
+%%LINE	  000217
+;Expr(217): btsprintf(send,"%s%s$%s$%s$%s$",cmd,sub,loc,userId,data)	
+%%SCOPE	  init,data,cmd,sub,sendData
+		stmfd	  sp!,{r10}
+%%SCOPE	  off,data
+		adrl	  r0,sp,AS@MakeDataToSend-16+4
+		stmfd	  sp!,{r0}
+		adrl	  r1,sp,AS@MakeDataToSend-4+8
+		stmfd	  sp!,{r1}
+		stmfd	  sp!,{r7}
+%%SCOPE	  off,sub
+		stmfd	  sp!,{r6}
+%%SCOPE	  off,cmd
+		ldr	  r2,S_S36
+		stmfd	  sp!,{r2}
+		adrl	  r0,sp,AS@MakeDataToSend-20496+24
+		stmfd	  sp!,{r0}
+%%CALL
+		bl	  @btsprintf
+		add	  sp,#28
+L89:
+; RET
+%%LINE	  000219
+;Expr(219): btmemcpy(sendData,send,btstrlen(send))	 - return -
+%%SCOPE	  init,sendData
+		adrl	  r0,sp,AS@MakeDataToSend-20496
+%%CALL
+		bl	  @btstrlen
+		mov	  r2,r0
+		adrl	  r1,sp,AS@MakeDataToSend-20496
+		mov	  r0,r12
+%%SCOPE	  off,sendData
+%%CALL
+		bl	  @btmemcpy
+%%LINE	  000221
+;Expr(221): 0	
+		mov	  r0,#0
+%%LINE	  000222
+%%SCOPE	init
+%%EF	  
+		add	  sp,#16
+		add	  sp,#20480
+%%RESTORE	R6
+%%RESTORE	R7
+%%RESTORE	R10
+%%RESTORE	R12
+%%RETURN
+		ldmfd	  sp!,{r6,r7,r10,r11,r12,pc}
+		bnd	  4
+%%FEND	  
+;	loc -> offset -4	 array
+;	data ->	regid  11	 pointer
+;	cmd -> regid  7	 pointer
+;	sub -> regid  8	 pointer
+;	sendData -> regid  13	 pointer
+;	userId -> offset -16	 array
+;	send ->	offset -20496	 array
+%%LINE	  000225
+%%FUNC	  CheckDataByType,3,cls=2,type=5,ftype=1
+%%RVALUE  kind=direct,register=R0,atype=2
+@CheckDataByType: ;entry
+		stmfd	  sp!,{r6,r7,r10,r11,r12,lr}
+		mov	  r11,sp
+%%SAVE	R6,kind=direct,base=R11,offset=0,atype=6
+%%SAVE	R7,kind=direct,base=R11,offset=4,atype=6
+%%SAVE	R10,kind=direct,base=R11,offset=8,atype=6
+%%SAVE	R12,kind=direct,base=R11,offset=16,atype=6
+		sub	  sp,#28
+AS@CheckDataByType	set	28		; stack	frame total size
+%%DFP	  3
+%%SYM	  loc,14,type=2,cls=1,reg=R6,val=0,size=4
+%%DTY	  
+%%DPT	  
+%%ENDD	  
+%%SYM	  val,14,type=2,cls=1,reg=R7,val=0,size=4
+%%DTY	  
+%%DPT	  
+%%ENDD	  
+%%SYM	  type,14,type=5,cls=1,reg=R10,val=0,size=4
+%%ENDD	  
+%%BF	  
+%%SYM	  cmp1,0,type=2,cls=6,val=-28,size=10
+%%DTY	  
+%%DAR	  1,10
+%%ENDD	  
+%%SYM	  cmp2,0,type=2,cls=6,val=-16,size=10
+%%DTY	  
+%%DAR	  1,10
+%%ENDD	  
+%%SYM	  size,0,type=5,cls=6,val=-4,size=4
+%%SCOPE	  init
+		mov	  r6,r0
+%%SCOPE	  on,loc
+		mov	  r7,r1
+%%SCOPE	  on,val
+		mov	  r10,r2
+%%SCOPE	  on,type
+		adrl	  r12,sp,AS@CheckDataByType-28
+;Expr(226): 10
+%%LINE	  000229
+;Expr(229): btmemset(cmp1,0,sizeof(cmp1))	
+%%SCOPE	  init,type,loc,val
+		mov	  r2,#10
+		mov	  r1,#0
+		mov	  r0,r12
+%%CALL
+		bl	  @btmemset
+%%LINE	  000230
+;Expr(230): btmemset(cmp2,0,sizeof(cmp2))	
+		mov	  r2,#10
+		mov	  r1,#0
+		adrl	  r0,sp,AS@CheckDataByType-16
+%%CALL
+		bl	  @btmemset
+%%LINE	  000232
+;Expr(232): type	
+		mov	  r0,r10
+		sub	  r0,#1
+		cmp	  r0,#4
+		bhi.x	  L105
+		mov	  r0,r0,lsl #1
+		ldrsh	  r0,[pc,r0]
+		add	  pc,pc,r0,lsl #2
+L00126:
+		dw	  (L94-L00126-4)>2
+		dw	  (L96-L00126-4)>2
+		dw	  (L98-L00126-4)>2
+		dw	  (L100-L00126-4)>2
+		dw	  (L102-L00126-4)>2
+		bnd	  4
+L94:
+; - case - 
+%%LINE	  000236
+;Expr(236): btsprintf(cmp1,"LOS")	
+%%SCOPE	  init,loc,val
+		ldr	  r1,S_S37
+		stmfd	  sp!,{r1}
+		stmfd	  sp!,{r12}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000237
+;Expr(237): btsprintf(cmp2,"LOR")	
+		add	  sp,#8
+		ldr	  r0,S_S38
+		stmfd	  sp!,{r0}
+%%LINE	  000239
+		b.x	  L123
+L96:
+; - case - 
+%%LINE	  000241
+;Expr(241): btsprintf(cmp1,"POS")	
+%%SCOPE	  init,loc,val
+		ldr	  r1,S_S39
+		stmfd	  sp!,{r1}
+		stmfd	  sp!,{r12}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000242
+;Expr(242): btsprintf(cmp2,"POR")	
+		add	  sp,#8
+		ldr	  r0,S_S40
+		stmfd	  sp!,{r0}
+%%LINE	  000244
+		b.x	  L123
+L98:
+; - case - 
+%%LINE	  000246
+;Expr(246): btsprintf(cmp1,"VB")	
+%%SCOPE	  init,loc,val
+		ldr	  r1,S_S41
+		stmfd	  sp!,{r1}
+		stmfd	  sp!,{r12}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000247
+;Expr(247): btsprintf(cmp2,"VC")	
+		ldr	  r0,S_S42
+		stmfd	  sp!,{r0}
+		adrl	  r1,sp,AS@CheckDataByType-16+12
+		stmfd	  sp!,{r1}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000248
+;Expr(248): size=2	 - break -
+		mov	  r0,#2
+		str	  r0,[sp,#AS@CheckDataByType-4+16]
+%%LINE	  000249
+		add	  sp,#16
+		b.x	  L105
+L100:
+; - case - 
+%%LINE	  000251
+;Expr(251): btsprintf(cmp1,"TOS")	
+%%SCOPE	  init,loc,val
+		ldr	  r1,S_S43
+		stmfd	  sp!,{r1}
+		stmfd	  sp!,{r12}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000252
+;Expr(252): btsprintf(cmp2,"TOR")	
+		add	  sp,#8
+		ldr	  r0,S_S44
+		stmfd	  sp!,{r0}
+%%LINE	  000254
+		b.x	  L123
+L102:
+; - case - 
+%%LINE	  000256
+;Expr(256): btsprintf(cmp1,"SOS")	
+%%SCOPE	  init,loc,val
+		ldr	  r1,S_S45
+		stmfd	  sp!,{r1}
+		stmfd	  sp!,{r12}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000257
+;Expr(257): btsprintf(cmp2,"SOR")	
+		add	  sp,#8
+		ldr	  r0,S_S46
+		stmfd	  sp!,{r0}
+L123:
+;winch object
+%%SCOPE	  init,loc,val
+		adrl	  r1,sp,AS@CheckDataByType-16+4
+		stmfd	  sp!,{r1}
+%%CALL
+		bl	  @btsprintf
+;Expr(258): size=3	 - break -
+		mov	  r0,#3
+		str	  r0,[sp,#AS@CheckDataByType-4+8]
+		add	  sp,#8
+L105:
+; - if -
+%%LINE	  000262
+;Expr(262): !btmemcmp((char*)loc,"OS1",3)	
+%%SCOPE	  init,loc,val
+		mov	  r2,#3
+		ldr	  r1,S_S47
+		mov	  r0,r6
+%%CALL
+		bl	  @btmemcmp
+		cmp	  r0,#0
+		bne.x	  L112
+; - then - - if	-
+%%LINE	  000264
+;Expr(264): btmemcmp((char*)val,cmp1,size)	
+%%SCOPE	  init,val
+		ldr	  r2,[sp,#AS@CheckDataByType-4]
+		mov	  r1,r12
+		mov	  r0,r7
+%%SCOPE	  off,val
+%%CALL
+		bl	  @btmemcmp
+		cmp	  r0,#0
+		beq.x	  L120
+		b.x	  L124
+L112:
+; - else - - if	-
+%%LINE	  000269
+;Expr(269): !btmemcmp((char*)loc,"OR1",3)	
+%%SCOPE	  init,loc,val
+		mov	  r2,#3
+		ldr	  r1,S_S48
+		mov	  r0,r6
+%%SCOPE	  off,loc
+%%CALL
+		bl	  @btmemcmp
+		cmp	  r0,#0
+		bne.x	  L120
+; - then - - if	-
+%%LINE	  000271
+;Expr(271): btmemcmp((char*)val,cmp2,size)	
+%%SCOPE	  init,val
+		ldr	  r2,[sp,#AS@CheckDataByType-4]
+		adrl	  r1,sp,AS@CheckDataByType-16
+		mov	  r0,r7
+%%SCOPE	  off,val
+%%CALL
+		bl	  @btmemcmp
+		cmp	  r0,#0
+		beq.x	  L120
+L124:
+;winch object
+;Expr(273): - 1	
+%%SCOPE	  init
+		mvn	  r0,#0
+		b.x	  L122
+L120:
+; - endif - - return -
+%%LINE	  000277
+;Expr(277): 0	
+%%SCOPE	  init
+		mov	  r0,#0
+L122:
+; RET
+%%LINE	  000278
+%%SCOPE	init
+%%EF	  
+		add	  sp,#28
+%%RESTORE	R6
+%%RESTORE	R7
+%%RESTORE	R10
+%%RESTORE	R12
+%%RETURN
+		ldmfd	  sp!,{r6,r7,r10,r11,r12,pc}
+		bnd	  4
+%%FEND	  
+;	type ->	regid  11	 int
+;	size ->	offset -4	 int
+;	loc -> regid  7	 pointer
+;	val -> regid  8	 pointer
+;	cmp2 ->	offset -16	 array
+;	cmp1 ->	offset -28	 array
+%%EFILE	  
+; DATA-LIST before block
+	bnd	4
+S_S3:	dd	S3
+S_S2:	dd	S2
+S_S1:	dd	S1
+S_S11:	dd	S11
+S_S4:	dd	S4
+S_S12:	dd	S12
+S_S14:	dd	S14
+S_S15:	dd	S15
+S_S16:	dd	S16
+S_S18:	dd	S18
+S_3000:	dd	3000
+S_S19:	dd	S19
+S_S21:	dd	S21
+S_S20:	dd	S20
+S_S22:	dd	S22
+S_S25:	dd	S25
+S_S24:	dd	S24
+S_S30:	dd	S30
+S_S31:	dd	S31
+S_S34:	dd	S34
+S_S33:	dd	S33
+S_S32:	dd	S32
+S_S35:	dd	S35
+S_S36:	dd	S36
+S_S38:	dd	S38
+S_S37:	dd	S37
+S_S40:	dd	S40
+S_S39:	dd	S39
+S_S42:	dd	S42
+S_S41:	dd	S41
+S_S44:	dd	S44
+S_S43:	dd	S43
+S_S46:	dd	S46
+S_S45:	dd	S45
+S_S47:	dd	S47
+S_S48:	dd	S48
+		end

@@ -1,0 +1,108 @@
+
+
+   CROSS LINKER        V11-L12   (7b02)  XLNK-V           LINKAGE LIST                    Mon 07-Oct-2019 17:56:30       PAGE-0001
+
+
+					+--------------------+
+					|  Option File List  |
+					+--------------------+
+
+   1	  ;==============================================================================+
+   2	  ;  UserApplication Linkage File                                                |
+   3	  ;  Copyright(c) 2008, Keyence Corporation. All rights reserved.                |
+   4	  ;==============================================================================+
+   5	  
+   6	  /boundary     = 4
+   7	  /address      = 0xc0e00000-0xc11fffff
+   8	  /section      = B*|COMM         (bss  = _BSS)
+   9	  /section      = D*|COMM         (data = _DATA)
+  10	  
+  11	  
+  12	  /address      = 0xc0008000-0xc000804F
+  13	  /section      = MAGICCODE|CODE
+  14	  /section          = HEADERINFO|CODE
+  15	  /address      = 0xc0008050-0xc0107fff
+  16	  /section      = C_start|CODE
+  17	  /section      = C_getRes|CODE
+  18	  /section      = C*|CODE
+  19	  /section      = I*|CODE
+  20	  /section      = I*|COMM
+  21	  /init_section = _INIT_DATA      (_DATA)
+  22	  
+  23	  ;====================================================+
+  24	  ;  Linkage Module                                    |
+  25	  ;====================================================+
+  26	  ;-------------------------+
+  27	  ;  Entry                  |
+  28	  ;-------------------------+
+  29	  ;/entn    =startup
+  30	  ;-------------------------+
+  31	  ;  SystemLib              |
+  32	  ;-------------------------+
+  33	  /Syslib  = ./lib/CRT.XLB             ;C-Runtime
+  34	  /Syslib  = ./lib/CP_CSAT3.XLB        ;C++-Runtime
+  35	  /Syslib  = ./lib/MATAT3A.XLB         ;GAIO Math
+  36	  /Syslib  = ./lib/CSAT3A.XLB          ;GAIO
+  37	  /Syslib  = ./lib/STDAT3A.XLB         ;GAIO
+  38	  /Syslib  = ./lib/APPLIB.xlb          ;APPLib Entry
+  39	  
+  40	  /name=btWarehouse.xlo
+  41	  /modl=App200.xao
+  42	  /modl=App300.xao
+  43	  /modl=App400.xao
+  44	  /modl=App500.xao
+  45	  /modl=Common.xao
+  46	  /modl=main.xao
+  47	  /modl=version.xao
+  48	  /modl=nokbt1500.xao
+  49	  /modl=startup.xao
+
+
+   CROSS LINKER        V11-L12   (7b02)  XLNK-V           LINKAGE LIST                    Mon 07-Oct-2019 17:56:30       PAGE-0002
+
+
+  File Name
+  ---------
+  tmp4708_00.xls
+
+  Mpu Name  Version
+  --------  --------
+       ARM  0102
+
+
+
+
+
+					+---------------------+
+					|  Module Information |
+					+---------------------+
+
+Module Name      Mode   Text Size  File                                         Creation Date      Creator              Mpu Name
+---------------- ------ ---------  ----                                         ----------------   -------              --------
+sbrk             Om     000000068  ./lib/CRT.XLB                                06-12-05(19:18:02) xcc-v V10.08  6518   ARM
+cslcpy0          Om     000000124  ./lib/CSAT3A.XLB                             04-10-27(20:57:02) XASS-V V10-L31 4915  ARM
+cslldiv          Om     000000088  ./lib/CSAT3A.XLB                             04-10-27(20:57:00) XASS-V V10-L31 4915  ARM
+cslltod          Om     000000164  ./lib/CSAT3A.XLB                             04-10-27(20:57:01) XASS-V V10-L31 4915  ARM
+cslddiv          Om     000000384  ./lib/CSAT3A.XLB                             04-10-27(20:56:56) XASS-V V10-L31 4915  ARM
+csldmul          Om     000000612  ./lib/CSAT3A.XLB                             04-10-27(20:56:56) XASS-V V10-L31 4915  ARM
+csldadd          Om     000000472  ./lib/CSAT3A.XLB                             04-10-27(20:56:55) XASS-V V10-L31 4915  ARM
+csldcmp          Om     000000144  ./lib/CSAT3A.XLB                             04-10-27(20:56:55) XASS-V V10-L31 4915  ARM
+csldtol          Om     000000160  ./lib/CSAT3A.XLB                             04-10-27(20:56:57) XASS-V V10-L31 4915  ARM
+malloc           Om     000000612  ./lib/STDAT3A.XLB                            04-10-27(21:06:05) XASS-V V10-L31 4915  ARM
+realloc          Om     000000116  ./lib/STDAT3A.XLB                            04-10-27(21:06:07) XASS-V V10-L31 4915  ARM
+memcpy           Om     000000132  ./lib/STDAT3A.XLB                            04-10-27(21:06:05) XASS-V V10-L31 4915  ARM
+calloc           Om     000000084  ./lib/STDAT3A.XLB                            04-10-27(21:05:56) XASS-V V10-L31 4915  ARM
+strlen           Om     000000040  ./lib/STDAT3A.XLB                            04-10-27(21:06:09) XASS-V V10-L31 4915  ARM
+atoi             Om     000000136  ./lib/STDAT3A.XLB                            04-10-27(21:05:55) XASS-V V10-L31 4915  ARM
+pblib            Om     000023576  ./lib/APPLIB.xlb                             09-12-01(13:18:53) XASS-V V10-L35 5c03  ARM
+magic            Om     000000044  ./lib/APPLIB.xlb                             09-12-01(13:18:37) XASS-V V10-L35 5c03  ARM
+getRes           Om     000000028  ./lib/APPLIB.xlb                             09-12-01(13:18:55) XASS-V V10-L35 5c03  ARM
+App200           Om     000002728  App200.xao                                   19-01-03(13:05:27) xcc-v V10.22  9226   ARM
+App300           Om     000007168  App300.xao                                   19-03-02(11:01:07) xcc-v V10.22  9226   ARM
+App400           Om     000002452  App400.xao                                   19-03-02(11:01:07) xcc-v V10.22  9226   ARM
+App500           Om     000000000  App500.xao                                   19-03-02(11:01:08) xcc-v V10.22  9226   ARM
+Common           Om     000002200  Common.xao                                   19-01-03(13:05:27) xcc-v V10.22  9226   ARM
+main             Om     000001048  main.xao                                     19-01-03(13:05:27) xcc-v V10.22  9226   ARM
+version          Om     000000036  version.xao                                  19-01-03(13:05:27) xcc-v V10.22  9226   ARM
+nokbt1500        Om     000024844  nokbt1500.xao                                19-01-03(13:05:29) xcc-v V10.22  9226   ARM
+startup          Om     000000120  startup.xao                                  19-01-03(13:05:29) XASS-V V10-L41 8901  ARM

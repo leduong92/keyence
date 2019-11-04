@@ -1,0 +1,124 @@
+
+
+   CROSS ASSEMBLER     V10-L41   (8901)  XASS-V                                           Thu 03-Jan-2019 13:05:27      PAGE-0001
+											              ARM               0102
+Addr     Location Object-Code	   RE Isn  Source Statement  [ ********                       ]				    Error
+  		  1 2 3 4 5 6 7 8	   ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                  		      0001 %%TOOL    'xcc-v V10.22  9226' ,190103130527					   
+                  		      0002 %%COMPILE language=C , source=version,mode=0,cps=4,dps=4,newdebug		   
+                  		      0003 ;	   Cross C Compiler  XCC-V  V10.22 (9226) -88011100:03FF-		   
+                  		      0004 ;		   == ARM/ARM9E (V01.03c) 8b13 ==  				   
+                  		      0005 ;		   === arch:V5TE [ARM code] ===					   
+                  		      0006 		   global    _g_app_info					   
+00000000          		      0007 HEADERINFO	   sect	   code							   
+00000000          		      0008 Itop		   set	   $							   
+                  		      0009 _g_app_info:									   
+         00000000 00		      0010 		   db	     000h						   
+         00000001 01		      0011 		   db	     001h						   
+         00000002 54		      0012 		   db	     054h						   
+         00000003 68		      0013 		   db	     068h						   
+         00000004 69		      0014 		   db	     069h						   
+         00000005 73		      0015 		   db	     073h						   
+         00000006 20		      0016 		   db	     020h						   
+         00000007 69		      0017 		   db	     069h						   
+         00000008 73		      0018 		   db	     073h						   
+         00000009 20		      0019 		   db	     020h						   
+         0000000A 74		      0020 		   db	     074h						   
+         0000000B 68		      0021 		   db	     068h						   
+         0000000C 65		      0022 		   db	     065h						   
+         0000000D 20		      0023 		   db	     020h						   
+         0000000E 74		      0024 		   db	     074h						   
+         0000000F 65		      0025 		   db	     065h						   
+         00000010 72		      0026 		   db	     072h						   
+         00000011 6D		      0027 		   db	     06dh						   
+         00000012 69		      0028 		   db	     069h						   
+         00000013 6E		      0029 		   db	     06eh						   
+         00000014 61		      0030 		   db	     061h						   
+         00000015 6C		      0031 		   db	     06ch						   
+         00000016 20		      0032 		   db	     020h						   
+         00000017 61		      0033 		   db	     061h						   
+         00000018 70		      0034 		   db	     070h						   
+         00000019 70		      0035 		   db	     070h						   
+         0000001A 6C		      0036 		   db	     06ch						   
+         0000001B 69		      0037 		   db	     069h						   
+         0000001C 63		      0038 		   db	     063h						   
+         0000001D 61		      0039 		   db	     061h						   
+         0000001E 74		      0040 		   db	     074h						   
+         0000001F 69		      0041 		   db	     069h						   
+         00000020 6F		      0042 		   db	     06fh						   
+         00000021 6E		      0043 		   db	     06eh						   
+         00000022 2E		      0044 		   db	     02eh						   
+         00000023 00		      0045 		   db	     000h						   
+                  		      0046 %%BFILE   'C:\Users\11709931\Desktop\KEYENC~1\keyence\src\version.c' ,1501231342
+                  		           16,11									   
+00000000          		      0047 C_version	   sect	   code							   
+         00000000 		      0048 		   code32							   
+                  		      0049 %%REGPARA R0									   
+                  		      0050 %%BFILE   'C:\Users\11709931\Desktop\KEYENC~1\keyence\inc\version.h' ,1501231342
+                  		           16,10									   
+                  		      0051 %%TYP     'void'		 ,   0, 0, 0,	11111111b, 0,0,0		   
+                  		      0052 %%TYP     'char'		 ,   1, 2, 1,	00111111b, 4,0,2		   
+
+
+   CROSS ASSEMBLER     V10-L41   (8901)  XASS-V                                           Thu 03-Jan-2019 13:05:27      PAGE-0002
+											              ARM               0102
+Addr     Location Object-Code	   RE Isn  Source Statement  [ ********                       ]				    Error
+  		  1 2 3 4 5 6 7 8	   ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                  		      0053 %%TYP     'unsigned char'	 ,   2, 2, 1,	01111111b, 4,0,2		   
+                  		      0054 %%TYP     'short'		 ,   3, 3, 2,	00111111b, 4,0,2		   
+                  		      0055 %%TYP     'unsigned short'	 ,   4, 3, 2,	01111111b, 4,0,2		   
+                  		      0056 %%TYP     'int'		 ,   5, 3, 4,	00111111b, 4,0,2		   
+                  		      0057 %%TYP     'unsigned int'	 ,   6, 3, 4,	01111111b, 4,0,2		   
+                  		      0058 %%TYP     'long'		 ,   7, 3, 4,	00111111b, 4,0,2		   
+                  		      0059 %%TYP     'unsigned long'	 ,   8, 3, 4,	01111111b, 4,0,2		   
+                  		      0060 %%TYP     'float'		 ,   9, 4, 4,	00000000b, 4,0,2		   
+                  		      0061 %%TYP     'double'		 ,  10, 4, 8,	00000001b, 8,0,3		   
+                  		      0062 %%TYP     'enum'		 ,  11, 8, 4,	00111111b, 4,0,2		   
+                  		      0063 %%TYP     'struct'		 ,  12, 9, 0,	11111111b, 0,0,4		   
+                  		      0064 %%TYP     'union'		 ,  13,10, 0,	11111111b, 0,0,4		   
+                  		      0065 %%TYP     'pointer'		 ,  14,11, 4,	01111111b, 4,0,2		   
+                  		      0066 %%EFILE   									   
+                  		      0067 %%SYM     ,9,type=12,id=1,size=36						   
+                  		      0068 %%DDS     									   
+                  		      0069 %%SYM     major_version,7,type=2,val=0,size=1				   
+                  		      0070 %%SYM     minor_version,7,type=2,val=1,size=1				   
+                  		      0071 %%SYM     comment,7,type=2,val=2,size=34					   
+                  		      0072 %%DTY     									   
+                  		      0073 %%DAR     1,34								   
+                  		      0074 %%ENDD    									   
+                  		      0075 %%ENDD    									   
+                  		      0076 %%SYM     g_app_info,0,sym=1,cls=2,val=_g_app_info,size=36			   
+                  		      0077 %%EFILE   									   
+         00000000 		      0078 		   end								   
+
+
+   CROSS ASSEMBLER     V10-L41   (8901)  XASS-V           PROGRAM INFORMATION             Thu 03-Jan-2019 13:05:27      PAGE-0003
+											              ARM               0102
+
+
+				     +--------------------+
+				     | Source Information |
+				     +--------------------+
+
+			      Instruction    Comment	    Macro	   Expansion	  Total		 Error
+
+	  Source  Step            43             35            0                0            78              0
+
+	  Include Step             0              0            0                0             0              0
+
+	  Total   Step            43             35            0                0            78              0
+
+
+
+
+
+
+
+				     +--------------------+
+				     | Object Information |
+				     +--------------------+
+
+	  Section Name           Type		Top Address	    End Address 	Size
+
+	  HEADERINFO             Code		00000000            00000024            00000024 (        36) relocatable
+	  C_version              Code		00000000            00000000            00000000 (         0) relocatable

@@ -1,0 +1,78 @@
+%%TOOL	  'xcc-v V10.22	 9226' ,190103130527
+%%COMPILE language=C , source=version,mode=0,cps=4,dps=4,newdebug
+;	Cross C	Compiler  XCC-V	 V10.22	(9226) -88011100:03FF-
+;		== ARM/ARM9E (V01.03c) 8b13 ==	
+;		=== arch:V5TE [ARM code] ===
+		global	  _g_app_info
+HEADERINFO	sect	code
+Itop		set	$
+_g_app_info:
+		db	  000h
+		db	  001h
+		db	  054h
+		db	  068h
+		db	  069h
+		db	  073h
+		db	  020h
+		db	  069h
+		db	  073h
+		db	  020h
+		db	  074h
+		db	  068h
+		db	  065h
+		db	  020h
+		db	  074h
+		db	  065h
+		db	  072h
+		db	  06dh
+		db	  069h
+		db	  06eh
+		db	  061h
+		db	  06ch
+		db	  020h
+		db	  061h
+		db	  070h
+		db	  070h
+		db	  06ch
+		db	  069h
+		db	  063h
+		db	  061h
+		db	  074h
+		db	  069h
+		db	  06fh
+		db	  06eh
+		db	  02eh
+		db	  000h
+%%BFILE	  'C:\Users\11709931\Desktop\KEYENC~1\keyence\src\version.c' ,150123134216,11
+C_version	sect	code
+		code32
+%%REGPARA R0
+%%BFILE	  'C:\Users\11709931\Desktop\KEYENC~1\keyence\inc\version.h' ,150123134216,10
+%%TYP	  'void'	      ,	  0, 0,	0,   11111111b,	0,0,0
+%%TYP	  'char'	      ,	  1, 2,	1,   00111111b,	4,0,2
+%%TYP	  'unsigned char'     ,	  2, 2,	1,   01111111b,	4,0,2
+%%TYP	  'short'	      ,	  3, 3,	2,   00111111b,	4,0,2
+%%TYP	  'unsigned short'    ,	  4, 3,	2,   01111111b,	4,0,2
+%%TYP	  'int'		      ,	  5, 3,	4,   00111111b,	4,0,2
+%%TYP	  'unsigned int'      ,	  6, 3,	4,   01111111b,	4,0,2
+%%TYP	  'long'	      ,	  7, 3,	4,   00111111b,	4,0,2
+%%TYP	  'unsigned long'     ,	  8, 3,	4,   01111111b,	4,0,2
+%%TYP	  'float'	      ,	  9, 4,	4,   00000000b,	4,0,2
+%%TYP	  'double'	      ,	 10, 4,	8,   00000001b,	8,0,3
+%%TYP	  'enum'	      ,	 11, 8,	4,   00111111b,	4,0,2
+%%TYP	  'struct'	      ,	 12, 9,	0,   11111111b,	0,0,4
+%%TYP	  'union'	      ,	 13,10,	0,   11111111b,	0,0,4
+%%TYP	  'pointer'	      ,	 14,11,	4,   01111111b,	4,0,2
+%%EFILE	  
+%%SYM	  ,9,type=12,id=1,size=36
+%%DDS	  
+%%SYM	  major_version,7,type=2,val=0,size=1
+%%SYM	  minor_version,7,type=2,val=1,size=1
+%%SYM	  comment,7,type=2,val=2,size=34
+%%DTY	  
+%%DAR	  1,34
+%%ENDD	  
+%%ENDD	  
+%%SYM	  g_app_info,0,sym=1,cls=2,val=_g_app_info,size=36
+%%EFILE	  
+		end

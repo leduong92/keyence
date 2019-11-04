@@ -1,0 +1,1272 @@
+
+
+   CROSS ASSEMBLER     V10-L41   (8901)  XASS-V                                           Sat 02-Mar-2019 11:01:08      PAGE-0001
+											              ARM               0102
+Addr     Location Object-Code	   RE Isn  Source Statement  [ ********                       ]				    Error
+  		  1 2 3 4 5 6 7 8	   ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                  		      0001 %%TOOL    'xcc-v V10.22  9226' ,190302110107					   
+                  		      0002 %%COMPILE language=C , source=App500,mode=0,cps=4,dps=4,newdebug		   
+                  		      0003 ;	   Cross C Compiler  XCC-V  V10.22 (9226) -88011100:03FF-		   
+                  		      0004 ;		   == ARM/ARM9E (V01.03c) 8b13 ==  				   
+                  		      0005 ;		   === arch:V5TE [ARM code] ===					   
+                  		      0006 %%BFILE   'C:\Users\11709931\Desktop\KEYENC~1\keyence\App500.c' ,190213114110,1 
+00000000          		      0007 C_App500	   sect	   code							   
+         00000000 		      0008 		   code32							   
+                  		      0009 %%REGPARA R0									   
+                  		      0010 %%BFILE   'C:\Users\11709931\Desktop\KEYENC~1\keyence\App500.h' ,190213103447,9 
+                  		      0011 %%BFILE   'P:\pdrv\barlib\Keyence\nokbt1500.h' ,161112115905,309		   
+                  		      0012 %%BFILE   'C:\Users\11709931\Desktop\KEYENC~1\keyence\inc\btlib.h' ,181122094114
+                  		           ,1243									   
+                  		      0013 %%BFILE   'C:\keyence\CPP\INCLUDE\string.h' ,000112113136,50			   
+                  		      0014 %%BFILE   'C:\keyence\CPP\INCLUDE\memory.h' ,000112113136,27			   
+                  		      0015 %%TYP     'void'		 ,   0, 0, 0,	11111111b, 0,0,0		   
+                  		      0016 %%TYP     'char'		 ,   1, 2, 1,	00111111b, 4,0,2		   
+                  		      0017 %%TYP     'unsigned char'	 ,   2, 2, 1,	01111111b, 4,0,2		   
+                  		      0018 %%TYP     'short'		 ,   3, 3, 2,	00111111b, 4,0,2		   
+                  		      0019 %%TYP     'unsigned short'	 ,   4, 3, 2,	01111111b, 4,0,2		   
+                  		      0020 %%TYP     'int'		 ,   5, 3, 4,	00111111b, 4,0,2		   
+                  		      0021 %%TYP     'unsigned int'	 ,   6, 3, 4,	01111111b, 4,0,2		   
+                  		      0022 %%TYP     'long'		 ,   7, 3, 4,	00111111b, 4,0,2		   
+                  		      0023 %%TYP     'unsigned long'	 ,   8, 3, 4,	01111111b, 4,0,2		   
+                  		      0024 %%TYP     'float'		 ,   9, 4, 4,	00000000b, 4,0,2		   
+                  		      0025 %%TYP     'double'		 ,  10, 4, 8,	00000001b, 8,0,3		   
+                  		      0026 %%TYP     'enum'		 ,  11, 8, 4,	00111111b, 4,0,2		   
+                  		      0027 %%TYP     'struct'		 ,  12, 9, 0,	11111111b, 0,0,4		   
+                  		      0028 %%TYP     'union'		 ,  13,10, 0,	11111111b, 0,0,4		   
+                  		      0029 %%TYP     'pointer'		 ,  14,11, 4,	01111111b, 4,0,2		   
+                  		      0030 %%EFILE   									   
+                  		      0031 %%EFILE   									   
+                  		      0032 %%BFILE   'C:\keyence\CPP\INCLUDE\stdlib.h' ,000112113136,58			   
+                  		      0033 %%EFILE   									   
+                  		      0034 %%EFILE   									   
+                  		      0035 %%BFILE   'C:\Users\11709931\Desktop\KEYENC~1\keyence\inc\btext.h' ,150123134216
+                  		           ,548										   
+                  		      0036 %%EFILE   									   
+                  		      0037 %%EFILE   									   
+                  		      0038 %%BFILE   'C:\Users\11709931\Desktop\KEYENC~1\keyence\Common.h' ,190302090540,60
+                  		      0039 %%EFILE   									   
+                  		      0040 %%EFILE   									   
+                  		      0041 %%SYM     _iobuf,9,type=12,id=1,size=16					   
+                  		      0042 %%DDS     									   
+                  		      0043 %%SYM     _cnt,7,type=5,val=0,size=4						   
+                  		      0044 %%SYM     _ptr,7,type=2,val=4,size=4						   
+                  		      0045 %%DTY     									   
+                  		      0046 %%DPT     									   
+                  		      0047 %%ENDD    									   
+                  		      0048 %%SYM     _base,7,type=2,val=8,size=4					   
+                  		      0049 %%DTY     									   
+                  		      0050 %%DPT     									   
+                  		      0051 %%ENDD    									   
+                  		      0052 %%SYM     _flag,7,type=3,val=12,size=2					   
+
+
+   CROSS ASSEMBLER     V10-L41   (8901)  XASS-V                                           Sat 02-Mar-2019 11:01:08      PAGE-0002
+											              ARM               0102
+Addr     Location Object-Code	   RE Isn  Source Statement  [ ********                       ]				    Error
+  		  1 2 3 4 5 6 7 8	   ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                  		      0053 %%SYM     _file,7,type=2,val=14,size=1					   
+                  		      0054 %%ENDD    									   
+                  		      0055 %%SYM     _dateinfo,9,type=12,id=2,size=4					   
+                  		      0056 %%DDS     									   
+                  		      0057 %%SYM     year,7,type=3,val=0,size=2						   
+                  		      0058 %%SYM     month,7,type=2,val=2,size=1					   
+                  		      0059 %%SYM     day,7,type=2,val=3,size=1						   
+                  		      0060 %%ENDD    									   
+                  		      0061 %%SYM     _timeinfo,9,type=12,id=3,size=4					   
+                  		      0062 %%DDS     									   
+                  		      0063 %%SYM     hour,7,type=2,val=0,size=1						   
+                  		      0064 %%SYM     min,7,type=2,val=1,size=1						   
+                  		      0065 %%SYM     sec,7,type=2,val=2,size=1						   
+                  		      0066 %%SYM     reserve,7,type=2,val=3,size=1					   
+                  		      0067 %%ENDD    									   
+                  		      0068 %%SYM     _tposition,9,type=12,id=4,size=4					   
+                  		      0069 %%DDS     									   
+                  		      0070 %%SYM     x,7,type=3,val=0,size=2						   
+                  		      0071 %%SYM     y,7,type=3,val=2,size=2						   
+                  		      0072 %%ENDD    									   
+                  		      0073 %%SYM     _gposition,9,type=12,id=5,size=4					   
+                  		      0074 %%DDS     									   
+                  		      0075 %%SYM     x,7,type=3,val=0,size=2						   
+                  		      0076 %%SYM     y,7,type=3,val=2,size=2						   
+                  		      0077 %%ENDD    									   
+                  		      0078 %%SYM     _dspattr,9,type=12,id=6,size=12					   
+                  		      0079 %%DDS     									   
+                  		      0080 %%SYM     tposition,7,sym=4,val=0,size=4					   
+                  		      0081 %%SYM     attribute,7,type=3,val=4,size=2					   
+                  		      0082 %%SYM     mag,7,type=3,val=6,size=2						   
+                  		      0083 %%SYM     fold,7,type=3,val=8,size=2						   
+                  		      0084 %%ENDD    									   
+                  		      0085 %%SYM     _dspattrg,9,type=12,id=7,size=12					   
+                  		      0086 %%DDS     									   
+                  		      0087 %%SYM     gposition,7,sym=5,val=0,size=4					   
+                  		      0088 %%SYM     attribute,7,type=3,val=4,size=2					   
+                  		      0089 %%SYM     mag,7,type=3,val=6,size=2						   
+                  		      0090 %%SYM     fold,7,type=3,val=8,size=2						   
+                  		      0091 %%ENDD    									   
+                  		      0092 %%SYM     _menuinfo,9,type=12,id=8,size=80					   
+                  		      0093 %%DDS     									   
+                  		      0094 %%SYM     rsv0,7,type=3,val=0,size=2						   
+                  		      0095 %%SYM     tenkeydirect,7,type=3,val=2,size=2					   
+                  		      0096 %%SYM     totalitem,7,type=3,val=4,size=2					   
+                  		      0097 %%SYM     inititem,7,type=3,val=6,size=2					   
+                  		      0098 %%SYM     menuitem,7,type=2,val=8,size=64					   
+                  		      0099 %%DTY     									   
+                  		      0100 %%DPT     									   
+                  		      0101 %%DAR     4,16								   
+                  		      0102 %%ENDD    									   
+                  		      0103 %%SYM     rsv1,7,type=3,val=72,size=2					   
+                  		      0104 %%SYM     rsv2,7,type=3,val=74,size=2					   
+                  		      0105 %%SYM     rsv3,7,type=3,val=76,size=2					   
+                  		      0106 %%ENDD    									   
+
+
+   CROSS ASSEMBLER     V10-L41   (8901)  XASS-V                                           Sat 02-Mar-2019 11:01:08      PAGE-0003
+											              ARM               0102
+Addr     Location Object-Code	   RE Isn  Source Statement  [ ********                       ]				    Error
+  		  1 2 3 4 5 6 7 8	   ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                  		      0107 %%SYM     _keyfunc,9,type=12,id=9,size=12					   
+                  		      0108 %%DDS     									   
+                  		      0109 %%SYM     F1,7,type=2,val=0,size=1						   
+                  		      0110 %%SYM     F2,7,type=2,val=1,size=1						   
+                  		      0111 %%SYM     F3,7,type=2,val=2,size=1						   
+                  		      0112 %%SYM     L,7,type=2,val=3,size=1						   
+                  		      0113 %%SYM     R,7,type=2,val=4,size=1						   
+                  		      0114 %%SYM     Trg,7,type=2,val=5,size=1						   
+                  		      0115 %%SYM     minus,7,type=2,val=6,size=3					   
+                  		      0116 %%DTY     									   
+                  		      0117 %%DAR     1,3								   
+                  		      0118 %%ENDD    									   
+                  		      0119 %%ENDD    									   
+                  		      0120 %%SYM     _inputintegerattr,9,type=12,id=10,size=12				   
+                  		      0121 %%DDS     									   
+                  		      0122 %%SYM     inputtype,7,type=3,val=0,size=2					   
+                  		      0123 %%SYM     inputarea,7,type=3,val=2,size=2					   
+                  		      0124 %%SYM     minvalue,7,type=7,val=4,size=4					   
+                  		      0125 %%SYM     maxvalue,7,type=7,val=8,size=4					   
+                  		      0126 %%ENDD    									   
+                  		      0127 %%SYM     _inputdecimalattr,9,type=12,id=11,size=16				   
+                  		      0128 %%DDS     									   
+                  		      0129 %%SYM     inputtype,7,type=3,val=0,size=2					   
+                  		      0130 %%SYM     inputarea,7,type=3,val=2,size=2					   
+                  		      0131 %%SYM     minvalue,7,type=7,val=4,size=4					   
+                  		      0132 %%SYM     maxvalue,7,type=7,val=8,size=4					   
+                  		      0133 %%SYM     digit,7,type=3,val=12,size=2					   
+                  		      0134 %%ENDD    									   
+                  		      0135 %%SYM     _inputstrattr,9,type=12,id=12,size=8				   
+                  		      0136 %%DDS     									   
+                  		      0137 %%SYM     inputtype,7,type=3,val=0,size=2					   
+                  		      0138 %%SYM     inputarea,7,type=3,val=2,size=2					   
+                  		      0139 %%SYM     mindigit,7,type=3,val=4,size=2					   
+                  		      0140 %%SYM     maxdigit,7,type=3,val=6,size=2					   
+                  		      0141 %%ENDD    									   
+                  		      0142 %%SYM     _bcrconf,9,type=12,id=13,size=16					   
+                  		      0143 %%DDS     									   
+                  		      0144 %%SYM     mode,7,type=3,val=0,size=2						   
+                  		      0145 %%SYM     trial,7,type=3,val=2,size=2					   
+                  		      0146 %%SYM     overlap,7,type=3,val=4,size=2					   
+                  		      0147 %%SYM     comparecnt,7,type=3,val=6,size=2					   
+                  		      0148 %%SYM     rsv1,7,type=3,val=8,size=2						   
+                  		      0149 %%SYM     rsv2,7,type=3,val=10,size=2					   
+                  		      0150 %%SYM     rsv3,7,type=3,val=12,size=2					   
+                  		      0151 %%SYM     rsv4,7,type=3,val=14,size=2					   
+                  		      0152 %%ENDD    									   
+                  		      0153 %%SYM     _jancodeset,9,type=12,id=14,size=4					   
+                  		      0154 %%DDS     									   
+                  		      0155 %%SYM     flgset,7,type=4,val=0,size=2					   
+                  		      0156 %%SYM     AdGap_min,7,type=2,val=2,size=1					   
+                  		      0157 %%SYM     AdGap_max,7,type=2,val=3,size=1					   
+                  		      0158 %%ENDD    									   
+                  		      0159 %%SYM     _c39codeset,9,type=12,id=15,size=8					   
+                  		      0160 %%DDS     									   
+
+
+   CROSS ASSEMBLER     V10-L41   (8901)  XASS-V                                           Sat 02-Mar-2019 11:01:08      PAGE-0004
+											              ARM               0102
+Addr     Location Object-Code	   RE Isn  Source Statement  [ ********                       ]				    Error
+  		  1 2 3 4 5 6 7 8	   ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                  		      0161 %%SYM     min,7,type=4,val=0,size=2						   
+                  		      0162 %%SYM     max,7,type=4,val=2,size=2						   
+                  		      0163 %%SYM     flgset,7,type=4,val=4,size=2					   
+                  		      0164 %%SYM     rsv1,7,type=3,val=6,size=2						   
+                  		      0165 %%ENDD    									   
+                  		      0166 %%SYM     _e128codeset,9,type=12,id=16,size=8				   
+                  		      0167 %%DDS     									   
+                  		      0168 %%SYM     min,7,type=4,val=0,size=2						   
+                  		      0169 %%SYM     max,7,type=4,val=2,size=2						   
+                  		      0170 %%SYM     flgset,7,type=4,val=4,size=2					   
+                  		      0171 %%SYM     separator,7,type=2,val=6,size=1					   
+                  		      0172 %%SYM     rsv,7,type=2,val=7,size=1						   
+                  		      0173 %%ENDD    									   
+                  		      0174 %%SYM     _c128codeset,9,type=12,id=17,size=8				   
+                  		      0175 %%DDS     									   
+                  		      0176 %%SYM     min,7,type=4,val=0,size=2						   
+                  		      0177 %%SYM     max,7,type=4,val=2,size=2						   
+                  		      0178 %%SYM     flgset,7,type=4,val=4,size=2					   
+                  		      0179 %%SYM     rsv1,7,type=3,val=6,size=2						   
+                  		      0180 %%ENDD    									   
+                  		      0181 %%SYM     _itfcodeset,9,type=12,id=18,size=8					   
+                  		      0182 %%DDS     									   
+                  		      0183 %%SYM     min,7,type=4,val=0,size=2						   
+                  		      0184 %%SYM     max,7,type=4,val=2,size=2						   
+                  		      0185 %%SYM     flgset,7,type=4,val=4,size=2					   
+                  		      0186 %%SYM     rsv1,7,type=3,val=6,size=2						   
+                  		      0187 %%ENDD    									   
+                  		      0188 %%SYM     _nw7codeset,9,type=12,id=19,size=8					   
+                  		      0189 %%DDS     									   
+                  		      0190 %%SYM     min,7,type=4,val=0,size=2						   
+                  		      0191 %%SYM     max,7,type=4,val=2,size=2						   
+                  		      0192 %%SYM     flgset,7,type=4,val=4,size=2					   
+                  		      0193 %%SYM     rsv1,7,type=3,val=6,size=2						   
+                  		      0194 %%ENDD    									   
+                  		      0195 %%SYM     _c93codeset,9,type=12,id=20,size=8					   
+                  		      0196 %%DDS     									   
+                  		      0197 %%SYM     min,7,type=4,val=0,size=2						   
+                  		      0198 %%SYM     max,7,type=4,val=2,size=2						   
+                  		      0199 %%SYM     flgset,7,type=4,val=4,size=2					   
+                  		      0200 %%SYM     rsv1,7,type=3,val=6,size=2						   
+                  		      0201 %%ENDD    									   
+                  		      0202 %%SYM     _tofcodeset,9,type=12,id=21,size=4					   
+                  		      0203 %%DDS     									   
+                  		      0204 %%SYM     min,7,type=4,val=0,size=2						   
+                  		      0205 %%SYM     max,7,type=4,val=2,size=2						   
+                  		      0206 %%ENDD    									   
+                  		      0207 %%SYM     _coopcodeset,9,type=12,id=22,size=4				   
+                  		      0208 %%DDS     									   
+                  		      0209 %%SYM     min,7,type=4,val=0,size=2						   
+                  		      0210 %%SYM     max,7,type=4,val=2,size=2						   
+                  		      0211 %%ENDD    									   
+                  		      0212 %%SYM     _qrcodeset,9,type=12,id=23,size=8					   
+                  		      0213 %%DDS     									   
+                  		      0214 %%SYM     min,7,type=4,val=0,size=2						   
+
+
+   CROSS ASSEMBLER     V10-L41   (8901)  XASS-V                                           Sat 02-Mar-2019 11:01:08      PAGE-0005
+											              ARM               0102
+Addr     Location Object-Code	   RE Isn  Source Statement  [ ********                       ]				    Error
+  		  1 2 3 4 5 6 7 8	   ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                  		      0215 %%SYM     max,7,type=4,val=2,size=2						   
+                  		      0216 %%SYM     flgset,7,type=4,val=4,size=2					   
+                  		      0217 %%ENDD    									   
+                  		      0218 %%SYM     _pdfcodeset,9,type=12,id=24,size=8					   
+                  		      0219 %%DDS     									   
+                  		      0220 %%SYM     min,7,type=4,val=0,size=2						   
+                  		      0221 %%SYM     max,7,type=4,val=2,size=2						   
+                  		      0222 %%SYM     flgset,7,type=4,val=4,size=2					   
+                  		      0223 %%ENDD    									   
+                  		      0224 %%SYM     _dmcodeset,9,type=12,id=25,size=8					   
+                  		      0225 %%DDS     									   
+                  		      0226 %%SYM     min,7,type=4,val=0,size=2						   
+                  		      0227 %%SYM     max,7,type=4,val=2,size=2						   
+                  		      0228 %%SYM     flgset,7,type=4,val=4,size=2					   
+                  		      0229 %%ENDD    									   
+                  		      0230 %%SYM     _mccodeset,9,type=12,id=26,size=8					   
+                  		      0231 %%DDS     									   
+                  		      0232 %%SYM     min,7,type=4,val=0,size=2						   
+                  		      0233 %%SYM     max,7,type=4,val=2,size=2						   
+                  		      0234 %%SYM     flgset,7,type=4,val=4,size=2					   
+                  		      0235 %%ENDD    									   
+                  		      0236 %%SYM     _rsscodeset,9,type=12,id=27,size=8					   
+                  		      0237 %%DDS     									   
+                  		      0238 %%SYM     min,7,type=4,val=0,size=2						   
+                  		      0239 %%SYM     max,7,type=4,val=2,size=2						   
+                  		      0240 %%SYM     flgset,7,type=4,val=4,size=2					   
+                  		      0241 %%ENDD    									   
+                  		      0242 %%SYM     _compositeset,9,type=12,id=28,size=4				   
+                  		      0243 %%DDS     									   
+                  		      0244 %%SYM     flgset,7,type=4,val=0,size=2					   
+                  		      0245 %%SYM     separator,7,type=2,val=2,size=1					   
+                  		      0246 %%SYM     rsv,7,type=2,val=3,size=1						   
+                  		      0247 %%ENDD    									   
+                  		      0248 %%SYM     _bcrcodeset,9,type=12,id=29,size=60				   
+                  		      0249 %%DDS     									   
+                  		      0250 %%SYM     JAN,7,sym=14,val=0,size=4						   
+                  		      0251 %%SYM     CODE39,7,sym=15,val=4,size=8					   
+                  		      0252 %%SYM     EAN128,7,sym=16,val=12,size=8					   
+                  		      0253 %%SYM     CODE128,7,sym=17,val=20,size=8					   
+                  		      0254 %%SYM     ITF,7,sym=18,val=28,size=8						   
+                  		      0255 %%SYM     NW7,7,sym=19,val=36,size=8						   
+                  		      0256 %%SYM     CODE93,7,sym=20,val=44,size=8					   
+                  		      0257 %%SYM     TOF,7,sym=21,val=52,size=4						   
+                  		      0258 %%SYM     COOP,7,sym=22,val=56,size=4					   
+                  		      0259 %%ENDD    									   
+                  		      0260 %%SYM     _bcrinput,9,type=12,id=30,size=132					   
+                  		      0261 %%DDS     									   
+                  		      0262 %%SYM     keta,7,type=3,val=0,size=2						   
+                  		      0263 %%SYM     codetype,7,type=3,val=2,size=2					   
+                  		      0264 %%SYM     bcrdata,7,type=2,val=4,size=128					   
+                  		      0265 %%DTY     									   
+                  		      0266 %%DAR     1,128								   
+                  		      0267 %%ENDD    									   
+                  		      0268 %%ENDD    									   
+
+
+   CROSS ASSEMBLER     V10-L41   (8901)  XASS-V                                           Sat 02-Mar-2019 11:01:08      PAGE-0006
+											              ARM               0102
+Addr     Location Object-Code	   RE Isn  Source Statement  [ ********                       ]				    Error
+  		  1 2 3 4 5 6 7 8	   ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                  		      0269 %%SYM     _bcr_result_report,9,type=12,id=31,size=12				   
+                  		      0270 %%DDS     									   
+                  		      0271 %%SYM     keta,7,type=3,val=0,size=2						   
+                  		      0272 %%SYM     codetype,7,type=3,val=2,size=2					   
+                  		      0273 %%SYM     composite,7,type=3,val=4,size=2					   
+                  		      0274 %%SYM     quality,7,type=3,val=6,size=2					   
+                  		      0275 %%SYM     extraType,7,type=2,val=8,size=1					   
+                  		      0276 %%SYM     codelink,7,type=2,val=9,size=1					   
+                  		      0277 %%ENDD    									   
+                  		      0278 %%SYM     _bcr_result_qr_report,9,type=12,id=32,size=8			   
+                  		      0279 %%DDS     									   
+                  		      0280 %%SYM     pos,7,type=3,val=0,size=2						   
+                  		      0281 %%SYM     parity,7,type=3,val=2,size=2					   
+                  		      0282 %%SYM     count,7,type=3,val=4,size=2					   
+                  		      0283 %%ENDD    									   
+                  		      0284 %%SYM     _bcr_fulldetection_column,9,type=12,id=33,size=4			   
+                  		      0285 %%DDS     									   
+                  		      0286 %%SYM     min,7,type=4,val=0,size=2						   
+                  		      0287 %%SYM     max,7,type=4,val=2,size=2						   
+                  		      0288 %%ENDD    									   
+                  		      0289 %%SYM     _bcr_fulldetection_codeset,9,type=12,id=34,size=20			   
+                  		      0290 %%DDS     									   
+                  		      0291 %%SYM     type,7,type=3,val=0,size=2						   
+                  		      0292 %%SYM     codecount,7,type=3,val=2,size=2					   
+                  		      0293 %%SYM     columneset,7,sym=33,val=4,size=16					   
+                  		      0294 %%DTY     									   
+                  		      0295 %%DAR     4,4								   
+                  		      0296 %%ENDD    									   
+                  		      0297 %%ENDD    									   
+                  		      0298 %%SYM     _bcr_fulldetection_set,9,type=12,id=35,size=84			   
+                  		      0299 %%DDS     									   
+                  		      0300 %%SYM     typecount,7,type=3,val=0,size=2					   
+                  		      0301 %%SYM     rsv1,7,type=3,val=2,size=2						   
+                  		      0302 %%SYM     codeset,7,sym=34,val=4,size=80					   
+                  		      0303 %%DTY     									   
+                  		      0304 %%DAR     20,4								   
+                  		      0305 %%ENDD    									   
+                  		      0306 %%ENDD    									   
+                  		      0307 %%SYM     _bcr_buzzer_action,9,type=12,id=36,size=12				   
+                  		      0308 %%DDS     									   
+                  		      0309 %%SYM     sw,7,type=3,val=0,size=2						   
+                  		      0310 %%SYM     ontime,7,type=3,val=2,size=2					   
+                  		      0311 %%SYM     offtime,7,type=3,val=4,size=2					   
+                  		      0312 %%SYM     cnt,7,type=3,val=6,size=2						   
+                  		      0313 %%SYM     pitch,7,type=3,val=8,size=2					   
+                  		      0314 %%SYM     rsv1,7,type=3,val=10,size=2					   
+                  		      0315 %%ENDD    									   
+                  		      0316 %%SYM     _bcr_led_action,9,type=12,id=37,size=12				   
+                  		      0317 %%DDS     									   
+                  		      0318 %%SYM     sw,7,type=3,val=0,size=2						   
+                  		      0319 %%SYM     ontime,7,type=3,val=2,size=2					   
+                  		      0320 %%SYM     offtime,7,type=3,val=4,size=2					   
+                  		      0321 %%SYM     cnt,7,type=3,val=6,size=2						   
+                  		      0322 %%SYM     color,7,type=3,val=8,size=2					   
+
+
+   CROSS ASSEMBLER     V10-L41   (8901)  XASS-V                                           Sat 02-Mar-2019 11:01:08      PAGE-0007
+											              ARM               0102
+Addr     Location Object-Code	   RE Isn  Source Statement  [ ********                       ]				    Error
+  		  1 2 3 4 5 6 7 8	   ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                  		      0323 %%SYM     rsv1,7,type=3,val=10,size=2					   
+                  		      0324 %%ENDD    									   
+                  		      0325 %%SYM     _bcr_vibrator_action,9,type=12,id=38,size=12			   
+                  		      0326 %%DDS     									   
+                  		      0327 %%SYM     sw,7,type=3,val=0,size=2						   
+                  		      0328 %%SYM     ontime,7,type=3,val=2,size=2					   
+                  		      0329 %%SYM     offtime,7,type=3,val=4,size=2					   
+                  		      0330 %%SYM     cnt,7,type=3,val=6,size=2						   
+                  		      0331 %%SYM     rsv1,7,type=3,val=8,size=2						   
+                  		      0332 %%SYM     rsv2,7,type=3,val=10,size=2					   
+                  		      0333 %%ENDD    									   
+                  		      0334 %%SYM     _file_info,9,type=12,id=39,size=272				   
+                  		      0335 %%DDS     									   
+                  		      0336 %%SYM     drive,7,type=2,val=0,size=2					   
+                  		      0337 %%DTY     									   
+                  		      0338 %%DAR     1,2								   
+                  		      0339 %%ENDD    									   
+                  		      0340 %%SYM     filename,7,type=2,val=2,size=254					   
+                  		      0341 %%DTY     									   
+                  		      0342 %%DAR     1,254								   
+                  		      0343 %%ENDD    									   
+                  		      0344 %%SYM     isDirectory,7,type=2,val=256,size=1				   
+                  		      0345 %%SYM     filesize,7,type=7,val=260,size=4					   
+                  		      0346 %%SYM     year,7,type=3,val=264,size=2					   
+                  		      0347 %%SYM     month,7,type=2,val=266,size=1					   
+                  		      0348 %%SYM     day,7,type=2,val=267,size=1					   
+                  		      0349 %%SYM     hour,7,type=2,val=268,size=1					   
+                  		      0350 %%SYM     min,7,type=2,val=269,size=1					   
+                  		      0351 %%SYM     rsv2,7,type=2,val=270,size=1					   
+                  		      0352 %%SYM     rsv3,7,type=2,val=271,size=1					   
+                  		      0353 %%ENDD    									   
+                  		      0354 %%SYM     _drive_info,9,type=12,id=40,size=16				   
+                  		      0355 %%DDS     									   
+                  		      0356 %%SYM     totalsize,7,type=7,val=0,size=4					   
+                  		      0357 %%SYM     freesize,7,type=7,val=4,size=4					   
+                  		      0358 %%SYM     invalidsize,7,type=7,val=8,size=4					   
+                  		      0359 %%SYM     filecnt,7,type=3,val=12,size=2					   
+                  		      0360 %%ENDD    									   
+                  		      0361 %%SYM     _master_index,9,type=12,id=41,size=28				   
+                  		      0362 %%DDS     									   
+                  		      0363 %%SYM     datatype,7,type=3,val=0,size=2					   
+                  		      0364 %%SYM     separator,7,type=2,val=2,size=1					   
+                  		      0365 %%SYM     fieldcnt,7,type=1,val=3,size=1					   
+                  		      0366 %%SYM     fieldlen,7,type=3,val=4,size=20					   
+                  		      0367 %%DTY     									   
+                  		      0368 %%DAR     2,10								   
+                  		      0369 %%ENDD    									   
+                  		      0370 %%SYM     rsv1,7,type=2,val=24,size=1					   
+                  		      0371 %%SYM     rsv2,7,type=2,val=25,size=1					   
+                  		      0372 %%ENDD    									   
+                  		      0373 %%SYM     _master_search,9,type=12,id=42,size=48				   
+                  		      0374 %%DDS     									   
+                  		      0375 %%SYM     ope,7,type=2,val=0,size=1						   
+                  		      0376 %%SYM     searchdata,7,type=2,val=4,size=40					   
+
+
+   CROSS ASSEMBLER     V10-L41   (8901)  XASS-V                                           Sat 02-Mar-2019 11:01:08      PAGE-0008
+											              ARM               0102
+Addr     Location Object-Code	   RE Isn  Source Statement  [ ********                       ]				    Error
+  		  1 2 3 4 5 6 7 8	   ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                  		      0377 %%DTY     									   
+                  		      0378 %%DPT     									   
+                  		      0379 %%DAR     4,10								   
+                  		      0380 %%ENDD    									   
+                  		      0381 %%SYM     incdeldata,7,type=2,val=44,size=1					   
+                  		      0382 %%SYM     rsv1,7,type=2,val=45,size=1					   
+                  		      0383 %%ENDD    									   
+                  		      0384 %%SYM     _alarm_pattern,9,type=12,id=43,size=76				   
+                  		      0385 %%DDS     									   
+                  		      0386 %%SYM     ontime,7,type=3,val=0,size=2					   
+                  		      0387 %%SYM     offtime,7,type=3,val=2,size=2					   
+                  		      0388 %%SYM     swBuzzer,7,type=3,val=4,size=2					   
+                  		      0389 %%SYM     swVibration,7,type=3,val=6,size=2					   
+                  		      0390 %%SYM     swLed,7,type=3,val=8,size=2					   
+                  		      0391 %%SYM     count,7,type=3,val=10,size=2					   
+                  		      0392 %%SYM     message,7,type=2,val=12,size=64					   
+                  		      0393 %%DTY     									   
+                  		      0394 %%DAR     1,64								   
+                  		      0395 %%ENDD    									   
+                  		      0396 %%ENDD    									   
+                  		      0397 %%SYM     _lost_alarm,9,type=12,id=44,size=92				   
+                  		      0398 %%DDS     									   
+                  		      0399 %%SYM     sw,7,type=3,val=0,size=2						   
+                  		      0400 %%SYM     watchtime,7,type=3,val=2,size=2					   
+                  		      0401 %%SYM     timestart,7,sym=3,val=4,size=4					   
+                  		      0402 %%SYM     timestop,7,sym=3,val=8,size=4					   
+                  		      0403 %%SYM     interval,7,type=3,val=12,size=2					   
+                  		      0404 %%SYM     crsv1,7,type=2,val=14,size=2					   
+                  		      0405 %%DTY     									   
+                  		      0406 %%DAR     1,2								   
+                  		      0407 %%ENDD    									   
+                  		      0408 %%SYM     pattern,7,sym=43,val=16,size=76					   
+                  		      0409 %%ENDD    									   
+                  		      0410 %%SYM     _alarm,9,type=12,id=45,size=84					   
+                  		      0411 %%DDS     									   
+                  		      0412 %%SYM     sw,7,type=3,val=0,size=2						   
+                  		      0413 %%SYM     crsv1,7,type=2,val=2,size=2					   
+                  		      0414 %%DTY     									   
+                  		      0415 %%DAR     1,2								   
+                  		      0416 %%ENDD    									   
+                  		      0417 %%SYM     time,7,sym=3,val=4,size=4						   
+                  		      0418 %%SYM     pattern,7,sym=43,val=8,size=76					   
+                  		      0419 %%ENDD    									   
+                  		      0420 %%SYM     _schedule,9,type=12,id=46,size=268					   
+                  		      0421 %%DDS     									   
+                  		      0422 %%SYM     sw,7,type=3,val=0,size=2						   
+                  		      0423 %%SYM     crsv1,7,type=2,val=2,size=2					   
+                  		      0424 %%DTY     									   
+                  		      0425 %%DAR     1,2								   
+                  		      0426 %%ENDD    									   
+                  		      0427 %%SYM     time,7,sym=3,val=4,size=4						   
+                  		      0428 %%SYM     filename,7,type=2,val=8,size=260					   
+                  		      0429 %%DTY     									   
+                  		      0430 %%DAR     1,260								   
+
+
+   CROSS ASSEMBLER     V10-L41   (8901)  XASS-V                                           Sat 02-Mar-2019 11:01:08      PAGE-0009
+											              ARM               0102
+Addr     Location Object-Code	   RE Isn  Source Statement  [ ********                       ]				    Error
+  		  1 2 3 4 5 6 7 8	   ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                  		      0431 %%ENDD    									   
+                  		      0432 %%ENDD    									   
+                  		      0433 %%SYM     _SEARCH_INDEX,9,type=12,id=47,size=48				   
+                  		      0434 %%DDS     									   
+                  		      0435 %%SYM     recordFormat,7,type=3,val=0,size=2					   
+                  		      0436 %%SYM     recordLength,7,type=3,val=2,size=2					   
+                  		      0437 %%SYM     separator,7,type=2,val=4,size=1					   
+                  		      0438 %%SYM     dmy,7,type=2,val=5,size=1						   
+                  		      0439 %%SYM     sortType,7,type=3,val=6,size=2					   
+                  		      0440 %%SYM     indexMode,7,type=3,val=8,size=2					   
+                  		      0441 %%SYM     indexNum,7,type=3,val=10,size=2					   
+                  		      0442 %%SYM     indexPosition,7,type=3,val=12,size=18				   
+                  		      0443 %%DTY     									   
+                  		      0444 %%DAR     2,9								   
+                  		      0445 %%ENDD    									   
+                  		      0446 %%SYM     indexLength,7,type=3,val=30,size=18				   
+                  		      0447 %%DTY     									   
+                  		      0448 %%DAR     2,9								   
+                  		      0449 %%ENDD    									   
+                  		      0450 %%ENDD    									   
+                  		      0451 %%SYM     WLanParam,8,type=11,id=48						   
+                  		      0452 %%DEN     									   
+                  		      0453 %%SYM     PRM_TERMINALIP,5,type=5,val='1'					   
+                  		      0454 %%SYM     PRM_SUBNETMASK,5,type=5,val='2'					   
+                  		      0455 %%SYM     PRM_GATEWAYIP,5,type=5,val='3'					   
+                  		      0456 %%SYM     PRM_HOSTIP,5,type=5,val='4'					   
+                  		      0457 %%SYM     PRM_DHCPENABLE,5,type=5,val='5'					   
+                  		      0458 %%SYM     PRM_TERMINALNAME,5,type=5,val='6'					   
+                  		      0459 %%SYM     PRM_PRI_DNS_ADDR,5,type=5,val='7'					   
+                  		      0460 %%SYM     PRM_SEC_DNS_ADDR,5,type=5,val='8'					   
+                  		      0461 %%SYM     PRM_FTP_PASV,5,type=5,val='9'					   
+                  		      0462 %%SYM     PRM_FTP_PORTMODE,5,type=5,val='10'					   
+                  		      0463 %%SYM     PRM_USE_FTPS,5,type=5,val='11'					   
+                  		      0464 %%SYM     PRM_SOCKET_NOTIFY,5,type=5,val='12'				   
+                  		      0465 %%SYM     PRM_FTP_TRANSMODE,5,type=5,val='13'				   
+                  		      0466 %%SYM     PRM_FTP_EPHEMERAL_PORT,5,type=5,val='14'				   
+                  		      0467 %%SYM     PRM_FTP_SIZECHECK,5,type=5,val='15'				   
+                  		      0468 %%SYM     PRM_FTP_TEMPDRIVE,5,type=5,val='16'				   
+                  		      0469 %%SYM     PRM_COMM_TRANSMODE,5,type=5,val='17'				   
+                  		      0470 %%SYM     PRM_PREAMBLETYPE,5,type=5,val='101'				   
+                  		      0471 %%SYM     PRM_RFRATE,5,type=5,val='102'					   
+                  		      0472 %%SYM     PRM_WEPAUTHENTICATIONTYPE,5,type=5,val='103'			   
+                  		      0473 %%SYM     PRM_WPAAUTHENTICATIONMODE,5,type=5,val='104'			   
+                  		      0474 %%SYM     PRM_BEACONLOSTCOUNT,5,type=5,val='105'				   
+                  		      0475 %%SYM     PRM_PWMODE,5,type=5,val='106'					   
+                  		      0476 %%SYM     PRM_POWERSAVETIME,5,type=5,val='107'				   
+                  		      0477 %%SYM     PRM_INFRASSID,5,type=5,val='108'					   
+                  		      0478 %%SYM     PRM_INFRAWEPINDEX,5,type=5,val='109'				   
+                  		      0479 %%SYM     PRM_INFRAWEP_1,5,type=5,val='110'					   
+                  		      0480 %%SYM     PRM_INFRAWEP_2,5,type=5,val='111'					   
+                  		      0481 %%SYM     PRM_INFRAWEP_3,5,type=5,val='112'					   
+                  		      0482 %%SYM     PRM_INFRAWEP_4,5,type=5,val='113'					   
+                  		      0483 %%SYM     PRM_ADHOCCHANNEL,5,type=5,val='114'				   
+                  		      0484 %%SYM     PRM_ADHOCSSID,5,type=5,val='115'					   
+
+
+   CROSS ASSEMBLER     V10-L41   (8901)  XASS-V                                           Sat 02-Mar-2019 11:01:08      PAGE-0010
+											              ARM               0102
+Addr     Location Object-Code	   RE Isn  Source Statement  [ ********                       ]				    Error
+  		  1 2 3 4 5 6 7 8	   ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                  		      0485 %%SYM     PRM_ADHOCWEPINDEX,5,type=5,val='116'				   
+                  		      0486 %%SYM     PRM_ADHOCWEP_1,5,type=5,val='117'					   
+                  		      0487 %%SYM     PRM_ADHOCWEP_2,5,type=5,val='118'					   
+                  		      0488 %%SYM     PRM_ADHOCWEP_3,5,type=5,val='119'					   
+                  		      0489 %%SYM     PRM_ADHOCWEP_4,5,type=5,val='120'					   
+                  		      0490 %%SYM     PRM_WPACIPHERMODE,5,type=5,val='121'				   
+                  		      0491 %%SYM     PRM_PRESHAREDKEY,5,type=5,val='122'				   
+                  		      0492 %%SYM     PRM_USERNAME,5,type=5,val='123'					   
+                  		      0493 %%SYM     PRM_PASSWORD,5,type=5,val='124'					   
+                  		      0494 %%SYM     PRM_ROOTCAFILENAME,5,type=5,val='125'				   
+                  		      0495 %%SYM     PRM_CERTFILENAME,5,type=5,val='126'				   
+                  		      0496 %%SYM     PRM_PRIVATEKEYFILENAME,5,type=5,val='127'				   
+                  		      0497 %%SYM     PRM_MAC_ADDR,5,type=5,val='128'					   
+                  		      0498 %%SYM     PRM_NETWORKMODE,5,type=5,val='129'					   
+                  		      0499 %%SYM     PRM_WLAN_READY,5,type=5,val='130'					   
+                  		      0500 %%SYM     PRM_RSSI_THRESH,5,type=5,val='131'					   
+                  		      0501 %%SYM     PRM_INFRACHANNEL,5,type=5,val='132'				   
+                  		      0502 %%SYM     PRM_RADIUS_LOGOFF,5,type=5,val='133'				   
+                  		      0503 %%SYM     PRM_WLAN_INFRA_802d11_MODE,5,type=5,val='134'			   
+                  		      0504 %%SYM     PRM_INFRACHANNEL_5G,5,type=5,val='135'				   
+                  		      0505 %%SYM     PRM_PINCODE,5,type=5,val='201'					   
+                  		      0506 %%SYM     PRM_LOCALDEVICENAME,5,type=5,val='202'				   
+                  		      0507 %%SYM     PRM_BD_ADDR,5,type=5,val='203'					   
+                  		      0508 %%SYM     PRM_CON_BD_ADDR,5,type=5,val='204'					   
+                  		      0509 %%SYM     PRM_SECURITYMODE,5,type=5,val='205'				   
+                  		      0510 %%SYM     PRM_BD_DTRMODE,5,type=5,val='206'					   
+                  		      0511 %%SYM     PRM_BLUE_SPPMODE,5,type=5,val='207'				   
+                  		      0512 %%SYM     PRM_LAST_TARGET_BD_ADDR,5,type=5,val='208'				   
+                  		      0513 %%SYM     PRM_TELNUMBER,5,type=5,val='301'					   
+                  		      0514 %%SYM     PRM_PPP_USERNAME,5,type=5,val='302'				   
+                  		      0515 %%SYM     PRM_PPP_PASSWORD,5,type=5,val='303'				   
+                  		      0516 %%SYM     PRM_USE_PAP,5,type=5,val='304'					   
+                  		      0517 %%SYM     PRM_USE_CHAP,5,type=5,val='305'					   
+                  		      0518 %%SYM     PRM_PPP_TIMEOUT,5,type=5,val='306'					   
+                  		      0519 %%SYM     PRM_PPP_HANGUP,5,type=5,val='307'					   
+                  		      0520 %%SYM     PRM_MODEM_ATCOMMAND,5,type=5,val='401'				   
+                  		      0521 %%SYM     PRM_MODEM_TELNUMBER,5,type=5,val='402'				   
+                  		      0522 %%SYM     PRM_MODEM_DIALTYPE,5,type=5,val='403'				   
+                  		      0523 %%SYM     PRM_MODEM_DIALTIMEOUT,5,type=5,val='404'				   
+                  		      0524 %%SYM     PRM_MODEM_REDIALCOUNT,5,type=5,val='405'				   
+                  		      0525 %%SYM     PRM_MODEM_REDIALINTERVAL,5,type=5,val='406'			   
+                  		      0526 %%SYM     PRM_MODEM_CRADLERATE,5,type=5,val='407'				   
+                  		      0527 %%ENDD    									   
+                  		      0528 %%SYM     _st_rf_configset,9,type=12,id=49,size=8				   
+                  		      0529 %%DDS     									   
+                  		      0530 %%SYM     NetworkMode,7,type=2,val=0,size=1					   
+                  		      0531 %%SYM     AdhocCh,7,type=2,val=1,size=1					   
+                  		      0532 %%SYM     Preamble,7,type=2,val=2,size=1					   
+                  		      0533 %%SYM     WepAuthtype,7,type=2,val=3,size=1					   
+                  		      0534 %%SYM     rate,7,type=2,val=4,size=1						   
+                  		      0535 %%SYM     PwMode,7,type=2,val=5,size=1					   
+                  		      0536 %%SYM     PowerSavetime,7,type=2,val=6,size=1				   
+                  		      0537 %%SYM     BeaconLostcount,7,type=2,val=7,size=1				   
+                  		      0538 %%ENDD    									   
+
+
+   CROSS ASSEMBLER     V10-L41   (8901)  XASS-V                                           Sat 02-Mar-2019 11:01:08      PAGE-0011
+											              ARM               0102
+Addr     Location Object-Code	   RE Isn  Source Statement  [ ********                       ]				    Error
+  		  1 2 3 4 5 6 7 8	   ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                  		      0539 %%SYM     _st_rf_connectioninfo,9,type=12,id=50,size=12			   
+                  		      0540 %%DDS     									   
+                  		      0541 %%SYM     AuthStatus,7,type=2,val=0,size=1					   
+                  		      0542 %%SYM     Ch,7,type=2,val=1,size=1						   
+                  		      0543 %%SYM     MacAddress,7,type=2,val=2,size=6					   
+                  		      0544 %%DTY     									   
+                  		      0545 %%DAR     1,6								   
+                  		      0546 %%ENDD    									   
+                  		      0547 %%SYM     Rssi,7,type=2,val=8,size=1						   
+                  		      0548 %%ENDD    									   
+                  		      0549 %%SYM     _st_wep_info,9,type=12,id=51,size=20				   
+                  		      0550 %%DDS     									   
+                  		      0551 %%SYM     size,7,type=7,val=0,size=4						   
+                  		      0552 %%SYM     wep,7,type=2,val=4,size=14						   
+                  		      0553 %%DTY     									   
+                  		      0554 %%DAR     1,14								   
+                  		      0555 %%ENDD    									   
+                  		      0556 %%ENDD    									   
+                  		      0557 %%SYM     _st_rf_securityinfoset,9,type=12,id=52,size=96			   
+                  		      0558 %%DDS     									   
+                  		      0559 %%SYM     ssid,7,type=2,val=0,size=33					   
+                  		      0560 %%DTY     									   
+                  		      0561 %%DAR     1,33								   
+                  		      0562 %%ENDD    									   
+                  		      0563 %%SYM     ssid_size,7,type=2,val=33,size=1					   
+                  		      0564 %%SYM     wep_selected,7,type=2,val=34,size=1				   
+                  		      0565 %%SYM     wep_size,7,type=2,val=35,size=4					   
+                  		      0566 %%DTY     									   
+                  		      0567 %%DAR     1,4								   
+                  		      0568 %%ENDD    									   
+                  		      0569 %%SYM     wep,7,type=2,val=39,size=56					   
+                  		      0570 %%DTY     									   
+                  		      0571 %%DAR     1,4,14								   
+                  		      0572 %%ENDD    									   
+                  		      0573 %%ENDD    									   
+                  		      0574 %%SYM     _st_rf_securityauthset,9,type=12,id=53,size=908			   
+                  		      0575 %%DDS     									   
+                  		      0576 %%SYM     psk_len,7,type=3,val=0,size=2					   
+                  		      0577 %%SYM     psk,7,type=2,val=2,size=64						   
+                  		      0578 %%DTY     									   
+                  		      0579 %%DAR     1,64								   
+                  		      0580 %%ENDD    									   
+                  		      0581 %%SYM     usr_id_len,7,type=3,val=66,size=2					   
+                  		      0582 %%SYM     usr_id,7,type=2,val=68,size=33					   
+                  		      0583 %%DTY     									   
+                  		      0584 %%DAR     1,33								   
+                  		      0585 %%ENDD    									   
+                  		      0586 %%SYM     usr_pass_len,7,type=3,val=102,size=2				   
+                  		      0587 %%SYM     usr_pass,7,type=2,val=104,size=33					   
+                  		      0588 %%DTY     									   
+                  		      0589 %%DAR     1,33								   
+                  		      0590 %%ENDD    									   
+                  		      0591 %%SYM     rootca_filename,7,type=2,val=137,size=256				   
+                  		      0592 %%DTY     									   
+
+
+   CROSS ASSEMBLER     V10-L41   (8901)  XASS-V                                           Sat 02-Mar-2019 11:01:08      PAGE-0012
+											              ARM               0102
+Addr     Location Object-Code	   RE Isn  Source Statement  [ ********                       ]				    Error
+  		  1 2 3 4 5 6 7 8	   ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                  		      0593 %%DAR     1,256								   
+                  		      0594 %%ENDD    									   
+                  		      0595 %%SYM     cert_filename,7,type=2,val=393,size=256				   
+                  		      0596 %%DTY     									   
+                  		      0597 %%DAR     1,256								   
+                  		      0598 %%ENDD    									   
+                  		      0599 %%SYM     prvkey_filename,7,type=2,val=649,size=256				   
+                  		      0600 %%DTY     									   
+                  		      0601 %%DAR     1,256								   
+                  		      0602 %%ENDD    									   
+                  		      0603 %%ENDD    									   
+                  		      0604 %%SYM     btsockaddr,9,type=12,id=54,size=16					   
+                  		      0605 %%DDS     									   
+                  		      0606 %%SYM     sa_family,7,type=4,val=0,size=2					   
+                  		      0607 %%SYM     sa_data,7,type=2,val=2,size=14					   
+                  		      0608 %%DTY     									   
+                  		      0609 %%DAR     1,14								   
+                  		      0610 %%ENDD    									   
+                  		      0611 %%ENDD    									   
+                  		      0612 %%SYM     btin_addr,9,type=12,id=55,size=4					   
+                  		      0613 %%DDS     									   
+                  		      0614 %%SYM     ,10,type=13,id=56,size=4						   
+                  		      0615 %%DDS     									   
+                  		      0616 %%SYM     ,9,type=12,id=57,size=4						   
+                  		      0617 %%DDS     									   
+                  		      0618 %%SYM     s_b1,7,type=2,val=0,size=1						   
+                  		      0619 %%SYM     s_b2,7,type=2,val=1,size=1						   
+                  		      0620 %%SYM     s_b3,7,type=2,val=2,size=1						   
+                  		      0621 %%SYM     s_b4,7,type=2,val=3,size=1						   
+                  		      0622 %%ENDD    									   
+                  		      0623 %%SYM     S_un_b,7,sym=57,val=0,size=4					   
+                  		      0624 %%SYM     ,9,type=12,id=58,size=4						   
+                  		      0625 %%DDS     									   
+                  		      0626 %%SYM     s_w1,7,type=4,val=0,size=2						   
+                  		      0627 %%SYM     s_w2,7,type=4,val=2,size=2						   
+                  		      0628 %%ENDD    									   
+                  		      0629 %%SYM     S_un_w,7,sym=58,val=0,size=4					   
+                  		      0630 %%SYM     S_addr,7,type=8,val=0,size=4					   
+                  		      0631 %%ENDD    									   
+                  		      0632 %%SYM     S_un,7,sym=56,val=0,size=4						   
+                  		      0633 %%ENDD    									   
+                  		      0634 %%SYM     btsockaddr_in,9,type=12,id=59,size=16				   
+                  		      0635 %%DDS     									   
+                  		      0636 %%SYM     sin_family,7,type=3,val=0,size=2					   
+                  		      0637 %%SYM     sin_port,7,type=4,val=2,size=2					   
+                  		      0638 %%SYM     sin_addr,7,sym=55,val=4,size=4					   
+                  		      0639 %%SYM     sin_zero,7,type=2,val=8,size=8					   
+                  		      0640 %%DTY     									   
+                  		      0641 %%DAR     1,8								   
+                  		      0642 %%ENDD    									   
+                  		      0643 %%ENDD    									   
+                  		      0644 %%SYM     btfd_set,9,type=12,id=60,size=260					   
+                  		      0645 %%DDS     									   
+                  		      0646 %%SYM     fd_count,7,type=6,val=0,size=4					   
+
+
+   CROSS ASSEMBLER     V10-L41   (8901)  XASS-V                                           Sat 02-Mar-2019 11:01:08      PAGE-0013
+											              ARM               0102
+Addr     Location Object-Code	   RE Isn  Source Statement  [ ********                       ]				    Error
+  		  1 2 3 4 5 6 7 8	   ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                  		      0647 %%SYM     fd_array,7,type=5,val=4,size=256					   
+                  		      0648 %%DTY     									   
+                  		      0649 %%DAR     4,64								   
+                  		      0650 %%ENDD    									   
+                  		      0651 %%ENDD    									   
+                  		      0652 %%SYM     bttimeval,9,type=12,id=61,size=8					   
+                  		      0653 %%DDS     									   
+                  		      0654 %%SYM     tv_sec,7,type=7,val=0,size=4					   
+                  		      0655 %%SYM     tv_usec,7,type=7,val=4,size=4					   
+                  		      0656 %%ENDD    									   
+                  		      0657 %%SYM     bthostent,9,type=12,id=62,size=24					   
+                  		      0658 %%DDS     									   
+                  		      0659 %%SYM     h_name,7,type=2,val=0,size=4					   
+                  		      0660 %%DTY     									   
+                  		      0661 %%DPT     									   
+                  		      0662 %%ENDD    									   
+                  		      0663 %%SYM     h_aliases,7,type=2,val=4,size=4					   
+                  		      0664 %%DTY     									   
+                  		      0665 %%DPT     									   
+                  		      0666 %%DAR     4,1								   
+                  		      0667 %%ENDD    									   
+                  		      0668 %%SYM     h_addrtype,7,type=4,val=8,size=2					   
+                  		      0669 %%SYM     h_length,7,type=4,val=10,size=2					   
+                  		      0670 %%SYM     h_addr_list,7,type=2,val=12,size=12				   
+                  		      0671 %%DTY     									   
+                  		      0672 %%DPT     									   
+                  		      0673 %%DAR     4,3								   
+                  		      0674 %%ENDD    									   
+                  		      0675 %%ENDD    									   
+                  		      0676 %%SYM     _st_ftpconfig,9,type=12,id=63,size=404				   
+                  		      0677 %%DDS     									   
+                  		      0678 %%SYM     timeout,7,type=7,val=0,size=4					   
+                  		      0679 %%SYM     cancelkey,7,type=7,val=4,size=4					   
+                  		      0680 %%SYM     target_ip,7,type=8,val=8,size=4					   
+                  		      0681 %%SYM     ftp_portnum,7,type=4,val=12,size=2					   
+                  		      0682 %%SYM     rsv1,7,type=4,val=14,size=2					   
+                  		      0683 %%SYM     usrname,7,type=2,val=16,size=65					   
+                  		      0684 %%DTY     									   
+                  		      0685 %%DAR     1,65								   
+                  		      0686 %%ENDD    									   
+                  		      0687 %%SYM     password,7,type=2,val=81,size=65					   
+                  		      0688 %%DTY     									   
+                  		      0689 %%DAR     1,65								   
+                  		      0690 %%ENDD    									   
+                  		      0691 %%SYM     logfilename,7,type=2,val=146,size=256				   
+                  		      0692 %%DTY     									   
+                  		      0693 %%DAR     1,256								   
+                  		      0694 %%ENDD    									   
+                  		      0695 %%ENDD    									   
+                  		      0696 %%SYM     _st_ftpsconfig,9,type=12,id=64,size=268				   
+                  		      0697 %%DDS     									   
+                  		      0698 %%SYM     ftps_protocol,7,type=5,val=0,size=4				   
+                  		      0699 %%SYM     ftps_data_encrypt,7,type=5,val=4,size=4				   
+                  		      0700 %%SYM     ftps_verify,7,type=5,val=8,size=4					   
+
+
+   CROSS ASSEMBLER     V10-L41   (8901)  XASS-V                                           Sat 02-Mar-2019 11:01:08      PAGE-0014
+											              ARM               0102
+Addr     Location Object-Code	   RE Isn  Source Statement  [ ********                       ]				    Error
+  		  1 2 3 4 5 6 7 8	   ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                  		      0701 %%SYM     ftps_certfile,7,type=2,val=12,size=256				   
+                  		      0702 %%DTY     									   
+                  		      0703 %%DAR     1,256								   
+                  		      0704 %%ENDD    									   
+                  		      0705 %%ENDD    									   
+                  		      0706 %%SYM     _rfstatus,9,type=12,id=65,size=12					   
+                  		      0707 %%DDS     									   
+                  		      0708 %%SYM     ip_adr,7,type=2,val=0,size=4					   
+                  		      0709 %%DTY     									   
+                  		      0710 %%DAR     1,4								   
+                  		      0711 %%ENDD    									   
+                  		      0712 %%SYM     subnet,7,type=2,val=4,size=4					   
+                  		      0713 %%DTY     									   
+                  		      0714 %%DAR     1,4								   
+                  		      0715 %%ENDD    									   
+                  		      0716 %%SYM     defgate,7,type=2,val=8,size=4					   
+                  		      0717 %%DTY     									   
+                  		      0718 %%DAR     1,4								   
+                  		      0719 %%ENDD    									   
+                  		      0720 %%ENDD    									   
+                  		      0721 %%SYM     _host_status,9,type=12,id=66,size=4				   
+                  		      0722 %%DDS     									   
+                  		      0723 %%SYM     ip_adr,7,type=2,val=0,size=4					   
+                  		      0724 %%DTY     									   
+                  		      0725 %%DAR     1,4								   
+                  		      0726 %%ENDD    									   
+                  		      0727 %%ENDD    									   
+                  		      0728 %%SYM     _rfdatif,9,type=12,id=67,size=12					   
+                  		      0729 %%DDS     									   
+                  		      0730 %%SYM     ip,7,type=2,val=0,size=4						   
+                  		      0731 %%DTY     									   
+                  		      0732 %%DAR     1,4								   
+                  		      0733 %%ENDD    									   
+                  		      0734 %%SYM     cnt,7,type=8,val=4,size=4						   
+                  		      0735 %%SYM     buf,7,type=2,val=8,size=4						   
+                  		      0736 %%DTY     									   
+                  		      0737 %%DPT     									   
+                  		      0738 %%ENDD    									   
+                  		      0739 %%ENDD    									   
+                  		      0740 %%SYM     _fileup_status,9,type=12,id=68,size=8				   
+                  		      0741 %%DDS     									   
+                  		      0742 %%SYM     len,7,type=8,val=0,size=4						   
+                  		      0743 %%SYM     ip_adr,7,type=2,val=4,size=4					   
+                  		      0744 %%DTY     									   
+                  		      0745 %%DAR     1,4								   
+                  		      0746 %%ENDD    									   
+                  		      0747 %%ENDD    									   
+                  		      0748 %%SYM     _ess_status,9,type=12,id=69,size=36				   
+                  		      0749 %%DDS     									   
+                  		      0750 %%SYM     ess_len,7,type=8,val=0,size=4					   
+                  		      0751 %%SYM     ess_dat,7,type=2,val=4,size=32					   
+                  		      0752 %%DTY     									   
+                  		      0753 %%DAR     1,32								   
+                  		      0754 %%ENDD    									   
+
+
+   CROSS ASSEMBLER     V10-L41   (8901)  XASS-V                                           Sat 02-Mar-2019 11:01:08      PAGE-0015
+											              ARM               0102
+Addr     Location Object-Code	   RE Isn  Source Statement  [ ********                       ]				    Error
+  		  1 2 3 4 5 6 7 8	   ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                  		      0755 %%ENDD    									   
+                  		      0756 %%SYM     _retry_status,9,type=12,id=70,size=4				   
+                  		      0757 %%DDS     									   
+                  		      0758 %%SYM     retry_count_max,7,type=2,val=0,size=1				   
+                  		      0759 %%SYM     retry_timer_init,7,type=2,val=1,size=1				   
+                  		      0760 %%ENDD    									   
+                  		      0761 %%SYM     ,9,type=12,id=71,size=324						   
+                  		      0762 %%DDS     									   
+                  		      0763 %%SYM     major_version,7,type=2,val=0,size=1				   
+                  		      0764 %%SYM     minor_version,7,type=2,val=1,size=1				   
+                  		      0765 %%SYM     comment,7,type=2,val=2,size=62					   
+                  		      0766 %%DTY     									   
+                  		      0767 %%DAR     1,62								   
+                  		      0768 %%ENDD    									   
+                  		      0769 %%SYM     filepath,7,type=2,val=64,size=260					   
+                  		      0770 %%DTY     									   
+                  		      0771 %%DAR     1,260								   
+                  		      0772 %%ENDD    									   
+                  		      0773 %%ENDD    									   
+                  		      0774 %%SYM     _st_zgnconfig,9,type=12,id=72,size=152				   
+                  		      0775 %%DDS     									   
+                  		      0776 %%SYM     MaxTextSize,7,type=4,val=0,size=2					   
+                  		      0777 %%SYM     Timeout,7,type=4,val=2,size=2					   
+                  		      0778 %%SYM     DestIP,7,type=2,val=4,size=80					   
+                  		      0779 %%DTY     									   
+                  		      0780 %%DAR     1,80								   
+                  		      0781 %%ENDD    									   
+                  		      0782 %%SYM     DestPortNo,7,type=4,val=84,size=2					   
+                  		      0783 %%SYM     LocalPortNo,7,type=4,val=86,size=2					   
+                  		      0784 %%SYM     TcpConnectRetry,7,type=4,val=88,size=2				   
+                  		      0785 %%SYM     TtcRoundupInit,7,type=4,val=90,size=2				   
+                  		      0786 %%SYM     DefineMN,7,type=2,val=92,size=1					   
+                  		      0787 %%SYM     ZeroByteFile,7,type=2,val=93,size=1				   
+                  		      0788 %%SYM     TransDateCheck,7,type=2,val=94,size=1				   
+                  		      0789 %%SYM     TtcBranch,7,type=2,val=95,size=1					   
+                  		      0790 %%SYM     Hostcord,7,type=2,val=96,size=7					   
+                  		      0791 %%DTY     									   
+                  		      0792 %%DAR     1,7								   
+                  		      0793 %%ENDD    									   
+                  		      0794 %%SYM     Termcord,7,type=2,val=103,size=7					   
+                  		      0795 %%DTY     									   
+                  		      0796 %%DAR     1,7								   
+                  		      0797 %%ENDD    									   
+                  		      0798 %%SYM     Password,7,type=2,val=110,size=6					   
+                  		      0799 %%DTY     									   
+                  		      0800 %%DAR     1,6								   
+                  		      0801 %%ENDD    									   
+                  		      0802 %%SYM     Ext,7,type=2,val=116,size=34					   
+                  		      0803 %%DTY     									   
+                  		      0804 %%DAR     1,34								   
+                  		      0805 %%ENDD    									   
+                  		      0806 %%ENDD    									   
+                  		      0807 %%SYM     _st_zgnfconfig,9,type=12,id=73,size=316				   
+                  		      0808 %%DDS     									   
+
+
+   CROSS ASSEMBLER     V10-L41   (8901)  XASS-V                                           Sat 02-Mar-2019 11:01:08      PAGE-0016
+											              ARM               0102
+Addr     Location Object-Code	   RE Isn  Source Statement  [ ********                       ]				    Error
+  		  1 2 3 4 5 6 7 8	   ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                  		      0809 %%SYM     FileName,7,type=2,val=0,size=256					   
+                  		      0810 %%DTY     									   
+                  		      0811 %%DAR     1,256								   
+                  		      0812 %%ENDD    									   
+                  		      0813 %%SYM     Mode,7,type=2,val=256,size=1					   
+                  		      0814 %%SYM     Branch,7,type=2,val=257,size=1					   
+                  		      0815 %%SYM     Pack,7,type=2,val=258,size=1					   
+                  		      0816 %%SYM     Derimita,7,type=2,val=259,size=1					   
+                  		      0817 %%SYM     Blocking,7,type=2,val=260,size=1					   
+                  		      0818 %%SYM     ChangeCodePtn,7,type=2,val=261,size=1				   
+                  		      0819 %%SYM     Cycle,7,type=2,val=262,size=1					   
+                  		      0820 %%SYM     VLRec,7,type=2,val=263,size=1					   
+                  		      0821 %%SYM     RecSize,7,type=4,val=264,size=2					   
+                  		      0822 %%SYM     ZFileName,7,type=2,val=266,size=12					   
+                  		      0823 %%DTY     									   
+                  		      0824 %%DAR     1,12								   
+                  		      0825 %%ENDD    									   
+                  		      0826 %%SYM     FileAccessKey,7,type=2,val=278,size=6				   
+                  		      0827 %%DTY     									   
+                  		      0828 %%DAR     1,6								   
+                  		      0829 %%ENDD    									   
+                  		      0830 %%SYM     FileSub,7,type=2,val=284,size=17					   
+                  		      0831 %%DTY     									   
+                  		      0832 %%DAR     1,17								   
+                  		      0833 %%ENDD    									   
+                  		      0834 %%SYM     FileExt,7,type=2,val=301,size=14					   
+                  		      0835 %%DTY     									   
+                  		      0836 %%DAR     1,14								   
+                  		      0837 %%ENDD    									   
+                  		      0838 %%ENDD    									   
+                  		      0839 %%SYM     _apli_updateinfo,9,type=12,id=74,size=328				   
+                  		      0840 %%DDS     									   
+                  		      0841 %%SYM     apptype,7,type=2,val=0,size=1					   
+                  		      0842 %%SYM     filename,7,type=2,val=1,size=256					   
+                  		      0843 %%DTY     									   
+                  		      0844 %%DAR     1,256								   
+                  		      0845 %%ENDD    									   
+                  		      0846 %%SYM     title,7,type=2,val=257,size=65					   
+                  		      0847 %%DTY     									   
+                  		      0848 %%DAR     1,65								   
+                  		      0849 %%ENDD    									   
+                  		      0850 %%SYM     version,7,type=2,val=322,size=2					   
+                  		      0851 %%DTY     									   
+                  		      0852 %%DAR     1,2								   
+                  		      0853 %%ENDD    									   
+                  		      0854 %%SYM     priority,7,type=2,val=324,size=1					   
+                  		      0855 %%ENDD    									   
+                  		      0856 %%SYM     _st_comenv,9,type=12,id=75,size=12					   
+                  		      0857 %%DDS     									   
+                  		      0858 %%SYM     baudRate,7,type=8,val=0,size=4					   
+                  		      0859 %%SYM     stopBits,7,type=3,val=4,size=2					   
+                  		      0860 %%SYM     parity,7,type=3,val=6,size=2					   
+                  		      0861 %%SYM     dataLen,7,type=3,val=8,size=2					   
+                  		      0862 %%ENDD    									   
+
+
+   CROSS ASSEMBLER     V10-L41   (8901)  XASS-V                                           Sat 02-Mar-2019 11:01:08      PAGE-0017
+											              ARM               0102
+Addr     Location Object-Code	   RE Isn  Source Statement  [ ********                       ]				    Error
+  		  1 2 3 4 5 6 7 8	   ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                  		      0863 %%SYM     ,9,type=12,id=76,size=44						   
+                  		      0864 %%DDS     									   
+                  		      0865 %%SYM     ch,7,type=2,val=0,size=1						   
+                  		      0866 %%SYM     signallevel,7,type=2,val=1,size=1					   
+                  		      0867 %%SYM     macaddr,7,type=2,val=2,size=6					   
+                  		      0868 %%DTY     									   
+                  		      0869 %%DAR     1,6								   
+                  		      0870 %%ENDD    									   
+                  		      0871 %%SYM     ssidlen,7,type=2,val=8,size=1					   
+                  		      0872 %%SYM     ssid,7,type=2,val=9,size=32					   
+                  		      0873 %%DTY     									   
+                  		      0874 %%DAR     1,32								   
+                  		      0875 %%ENDD    									   
+                  		      0876 %%SYM     rsv1,7,type=2,val=41,size=3					   
+                  		      0877 %%DTY     									   
+                  		      0878 %%DAR     1,3								   
+                  		      0879 %%ENDD    									   
+                  		      0880 %%ENDD    									   
+                  		      0881 %%SYM     ,9,type=12,id=77,size=528						   
+                  		      0882 %%DDS     									   
+                  		      0883 %%SYM     apinfo,7,sym=76,val=0,size=528					   
+                  		      0884 %%DTY     									   
+                  		      0885 %%DAR     44,12								   
+                  		      0886 %%ENDD    									   
+                  		      0887 %%ENDD    									   
+                  		      0888 %%SYM     ,9,type=12,id=78,size=44						   
+                  		      0889 %%DDS     									   
+                  		      0890 %%SYM     devicename,7,type=2,val=0,size=32					   
+                  		      0891 %%DTY     									   
+                  		      0892 %%DAR     1,32								   
+                  		      0893 %%ENDD    									   
+                  		      0894 %%SYM     bd_address,7,type=2,val=32,size=12					   
+                  		      0895 %%DTY     									   
+                  		      0896 %%DAR     1,12								   
+                  		      0897 %%ENDD    									   
+                  		      0898 %%ENDD    									   
+                  		      0899 %%SYM     ,9,type=12,id=79,size=396						   
+                  		      0900 %%DDS     									   
+                  		      0901 %%SYM     bluetoothinfo,7,sym=78,val=0,size=396				   
+                  		      0902 %%DTY     									   
+                  		      0903 %%DAR     44,9								   
+                  		      0904 %%ENDD    									   
+                  		      0905 %%ENDD    									   
+                  		      0906 %%SYM     ,8,type=11,id=80							   
+                  		      0907 %%DEN     									   
+                  		      0908 %%SYM     BT_GUI_WT_CANVAS,5,type=5,val='0'					   
+                  		      0909 %%SYM     BT_GUI_WT_EDIT_FIELD,5,type=5,val='1'				   
+                  		      0910 %%SYM     BT_GUI_WT_ML_EDIT,5,type=5,val='2'					   
+                  		      0911 %%SYM     BT_GUI_WT_TEXTBOX,5,type=5,val='3'					   
+                  		      0912 %%SYM     BT_GUI_WT_GROUPBOX,5,type=5,val='4'				   
+                  		      0913 %%SYM     BT_GUI_WT_LISTBOX,5,type=5,val='5'					   
+                  		      0914 %%SYM     BT_GUI_WT_COMBOBOX,5,type=5,val='6'				   
+                  		      0915 %%SYM     BT_GUI_WT_CHECKBOX,5,type=5,val='7'				   
+                  		      0916 %%SYM     BT_GUI_WT_RADIOBUTTON,5,type=5,val='8'				   
+
+
+   CROSS ASSEMBLER     V10-L41   (8901)  XASS-V                                           Sat 02-Mar-2019 11:01:08      PAGE-0018
+											              ARM               0102
+Addr     Location Object-Code	   RE Isn  Source Statement  [ ********                       ]				    Error
+  		  1 2 3 4 5 6 7 8	   ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                  		      0917 %%SYM     BT_GUI_WT_BUTTON,5,type=5,val='9'					   
+                  		      0918 %%SYM     BT_GUI_WT_WINDOW,5,type=5,val='10'					   
+                  		      0919 %%ENDD    									   
+                  		      0920 %%SYM     ,8,type=11,id=81							   
+                  		      0921 %%DEN     									   
+                  		      0922 %%SYM     BT_GUI_PT_VISIBLE,5,type=5,val='0'					   
+                  		      0923 %%SYM     BT_GUI_PT_ENABLE,5,type=5,val='1'					   
+                  		      0924 %%SYM     BT_GUI_PT_FRAME,5,type=5,val='2'					   
+                  		      0925 %%SYM     BT_GUI_PT_BGCOLOR,5,type=5,val='3'					   
+                  		      0926 %%SYM     BT_GUI_PT_TEXTCOLOR,5,type=5,val='4'				   
+                  		      0927 %%SYM     BT_GUI_PT_SEL_BGCOLOR,5,type=5,val='5'				   
+                  		      0928 %%SYM     BT_GUI_PT_SEL_TEXTCOLOR,5,type=5,val='6'				   
+                  		      0929 %%SYM     BT_GUI_PT_EXCLUSIVE,5,type=5,val='7'				   
+                  		      0930 %%SYM     BT_GUI_PT_TEXTDATA,5,type=5,val='8'				   
+                  		      0931 %%SYM     BT_GUI_PT_IMAGE_FILE,5,type=5,val='9'				   
+                  		      0932 %%SYM     BT_GUI_PT_FONTSIZE,5,type=5,val='10'				   
+                  		      0933 %%SYM     BT_GUI_PT_TEXTALIGN,5,type=5,val='11'				   
+                  		      0934 %%SYM     BT_GUI_PT_HSCROLLBAR,5,type=5,val='12'				   
+                  		      0935 %%SYM     BT_GUI_PT_VSCROLLBAR,5,type=5,val='13'				   
+                  		      0936 %%SYM     BT_GUI_PT_STRLEN,5,type=5,val='14'					   
+                  		      0937 %%SYM     BT_GUI_PT_CHECKED,5,type=5,val='15'				   
+                  		      0938 %%SYM     BT_GUI_PT_INPUTMAX,5,type=5,val='16'				   
+                  		      0939 %%SYM     BT_GUI_PT_TRG_MODE,5,type=5,val='17'				   
+                  		      0940 %%SYM     BT_GUI_PT_F3KEY_MODE,5,type=5,val='18'				   
+                  		      0941 %%SYM     BT_GUI_PT_FOCUSIN_EDIT,5,type=5,val='19'				   
+                  		      0942 %%SYM     BT_GUI_PT_AUTOREAD_ENABLE,5,type=5,val='20'			   
+                  		      0943 %%SYM     BT_GUI_PT_KEYINPUT_ENABLE,5,type=5,val='21'			   
+                  		      0944 %%SYM     BT_GUI_PT_FOCUSINDICATOR,5,type=5,val='22'				   
+                  		      0945 %%ENDD    									   
+                  		      0946 %%SYM     _bt_gui_fontinfo,9,type=12,id=82,size=12				   
+                  		      0947 %%DDS     									   
+                  		      0948 %%SYM     sFontSize,7,type=3,val=0,size=2					   
+                  		      0949 %%SYM     sReserve1,7,type=3,val=2,size=2					   
+                  		      0950 %%SYM     ulTextColor,7,type=8,val=4,size=4					   
+                  		      0951 %%SYM     ulBkgColor,7,type=8,val=8,size=4					   
+                  		      0952 %%ENDD    									   
+                  		      0953 %%SYM     _bt_gui_drawex,9,type=12,id=83,size=32				   
+                  		      0954 %%DDS     									   
+                  		      0955 %%SYM     fontinfo,7,sym=82,val=0,size=12					   
+                  		      0956 %%SYM     gapx,7,type=3,val=12,size=2					   
+                  		      0957 %%SYM     gapy,7,type=3,val=14,size=2					   
+                  		      0958 %%SYM     type,7,type=3,val=16,size=2					   
+                  		      0959 %%SYM     sReserve1,7,type=3,val=18,size=2					   
+                  		      0960 %%SYM     attrg,7,sym=7,val=20,size=12					   
+                  		      0961 %%ENDD    									   
+                  		      0962 %%SYM     ,9,type=12,id=84,size=76						   
+                  		      0963 %%DDS     									   
+                  		      0964 %%SYM     anykey,7,type=5,val=0,size=4					   
+                  		      0965 %%SYM     key0,7,type=5,val=4,size=4						   
+                  		      0966 %%SYM     key1,7,type=5,val=8,size=4						   
+                  		      0967 %%SYM     key2,7,type=5,val=12,size=4					   
+                  		      0968 %%SYM     key3,7,type=5,val=16,size=4					   
+                  		      0969 %%SYM     key4,7,type=5,val=20,size=4					   
+                  		      0970 %%SYM     key5,7,type=5,val=24,size=4					   
+
+
+   CROSS ASSEMBLER     V10-L41   (8901)  XASS-V                                           Sat 02-Mar-2019 11:01:08      PAGE-0019
+											              ARM               0102
+Addr     Location Object-Code	   RE Isn  Source Statement  [ ********                       ]				    Error
+  		  1 2 3 4 5 6 7 8	   ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                  		      0971 %%SYM     key6,7,type=5,val=28,size=4					   
+                  		      0972 %%SYM     key7,7,type=5,val=32,size=4					   
+                  		      0973 %%SYM     key8,7,type=5,val=36,size=4					   
+                  		      0974 %%SYM     key9,7,type=5,val=40,size=4					   
+                  		      0975 %%SYM     keyEnt,7,type=5,val=44,size=4					   
+                  		      0976 %%SYM     keyEsc,7,type=5,val=48,size=4					   
+                  		      0977 %%SYM     keyFnUp,7,type=5,val=52,size=4					   
+                  		      0978 %%SYM     keyClr,7,type=5,val=56,size=4					   
+                  		      0979 %%SYM     keyL,7,type=5,val=60,size=4					   
+                  		      0980 %%SYM     keyR,7,type=5,val=64,size=4					   
+                  		      0981 %%SYM     keyUp,7,type=5,val=68,size=4					   
+                  		      0982 %%SYM     keyDown,7,type=5,val=72,size=4					   
+                  		      0983 %%ENDD    									   
+                  		      0984 %%SYM     ,9,type=12,id=85,size=244						   
+                  		      0985 %%DDS     									   
+                  		      0986 %%SYM     data,7,type=2,val=0,size=242					   
+                  		      0987 %%DTY     									   
+                  		      0988 %%DAR     1,11,22								   
+                  		      0989 %%ENDD    									   
+                  		      0990 %%ENDD    									   
+                  		      0991 %%SYM     ,9,type=12,id=86,size=24						   
+                  		      0992 %%DDS     									   
+                  		      0993 %%SYM     name,7,type=2,val=0,size=21					   
+                  		      0994 %%DTY     									   
+                  		      0995 %%DAR     1,21								   
+                  		      0996 %%ENDD    									   
+                  		      0997 %%ENDD    									   
+                  		      0998 %%SYM     ,9,type=12,id=87,size=384						   
+                  		      0999 %%DDS     									   
+                  		      1000 %%SYM     item,7,sym=86,val=0,size=384					   
+                  		      1001 %%DTY     									   
+                  		      1002 %%DAR     24,16								   
+                  		      1003 %%ENDD    									   
+                  		      1004 %%ENDD    									   
+                  		      1005 %%SYM     ,9,type=12,id=88,size=12						   
+                  		      1006 %%DDS     									   
+                  		      1007 %%SYM     year,7,type=3,val=0,size=2						   
+                  		      1008 %%SYM     month,7,type=3,val=2,size=2					   
+                  		      1009 %%SYM     day,7,type=3,val=4,size=2						   
+                  		      1010 %%SYM     hour,7,type=3,val=6,size=2						   
+                  		      1011 %%SYM     min,7,type=3,val=8,size=2						   
+                  		      1012 %%SYM     sec,7,type=3,val=10,size=2						   
+                  		      1013 %%ENDD    									   
+                  		      1014 %%SYM     ,9,type=12,id=89,size=232						   
+                  		      1015 %%DDS     									   
+                  		      1016 %%SYM     mode,7,type=5,val=0,size=4						   
+                  		      1017 %%SYM     title,7,type=2,val=4,size=21					   
+                  		      1018 %%DTY     									   
+                  		      1019 %%DAR     1,21								   
+                  		      1020 %%ENDD    									   
+                  		      1021 %%SYM     l1,7,type=2,val=25,size=21						   
+                  		      1022 %%DTY     									   
+                  		      1023 %%DAR     1,21								   
+                  		      1024 %%ENDD    									   
+
+
+   CROSS ASSEMBLER     V10-L41   (8901)  XASS-V                                           Sat 02-Mar-2019 11:01:08      PAGE-0020
+											              ARM               0102
+Addr     Location Object-Code	   RE Isn  Source Statement  [ ********                       ]				    Error
+  		  1 2 3 4 5 6 7 8	   ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                  		      1025 %%SYM     l2,7,type=2,val=46,size=21						   
+                  		      1026 %%DTY     									   
+                  		      1027 %%DAR     1,21								   
+                  		      1028 %%ENDD    									   
+                  		      1029 %%SYM     l3,7,type=2,val=67,size=21						   
+                  		      1030 %%DTY     									   
+                  		      1031 %%DAR     1,21								   
+                  		      1032 %%ENDD    									   
+                  		      1033 %%SYM     l4,7,type=2,val=88,size=21						   
+                  		      1034 %%DTY     									   
+                  		      1035 %%DAR     1,21								   
+                  		      1036 %%ENDD    									   
+                  		      1037 %%SYM     l5,7,type=2,val=109,size=21					   
+                  		      1038 %%DTY     									   
+                  		      1039 %%DAR     1,21								   
+                  		      1040 %%ENDD    									   
+                  		      1041 %%SYM     l6,7,type=2,val=130,size=21					   
+                  		      1042 %%DTY     									   
+                  		      1043 %%DAR     1,21								   
+                  		      1044 %%ENDD    									   
+                  		      1045 %%SYM     l7,7,type=2,val=151,size=21					   
+                  		      1046 %%DTY     									   
+                  		      1047 %%DAR     1,21								   
+                  		      1048 %%ENDD    									   
+                  		      1049 %%SYM     buffer,7,type=2,val=172,size=4					   
+                  		      1050 %%DTY     									   
+                  		      1051 %%DPT     									   
+                  		      1052 %%ENDD    									   
+                  		      1053 %%SYM     bufsize,7,type=6,val=176,size=4					   
+                  		      1054 %%SYM     emptyOK,7,type=5,val=180,size=4					   
+                  		      1055 %%SYM     upkey,7,type=5,val=184,size=4					   
+                  		      1056 %%SYM     downkey,7,type=5,val=188,size=4					   
+                  		      1057 %%SYM     bar_read,7,type=5,val=192,size=4					   
+                  		      1058 %%SYM     keychange,7,type=5,val=196,size=4					   
+                  		      1059 %%SYM     defdata,7,type=2,val=200,size=21					   
+                  		      1060 %%DTY     									   
+                  		      1061 %%DAR     1,21								   
+                  		      1062 %%ENDD    									   
+                  		      1063 %%SYM     alpha,7,type=2,val=221,size=1					   
+                  		      1064 %%SYM     c1,7,type=2,val=222,size=1						   
+                  		      1065 %%SYM     c2,7,type=2,val=223,size=1						   
+                  		      1066 %%SYM     c3,7,type=2,val=224,size=1						   
+                  		      1067 %%SYM     c4,7,type=2,val=225,size=1						   
+                  		      1068 %%SYM     c5,7,type=2,val=226,size=1						   
+                  		      1069 %%SYM     c6,7,type=2,val=227,size=1						   
+                  		      1070 %%SYM     c7,7,type=2,val=228,size=1						   
+                  		      1071 %%ENDD    									   
+                  		      1072 %%SYM     ,9,type=12,id=90,size=48						   
+                  		      1073 %%DDS     									   
+                  		      1074 %%SYM     Name,7,type=2,val=0,size=30					   
+                  		      1075 %%DTY     									   
+                  		      1076 %%DAR     1,30								   
+                  		      1077 %%ENDD    									   
+                  		      1078 %%SYM     AdminSign,7,type=2,val=30,size=1					   
+
+
+   CROSS ASSEMBLER     V10-L41   (8901)  XASS-V                                           Sat 02-Mar-2019 11:01:08      PAGE-0021
+											              ARM               0102
+Addr     Location Object-Code	   RE Isn  Source Statement  [ ********                       ]				    Error
+  		  1 2 3 4 5 6 7 8	   ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                  		      1079 %%SYM     Location,7,type=2,val=31,size=3					   
+                  		      1080 %%DTY     									   
+                  		      1081 %%DAR     1,3								   
+                  		      1082 %%ENDD    									   
+                  		      1083 %%SYM     UserId,7,type=2,val=34,size=10					   
+                  		      1084 %%DTY     									   
+                  		      1085 %%DAR     1,10								   
+                  		      1086 %%ENDD    									   
+                  		      1087 %%SYM     None,7,type=2,val=44,size=1					   
+                  		      1088 %%ENDD    									   
+                  		      1089 %%SYM     ,9,type=12,id=91,size=100						   
+                  		      1090 %%DDS     									   
+                  		      1091 %%SYM     msg1,7,type=2,val=0,size=20					   
+                  		      1092 %%DTY     									   
+                  		      1093 %%DAR     1,20								   
+                  		      1094 %%ENDD    									   
+                  		      1095 %%SYM     msg2,7,type=2,val=20,size=20					   
+                  		      1096 %%DTY     									   
+                  		      1097 %%DAR     1,20								   
+                  		      1098 %%ENDD    									   
+                  		      1099 %%SYM     msg3,7,type=2,val=40,size=20					   
+                  		      1100 %%DTY     									   
+                  		      1101 %%DAR     1,20								   
+                  		      1102 %%ENDD    									   
+                  		      1103 %%SYM     msg4,7,type=2,val=60,size=20					   
+                  		      1104 %%DTY     									   
+                  		      1105 %%DAR     1,20								   
+                  		      1106 %%ENDD    									   
+                  		      1107 %%SYM     msg5,7,type=2,val=80,size=20					   
+                  		      1108 %%DTY     									   
+                  		      1109 %%DAR     1,20								   
+                  		      1110 %%ENDD    									   
+                  		      1111 %%ENDD    									   
+                  		      1112 %%EFILE   									   
+         00000000 		      1113 		   end								   
+
+
+   CROSS ASSEMBLER     V10-L41   (8901)  XASS-V           PROGRAM INFORMATION             Sat 02-Mar-2019 11:01:08      PAGE-0022
+											              ARM               0102
+
+
+				     +--------------------+
+				     | Source Information |
+				     +--------------------+
+
+			      Instruction    Comment	    Macro	   Expansion	  Total		 Error
+
+	  Source  Step             3           1110            0                0          1113              0
+
+	  Include Step             0              0            0                0             0              0
+
+	  Total   Step             3           1110            0                0          1113              0
+
+
+
+
+
+
+
+				     +--------------------+
+				     | Object Information |
+				     +--------------------+
+
+	  Section Name           Type		Top Address	    End Address 	Size
+
+	  C_App500               Code		00000000            00000000            00000000 (         0) relocatable

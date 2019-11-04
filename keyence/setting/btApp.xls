@@ -1,0 +1,39 @@
+;==============================================================================+
+;  UserApplication Linkage File                                                |
+;  Copyright(c) 2008, Keyence Corporation. All rights reserved.                |
+;==============================================================================+
+
+/boundary     = 4
+/address      = 0xc0e00000-0xc11fffff
+/section      = B*|COMM		(bss  = _BSS)
+/section      = D*|COMM		(data = _DATA)
+
+
+/address      = 0xc0008000-0xc000804F
+/section      = MAGICCODE|CODE
+/section	  = HEADERINFO|CODE
+/address      = 0xc0008050-0xc0107fff
+/section      = C_start|CODE
+/section      = C_getRes|CODE
+/section      = C*|CODE
+/section      = I*|CODE
+/section      = I*|COMM
+/init_section = _INIT_DATA	(_DATA)
+
+;====================================================+
+;  Linkage Module                                    |
+;====================================================+
+;-------------------------+
+;  Entry                  |
+;-------------------------+
+;/entn    =startup
+;-------------------------+
+;  SystemLib              |
+;-------------------------+
+/Syslib  = ./lib/CRT.XLB             ;C-Runtime
+/Syslib  = ./lib/CP_CSAT3.XLB        ;C++-Runtime
+/Syslib  = ./lib/MATAT3A.XLB         ;GAIO Math
+/Syslib  = ./lib/CSAT3A.XLB          ;GAIO
+/Syslib  = ./lib/STDAT3A.XLB         ;GAIO
+/Syslib  = ./lib/APPLIB.xlb          ;APPLib Entry
+

@@ -1,0 +1,4752 @@
+%%TOOL	  'xcc-v V10.22	 9226' ,190302110106
+%%COMPILE language=C , source=App300,mode=0,cps=4,dps=4,newdebug
+;	Cross C	Compiler  XCC-V	 V10.22	(9226) -88011100:03FF-
+;		== ARM/ARM9E (V01.03c) 8b13 ==	
+;		=== arch:V5TE [ARM code] ===
+		extnal	  @strlen
+		extnal	  @btMessageBoxEx
+		extnal	  @btstrcpy
+		extnal	  @btstrlen
+		extnal	  @btmemcpy
+		extnal	  @btmemcmp
+		extnal	  @btmemset
+		extnal	  @btsprintf
+		extnal	  @StartDisplay
+		extnal	  @Beep
+		extnal	  @Buzzer
+		extnal	  @DataInputBt
+		extnal	  @MasterFind
+		extnal	  _send
+		extnal	  _rcv
+		extnal	  _buf
+		extnal	  _keyCode
+		extnal	  _loc
+		extnal	  _userId
+		extnal	  _msg
+		extnal	  _msg2
+		extnal	  _ret
+		extnal	  @DataSend
+		extnal	  @MakeDataToSend
+		extnal	  @CheckDataByType
+		extnal	  @GetBoxNoFromString
+		extnal	  @CheckDataExistInString
+		extnal	  @CheckDuplicate
+		extnal	  @GetUserAndLocation
+		extnal	  @ReadData
+		global	  @InStock
+		global	  @CheckInventoryForOS
+		global	  @CheckInventoryForOR
+		global	  @PrintPCLOR
+		global	  @Reservation
+		global	  @ArrangeBoxToPallet
+		global	  @ArrangeToPalletOS
+		global	  @ArrangeToPalletOR
+I_App300	sect	comm
+Itop		set	$
+S1:
+		db	  06ch,06fh,063h,061h,074h
+		db	  069h,06fh,06eh,0
+S2:
+		db	  075h,073h,065h,072h,0
+S3:
+		db	  025h,073h,0
+S4:
+		db	  025h,073h,0
+S5:
+		db	  025h,073h,040h,025h,073h
+		db	  0
+S6:
+		db	  05bh,025h,064h,05dh,0
+S7:
+		db	  056h,04eh,04eh,020h,04eh
+		db	  04fh,04bh,0
+S8:
+		db	  050h,043h,04ch,020h,04eh
+		db	  06fh,03ah,0
+S9:
+		db	  0
+S10:
+		db	  0
+S11:
+		db	  0
+S12:
+		db	  0
+S13:
+		db	  020h,043h,03ah,054h,068h
+		db	  06fh,061h,074h,020h,02dh
+		db	  020h,045h,04eh,054h,03ah
+		db	  047h,075h,069h,020h,0
+S14:
+		db	  04dh,033h,030h,031h,0
+S15:
+		db	  0
+S16:
+		db	  053h,063h,061h,06eh,06eh
+		db	  065h,064h,020h,042h,06fh
+		db	  078h,03ah,020h,025h,06ch
+		db	  064h,02fh,025h,06ch,064h
+		db	  0
+S17:
+		db	  025h,073h,025h,073h,0
+S18:
+		db	  025h,073h,0
+S19:
+		db	  04dh,033h,030h,031h,0
+S20:
+		db	  053h,030h,031h,0
+S21:
+		db	  06ch,06fh,063h,061h,074h
+		db	  069h,06fh,06eh,0
+S22:
+		db	  075h,073h,065h,072h,0
+S23:
+		db	  04dh,033h,030h,036h,0
+S24:
+		db	  0
+S25:
+		db	  053h,063h,061h,06eh,06eh
+		db	  065h,064h,020h,042h,06fh
+		db	  078h,03ah,020h,025h,06ch
+		db	  064h,02fh,025h,06ch,064h
+		db	  0
+S26:
+		db	  025h,073h,040h,025h,073h
+		db	  0
+S27:
+		db	  025h,073h,0
+S28:
+		db	  056h,04eh,04eh,020h,04eh
+		db	  04fh,04bh,0
+S29:
+		db	  051h,075h,065h,074h,020h
+		db	  074h,068h,075h,06eh,067h
+		db	  020h,06bh,065h,020h,074h
+		db	  069h,065h,070h,0
+S30:
+		db	  0
+S31:
+		db	  0
+S32:
+		db	  0
+S33:
+		db	  0
+S34:
+		db	  020h,043h,03ah,054h,068h
+		db	  06fh,061h,074h,020h,02dh
+		db	  020h,045h,04eh,054h,03ah
+		db	  047h,075h,069h,020h,0
+S35:
+		db	  025h,073h,040h,025h,073h
+		db	  0
+S36:
+		db	  04dh,033h,030h,036h,0
+S37:
+		db	  053h,030h,031h,0
+S38:
+		db	  04dh,033h,030h,036h,0
+S39:
+		db	  053h,030h,032h,0
+S40:
+		db	  054h,06fh,020h,020h,05bh
+		db	  025h,06ch,064h,02fh,025h
+		db	  06ch,064h,05dh,0
+S41:
+		db	  025h,073h,040h,025h,073h
+		db	  0
+S42:
+		db	  025h,073h,0
+S43:
+		db	  020h,020h,05bh,025h,06ch
+		db	  064h,02fh,025h,06ch,064h
+		db	  05dh,0
+S44:
+		db	  056h,04eh,04eh,020h,04eh
+		db	  04fh,04bh,0
+S45:
+		db	  051h,075h,065h,074h,020h
+		db	  053h,068h,069h,070h,070h
+		db	  069h,06eh,067h,020h,054h
+		db	  06fh,0
+S46:
+		db	  06bh,065h,020h,074h,069h
+		db	  065h,070h,03ah,0
+S47:
+		db	  0
+S48:
+		db	  0
+S49:
+		db	  0
+S50:
+		db	  020h,043h,03ah,054h,068h
+		db	  06fh,061h,074h,020h,02dh
+		db	  020h,045h,04eh,054h,03ah
+		db	  047h,075h,069h,020h,0
+S51:
+		db	  025h,073h,040h,025h,073h
+		db	  0
+S52:
+		db	  04dh,033h,030h,036h,0
+S53:
+		db	  053h,030h,033h,0
+S54:
+		db	  06ch,06fh,063h,061h,074h
+		db	  069h,06fh,06eh,0
+S55:
+		db	  075h,073h,065h,072h,0
+S56:
+		db	  04dh,033h,030h,036h,0
+S57:
+		db	  052h,030h,031h,0
+S58:
+		db	  04eh,047h,0
+S59:
+		db	  025h,073h,0
+S60:
+		db	  025h,073h,025h,073h,0
+S61:
+		db	  04dh,033h,030h,036h,0
+S62:
+		db	  052h,030h,032h,0
+S63:
+		db	  054h,06fh,020h,020h,05bh
+		db	  025h,06ch,064h,02fh,025h
+		db	  06ch,064h,05dh,0
+S64:
+		db	  025h,073h,040h,025h,073h
+		db	  0
+S65:
+		db	  025h,073h,0
+S66:
+		db	  020h,020h,05bh,025h,06ch
+		db	  064h,02fh,025h,06ch,064h
+		db	  05dh,0
+S67:
+		db	  056h,04eh,04eh,020h,04eh
+		db	  04fh,04bh,0
+S68:
+		db	  051h,075h,065h,074h,020h
+		db	  053h,068h,069h,070h,070h
+		db	  069h,06eh,067h,020h,054h
+		db	  06fh,0
+S69:
+		db	  06bh,065h,020h,074h,069h
+		db	  065h,070h,03ah,0
+S70:
+		db	  0
+S71:
+		db	  0
+S72:
+		db	  0
+S73:
+		db	  020h,043h,03ah,054h,068h
+		db	  06fh,061h,074h,020h,02dh
+		db	  020h,045h,04eh,054h,03ah
+		db	  047h,075h,069h,020h,0
+S74:
+		db	  04dh,033h,030h,036h,0
+S75:
+		db	  052h,030h,033h,0
+S76:
+		db	  048h,06fh,061h,06eh,020h
+		db	  054h,068h,061h,06eh,068h
+		db	  021h,021h,021h,0
+S77:
+		db	  0
+S78:
+		db	  04dh,033h,030h,030h,0
+S79:
+		db	  0
+S80:
+		db	  06ch,06fh,063h,061h,074h
+		db	  069h,06fh,06eh,0
+S81:
+		db	  075h,073h,065h,072h,0
+S82:
+		db	  054h,068h,075h,020h,05bh
+		db	  025h,064h,05dh,0
+S83:
+		db	  056h,04eh,04eh,020h,04eh
+		db	  04fh,04bh,0
+S84:
+		db	  051h,075h,065h,074h,020h
+		db	  050h,061h,06ch,06ch,065h
+		db	  074h,065h,020h,043h,058h
+		db	  0
+S85:
+		db	  020h,020h,05bh,020h,020h
+		db	  020h,020h,052h,03ah,047h
+		db	  075h,069h,020h,020h,020h
+		db	  020h,05dh,0
+S86:
+		db	  054h,04fh,053h,031h,0
+S87:
+		db	  025h,073h,025h,073h,040h
+		db	  0
+S88:
+		db	  056h,04eh,04eh,020h,04eh
+		db	  04fh,04bh,0
+S89:
+		db	  05bh,052h,065h,073h,065h
+		db	  072h,076h,061h,074h,069h
+		db	  06fh,06eh,05dh,0
+S90:
+		db	  051h,075h,065h,074h,020h
+		db	  050h,061h,06ch,06ch,065h
+		db	  074h,065h,020h,074h,069h
+		db	  065h,070h,020h,0
+S91:
+		db	  074h,068h,065h,06fh,0
+S92:
+		db	  0
+S93:
+		db	  020h,0
+S94:
+		db	  0
+S95:
+		db	  045h,04eh,054h,03ah,020h
+		db	  048h,06fh,061h,06eh,020h
+		db	  054h,068h,061h,06eh,068h
+		db	  0
+S96:
+		db	  04dh,033h,030h,034h,0
+S97:
+		db	  0
+S98:
+		db	  06ch,06fh,063h,061h,074h
+		db	  069h,06fh,06eh,0
+S99:
+		db	  075h,073h,065h,072h,0
+S100:
+		db	  04fh,053h,031h,0
+S101:
+		db	  04fh,053h,031h,0
+S102:
+		db	  04fh,052h,031h,0
+S103:
+		db	  04fh,052h,031h,0
+S104:
+		db	  054h,068h,069h,073h,020h
+		db	  066h,075h,06eh,063h,074h
+		db	  069h,06fh,06eh,020h,064h
+		db	  06fh,065h,073h,06eh,027h
+		db	  074h,020h,065h,078h,069h
+		db	  073h,074h,073h,021h,021h
+		db	  021h,0
+S105:
+		db	  043h,06fh,06dh,06dh,061h
+		db	  06eh,064h,020h,044h,069h
+		db	  073h,074h,02eh,0
+S106:
+		db	  056h,04eh,04eh,020h,04eh
+		db	  04fh,04bh,0
+S107:
+		db	  050h,061h,06ch,06ch,065h
+		db	  074h,065h,020h,043h,061h
+		db	  06eh,020h,043h,068h,075h
+		db	  079h,065h,06eh,0
+S108:
+		db	  0
+S109:
+		db	  025h,073h,0
+S110:
+		db	  04dh,033h,030h,032h,0
+S111:
+		db	  053h,030h,031h,0
+S112:
+		db	  051h,075h,065h,074h,020h
+		db	  042h,06fh,078h,020h,073h
+		db	  061h,070h,020h,078h,065h
+		db	  070h,0
+S113:
+		db	  0
+S114:
+		db	  0
+S115:
+		db	  054h,06fh,06eh,067h,020h
+		db	  073h,06fh,020h,042h,06fh
+		db	  078h,03ah,020h,025h,06ch
+		db	  064h,0
+S116:
+		db	  025h,073h,040h,025h,073h
+		db	  0
+S117:
+		db	  054h,06fh,06eh,067h,020h
+		db	  073h,06fh,020h,042h,06fh
+		db	  078h,03ah,020h,025h,06ch
+		db	  064h,0
+S118:
+		db	  056h,04eh,04eh,020h,04eh
+		db	  04fh,04bh,0
+S119:
+		db	  05bh,054h,068h,06fh,06eh
+		db	  067h,020h,074h,069h,06eh
+		db	  05dh,0
+S120:
+		db	  0
+S121:
+		db	  0
+S122:
+		db	  043h,03ah,020h,054h,068h
+		db	  06fh,061h,074h,0
+S123:
+		db	  045h,04eh,054h,03ah,020h
+		db	  047h,075h,069h,0
+S124:
+		db	  025h,073h,025h,073h,0
+S125:
+		db	  04dh,033h,030h,032h,0
+S126:
+		db	  053h,030h,032h,0
+S127:
+		db	  051h,075h,065h,074h,020h
+		db	  042h,06fh,078h,020h,073h
+		db	  061h,070h,020h,078h,065h
+		db	  070h,0
+S128:
+		db	  0
+S129:
+		db	  0
+S130:
+		db	  020h,020h,020h,020h,020h
+		db	  05bh,04ch,05dh,020h,054h
+		db	  068h,06fh,061h,074h,0
+S131:
+		db	  025h,073h,0
+S132:
+		db	  04dh,033h,030h,032h,0
+S133:
+		db	  053h,030h,033h,0
+		ds	  1			    ; bnd 4
+%%BFILE	  'C:\Users\11709931\Desktop\KEYENC~1\keyence\App300.c'	,190302105251,758
+C_App300	sect	code
+		code32
+%%REGPARA R0
+%%BFILE	  'C:\Users\11709931\Desktop\KEYENC~1\keyence\App300.h'	,190302105120,40
+%%BFILE	  'P:\pdrv\barlib\Keyence\nokbt1500.h' ,161112115905,309
+%%BFILE	  'C:\Users\11709931\Desktop\KEYENC~1\keyence\inc\btlib.h' ,181122094114,1243
+%%BFILE	  'C:\keyence\CPP\INCLUDE\string.h' ,000112113136,50
+%%BFILE	  'C:\keyence\CPP\INCLUDE\memory.h' ,000112113136,27
+%%TYP	  'void'	      ,	  0, 0,	0,   11111111b,	0,0,0
+%%TYP	  'char'	      ,	  1, 2,	1,   00111111b,	4,0,2
+%%TYP	  'unsigned char'     ,	  2, 2,	1,   01111111b,	4,0,2
+%%TYP	  'short'	      ,	  3, 3,	2,   00111111b,	4,0,2
+%%TYP	  'unsigned short'    ,	  4, 3,	2,   01111111b,	4,0,2
+%%TYP	  'int'		      ,	  5, 3,	4,   00111111b,	4,0,2
+%%TYP	  'unsigned int'      ,	  6, 3,	4,   01111111b,	4,0,2
+%%TYP	  'long'	      ,	  7, 3,	4,   00111111b,	4,0,2
+%%TYP	  'unsigned long'     ,	  8, 3,	4,   01111111b,	4,0,2
+%%TYP	  'float'	      ,	  9, 4,	4,   00000000b,	4,0,2
+%%TYP	  'double'	      ,	 10, 4,	8,   00000001b,	8,0,3
+%%TYP	  'enum'	      ,	 11, 8,	4,   00111111b,	4,0,2
+%%TYP	  'struct'	      ,	 12, 9,	0,   11111111b,	0,0,4
+%%TYP	  'union'	      ,	 13,10,	0,   11111111b,	0,0,4
+%%TYP	  'pointer'	      ,	 14,11,	4,   01111111b,	4,0,2
+%%EFILE	  
+%%EFILE	  
+%%BFILE	  'C:\keyence\CPP\INCLUDE\stdlib.h' ,000112113136,58
+%%EFILE	  
+%%EFILE	  
+%%BFILE	  'C:\Users\11709931\Desktop\KEYENC~1\keyence\inc\btext.h' ,150123134216,548
+%%EFILE	  
+%%EFILE	  
+%%BFILE	  'C:\Users\11709931\Desktop\KEYENC~1\keyence\Common.h'	,190302090540,60
+%%EFILE	  
+%%EFILE	  
+%%SYM	  _iobuf,9,type=12,id=1,size=16
+%%DDS	  
+%%SYM	  _cnt,7,type=5,val=0,size=4
+%%SYM	  _ptr,7,type=2,val=4,size=4
+%%DTY	  
+%%DPT	  
+%%ENDD	  
+%%SYM	  _base,7,type=2,val=8,size=4
+%%DTY	  
+%%DPT	  
+%%ENDD	  
+%%SYM	  _flag,7,type=3,val=12,size=2
+%%SYM	  _file,7,type=2,val=14,size=1
+%%ENDD	  
+%%SYM	  _dateinfo,9,type=12,id=2,size=4
+%%DDS	  
+%%SYM	  year,7,type=3,val=0,size=2
+%%SYM	  month,7,type=2,val=2,size=1
+%%SYM	  day,7,type=2,val=3,size=1
+%%ENDD	  
+%%SYM	  _timeinfo,9,type=12,id=3,size=4
+%%DDS	  
+%%SYM	  hour,7,type=2,val=0,size=1
+%%SYM	  min,7,type=2,val=1,size=1
+%%SYM	  sec,7,type=2,val=2,size=1
+%%SYM	  reserve,7,type=2,val=3,size=1
+%%ENDD	  
+%%SYM	  _tposition,9,type=12,id=4,size=4
+%%DDS	  
+%%SYM	  x,7,type=3,val=0,size=2
+%%SYM	  y,7,type=3,val=2,size=2
+%%ENDD	  
+%%SYM	  _gposition,9,type=12,id=5,size=4
+%%DDS	  
+%%SYM	  x,7,type=3,val=0,size=2
+%%SYM	  y,7,type=3,val=2,size=2
+%%ENDD	  
+%%SYM	  _dspattr,9,type=12,id=6,size=12
+%%DDS	  
+%%SYM	  tposition,7,sym=4,val=0,size=4
+%%SYM	  attribute,7,type=3,val=4,size=2
+%%SYM	  mag,7,type=3,val=6,size=2
+%%SYM	  fold,7,type=3,val=8,size=2
+%%ENDD	  
+%%SYM	  _dspattrg,9,type=12,id=7,size=12
+%%DDS	  
+%%SYM	  gposition,7,sym=5,val=0,size=4
+%%SYM	  attribute,7,type=3,val=4,size=2
+%%SYM	  mag,7,type=3,val=6,size=2
+%%SYM	  fold,7,type=3,val=8,size=2
+%%ENDD	  
+%%SYM	  _menuinfo,9,type=12,id=8,size=80
+%%DDS	  
+%%SYM	  rsv0,7,type=3,val=0,size=2
+%%SYM	  tenkeydirect,7,type=3,val=2,size=2
+%%SYM	  totalitem,7,type=3,val=4,size=2
+%%SYM	  inititem,7,type=3,val=6,size=2
+%%SYM	  menuitem,7,type=2,val=8,size=64
+%%DTY	  
+%%DPT	  
+%%DAR	  4,16
+%%ENDD	  
+%%SYM	  rsv1,7,type=3,val=72,size=2
+%%SYM	  rsv2,7,type=3,val=74,size=2
+%%SYM	  rsv3,7,type=3,val=76,size=2
+%%ENDD	  
+%%SYM	  _keyfunc,9,type=12,id=9,size=12
+%%DDS	  
+%%SYM	  F1,7,type=2,val=0,size=1
+%%SYM	  F2,7,type=2,val=1,size=1
+%%SYM	  F3,7,type=2,val=2,size=1
+%%SYM	  L,7,type=2,val=3,size=1
+%%SYM	  R,7,type=2,val=4,size=1
+%%SYM	  Trg,7,type=2,val=5,size=1
+%%SYM	  minus,7,type=2,val=6,size=3
+%%DTY	  
+%%DAR	  1,3
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _inputintegerattr,9,type=12,id=10,size=12
+%%DDS	  
+%%SYM	  inputtype,7,type=3,val=0,size=2
+%%SYM	  inputarea,7,type=3,val=2,size=2
+%%SYM	  minvalue,7,type=7,val=4,size=4
+%%SYM	  maxvalue,7,type=7,val=8,size=4
+%%ENDD	  
+%%SYM	  _inputdecimalattr,9,type=12,id=11,size=16
+%%DDS	  
+%%SYM	  inputtype,7,type=3,val=0,size=2
+%%SYM	  inputarea,7,type=3,val=2,size=2
+%%SYM	  minvalue,7,type=7,val=4,size=4
+%%SYM	  maxvalue,7,type=7,val=8,size=4
+%%SYM	  digit,7,type=3,val=12,size=2
+%%ENDD	  
+%%SYM	  _inputstrattr,9,type=12,id=12,size=8
+%%DDS	  
+%%SYM	  inputtype,7,type=3,val=0,size=2
+%%SYM	  inputarea,7,type=3,val=2,size=2
+%%SYM	  mindigit,7,type=3,val=4,size=2
+%%SYM	  maxdigit,7,type=3,val=6,size=2
+%%ENDD	  
+%%SYM	  _bcrconf,9,type=12,id=13,size=16
+%%DDS	  
+%%SYM	  mode,7,type=3,val=0,size=2
+%%SYM	  trial,7,type=3,val=2,size=2
+%%SYM	  overlap,7,type=3,val=4,size=2
+%%SYM	  comparecnt,7,type=3,val=6,size=2
+%%SYM	  rsv1,7,type=3,val=8,size=2
+%%SYM	  rsv2,7,type=3,val=10,size=2
+%%SYM	  rsv3,7,type=3,val=12,size=2
+%%SYM	  rsv4,7,type=3,val=14,size=2
+%%ENDD	  
+%%SYM	  _jancodeset,9,type=12,id=14,size=4
+%%DDS	  
+%%SYM	  flgset,7,type=4,val=0,size=2
+%%SYM	  AdGap_min,7,type=2,val=2,size=1
+%%SYM	  AdGap_max,7,type=2,val=3,size=1
+%%ENDD	  
+%%SYM	  _c39codeset,9,type=12,id=15,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%SYM	  rsv1,7,type=3,val=6,size=2
+%%ENDD	  
+%%SYM	  _e128codeset,9,type=12,id=16,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%SYM	  separator,7,type=2,val=6,size=1
+%%SYM	  rsv,7,type=2,val=7,size=1
+%%ENDD	  
+%%SYM	  _c128codeset,9,type=12,id=17,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%SYM	  rsv1,7,type=3,val=6,size=2
+%%ENDD	  
+%%SYM	  _itfcodeset,9,type=12,id=18,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%SYM	  rsv1,7,type=3,val=6,size=2
+%%ENDD	  
+%%SYM	  _nw7codeset,9,type=12,id=19,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%SYM	  rsv1,7,type=3,val=6,size=2
+%%ENDD	  
+%%SYM	  _c93codeset,9,type=12,id=20,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%SYM	  rsv1,7,type=3,val=6,size=2
+%%ENDD	  
+%%SYM	  _tofcodeset,9,type=12,id=21,size=4
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%ENDD	  
+%%SYM	  _coopcodeset,9,type=12,id=22,size=4
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%ENDD	  
+%%SYM	  _qrcodeset,9,type=12,id=23,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%ENDD	  
+%%SYM	  _pdfcodeset,9,type=12,id=24,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%ENDD	  
+%%SYM	  _dmcodeset,9,type=12,id=25,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%ENDD	  
+%%SYM	  _mccodeset,9,type=12,id=26,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%ENDD	  
+%%SYM	  _rsscodeset,9,type=12,id=27,size=8
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%SYM	  flgset,7,type=4,val=4,size=2
+%%ENDD	  
+%%SYM	  _compositeset,9,type=12,id=28,size=4
+%%DDS	  
+%%SYM	  flgset,7,type=4,val=0,size=2
+%%SYM	  separator,7,type=2,val=2,size=1
+%%SYM	  rsv,7,type=2,val=3,size=1
+%%ENDD	  
+%%SYM	  _bcrcodeset,9,type=12,id=29,size=60
+%%DDS	  
+%%SYM	  JAN,7,sym=14,val=0,size=4
+%%SYM	  CODE39,7,sym=15,val=4,size=8
+%%SYM	  EAN128,7,sym=16,val=12,size=8
+%%SYM	  CODE128,7,sym=17,val=20,size=8
+%%SYM	  ITF,7,sym=18,val=28,size=8
+%%SYM	  NW7,7,sym=19,val=36,size=8
+%%SYM	  CODE93,7,sym=20,val=44,size=8
+%%SYM	  TOF,7,sym=21,val=52,size=4
+%%SYM	  COOP,7,sym=22,val=56,size=4
+%%ENDD	  
+%%SYM	  _bcrinput,9,type=12,id=30,size=132
+%%DDS	  
+%%SYM	  keta,7,type=3,val=0,size=2
+%%SYM	  codetype,7,type=3,val=2,size=2
+%%SYM	  bcrdata,7,type=2,val=4,size=128
+%%DTY	  
+%%DAR	  1,128
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _bcr_result_report,9,type=12,id=31,size=12
+%%DDS	  
+%%SYM	  keta,7,type=3,val=0,size=2
+%%SYM	  codetype,7,type=3,val=2,size=2
+%%SYM	  composite,7,type=3,val=4,size=2
+%%SYM	  quality,7,type=3,val=6,size=2
+%%SYM	  extraType,7,type=2,val=8,size=1
+%%SYM	  codelink,7,type=2,val=9,size=1
+%%ENDD	  
+%%SYM	  _bcr_result_qr_report,9,type=12,id=32,size=8
+%%DDS	  
+%%SYM	  pos,7,type=3,val=0,size=2
+%%SYM	  parity,7,type=3,val=2,size=2
+%%SYM	  count,7,type=3,val=4,size=2
+%%ENDD	  
+%%SYM	  _bcr_fulldetection_column,9,type=12,id=33,size=4
+%%DDS	  
+%%SYM	  min,7,type=4,val=0,size=2
+%%SYM	  max,7,type=4,val=2,size=2
+%%ENDD	  
+%%SYM	  _bcr_fulldetection_codeset,9,type=12,id=34,size=20
+%%DDS	  
+%%SYM	  type,7,type=3,val=0,size=2
+%%SYM	  codecount,7,type=3,val=2,size=2
+%%SYM	  columneset,7,sym=33,val=4,size=16
+%%DTY	  
+%%DAR	  4,4
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _bcr_fulldetection_set,9,type=12,id=35,size=84
+%%DDS	  
+%%SYM	  typecount,7,type=3,val=0,size=2
+%%SYM	  rsv1,7,type=3,val=2,size=2
+%%SYM	  codeset,7,sym=34,val=4,size=80
+%%DTY	  
+%%DAR	  20,4
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _bcr_buzzer_action,9,type=12,id=36,size=12
+%%DDS	  
+%%SYM	  sw,7,type=3,val=0,size=2
+%%SYM	  ontime,7,type=3,val=2,size=2
+%%SYM	  offtime,7,type=3,val=4,size=2
+%%SYM	  cnt,7,type=3,val=6,size=2
+%%SYM	  pitch,7,type=3,val=8,size=2
+%%SYM	  rsv1,7,type=3,val=10,size=2
+%%ENDD	  
+%%SYM	  _bcr_led_action,9,type=12,id=37,size=12
+%%DDS	  
+%%SYM	  sw,7,type=3,val=0,size=2
+%%SYM	  ontime,7,type=3,val=2,size=2
+%%SYM	  offtime,7,type=3,val=4,size=2
+%%SYM	  cnt,7,type=3,val=6,size=2
+%%SYM	  color,7,type=3,val=8,size=2
+%%SYM	  rsv1,7,type=3,val=10,size=2
+%%ENDD	  
+%%SYM	  _bcr_vibrator_action,9,type=12,id=38,size=12
+%%DDS	  
+%%SYM	  sw,7,type=3,val=0,size=2
+%%SYM	  ontime,7,type=3,val=2,size=2
+%%SYM	  offtime,7,type=3,val=4,size=2
+%%SYM	  cnt,7,type=3,val=6,size=2
+%%SYM	  rsv1,7,type=3,val=8,size=2
+%%SYM	  rsv2,7,type=3,val=10,size=2
+%%ENDD	  
+%%SYM	  _file_info,9,type=12,id=39,size=272
+%%DDS	  
+%%SYM	  drive,7,type=2,val=0,size=2
+%%DTY	  
+%%DAR	  1,2
+%%ENDD	  
+%%SYM	  filename,7,type=2,val=2,size=254
+%%DTY	  
+%%DAR	  1,254
+%%ENDD	  
+%%SYM	  isDirectory,7,type=2,val=256,size=1
+%%SYM	  filesize,7,type=7,val=260,size=4
+%%SYM	  year,7,type=3,val=264,size=2
+%%SYM	  month,7,type=2,val=266,size=1
+%%SYM	  day,7,type=2,val=267,size=1
+%%SYM	  hour,7,type=2,val=268,size=1
+%%SYM	  min,7,type=2,val=269,size=1
+%%SYM	  rsv2,7,type=2,val=270,size=1
+%%SYM	  rsv3,7,type=2,val=271,size=1
+%%ENDD	  
+%%SYM	  _drive_info,9,type=12,id=40,size=16
+%%DDS	  
+%%SYM	  totalsize,7,type=7,val=0,size=4
+%%SYM	  freesize,7,type=7,val=4,size=4
+%%SYM	  invalidsize,7,type=7,val=8,size=4
+%%SYM	  filecnt,7,type=3,val=12,size=2
+%%ENDD	  
+%%SYM	  _master_index,9,type=12,id=41,size=28
+%%DDS	  
+%%SYM	  datatype,7,type=3,val=0,size=2
+%%SYM	  separator,7,type=2,val=2,size=1
+%%SYM	  fieldcnt,7,type=1,val=3,size=1
+%%SYM	  fieldlen,7,type=3,val=4,size=20
+%%DTY	  
+%%DAR	  2,10
+%%ENDD	  
+%%SYM	  rsv1,7,type=2,val=24,size=1
+%%SYM	  rsv2,7,type=2,val=25,size=1
+%%ENDD	  
+%%SYM	  _master_search,9,type=12,id=42,size=48
+%%DDS	  
+%%SYM	  ope,7,type=2,val=0,size=1
+%%SYM	  searchdata,7,type=2,val=4,size=40
+%%DTY	  
+%%DPT	  
+%%DAR	  4,10
+%%ENDD	  
+%%SYM	  incdeldata,7,type=2,val=44,size=1
+%%SYM	  rsv1,7,type=2,val=45,size=1
+%%ENDD	  
+%%SYM	  _alarm_pattern,9,type=12,id=43,size=76
+%%DDS	  
+%%SYM	  ontime,7,type=3,val=0,size=2
+%%SYM	  offtime,7,type=3,val=2,size=2
+%%SYM	  swBuzzer,7,type=3,val=4,size=2
+%%SYM	  swVibration,7,type=3,val=6,size=2
+%%SYM	  swLed,7,type=3,val=8,size=2
+%%SYM	  count,7,type=3,val=10,size=2
+%%SYM	  message,7,type=2,val=12,size=64
+%%DTY	  
+%%DAR	  1,64
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _lost_alarm,9,type=12,id=44,size=92
+%%DDS	  
+%%SYM	  sw,7,type=3,val=0,size=2
+%%SYM	  watchtime,7,type=3,val=2,size=2
+%%SYM	  timestart,7,sym=3,val=4,size=4
+%%SYM	  timestop,7,sym=3,val=8,size=4
+%%SYM	  interval,7,type=3,val=12,size=2
+%%SYM	  crsv1,7,type=2,val=14,size=2
+%%DTY	  
+%%DAR	  1,2
+%%ENDD	  
+%%SYM	  pattern,7,sym=43,val=16,size=76
+%%ENDD	  
+%%SYM	  _alarm,9,type=12,id=45,size=84
+%%DDS	  
+%%SYM	  sw,7,type=3,val=0,size=2
+%%SYM	  crsv1,7,type=2,val=2,size=2
+%%DTY	  
+%%DAR	  1,2
+%%ENDD	  
+%%SYM	  time,7,sym=3,val=4,size=4
+%%SYM	  pattern,7,sym=43,val=8,size=76
+%%ENDD	  
+%%SYM	  _schedule,9,type=12,id=46,size=268
+%%DDS	  
+%%SYM	  sw,7,type=3,val=0,size=2
+%%SYM	  crsv1,7,type=2,val=2,size=2
+%%DTY	  
+%%DAR	  1,2
+%%ENDD	  
+%%SYM	  time,7,sym=3,val=4,size=4
+%%SYM	  filename,7,type=2,val=8,size=260
+%%DTY	  
+%%DAR	  1,260
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _SEARCH_INDEX,9,type=12,id=47,size=48
+%%DDS	  
+%%SYM	  recordFormat,7,type=3,val=0,size=2
+%%SYM	  recordLength,7,type=3,val=2,size=2
+%%SYM	  separator,7,type=2,val=4,size=1
+%%SYM	  dmy,7,type=2,val=5,size=1
+%%SYM	  sortType,7,type=3,val=6,size=2
+%%SYM	  indexMode,7,type=3,val=8,size=2
+%%SYM	  indexNum,7,type=3,val=10,size=2
+%%SYM	  indexPosition,7,type=3,val=12,size=18
+%%DTY	  
+%%DAR	  2,9
+%%ENDD	  
+%%SYM	  indexLength,7,type=3,val=30,size=18
+%%DTY	  
+%%DAR	  2,9
+%%ENDD	  
+%%ENDD	  
+%%SYM	  WLanParam,8,type=11,id=48
+%%DEN	  
+%%SYM	  PRM_TERMINALIP,5,type=5,val='1'
+%%SYM	  PRM_SUBNETMASK,5,type=5,val='2'
+%%SYM	  PRM_GATEWAYIP,5,type=5,val='3'
+%%SYM	  PRM_HOSTIP,5,type=5,val='4'
+%%SYM	  PRM_DHCPENABLE,5,type=5,val='5'
+%%SYM	  PRM_TERMINALNAME,5,type=5,val='6'
+%%SYM	  PRM_PRI_DNS_ADDR,5,type=5,val='7'
+%%SYM	  PRM_SEC_DNS_ADDR,5,type=5,val='8'
+%%SYM	  PRM_FTP_PASV,5,type=5,val='9'
+%%SYM	  PRM_FTP_PORTMODE,5,type=5,val='10'
+%%SYM	  PRM_USE_FTPS,5,type=5,val='11'
+%%SYM	  PRM_SOCKET_NOTIFY,5,type=5,val='12'
+%%SYM	  PRM_FTP_TRANSMODE,5,type=5,val='13'
+%%SYM	  PRM_FTP_EPHEMERAL_PORT,5,type=5,val='14'
+%%SYM	  PRM_FTP_SIZECHECK,5,type=5,val='15'
+%%SYM	  PRM_FTP_TEMPDRIVE,5,type=5,val='16'
+%%SYM	  PRM_COMM_TRANSMODE,5,type=5,val='17'
+%%SYM	  PRM_PREAMBLETYPE,5,type=5,val='101'
+%%SYM	  PRM_RFRATE,5,type=5,val='102'
+%%SYM	  PRM_WEPAUTHENTICATIONTYPE,5,type=5,val='103'
+%%SYM	  PRM_WPAAUTHENTICATIONMODE,5,type=5,val='104'
+%%SYM	  PRM_BEACONLOSTCOUNT,5,type=5,val='105'
+%%SYM	  PRM_PWMODE,5,type=5,val='106'
+%%SYM	  PRM_POWERSAVETIME,5,type=5,val='107'
+%%SYM	  PRM_INFRASSID,5,type=5,val='108'
+%%SYM	  PRM_INFRAWEPINDEX,5,type=5,val='109'
+%%SYM	  PRM_INFRAWEP_1,5,type=5,val='110'
+%%SYM	  PRM_INFRAWEP_2,5,type=5,val='111'
+%%SYM	  PRM_INFRAWEP_3,5,type=5,val='112'
+%%SYM	  PRM_INFRAWEP_4,5,type=5,val='113'
+%%SYM	  PRM_ADHOCCHANNEL,5,type=5,val='114'
+%%SYM	  PRM_ADHOCSSID,5,type=5,val='115'
+%%SYM	  PRM_ADHOCWEPINDEX,5,type=5,val='116'
+%%SYM	  PRM_ADHOCWEP_1,5,type=5,val='117'
+%%SYM	  PRM_ADHOCWEP_2,5,type=5,val='118'
+%%SYM	  PRM_ADHOCWEP_3,5,type=5,val='119'
+%%SYM	  PRM_ADHOCWEP_4,5,type=5,val='120'
+%%SYM	  PRM_WPACIPHERMODE,5,type=5,val='121'
+%%SYM	  PRM_PRESHAREDKEY,5,type=5,val='122'
+%%SYM	  PRM_USERNAME,5,type=5,val='123'
+%%SYM	  PRM_PASSWORD,5,type=5,val='124'
+%%SYM	  PRM_ROOTCAFILENAME,5,type=5,val='125'
+%%SYM	  PRM_CERTFILENAME,5,type=5,val='126'
+%%SYM	  PRM_PRIVATEKEYFILENAME,5,type=5,val='127'
+%%SYM	  PRM_MAC_ADDR,5,type=5,val='128'
+%%SYM	  PRM_NETWORKMODE,5,type=5,val='129'
+%%SYM	  PRM_WLAN_READY,5,type=5,val='130'
+%%SYM	  PRM_RSSI_THRESH,5,type=5,val='131'
+%%SYM	  PRM_INFRACHANNEL,5,type=5,val='132'
+%%SYM	  PRM_RADIUS_LOGOFF,5,type=5,val='133'
+%%SYM	  PRM_WLAN_INFRA_802d11_MODE,5,type=5,val='134'
+%%SYM	  PRM_INFRACHANNEL_5G,5,type=5,val='135'
+%%SYM	  PRM_PINCODE,5,type=5,val='201'
+%%SYM	  PRM_LOCALDEVICENAME,5,type=5,val='202'
+%%SYM	  PRM_BD_ADDR,5,type=5,val='203'
+%%SYM	  PRM_CON_BD_ADDR,5,type=5,val='204'
+%%SYM	  PRM_SECURITYMODE,5,type=5,val='205'
+%%SYM	  PRM_BD_DTRMODE,5,type=5,val='206'
+%%SYM	  PRM_BLUE_SPPMODE,5,type=5,val='207'
+%%SYM	  PRM_LAST_TARGET_BD_ADDR,5,type=5,val='208'
+%%SYM	  PRM_TELNUMBER,5,type=5,val='301'
+%%SYM	  PRM_PPP_USERNAME,5,type=5,val='302'
+%%SYM	  PRM_PPP_PASSWORD,5,type=5,val='303'
+%%SYM	  PRM_USE_PAP,5,type=5,val='304'
+%%SYM	  PRM_USE_CHAP,5,type=5,val='305'
+%%SYM	  PRM_PPP_TIMEOUT,5,type=5,val='306'
+%%SYM	  PRM_PPP_HANGUP,5,type=5,val='307'
+%%SYM	  PRM_MODEM_ATCOMMAND,5,type=5,val='401'
+%%SYM	  PRM_MODEM_TELNUMBER,5,type=5,val='402'
+%%SYM	  PRM_MODEM_DIALTYPE,5,type=5,val='403'
+%%SYM	  PRM_MODEM_DIALTIMEOUT,5,type=5,val='404'
+%%SYM	  PRM_MODEM_REDIALCOUNT,5,type=5,val='405'
+%%SYM	  PRM_MODEM_REDIALINTERVAL,5,type=5,val='406'
+%%SYM	  PRM_MODEM_CRADLERATE,5,type=5,val='407'
+%%ENDD	  
+%%SYM	  _st_rf_configset,9,type=12,id=49,size=8
+%%DDS	  
+%%SYM	  NetworkMode,7,type=2,val=0,size=1
+%%SYM	  AdhocCh,7,type=2,val=1,size=1
+%%SYM	  Preamble,7,type=2,val=2,size=1
+%%SYM	  WepAuthtype,7,type=2,val=3,size=1
+%%SYM	  rate,7,type=2,val=4,size=1
+%%SYM	  PwMode,7,type=2,val=5,size=1
+%%SYM	  PowerSavetime,7,type=2,val=6,size=1
+%%SYM	  BeaconLostcount,7,type=2,val=7,size=1
+%%ENDD	  
+%%SYM	  _st_rf_connectioninfo,9,type=12,id=50,size=12
+%%DDS	  
+%%SYM	  AuthStatus,7,type=2,val=0,size=1
+%%SYM	  Ch,7,type=2,val=1,size=1
+%%SYM	  MacAddress,7,type=2,val=2,size=6
+%%DTY	  
+%%DAR	  1,6
+%%ENDD	  
+%%SYM	  Rssi,7,type=2,val=8,size=1
+%%ENDD	  
+%%SYM	  _st_wep_info,9,type=12,id=51,size=20
+%%DDS	  
+%%SYM	  size,7,type=7,val=0,size=4
+%%SYM	  wep,7,type=2,val=4,size=14
+%%DTY	  
+%%DAR	  1,14
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _st_rf_securityinfoset,9,type=12,id=52,size=96
+%%DDS	  
+%%SYM	  ssid,7,type=2,val=0,size=33
+%%DTY	  
+%%DAR	  1,33
+%%ENDD	  
+%%SYM	  ssid_size,7,type=2,val=33,size=1
+%%SYM	  wep_selected,7,type=2,val=34,size=1
+%%SYM	  wep_size,7,type=2,val=35,size=4
+%%DTY	  
+%%DAR	  1,4
+%%ENDD	  
+%%SYM	  wep,7,type=2,val=39,size=56
+%%DTY	  
+%%DAR	  1,4,14
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _st_rf_securityauthset,9,type=12,id=53,size=908
+%%DDS	  
+%%SYM	  psk_len,7,type=3,val=0,size=2
+%%SYM	  psk,7,type=2,val=2,size=64
+%%DTY	  
+%%DAR	  1,64
+%%ENDD	  
+%%SYM	  usr_id_len,7,type=3,val=66,size=2
+%%SYM	  usr_id,7,type=2,val=68,size=33
+%%DTY	  
+%%DAR	  1,33
+%%ENDD	  
+%%SYM	  usr_pass_len,7,type=3,val=102,size=2
+%%SYM	  usr_pass,7,type=2,val=104,size=33
+%%DTY	  
+%%DAR	  1,33
+%%ENDD	  
+%%SYM	  rootca_filename,7,type=2,val=137,size=256
+%%DTY	  
+%%DAR	  1,256
+%%ENDD	  
+%%SYM	  cert_filename,7,type=2,val=393,size=256
+%%DTY	  
+%%DAR	  1,256
+%%ENDD	  
+%%SYM	  prvkey_filename,7,type=2,val=649,size=256
+%%DTY	  
+%%DAR	  1,256
+%%ENDD	  
+%%ENDD	  
+%%SYM	  btsockaddr,9,type=12,id=54,size=16
+%%DDS	  
+%%SYM	  sa_family,7,type=4,val=0,size=2
+%%SYM	  sa_data,7,type=2,val=2,size=14
+%%DTY	  
+%%DAR	  1,14
+%%ENDD	  
+%%ENDD	  
+%%SYM	  btin_addr,9,type=12,id=55,size=4
+%%DDS	  
+%%SYM	  ,10,type=13,id=56,size=4
+%%DDS	  
+%%SYM	  ,9,type=12,id=57,size=4
+%%DDS	  
+%%SYM	  s_b1,7,type=2,val=0,size=1
+%%SYM	  s_b2,7,type=2,val=1,size=1
+%%SYM	  s_b3,7,type=2,val=2,size=1
+%%SYM	  s_b4,7,type=2,val=3,size=1
+%%ENDD	  
+%%SYM	  S_un_b,7,sym=57,val=0,size=4
+%%SYM	  ,9,type=12,id=58,size=4
+%%DDS	  
+%%SYM	  s_w1,7,type=4,val=0,size=2
+%%SYM	  s_w2,7,type=4,val=2,size=2
+%%ENDD	  
+%%SYM	  S_un_w,7,sym=58,val=0,size=4
+%%SYM	  S_addr,7,type=8,val=0,size=4
+%%ENDD	  
+%%SYM	  S_un,7,sym=56,val=0,size=4
+%%ENDD	  
+%%SYM	  btsockaddr_in,9,type=12,id=59,size=16
+%%DDS	  
+%%SYM	  sin_family,7,type=3,val=0,size=2
+%%SYM	  sin_port,7,type=4,val=2,size=2
+%%SYM	  sin_addr,7,sym=55,val=4,size=4
+%%SYM	  sin_zero,7,type=2,val=8,size=8
+%%DTY	  
+%%DAR	  1,8
+%%ENDD	  
+%%ENDD	  
+%%SYM	  btfd_set,9,type=12,id=60,size=260
+%%DDS	  
+%%SYM	  fd_count,7,type=6,val=0,size=4
+%%SYM	  fd_array,7,type=5,val=4,size=256
+%%DTY	  
+%%DAR	  4,64
+%%ENDD	  
+%%ENDD	  
+%%SYM	  bttimeval,9,type=12,id=61,size=8
+%%DDS	  
+%%SYM	  tv_sec,7,type=7,val=0,size=4
+%%SYM	  tv_usec,7,type=7,val=4,size=4
+%%ENDD	  
+%%SYM	  bthostent,9,type=12,id=62,size=24
+%%DDS	  
+%%SYM	  h_name,7,type=2,val=0,size=4
+%%DTY	  
+%%DPT	  
+%%ENDD	  
+%%SYM	  h_aliases,7,type=2,val=4,size=4
+%%DTY	  
+%%DPT	  
+%%DAR	  4,1
+%%ENDD	  
+%%SYM	  h_addrtype,7,type=4,val=8,size=2
+%%SYM	  h_length,7,type=4,val=10,size=2
+%%SYM	  h_addr_list,7,type=2,val=12,size=12
+%%DTY	  
+%%DPT	  
+%%DAR	  4,3
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _st_ftpconfig,9,type=12,id=63,size=404
+%%DDS	  
+%%SYM	  timeout,7,type=7,val=0,size=4
+%%SYM	  cancelkey,7,type=7,val=4,size=4
+%%SYM	  target_ip,7,type=8,val=8,size=4
+%%SYM	  ftp_portnum,7,type=4,val=12,size=2
+%%SYM	  rsv1,7,type=4,val=14,size=2
+%%SYM	  usrname,7,type=2,val=16,size=65
+%%DTY	  
+%%DAR	  1,65
+%%ENDD	  
+%%SYM	  password,7,type=2,val=81,size=65
+%%DTY	  
+%%DAR	  1,65
+%%ENDD	  
+%%SYM	  logfilename,7,type=2,val=146,size=256
+%%DTY	  
+%%DAR	  1,256
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _st_ftpsconfig,9,type=12,id=64,size=268
+%%DDS	  
+%%SYM	  ftps_protocol,7,type=5,val=0,size=4
+%%SYM	  ftps_data_encrypt,7,type=5,val=4,size=4
+%%SYM	  ftps_verify,7,type=5,val=8,size=4
+%%SYM	  ftps_certfile,7,type=2,val=12,size=256
+%%DTY	  
+%%DAR	  1,256
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _rfstatus,9,type=12,id=65,size=12
+%%DDS	  
+%%SYM	  ip_adr,7,type=2,val=0,size=4
+%%DTY	  
+%%DAR	  1,4
+%%ENDD	  
+%%SYM	  subnet,7,type=2,val=4,size=4
+%%DTY	  
+%%DAR	  1,4
+%%ENDD	  
+%%SYM	  defgate,7,type=2,val=8,size=4
+%%DTY	  
+%%DAR	  1,4
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _host_status,9,type=12,id=66,size=4
+%%DDS	  
+%%SYM	  ip_adr,7,type=2,val=0,size=4
+%%DTY	  
+%%DAR	  1,4
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _rfdatif,9,type=12,id=67,size=12
+%%DDS	  
+%%SYM	  ip,7,type=2,val=0,size=4
+%%DTY	  
+%%DAR	  1,4
+%%ENDD	  
+%%SYM	  cnt,7,type=8,val=4,size=4
+%%SYM	  buf,7,type=2,val=8,size=4
+%%DTY	  
+%%DPT	  
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _fileup_status,9,type=12,id=68,size=8
+%%DDS	  
+%%SYM	  len,7,type=8,val=0,size=4
+%%SYM	  ip_adr,7,type=2,val=4,size=4
+%%DTY	  
+%%DAR	  1,4
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _ess_status,9,type=12,id=69,size=36
+%%DDS	  
+%%SYM	  ess_len,7,type=8,val=0,size=4
+%%SYM	  ess_dat,7,type=2,val=4,size=32
+%%DTY	  
+%%DAR	  1,32
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _retry_status,9,type=12,id=70,size=4
+%%DDS	  
+%%SYM	  retry_count_max,7,type=2,val=0,size=1
+%%SYM	  retry_timer_init,7,type=2,val=1,size=1
+%%ENDD	  
+%%SYM	  ,9,type=12,id=71,size=324
+%%DDS	  
+%%SYM	  major_version,7,type=2,val=0,size=1
+%%SYM	  minor_version,7,type=2,val=1,size=1
+%%SYM	  comment,7,type=2,val=2,size=62
+%%DTY	  
+%%DAR	  1,62
+%%ENDD	  
+%%SYM	  filepath,7,type=2,val=64,size=260
+%%DTY	  
+%%DAR	  1,260
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _st_zgnconfig,9,type=12,id=72,size=152
+%%DDS	  
+%%SYM	  MaxTextSize,7,type=4,val=0,size=2
+%%SYM	  Timeout,7,type=4,val=2,size=2
+%%SYM	  DestIP,7,type=2,val=4,size=80
+%%DTY	  
+%%DAR	  1,80
+%%ENDD	  
+%%SYM	  DestPortNo,7,type=4,val=84,size=2
+%%SYM	  LocalPortNo,7,type=4,val=86,size=2
+%%SYM	  TcpConnectRetry,7,type=4,val=88,size=2
+%%SYM	  TtcRoundupInit,7,type=4,val=90,size=2
+%%SYM	  DefineMN,7,type=2,val=92,size=1
+%%SYM	  ZeroByteFile,7,type=2,val=93,size=1
+%%SYM	  TransDateCheck,7,type=2,val=94,size=1
+%%SYM	  TtcBranch,7,type=2,val=95,size=1
+%%SYM	  Hostcord,7,type=2,val=96,size=7
+%%DTY	  
+%%DAR	  1,7
+%%ENDD	  
+%%SYM	  Termcord,7,type=2,val=103,size=7
+%%DTY	  
+%%DAR	  1,7
+%%ENDD	  
+%%SYM	  Password,7,type=2,val=110,size=6
+%%DTY	  
+%%DAR	  1,6
+%%ENDD	  
+%%SYM	  Ext,7,type=2,val=116,size=34
+%%DTY	  
+%%DAR	  1,34
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _st_zgnfconfig,9,type=12,id=73,size=316
+%%DDS	  
+%%SYM	  FileName,7,type=2,val=0,size=256
+%%DTY	  
+%%DAR	  1,256
+%%ENDD	  
+%%SYM	  Mode,7,type=2,val=256,size=1
+%%SYM	  Branch,7,type=2,val=257,size=1
+%%SYM	  Pack,7,type=2,val=258,size=1
+%%SYM	  Derimita,7,type=2,val=259,size=1
+%%SYM	  Blocking,7,type=2,val=260,size=1
+%%SYM	  ChangeCodePtn,7,type=2,val=261,size=1
+%%SYM	  Cycle,7,type=2,val=262,size=1
+%%SYM	  VLRec,7,type=2,val=263,size=1
+%%SYM	  RecSize,7,type=4,val=264,size=2
+%%SYM	  ZFileName,7,type=2,val=266,size=12
+%%DTY	  
+%%DAR	  1,12
+%%ENDD	  
+%%SYM	  FileAccessKey,7,type=2,val=278,size=6
+%%DTY	  
+%%DAR	  1,6
+%%ENDD	  
+%%SYM	  FileSub,7,type=2,val=284,size=17
+%%DTY	  
+%%DAR	  1,17
+%%ENDD	  
+%%SYM	  FileExt,7,type=2,val=301,size=14
+%%DTY	  
+%%DAR	  1,14
+%%ENDD	  
+%%ENDD	  
+%%SYM	  _apli_updateinfo,9,type=12,id=74,size=328
+%%DDS	  
+%%SYM	  apptype,7,type=2,val=0,size=1
+%%SYM	  filename,7,type=2,val=1,size=256
+%%DTY	  
+%%DAR	  1,256
+%%ENDD	  
+%%SYM	  title,7,type=2,val=257,size=65
+%%DTY	  
+%%DAR	  1,65
+%%ENDD	  
+%%SYM	  version,7,type=2,val=322,size=2
+%%DTY	  
+%%DAR	  1,2
+%%ENDD	  
+%%SYM	  priority,7,type=2,val=324,size=1
+%%ENDD	  
+%%SYM	  _st_comenv,9,type=12,id=75,size=12
+%%DDS	  
+%%SYM	  baudRate,7,type=8,val=0,size=4
+%%SYM	  stopBits,7,type=3,val=4,size=2
+%%SYM	  parity,7,type=3,val=6,size=2
+%%SYM	  dataLen,7,type=3,val=8,size=2
+%%ENDD	  
+%%SYM	  ,9,type=12,id=76,size=44
+%%DDS	  
+%%SYM	  ch,7,type=2,val=0,size=1
+%%SYM	  signallevel,7,type=2,val=1,size=1
+%%SYM	  macaddr,7,type=2,val=2,size=6
+%%DTY	  
+%%DAR	  1,6
+%%ENDD	  
+%%SYM	  ssidlen,7,type=2,val=8,size=1
+%%SYM	  ssid,7,type=2,val=9,size=32
+%%DTY	  
+%%DAR	  1,32
+%%ENDD	  
+%%SYM	  rsv1,7,type=2,val=41,size=3
+%%DTY	  
+%%DAR	  1,3
+%%ENDD	  
+%%ENDD	  
+%%SYM	  ,9,type=12,id=77,size=528
+%%DDS	  
+%%SYM	  apinfo,7,sym=76,val=0,size=528
+%%DTY	  
+%%DAR	  44,12
+%%ENDD	  
+%%ENDD	  
+%%SYM	  ,9,type=12,id=78,size=44
+%%DDS	  
+%%SYM	  devicename,7,type=2,val=0,size=32
+%%DTY	  
+%%DAR	  1,32
+%%ENDD	  
+%%SYM	  bd_address,7,type=2,val=32,size=12
+%%DTY	  
+%%DAR	  1,12
+%%ENDD	  
+%%ENDD	  
+%%SYM	  ,9,type=12,id=79,size=396
+%%DDS	  
+%%SYM	  bluetoothinfo,7,sym=78,val=0,size=396
+%%DTY	  
+%%DAR	  44,9
+%%ENDD	  
+%%ENDD	  
+%%SYM	  ,8,type=11,id=80
+%%DEN	  
+%%SYM	  BT_GUI_WT_CANVAS,5,type=5,val='0'
+%%SYM	  BT_GUI_WT_EDIT_FIELD,5,type=5,val='1'
+%%SYM	  BT_GUI_WT_ML_EDIT,5,type=5,val='2'
+%%SYM	  BT_GUI_WT_TEXTBOX,5,type=5,val='3'
+%%SYM	  BT_GUI_WT_GROUPBOX,5,type=5,val='4'
+%%SYM	  BT_GUI_WT_LISTBOX,5,type=5,val='5'
+%%SYM	  BT_GUI_WT_COMBOBOX,5,type=5,val='6'
+%%SYM	  BT_GUI_WT_CHECKBOX,5,type=5,val='7'
+%%SYM	  BT_GUI_WT_RADIOBUTTON,5,type=5,val='8'
+%%SYM	  BT_GUI_WT_BUTTON,5,type=5,val='9'
+%%SYM	  BT_GUI_WT_WINDOW,5,type=5,val='10'
+%%ENDD	  
+%%SYM	  ,8,type=11,id=81
+%%DEN	  
+%%SYM	  BT_GUI_PT_VISIBLE,5,type=5,val='0'
+%%SYM	  BT_GUI_PT_ENABLE,5,type=5,val='1'
+%%SYM	  BT_GUI_PT_FRAME,5,type=5,val='2'
+%%SYM	  BT_GUI_PT_BGCOLOR,5,type=5,val='3'
+%%SYM	  BT_GUI_PT_TEXTCOLOR,5,type=5,val='4'
+%%SYM	  BT_GUI_PT_SEL_BGCOLOR,5,type=5,val='5'
+%%SYM	  BT_GUI_PT_SEL_TEXTCOLOR,5,type=5,val='6'
+%%SYM	  BT_GUI_PT_EXCLUSIVE,5,type=5,val='7'
+%%SYM	  BT_GUI_PT_TEXTDATA,5,type=5,val='8'
+%%SYM	  BT_GUI_PT_IMAGE_FILE,5,type=5,val='9'
+%%SYM	  BT_GUI_PT_FONTSIZE,5,type=5,val='10'
+%%SYM	  BT_GUI_PT_TEXTALIGN,5,type=5,val='11'
+%%SYM	  BT_GUI_PT_HSCROLLBAR,5,type=5,val='12'
+%%SYM	  BT_GUI_PT_VSCROLLBAR,5,type=5,val='13'
+%%SYM	  BT_GUI_PT_STRLEN,5,type=5,val='14'
+%%SYM	  BT_GUI_PT_CHECKED,5,type=5,val='15'
+%%SYM	  BT_GUI_PT_INPUTMAX,5,type=5,val='16'
+%%SYM	  BT_GUI_PT_TRG_MODE,5,type=5,val='17'
+%%SYM	  BT_GUI_PT_F3KEY_MODE,5,type=5,val='18'
+%%SYM	  BT_GUI_PT_FOCUSIN_EDIT,5,type=5,val='19'
+%%SYM	  BT_GUI_PT_AUTOREAD_ENABLE,5,type=5,val='20'
+%%SYM	  BT_GUI_PT_KEYINPUT_ENABLE,5,type=5,val='21'
+%%SYM	  BT_GUI_PT_FOCUSINDICATOR,5,type=5,val='22'
+%%ENDD	  
+%%SYM	  _bt_gui_fontinfo,9,type=12,id=82,size=12
+%%DDS	  
+%%SYM	  sFontSize,7,type=3,val=0,size=2
+%%SYM	  sReserve1,7,type=3,val=2,size=2
+%%SYM	  ulTextColor,7,type=8,val=4,size=4
+%%SYM	  ulBkgColor,7,type=8,val=8,size=4
+%%ENDD	  
+%%SYM	  _bt_gui_drawex,9,type=12,id=83,size=32
+%%DDS	  
+%%SYM	  fontinfo,7,sym=82,val=0,size=12
+%%SYM	  gapx,7,type=3,val=12,size=2
+%%SYM	  gapy,7,type=3,val=14,size=2
+%%SYM	  type,7,type=3,val=16,size=2
+%%SYM	  sReserve1,7,type=3,val=18,size=2
+%%SYM	  attrg,7,sym=7,val=20,size=12
+%%ENDD	  
+%%SYM	  ,9,type=12,id=84,size=76
+%%DDS	  
+%%SYM	  anykey,7,type=5,val=0,size=4
+%%SYM	  key0,7,type=5,val=4,size=4
+%%SYM	  key1,7,type=5,val=8,size=4
+%%SYM	  key2,7,type=5,val=12,size=4
+%%SYM	  key3,7,type=5,val=16,size=4
+%%SYM	  key4,7,type=5,val=20,size=4
+%%SYM	  key5,7,type=5,val=24,size=4
+%%SYM	  key6,7,type=5,val=28,size=4
+%%SYM	  key7,7,type=5,val=32,size=4
+%%SYM	  key8,7,type=5,val=36,size=4
+%%SYM	  key9,7,type=5,val=40,size=4
+%%SYM	  keyEnt,7,type=5,val=44,size=4
+%%SYM	  keyEsc,7,type=5,val=48,size=4
+%%SYM	  keyFnUp,7,type=5,val=52,size=4
+%%SYM	  keyClr,7,type=5,val=56,size=4
+%%SYM	  keyL,7,type=5,val=60,size=4
+%%SYM	  keyR,7,type=5,val=64,size=4
+%%SYM	  keyUp,7,type=5,val=68,size=4
+%%SYM	  keyDown,7,type=5,val=72,size=4
+%%ENDD	  
+%%SYM	  ,9,type=12,id=85,size=244
+%%DDS	  
+%%SYM	  data,7,type=2,val=0,size=242
+%%DTY	  
+%%DAR	  1,11,22
+%%ENDD	  
+%%ENDD	  
+%%SYM	  ,9,type=12,id=86,size=24
+%%DDS	  
+%%SYM	  name,7,type=2,val=0,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%ENDD	  
+%%SYM	  ,9,type=12,id=87,size=384
+%%DDS	  
+%%SYM	  item,7,sym=86,val=0,size=384
+%%DTY	  
+%%DAR	  24,16
+%%ENDD	  
+%%ENDD	  
+%%SYM	  ,9,type=12,id=88,size=12
+%%DDS	  
+%%SYM	  year,7,type=3,val=0,size=2
+%%SYM	  month,7,type=3,val=2,size=2
+%%SYM	  day,7,type=3,val=4,size=2
+%%SYM	  hour,7,type=3,val=6,size=2
+%%SYM	  min,7,type=3,val=8,size=2
+%%SYM	  sec,7,type=3,val=10,size=2
+%%ENDD	  
+%%SYM	  ,9,type=12,id=89,size=232
+%%DDS	  
+%%SYM	  mode,7,type=5,val=0,size=4
+%%SYM	  title,7,type=2,val=4,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  l1,7,type=2,val=25,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  l2,7,type=2,val=46,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  l3,7,type=2,val=67,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  l4,7,type=2,val=88,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  l5,7,type=2,val=109,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  l6,7,type=2,val=130,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  l7,7,type=2,val=151,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  buffer,7,type=2,val=172,size=4
+%%DTY	  
+%%DPT	  
+%%ENDD	  
+%%SYM	  bufsize,7,type=6,val=176,size=4
+%%SYM	  emptyOK,7,type=5,val=180,size=4
+%%SYM	  upkey,7,type=5,val=184,size=4
+%%SYM	  downkey,7,type=5,val=188,size=4
+%%SYM	  bar_read,7,type=5,val=192,size=4
+%%SYM	  keychange,7,type=5,val=196,size=4
+%%SYM	  defdata,7,type=2,val=200,size=21
+%%DTY	  
+%%DAR	  1,21
+%%ENDD	  
+%%SYM	  alpha,7,type=2,val=221,size=1
+%%SYM	  c1,7,type=2,val=222,size=1
+%%SYM	  c2,7,type=2,val=223,size=1
+%%SYM	  c3,7,type=2,val=224,size=1
+%%SYM	  c4,7,type=2,val=225,size=1
+%%SYM	  c5,7,type=2,val=226,size=1
+%%SYM	  c6,7,type=2,val=227,size=1
+%%SYM	  c7,7,type=2,val=228,size=1
+%%ENDD	  
+%%SYM	  ,9,type=12,id=90,size=48
+%%DDS	  
+%%SYM	  Name,7,type=2,val=0,size=30
+%%DTY	  
+%%DAR	  1,30
+%%ENDD	  
+%%SYM	  AdminSign,7,type=2,val=30,size=1
+%%SYM	  Location,7,type=2,val=31,size=3
+%%DTY	  
+%%DAR	  1,3
+%%ENDD	  
+%%SYM	  UserId,7,type=2,val=34,size=10
+%%DTY	  
+%%DAR	  1,10
+%%ENDD	  
+%%SYM	  None,7,type=2,val=44,size=1
+%%ENDD	  
+%%SYM	  ,9,type=12,id=91,size=100
+%%DDS	  
+%%SYM	  msg1,7,type=2,val=0,size=20
+%%DTY	  
+%%DAR	  1,20
+%%ENDD	  
+%%SYM	  msg2,7,type=2,val=20,size=20
+%%DTY	  
+%%DAR	  1,20
+%%ENDD	  
+%%SYM	  msg3,7,type=2,val=40,size=20
+%%DTY	  
+%%DAR	  1,20
+%%ENDD	  
+%%SYM	  msg4,7,type=2,val=60,size=20
+%%DTY	  
+%%DAR	  1,20
+%%ENDD	  
+%%SYM	  msg5,7,type=2,val=80,size=20
+%%DTY	  
+%%DAR	  1,20
+%%ENDD	  
+%%ENDD	  
+%%LINE	  000006
+%%FUNC	  InStock,3,cls=2,type=5,ftype=1
+%%RVALUE  kind=direct,register=R0,atype=2
+@InStock: ;entry
+		stmfd	  sp!,{r6,r7,r10,r11,r12,lr}
+		mov	  r11,sp
+%%SAVE	R6,kind=direct,base=R11,offset=0,atype=6
+%%SAVE	R7,kind=direct,base=R11,offset=4,atype=6
+%%SAVE	R10,kind=direct,base=R11,offset=8,atype=6
+%%SAVE	R12,kind=direct,base=R11,offset=16,atype=6
+		sub	  sp,#52
+		sub	  sp,#28672
+AS@InStock	set	28724		; stack	frame total size
+%%BF	  
+%%SYM	  ret,0,type=5,cls=1,reg=R10,val=0,size=4
+%%SYM	  cnt,0,type=5,cls=6,val=-4,size=4
+%%SYM	  pclList,0,type=2,cls=6,val=-28720,size=4096
+%%DTY	  
+%%DAR	  1,4096
+%%ENDD	  
+%%SYM	  tmp,0,type=2,cls=6,val=-4128,size=4096
+%%DTY	  
+%%DAR	  1,4096
+%%ENDD	  
+%%SYM	  totalBox,0,type=5,cls=6,val=-8,size=4
+%%SYM	  boxScan,0,type=5,cls=6,val=-12,size=4
+%%SYM	  boxes,0,type=2,cls=6,val=-14368,size=10240
+%%DTY	  
+%%DAR	  1,10240
+%%ENDD	  
+%%SYM	  boxesTemp,0,type=2,cls=6,val=-24608,size=10240
+%%DTY	  
+%%DAR	  1,10240
+%%ENDD	  
+%%SYM	  boxNo,0,type=2,cls=6,val=-24624,size=14
+%%DTY	  
+%%DAR	  1,14
+%%ENDD	  
+%%SYM	  pclNo,0,type=2,cls=6,val=-32,size=18
+%%DTY	  
+%%DAR	  1,18
+%%ENDD	  
+%%SCOPE	  init
+		mov	  r12,#0
+		adrl	  r7,sp,AS@InStock-28720
+		mov	  r6,#0
+%%LINE	  000007
+;Expr(8): 4096
+%%SCOPE	  init
+		adrl	  r4,sp,AS@InStock-4
+		str	  r12,[r4,#0]
+%%LINE	  000009
+;Expr(12): 16+ 2
+		adrl	  r4,sp,AS@InStock-12
+		str	  r12,[r4,#0]
+%%LINE	  000014
+;Expr(14): btmemset(loc,0,sizeof(loc))	
+		mov	  r2,#4
+		mov	  r1,r6
+		ldr	  r0,S1__loc
+%%CALL
+		bl	  @btmemset
+%%LINE	  000015
+;Expr(15): btmemset(userId,0,sizeof(userId))	
+		mov	  r2,#10
+		mov	  r1,r6
+		ldr	  r0,S1__userId
+%%CALL
+		bl	  @btmemset
+%%LINE	  000016
+;Expr(16): btmemset(msg2,0,sizeof(msg2))	
+		mov	  r2,#128
+		mov	  r1,r6
+		ldr	  r0,S__msg2
+%%CALL
+		bl	  @btmemset
+%%LINE	  000018
+;Expr(18): MasterFind("location",loc)	
+		ldr	  r1,S1__loc
+		ldr	  r0,S_S1
+%%CALL
+		bl	  @MasterFind
+%%LINE	  000019
+;Expr(19): MasterFind("user",userId)	
+		ldr	  r1,S1__userId
+		ldr	  r0,S_S2
+%%CALL
+		bl	  @MasterFind
+%%LINE	  000021
+;Expr(21): btmemset(pclList,0,sizeof(pclList))	
+		mov	  r2,#4096
+		mov	  r1,r6
+		mov	  r0,r7
+%%CALL
+		bl	  @btmemset
+%%LINE	  000022
+;Expr(22): btmemset(msg,0,sizeof(msg))	
+		mov	  r2,#128
+		mov	  r1,r6
+		ldr	  r0,S1__msg
+%%CALL
+		bl	  @btmemset
+L4:
+; - do -
+%%LINE	  000026
+;Expr(26): btmemset(pclNo,0,sizeof(pclNo))	
+%%SCOPE	  init
+		mov	  r2,#18
+		mov	  r1,r6
+		adrl	  r0,sp,AS@InStock-32
+%%CALL
+		bl	  @btmemset
+%%LINE	  000027
+;Expr(27): ret=ReadData(pclNo,pclList,msg,0,1)	 - if -
+		mov	  r0,#1
+		stmfd	  sp!,{r0}
+		mov	  r3,#0
+		ldr	  r2,S1__msg
+		mov	  r1,r7
+		adrl	  r0,sp,AS@InStock-32+4
+%%CALL
+		bl	  @ReadData
+		mov	  r10,r0
+%%LINE	  000029
+;Expr(29): ret<0	
+%%SCOPE	  on,ret
+		add	  sp,#4
+		cmp	  r10,r12
+; - then - - return -
+%%LINE	  000030
+;Expr(30): ret	
+%%SCOPE	  init,ret
+		blt.x	  L77
+; - endif - - if -
+%%LINE	  000032
+;Expr(32): ret==2&&btstrlen(pclList)>0	
+%%SCOPE	  init,ret
+		cmp	  r10,#2
+		bne.x	  L13
+%%SCOPE	  init,ret
+		mov	  r0,r7
+%%CALL
+		bl	  @btstrlen
+		cmp	  r0,r12
+		bgt.x	  L33
+L13:
+; - else - - if	-
+%%LINE	  000034
+;Expr(34): ret==2&&btstrlen(pclNo)==0	
+%%SCOPE	  init,ret
+		cmp	  r10,#2
+		bne.x	  L19
+%%SCOPE	  init
+		adrl	  r0,sp,AS@InStock-32
+%%CALL
+		bl	  @btstrlen
+		cmp	  r0,#0
+		beq.x	  L4
+L19:
+; - endif - - if -
+%%LINE	  000037
+;Expr(37): btstrlen(pclList)==0	
+%%SCOPE	  init
+		mov	  r0,r7
+%%CALL
+		bl	  @btstrlen
+		cmp	  r0,#0
+		bne.x	  L22
+; - then -
+%%LINE	  000039
+;Expr(39): btsprintf(pclList,"%s",pclNo)	
+%%SCOPE	  init
+		adrl	  r1,sp,AS@InStock-32
+		stmfd	  sp!,{r1}
+		ldr	  r0,S_S3
+		stmfd	  sp!,{r0}
+		stmfd	  sp!,{r7}
+%%CALL
+		bl	  @btsprintf
+		add	  sp,#12
+		b.x	  L26
+L22:
+; - else - - if	-
+%%LINE	  000041
+;Expr(41): btstrlen(pclList)>0	
+%%SCOPE	  init
+		mov	  r0,r7
+%%CALL
+		bl	  @btstrlen
+		cmp	  r0,r12
+		ble.x	  L26
+; - then -
+%%LINE	  000043
+;Expr(43): btmemset(tmp,0,sizeof(tmp))	
+%%SCOPE	  init
+		mov	  r2,#4096
+		mov	  r1,r6
+		adrl	  r0,sp,AS@InStock-4128
+%%CALL
+		bl	  @btmemset
+%%LINE	  000044
+;Expr(44): btsprintf(tmp,"%s",pclList)	
+		stmfd	  sp!,{r7}
+		ldr	  r0,S_S4
+		stmfd	  sp!,{r0}
+		adrl	  r1,sp,AS@InStock-4128+8
+		stmfd	  sp!,{r1}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000046
+;Expr(46): btmemset(pclList,0,sizeof(pclList))	
+		mov	  r2,#4096
+		mov	  r1,r6
+		mov	  r0,r7
+%%CALL
+		bl	  @btmemset
+%%LINE	  000047
+;Expr(47): btsprintf(pclList,"%s@%s",tmp,pclNo)	
+		adrl	  r0,sp,AS@InStock-32+12
+		stmfd	  sp!,{r0}
+		adrl	  r1,sp,AS@InStock-4128+16
+		stmfd	  sp!,{r1}
+		ldr	  r2,S_S5
+		stmfd	  sp!,{r2}
+		stmfd	  sp!,{r7}
+%%CALL
+		bl	  @btsprintf
+		add	  sp,#28
+L26:
+; - endif -
+%%LINE	  000050
+;Expr(50): cnt++	
+%%SCOPE	  init
+		adrl	  r4,sp,AS@InStock-4
+		ldr	  r0,[r4,#0]
+		adds	  r0,r0,#1
+		str	  r0,[r4,#0]
+%%LINE	  000052
+;Expr(52): btmemset(msg,0,sizeof(msg))	
+		mov	  r2,#128
+		mov	  r1,r6
+		ldr	  r0,S1__msg
+%%CALL
+		bl	  @btmemset
+%%LINE	  000053
+;Expr(53): btsprintf(msg,"[%d]",cnt)	
+		adrl	  r4,sp,AS@InStock-4
+		ldr	  r0,[r4,#0]
+		stmfd	  sp!,{r0}
+		ldr	  r1,S_S6
+		stmfd	  sp!,{r1}
+		ldr	  r0,S1__msg
+		stmfd	  sp!,{r0}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000055
+;Expr(55): keyCode=StartDisplay("VNN NOK","PCL No:",pclNo,"","","","","	C:Thoat	- ENT:Gui ")	 - if -
+		ldr	  r0,S_S13
+		stmfd	  sp!,{r0}
+		sub	  r1,r0,#1		; ldr r1,S_S12
+		stmfd	  sp!,{r1}
+		sub	  r2,r0,#2		; ldr r2,S_S11
+		stmfd	  sp!,{r2}
+		sub	  r0,r0,#3		; ldr r0,S_S10
+		stmfd	  sp!,{r0}
+		sub	  r3,r0,#1		; ldr r3,S_S9
+		adrl	  r2,sp,AS@InStock-32+28
+		sub	  r1,r1,#11		; ldr r1,S_S8
+		sub	  r0,r0,#17		; ldr r0,S_S7
+%%CALL
+		bl	  @StartDisplay
+		ldr	  r4,S1__keyCode
+		str	  r0,[r4,#0]
+%%LINE	  000057
+;Expr(57): keyCode==(0019)	
+		add	  sp,#28
+		ldr	  r1,[r4,#0]
+		cmp	  r1,#25
+		beq.x	  L79
+; - endif - - if -
+%%LINE	  000060
+;Expr(60): keyCode==(000d)	
+%%SCOPE	  init
+		ldr	  r0,[r4,#0]
+		cmp	  r0,#13
+		bne.x	  L4
+L33:
+%%LINE	  000063
+;Expr(63): btmemset(send,0,sizeof(send))	
+%%SCOPE	  init
+		mov	  r2,#20480
+		mov	  r1,r6
+		ldr	  r0,S2__send
+%%CALL
+		bl	  @btmemset
+%%LINE	  000065
+;Expr(65): MakeDataToSend("M301","",pclList,send)	
+		ldr	  r3,S2__send
+		mov	  r2,r7
+		ldr	  r1,S_S15
+		sub	  r0,r1,#5		; ldr r0,S_S14
+%%CALL
+		bl	  @MakeDataToSend
+%%LINE	  000067
+;Expr(67): ret=DataSend(send,btstrlen(send),rcv,sizeof(rcv),(0))	 - if -
+		stmfd	  sp!,{r12}
+		ldr	  r0,S2__send
+%%CALL
+		bl	  @btstrlen
+		mov	  r10,r0
+		mov	  r3,#20480
+		ldr	  r2,S1__rcv
+		mov	  r1,r10
+		ldr	  r0,S2__send
+%%CALL
+		bl	  @DataSend
+%%LINE	  000069
+;Expr(69): ret==1	
+		add	  sp,#4
+		cmp	  r0,#1
+		beq.x	  L78
+; - endif -
+%%LINE	  000072
+;Expr(72): btmemcpy(boxes,rcv,sizeof(boxes))	
+%%SCOPE	  init
+		mov	  r2,#10240
+		ldr	  r1,S1__rcv
+		adrl	  r0,sp,AS@InStock-14368
+%%CALL
+		bl	  @btmemcpy
+%%LINE	  000074
+;Expr(74): totalBox=btstrlen((char*)boxes)/12	 - if -
+		adrl	  r0,sp,AS@InStock-14368
+%%CALL
+		bl	  @btstrlen
+		mov	  r1,#12
+		bl	  cslldiv
+		adrl	  r4,sp,AS@InStock-8
+		str	  r0,[r4,#0]
+%%LINE	  000076
+;Expr(76): totalBox>0	
+		cmp	  r0,r12
+		ble.x	  L71
+%%LINE	  000078
+;Expr(78): btmemset(boxesTemp,0,sizeof(boxesTemp))	
+%%SCOPE	  init
+		mov	  r2,#10240
+		mov	  r1,r6
+		adrl	  r0,sp,AS@InStock-24608
+%%CALL
+		bl	  @btmemset
+L41:
+; - do -
+%%LINE	  000082
+;Expr(82): btsprintf(msg,"Scanned Box: %ld/%ld",boxScan,totalBox)	
+%%SCOPE	  init
+		adrl	  r4,sp,AS@InStock-8
+		ldr	  r0,[r4,#0]
+		stmfd	  sp!,{r0}
+		adrl	  r4,sp,AS@InStock-12+4
+		ldr	  r1,[r4,#0]
+		stmfd	  sp!,{r1}
+		ldr	  r0,S_S16
+		stmfd	  sp!,{r0}
+		ldr	  r1,S1__msg
+		stmfd	  sp!,{r1}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000083
+;Expr(83): btmemset(boxNo,0,sizeof(boxNo))	
+		mov	  r2,#14
+		mov	  r1,r6
+		adrl	  r0,sp,AS@InStock-24624+16
+%%CALL
+		bl	  @btmemset
+%%LINE	  000084
+;Expr(84): ret=ReadData(boxNo,boxesTemp,msg,0,2)	 - if -
+		mov	  r0,#2
+		stmfd	  sp!,{r0}
+		mov	  r3,#0
+		ldr	  r2,S1__msg
+		adrl	  r1,sp,AS@InStock-24608+20
+		adrl	  r0,sp,AS@InStock-24624+20
+%%CALL
+		bl	  @ReadData
+%%LINE	  000086
+;Expr(86): ret==2&&btstrlen(boxNo)==0	
+		add	  sp,#20
+		cmp	  r0,#2
+		bne.x	  L55
+%%SCOPE	  init
+		adrl	  r0,sp,AS@InStock-24624
+%%CALL
+		bl	  @btstrlen
+		cmp	  r0,#0
+		beq.x	  L41
+L55:
+%%LINE	  000090
+;Expr(90): ret=CheckDataExistInString(boxes,boxNo,3)	
+%%SCOPE	  init
+		mov	  r2,#3
+		adrl	  r1,sp,AS@InStock-24624
+		adrl	  r0,sp,AS@InStock-14368
+%%CALL
+		bl	  @CheckDataExistInString
+%%LINE	  000091
+;Expr(91): ret	
+		cmp	  r0,#13
+		beq.x	  L41
+		cmp	  r0,#16
+		beq.x	  L41
+		cmp	  r0,#25
+		beq.x	  L79
+		b.x	  L56
+L79:
+;winch object
+;Expr(94): - 2	
+%%SCOPE	  init
+		mvn	  r0,#1
+		b.x	  L77
+L56:
+%%LINE	  000102
+;Expr(102): btmemset(tmp,0,sizeof(tmp))	
+%%SCOPE	  init
+		mov	  r2,#4096
+		mov	  r1,r6
+		adrl	  r0,sp,AS@InStock-4128
+%%CALL
+		bl	  @btmemset
+%%LINE	  000103
+;Expr(103): btsprintf(tmp,"%s%s",boxesTemp,boxNo)	
+		adrl	  r0,sp,AS@InStock-24624
+		stmfd	  sp!,{r0}
+		adrl	  r1,sp,AS@InStock-24608+4
+		stmfd	  sp!,{r1}
+		ldr	  r2,S_S17
+		stmfd	  sp!,{r2}
+		adrl	  r0,sp,AS@InStock-4128+12
+		stmfd	  sp!,{r0}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000105
+;Expr(105): btmemset(boxesTemp,0,sizeof(boxesTemp))	
+		mov	  r2,#10240
+		mov	  r1,r6
+		adrl	  r0,sp,AS@InStock-24608+16
+%%CALL
+		bl	  @btmemset
+%%LINE	  000106
+;Expr(106): btsprintf(boxesTemp,"%s",tmp)	
+		adrl	  r0,sp,AS@InStock-4128+16
+		stmfd	  sp!,{r0}
+		ldr	  r1,S_S18
+		stmfd	  sp!,{r1}
+		adrl	  r2,sp,AS@InStock-24608+24
+		stmfd	  sp!,{r2}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000108
+;Expr(108): boxScan++	 - if -
+		adrl	  r4,sp,AS@InStock-12+28
+		ldr	  r0,[r4,#0]
+		adds	  r0,r0,#1
+		str	  r0,[r4,#0]
+%%LINE	  000110
+;Expr(110): boxScan==totalBox	
+		add	  sp,#28
+		ldr	  r1,[r4,#4]
+		cmp	  r0,r1
+		bne.x	  L41
+; - then -
+%%LINE	  000112
+;Expr(112): btmemset(send,0,sizeof(send))	
+%%SCOPE	  init
+		mov	  r2,#20480
+		mov	  r1,r6
+		ldr	  r0,S2__send
+%%CALL
+		bl	  @btmemset
+%%LINE	  000114
+;Expr(114): MakeDataToSend("M301","S01",pclList,send)	
+		ldr	  r3,S2__send
+		mov	  r2,r7
+		ldr	  r1,S_S20
+		sub	  r0,r1,#5		; ldr r0,S_S19
+%%CALL
+		bl	  @MakeDataToSend
+%%LINE	  000116
+;Expr(116): ret=DataSend(send,btstrlen(send),rcv,sizeof(rcv),(0))	 - if -
+		stmfd	  sp!,{r12}
+		ldr	  r0,S2__send
+%%CALL
+		bl	  @btstrlen
+		str	  r0,[sp,#AS@InStock-28724+4]
+		mov	  r3,#20480
+		ldr	  r2,S1__rcv
+		mov	  r1,r0
+		ldr	  r0,S2__send
+%%CALL
+		bl	  @DataSend
+		mov	  r10,r0
+%%LINE	  000118
+;Expr(118): ret==1	
+%%SCOPE	  on,ret
+		add	  sp,#4
+		cmp	  r10,#1
+		bne.x	  L62
+L78:
+;winch object
+;Expr(119): - 1	
+%%SCOPE	  init
+		mvn	  r0,#0
+		b.x	  L77
+L62:
+; - endif - - if -
+%%LINE	  000121
+;Expr(121): !ret	
+%%SCOPE	  init,ret
+		cmp	  r10,#0
+		bne.x	  L41
+; - then - - return -
+%%LINE	  000122
+;Expr(122): 0	
+%%SCOPE	  init
+		mov	  r0,r12
+		b.x	  L77
+L71:
+; - else -
+%%LINE	  000128
+;Expr(128): Buzzer()	
+%%SCOPE	  init
+%%CALL
+		bl	  @Buzzer
+		b.x	  L4
+L77:
+; RET
+%%LINE	  000132
+%%SCOPE	init
+%%EF	  
+		add	  sp,#52
+		add	  sp,#28672
+%%RESTORE	R6
+%%RESTORE	R7
+%%RESTORE	R10
+%%RESTORE	R12
+%%RETURN
+		ldmfd	  sp!,{r6,r7,r10,r11,r12,pc}
+		bnd	  4
+%%FEND	  
+;	cnt -> offset -4	 int
+;	totalBox -> offset -8	 int
+;	boxScan	-> offset -12	 int
+;	ret -> regid  11	 int
+;	pclNo -> offset	-32	 array
+;	tmp -> offset -4128	 array
+;	boxes -> offset	-14368	 array
+;	boxesTemp -> offset -24608	 array
+;	boxNo -> offset	-24624	 array
+;	pclList	-> offset -28720	 array
+%%LINE	  000135
+%%FUNC	  CheckInventoryForOS,3,cls=2,type=5,ftype=1
+%%RVALUE  kind=direct,register=R0,atype=2
+@CheckInventoryForOS: ;entry
+		stmfd	  sp!,{r6,r7,r10,r11,r12,lr}
+		mov	  r11,sp
+%%SAVE	R6,kind=direct,base=R11,offset=0,atype=6
+%%SAVE	R7,kind=direct,base=R11,offset=4,atype=6
+%%SAVE	R10,kind=direct,base=R11,offset=8,atype=6
+%%SAVE	R12,kind=direct,base=R11,offset=16,atype=6
+		sub	  sp,#300
+		sub	  sp,#86016
+AS@CheckInventoryForOS	set	86316		; stack	frame total size
+%%BF	  
+%%SYM	  set,0,sym=89,cls=6,val=-82196,size=232
+%%SYM	  ret,0,type=5,cls=1,reg=R7,val=0,size=4
+%%SYM	  totalBox,0,type=5,cls=6,val=-4,size=4
+%%SYM	  boxScanned,0,type=5,cls=6,val=-8,size=4
+%%SYM	  boxes,0,type=2,cls=6,val=-20524,size=20480
+%%DTY	  
+%%DAR	  1,20480
+%%ENDD	  
+%%SYM	  boxesTemp,0,type=2,cls=6,val=-41004,size=20480
+%%DTY	  
+%%DAR	  1,20480
+%%ENDD	  
+%%SYM	  tmp,0,type=2,cls=6,val=-86312,size=4096
+%%DTY	  
+%%DAR	  1,4096
+%%ENDD	  
+%%SYM	  boxNo,0,type=2,cls=6,val=-44,size=14
+%%DTY	  
+%%DAR	  1,14
+%%ENDD	  
+%%SYM	  pallete,0,type=2,cls=6,val=-28,size=12
+%%DTY	  
+%%DAR	  1,12
+%%ENDD	  
+%%SYM	  shippingTo,0,type=2,cls=6,val=-82216,size=18
+%%DTY	  
+%%DAR	  1,18
+%%ENDD	  
+%%SYM	  mnPallete,0,type=2,cls=6,val=-61484,size=20480
+%%DTY	  
+%%DAR	  1,20480
+%%ENDD	  
+%%SYM	  mnPalleteTemp,0,type=2,cls=6,val=-81964,size=20480
+%%DTY	  
+%%DAR	  1,20480
+%%ENDD	  
+%%SYM	  totalPallete,0,type=5,cls=6,val=-12,size=4
+%%SYM	  palleteScanned,0,type=5,cls=6,val=-16,size=4
+%%SCOPE	  init
+		adrl	  r12,sp,AS@CheckInventoryForOS-86312
+		mov	  r10,#20480
+		mov	  r6,#0
+%%LINE	  000137
+;Expr(141): 20480
+%%SCOPE	  init
+		adrl	  r4,sp,AS@CheckInventoryForOS-8
+		str	  r6,[r4,#0]
+%%LINE	  000142
+;Expr(142): 0	
+		adrl	  r4,sp,AS@CheckInventoryForOS-16
+		str	  r6,[r4,#0]
+%%LINE	  000144
+;Expr(144): btmemset(loc,0,sizeof(loc))	
+		mov	  r2,#4
+		mov	  r1,r6
+		ldr	  r0,S1__loc
+%%CALL
+		bl	  @btmemset
+%%LINE	  000145
+;Expr(145): btmemset(userId,0,sizeof(userId))	
+		mov	  r2,#10
+		mov	  r1,r6
+		ldr	  r0,S1__userId
+%%CALL
+		bl	  @btmemset
+%%LINE	  000146
+;Expr(146): btmemset(msg,0,sizeof(msg))	
+		mov	  r2,#128
+		mov	  r1,r6
+		ldr	  r0,S1__msg
+%%CALL
+		bl	  @btmemset
+%%LINE	  000148
+;Expr(148): MasterFind("location",loc)	
+		ldr	  r1,S1__loc
+		ldr	  r0,S_S21
+%%CALL
+		bl	  @MasterFind
+%%LINE	  000149
+;Expr(149): MasterFind("user",userId)	
+		ldr	  r1,S1__userId
+		ldr	  r0,S_S22
+%%CALL
+		bl	  @MasterFind
+L84:
+; - do -
+%%LINE	  000153
+;Expr(153): btmemset(pallete,0,sizeof(pallete))	
+%%SCOPE	  init
+		mov	  r2,#12
+		mov	  r1,r6
+		adrl	  r0,sp,AS@CheckInventoryForOS-28
+%%CALL
+		bl	  @btmemset
+%%LINE	  000154
+;Expr(154): ret=ReadData(pallete,0,0,0,3)	 - if -
+		mov	  r0,#3
+		stmfd	  sp!,{r0}
+		mov	  r3,#0
+		mov	  r2,r3
+		mov	  r1,r2
+		adrl	  r0,sp,AS@CheckInventoryForOS-28+4
+%%CALL
+		bl	  @ReadData
+%%LINE	  000156
+;Expr(156): ret==2&&btstrlen(boxNo)==0	
+		add	  sp,#4
+		cmp	  r0,#2
+		bne.x	  L89
+%%SCOPE	  init
+		adrl	  r0,sp,AS@CheckInventoryForOS-44
+%%CALL
+		bl	  @btstrlen
+		cmp	  r0,#0
+		beq.x	  L84
+L89:
+; - endif -
+%%LINE	  000159
+;Expr(159): btmemset(send,0,sizeof(send))	
+%%SCOPE	  init
+		mov	  r2,r10
+		mov	  r1,r6
+		ldr	  r0,S2__send
+%%CALL
+		bl	  @btmemset
+%%LINE	  000160
+;Expr(160): MakeDataToSend("M306","",pallete,send)	
+		ldr	  r3,S2__send
+		adrl	  r2,sp,AS@CheckInventoryForOS-28
+		ldr	  r1,S_S24
+		sub	  r0,r1,#5		; ldr r0,S_S23
+%%CALL
+		bl	  @MakeDataToSend
+%%LINE	  000162
+;Expr(162): ret=DataSend(send,btstrlen(send),rcv,sizeof(rcv),(0))	 - if -
+		mov	  r0,#0
+		stmfd	  sp!,{r0}
+		ldr	  r0,S2__send
+%%CALL
+		bl	  @btstrlen
+		str	  r0,[sp,#AS@CheckInventoryForOS-86316+4]
+		mov	  r3,r10
+		ldr	  r2,S1__rcv
+		mov	  r1,r0
+		ldr	  r0,S2__send
+%%CALL
+		bl	  @DataSend
+		mov	  r7,r0
+%%LINE	  000164
+;Expr(164): ret==1	
+%%SCOPE	  on,ret
+		add	  sp,#4
+		cmp	  r7,#1
+		beq.x	  L190
+; - endif - - if -
+%%LINE	  000167
+;Expr(167): !ret	
+%%SCOPE	  init,ret
+		cmp	  r7,#0
+		beq.x	  L189
+; - endif -
+%%LINE	  000170
+;Expr(170): btmemcpy(boxes,rcv,sizeof(boxes))	
+%%SCOPE	  init
+		mov	  r2,r10
+		ldr	  r1,S1__rcv
+		adrl	  r0,sp,AS@CheckInventoryForOS-20524
+%%CALL
+		bl	  @btmemcpy
+%%LINE	  000172
+;Expr(172): totalBox=btstrlen((char*)boxes)/12	 - if -
+		adrl	  r0,sp,AS@CheckInventoryForOS-20524
+%%CALL
+		bl	  @btstrlen
+		mov	  r1,#12
+		bl	  cslldiv
+		adrl	  r4,sp,AS@CheckInventoryForOS-4
+		str	  r0,[r4,#0]
+%%LINE	  000174
+;Expr(174): totalBox>0	
+		cmp	  r0,#0
+		ble.x	  L183
+; - then -
+%%LINE	  000176
+;Expr(176): btmemset(boxesTemp,0,sizeof(boxesTemp))	
+%%SCOPE	  init
+		mov	  r2,r10
+		mov	  r1,r6
+		adrl	  r0,sp,AS@CheckInventoryForOS-41004
+%%CALL
+		bl	  @btmemset
+L101:
+; - do -
+%%LINE	  000179
+;Expr(179): btsprintf(msg,"Scanned Box:	%ld/%ld",boxScanned,totalBox)	
+%%SCOPE	  init
+		adrl	  r4,sp,AS@CheckInventoryForOS-4
+		ldr	  r0,[r4,#0]
+		stmfd	  sp!,{r0}
+		adrl	  r4,sp,AS@CheckInventoryForOS-8+4
+		ldr	  r1,[r4,#0]
+		stmfd	  sp!,{r1}
+		ldr	  r0,S_S25
+		stmfd	  sp!,{r0}
+		ldr	  r1,S1__msg
+		stmfd	  sp!,{r1}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000180
+;Expr(180): btmemset(boxNo,0,sizeof(boxNo))	
+		mov	  r2,#14
+		mov	  r1,r6
+		adrl	  r0,sp,AS@CheckInventoryForOS-44+16
+%%CALL
+		bl	  @btmemset
+%%LINE	  000182
+;Expr(182): ret=ReadData(boxNo,boxesTemp,msg,0,2)	 - if -
+		mov	  r0,#2
+		stmfd	  sp!,{r0}
+		mov	  r3,#0
+		ldr	  r2,S1__msg
+		adrl	  r1,sp,AS@CheckInventoryForOS-41004+20
+		adrl	  r0,sp,AS@CheckInventoryForOS-44+20
+%%CALL
+		bl	  @ReadData
+		mov	  r7,r0
+%%LINE	  000184
+;Expr(184): ret==2&&btstrlen(boxesTemp)>0	
+%%SCOPE	  on,ret
+		add	  sp,#20
+		cmp	  r7,#2
+		bne.x	  L106
+%%SCOPE	  init,ret
+		adrl	  r0,sp,AS@CheckInventoryForOS-41004
+%%CALL
+		bl	  @btstrlen
+		cmp	  r0,#0
+		bgt.x	  L125
+L106:
+; - else - - if	-
+%%LINE	  000186
+;Expr(186): ret==2&&btstrlen(boxNo)==0	
+%%SCOPE	  init,ret
+		cmp	  r7,#2
+		bne.x	  L121
+%%SCOPE	  init
+		adrl	  r0,sp,AS@CheckInventoryForOS-44
+%%CALL
+		bl	  @btstrlen
+		cmp	  r0,#0
+		beq.x	  L101
+L121:
+%%LINE	  000189
+;Expr(189): ret=CheckDataExistInString(boxes,boxNo,3)	
+%%SCOPE	  init
+		mov	  r2,#3
+		adrl	  r1,sp,AS@CheckInventoryForOS-44
+		adrl	  r0,sp,AS@CheckInventoryForOS-20524
+%%CALL
+		bl	  @CheckDataExistInString
+%%LINE	  000190
+;Expr(190): ret	
+		cmp	  r0,#13
+		beq.x	  L101
+		cmp	  r0,#16
+		beq.x	  L101
+		cmp	  r0,#25
+		beq.x	  L191
+		b.x	  L122
+L122:
+%%LINE	  000202
+;Expr(202): btmemset(tmp,0,sizeof(tmp))	
+%%SCOPE	  init
+		mov	  r2,#4096
+		mov	  r1,r6
+		mov	  r0,r12
+%%CALL
+		bl	  @btmemset
+%%LINE	  000203
+;Expr(203): btsprintf(tmp,"%s@%s",boxesTemp,boxNo)	
+		adrl	  r0,sp,AS@CheckInventoryForOS-44
+		stmfd	  sp!,{r0}
+		adrl	  r1,sp,AS@CheckInventoryForOS-41004+4
+		stmfd	  sp!,{r1}
+		ldr	  r2,S_S26
+		stmfd	  sp!,{r2}
+		stmfd	  sp!,{r12}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000205
+;Expr(205): btmemset(boxesTemp,0,sizeof(boxesTemp))	
+		mov	  r2,r10
+		mov	  r1,r6
+		adrl	  r0,sp,AS@CheckInventoryForOS-41004+16
+%%CALL
+		bl	  @btmemset
+%%LINE	  000206
+;Expr(206): btsprintf(boxesTemp,"%s",tmp)	
+		stmfd	  sp!,{r12}
+		ldr	  r0,S_S27
+		stmfd	  sp!,{r0}
+		adrl	  r1,sp,AS@CheckInventoryForOS-41004+24
+		stmfd	  sp!,{r1}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000208
+;Expr(208): boxScanned++	
+		adrl	  r4,sp,AS@CheckInventoryForOS-8+28
+		ldr	  r0,[r4,#0]
+		adds	  r0,r0,#1
+		str	  r0,[r4,#0]
+%%LINE	  000210
+;Expr(210): keyCode=StartDisplay("VNN NOK","Quet thung ke tiep","",boxNo,"","",""," C:Thoat - ENT:Gui ")	 - if -
+		ldr	  r1,S_S34
+		stmfd	  sp!,{r1}
+		sub	  r0,r1,#1		; ldr r0,S_S33
+		stmfd	  sp!,{r0}
+		sub	  r2,r0,#1		; ldr r2,S_S32
+		stmfd	  sp!,{r2}
+		sub	  r1,r1,#3		; ldr r1,S_S31
+		stmfd	  sp!,{r1}
+		adrl	  r3,sp,AS@CheckInventoryForOS-44+44
+		sub	  r2,r2,#2		; ldr r2,S_S30
+		sub	  r1,r1,#20		; ldr r1,S_S29
+		sub	  r0,r0,#30		; ldr r0,S_S28
+%%CALL
+		bl	  @StartDisplay
+		ldr	  r4,S1__keyCode
+		str	  r0,[r4,#0]
+%%LINE	  000212
+;Expr(212): keyCode==(000d)	
+		add	  sp,#44
+		ldr	  r1,[r4,#0]
+		cmp	  r1,#13
+		bne.x	  L101
+L125:
+%%LINE	  000215
+;Expr(215): btmemset(tmp,0,sizeof(tmp))	
+%%SCOPE	  init
+		mov	  r2,#4096
+		mov	  r1,r6
+		mov	  r0,r12
+%%CALL
+		bl	  @btmemset
+%%LINE	  000216
+;Expr(216): btsprintf(tmp,"%s@%s",pallete,boxesTemp)	
+		adrl	  r0,sp,AS@CheckInventoryForOS-41004
+		stmfd	  sp!,{r0}
+		adrl	  r1,sp,AS@CheckInventoryForOS-28+4
+		stmfd	  sp!,{r1}
+		ldr	  r2,S_S35
+		stmfd	  sp!,{r2}
+		stmfd	  sp!,{r12}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000218
+;Expr(218): btmemset(send,0,sizeof(send))	
+		mov	  r2,r10
+		mov	  r1,r6
+		ldr	  r0,S2__send
+%%CALL
+		bl	  @btmemset
+%%LINE	  000219
+;Expr(219): MakeDataToSend("M306","S01",tmp,send)	
+		ldr	  r3,S2__send
+		mov	  r2,r12
+		ldr	  r1,S_S37
+		sub	  r0,r1,#5		; ldr r0,S_S36
+%%CALL
+		bl	  @MakeDataToSend
+%%LINE	  000221
+;Expr(221): ret=DataSend(send,btstrlen(send),rcv,sizeof(rcv),(0))	 - if -
+		mov	  r0,#0
+		stmfd	  sp!,{r0}
+		ldr	  r0,S2__send
+%%CALL
+		bl	  @btstrlen
+		str	  r0,[sp,#AS@CheckInventoryForOS-86316+20]
+		mov	  r3,r10
+		ldr	  r2,S1__rcv
+		mov	  r1,r0
+		ldr	  r0,S2__send
+%%CALL
+		bl	  @DataSend
+		mov	  r7,r0
+%%LINE	  000223
+;Expr(223): ret==1	
+%%SCOPE	  on,ret
+		add	  sp,#20
+		cmp	  r7,#1
+		beq.x	  L190
+; - endif - - if -
+%%LINE	  000227
+;Expr(227): ret==2	
+%%SCOPE	  init,ret
+		cmp	  r7,#2
+		bne.x	  L101
+; - then -
+%%LINE	  000229
+;Expr(229): btmemset(send,0,sizeof(send))	
+%%SCOPE	  init
+		mov	  r2,r10
+		mov	  r1,r6
+		ldr	  r0,S2__send
+%%CALL
+		bl	  @btmemset
+%%LINE	  000230
+;Expr(230): MakeDataToSend("M306","S02",pallete,send)	
+		ldr	  r3,S2__send
+		adrl	  r2,sp,AS@CheckInventoryForOS-28
+		ldr	  r1,S_S39
+		sub	  r0,r1,#5		; ldr r0,S_S38
+%%CALL
+		bl	  @MakeDataToSend
+%%LINE	  000232
+;Expr(232): ret=DataSend(send,btstrlen(send),rcv,sizeof(rcv),(0))	 - if -
+		mov	  r0,#0
+		stmfd	  sp!,{r0}
+		ldr	  r0,S2__send
+%%CALL
+		bl	  @btstrlen
+		mov	  r7,r0
+		mov	  r3,r10
+		ldr	  r2,S1__rcv
+		mov	  r1,r7
+		ldr	  r0,S2__send
+%%CALL
+		bl	  @DataSend
+%%LINE	  000234
+;Expr(234): ret==1	
+		add	  sp,#4
+		cmp	  r0,#1
+		beq.x	  L190
+; - endif -
+%%LINE	  000237
+;Expr(237): btmemcpy(mnPallete,rcv,sizeof(rcv))	
+%%SCOPE	  init
+		mov	  r2,r10
+		ldr	  r1,S1__rcv
+		adrl	  r0,sp,AS@CheckInventoryForOS-61484
+%%CALL
+		bl	  @btmemcpy
+%%LINE	  000239
+;Expr(239): totalPallete=btstrlen((char*)mnPallete)/15	 - if -
+		adrl	  r0,sp,AS@CheckInventoryForOS-61484
+%%CALL
+		bl	  @btstrlen
+		mov	  r1,#15
+		bl	  cslldiv
+		adrl	  r4,sp,AS@CheckInventoryForOS-12
+		str	  r0,[r4,#0]
+%%LINE	  000241
+;Expr(241): totalPallete>0	
+		cmp	  r0,#0
+		ble.x	  L176
+; - then -
+%%LINE	  000243
+;Expr(243): btmemset(mnPalleteTemp,0,sizeof(mnPalleteTemp))	
+%%SCOPE	  init
+		mov	  r2,r10
+		mov	  r1,r6
+		adrl	  r0,sp,AS@CheckInventoryForOS-81964
+%%CALL
+		bl	  @btmemset
+%%LINE	  000244
+;Expr(244): btmemset(&set,0,sizeof(set))	
+		mov	  r2,#232
+		mov	  r1,r6
+		adrl	  r0,sp,AS@CheckInventoryForOS-82196
+%%CALL
+		bl	  @btmemset
+L139:
+; - do -
+%%LINE	  000248
+;Expr(248): btsprintf(msg,"To  [%ld/%ld]",palleteScanned,totalPallete)	
+%%SCOPE	  init
+		adrl	  r4,sp,AS@CheckInventoryForOS-12
+		ldr	  r0,[r4,#0]
+		stmfd	  sp!,{r0}
+		adrl	  r4,sp,AS@CheckInventoryForOS-16+4
+		ldr	  r1,[r4,#0]
+		stmfd	  sp!,{r1}
+		ldr	  r0,S_S40
+		stmfd	  sp!,{r0}
+		ldr	  r1,S1__msg
+		stmfd	  sp!,{r1}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000250
+;Expr(250): btmemset(shippingTo,0,sizeof(shippingTo))	
+		mov	  r2,#18
+		mov	  r1,r6
+		adrl	  r0,sp,AS@CheckInventoryForOS-82216+16
+%%CALL
+		bl	  @btmemset
+%%LINE	  000251
+;Expr(251): ret=ReadData(shippingTo,mnPalleteTemp,msg,0,4)	 - if -
+		mov	  r0,#4
+		stmfd	  sp!,{r0}
+		mov	  r3,#0
+		ldr	  r2,S1__msg
+		adrl	  r1,sp,AS@CheckInventoryForOS-81964+20
+		adrl	  r0,sp,AS@CheckInventoryForOS-82216+20
+%%CALL
+		bl	  @ReadData
+		mov	  r7,r0
+%%LINE	  000253
+;Expr(253): ret==2&&btstrlen(mnPalleteTemp)>0	
+%%SCOPE	  on,ret
+		add	  sp,#20
+		cmp	  r7,#2
+		bne.x	  L144
+%%SCOPE	  init,ret
+		adrl	  r0,sp,AS@CheckInventoryForOS-81964
+%%CALL
+		bl	  @btstrlen
+		cmp	  r0,#0
+		bgt.x	  L163
+L144:
+; - else - - if	-
+%%LINE	  000255
+;Expr(255): ret==2&&btstrlen(shippingTo)==0	
+%%SCOPE	  init,ret
+		cmp	  r7,#2
+		bne.x	  L159
+%%SCOPE	  init
+		adrl	  r0,sp,AS@CheckInventoryForOS-82216
+%%CALL
+		bl	  @btstrlen
+		cmp	  r0,#0
+		beq.x	  L139
+L159:
+%%LINE	  000258
+;Expr(258): ret=CheckDataExistInString(mnPallete,shippingTo,4)	
+%%SCOPE	  init
+		mov	  r2,#4
+		adrl	  r1,sp,AS@CheckInventoryForOS-82216
+		adrl	  r0,sp,AS@CheckInventoryForOS-61484
+%%CALL
+		bl	  @CheckDataExistInString
+%%LINE	  000259
+;Expr(259): ret	
+		cmp	  r0,#13
+		beq.x	  L139
+		cmp	  r0,#16
+		beq.x	  L139
+		cmp	  r0,#25
+		beq.x	  L191
+		b.x	  L160
+L191:
+;winch object
+;Expr(262): - 2	
+%%SCOPE	  init
+		mvn	  r0,#1
+		b.x	  L188
+L160:
+%%LINE	  000270
+;Expr(270): btmemset(tmp,0,sizeof(tmp))	
+%%SCOPE	  init
+		mov	  r2,#4096
+		mov	  r1,r6
+		mov	  r0,r12
+%%CALL
+		bl	  @btmemset
+%%LINE	  000271
+;Expr(271): btsprintf(tmp,"%s@%s",mnPalleteTemp,shippingTo)	
+		adrl	  r0,sp,AS@CheckInventoryForOS-82216
+		stmfd	  sp!,{r0}
+		adrl	  r1,sp,AS@CheckInventoryForOS-81964+4
+		stmfd	  sp!,{r1}
+		ldr	  r2,S_S41
+		stmfd	  sp!,{r2}
+		stmfd	  sp!,{r12}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000273
+;Expr(273): btmemset(mnPalleteTemp,0,sizeof(mnPalleteTemp))	
+		mov	  r2,r10
+		mov	  r1,r6
+		adrl	  r0,sp,AS@CheckInventoryForOS-81964+16
+%%CALL
+		bl	  @btmemset
+%%LINE	  000274
+;Expr(274): btsprintf(mnPalleteTemp,"%s",tmp)	
+		stmfd	  sp!,{r12}
+		ldr	  r0,S_S42
+		stmfd	  sp!,{r0}
+		adrl	  r1,sp,AS@CheckInventoryForOS-81964+24
+		stmfd	  sp!,{r1}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000276
+;Expr(276): palleteScanned++	
+		adrl	  r4,sp,AS@CheckInventoryForOS-16+28
+		ldr	  r0,[r4,#0]
+		adds	  r0,r0,#1
+		str	  r0,[r4,#0]
+%%LINE	  000278
+;Expr(278): btsprintf(msg,"  [%ld/%ld]",palleteScanned,totalPallete)	
+		ldr	  r1,[r4,#4]
+		stmfd	  sp!,{r1}
+		stmfd	  sp!,{r0}
+		ldr	  r2,S_S43
+		stmfd	  sp!,{r2}
+		ldr	  r1,S1__msg
+		stmfd	  sp!,{r1}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000279
+;Expr(279): keyCode=StartDisplay("VNN NOK","Quet Shipping To","ke tiep:",shippingTo,"","",""," C:Thoat - ENT:Gui ")	 - if -
+		ldr	  r0,S_S50
+		stmfd	  sp!,{r0}
+		sub	  r1,r0,#1		; ldr r1,S_S49
+		stmfd	  sp!,{r1}
+		sub	  r2,r0,#2		; ldr r2,S_S48
+		stmfd	  sp!,{r2}
+		sub	  r0,r0,#3		; ldr r0,S_S47
+		stmfd	  sp!,{r0}
+		adrl	  r3,sp,AS@CheckInventoryForOS-82216+60
+		sub	  r2,r2,#10		; ldr r2,S_S46
+		sub	  r1,r1,#28		; ldr r1,S_S45
+		sub	  r0,r0,#34		; ldr r0,S_S44
+%%CALL
+		bl	  @StartDisplay
+		ldr	  r4,S1__keyCode
+		str	  r0,[r4,#0]
+%%LINE	  000281
+;Expr(281): keyCode==(000d)	
+		add	  sp,#60
+		ldr	  r1,[r4,#0]
+		cmp	  r1,#13
+		bne.x	  L139
+L163:
+%%LINE	  000284
+;Expr(284): btmemset(tmp,0,sizeof(tmp))	
+%%SCOPE	  init
+		mov	  r2,#4096
+		mov	  r1,r6
+		mov	  r0,r12
+%%CALL
+		bl	  @btmemset
+%%LINE	  000285
+;Expr(285): btsprintf(tmp,"%s@%s",pallete,mnPalleteTemp)	
+		adrl	  r0,sp,AS@CheckInventoryForOS-81964
+		stmfd	  sp!,{r0}
+		adrl	  r1,sp,AS@CheckInventoryForOS-28+4
+		stmfd	  sp!,{r1}
+		ldr	  r2,S_S51
+		stmfd	  sp!,{r2}
+		stmfd	  sp!,{r12}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000287
+;Expr(287): btmemset(send,0,sizeof(send))	
+		mov	  r2,r10
+		mov	  r1,r6
+		ldr	  r0,S2__send
+%%CALL
+		bl	  @btmemset
+%%LINE	  000288
+;Expr(288): MakeDataToSend("M306","S03",tmp,send)	
+		ldr	  r3,S2__send
+		mov	  r2,r12
+		ldr	  r1,S_S53
+		sub	  r0,r1,#5		; ldr r0,S_S52
+%%CALL
+		bl	  @MakeDataToSend
+%%LINE	  000290
+;Expr(290): ret=DataSend(send,btstrlen(send),rcv,sizeof(rcv),(0))	 - if -
+		mov	  r0,#0
+		stmfd	  sp!,{r0}
+		ldr	  r0,S2__send
+%%CALL
+		bl	  @btstrlen
+		str	  r0,[sp,#AS@CheckInventoryForOS-86316+20]
+		mov	  r3,r10
+		ldr	  r2,S1__rcv
+		mov	  r1,r0
+		ldr	  r0,S2__send
+%%CALL
+		bl	  @DataSend
+		mov	  r7,r0
+%%LINE	  000292
+;Expr(292): ret	
+%%SCOPE	  on,ret
+		add	  sp,#20
+		cmp	  r7,#0
+		beq.x	  L167
+L190:
+;winch object
+;Expr(293): - 1	
+%%SCOPE	  init
+		mvn	  r0,#0
+		b.x	  L188
+L167:
+; - endif - - if -
+%%LINE	  000295
+;Expr(295): !ret	
+%%SCOPE	  init,ret
+		cmp	  r7,#0
+		bne.x	  L139
+L189:
+;winch object
+;Expr(296): 0	
+%%SCOPE	  init
+		mov	  r0,#0
+		b.x	  L188
+L176:
+; - else -
+%%LINE	  000303
+;Expr(303): Buzzer()	
+%%SCOPE	  init
+%%CALL
+		bl	  @Buzzer
+		b.x	  L101
+L183:
+; - else -
+%%LINE	  000311
+;Expr(311): Buzzer()	
+%%SCOPE	  init
+%%CALL
+		bl	  @Buzzer
+		b.x	  L84
+L188:
+; RET
+%%LINE	  000315
+%%SCOPE	init
+%%EF	  
+		add	  sp,#300
+		add	  sp,#86016
+%%RESTORE	R6
+%%RESTORE	R7
+%%RESTORE	R10
+%%RESTORE	R12
+%%RETURN
+		ldmfd	  sp!,{r6,r7,r10,r11,r12,pc}
+		bnd	  4
+%%FEND	  
+;	totalBox -> offset -4	 int
+;	boxScanned -> offset -8	 int
+;	totalPallete ->	offset -12	 int
+;	palleteScanned -> offset -16	 int
+;	ret -> regid  8	 int
+;	pallete	-> offset -28	 array
+;	boxNo -> offset	-44	 array
+;	boxes -> offset	-20524	 array
+;	boxesTemp -> offset -41004	 array
+;	mnPallete -> offset -61484	 array
+;	mnPalleteTemp -> offset	-81964	 array
+;	set -> offset -82196	 struct
+;	shippingTo -> offset -82216	 array
+;	tmp -> offset -86312	 array
+%%LINE	  000318
+%%FUNC	  CheckInventoryForOR,3,cls=2,type=5,ftype=1
+%%RVALUE  kind=direct,register=R0,atype=2
+@CheckInventoryForOR: ;entry
+		stmfd	  sp!,{r6,r7,r10,r11,r12,lr}
+		mov	  r11,sp
+%%SAVE	R6,kind=direct,base=R11,offset=0,atype=6
+%%SAVE	R7,kind=direct,base=R11,offset=4,atype=6
+%%SAVE	R10,kind=direct,base=R11,offset=8,atype=6
+%%SAVE	R12,kind=direct,base=R11,offset=16,atype=6
+		sub	  sp,#48
+		sub	  sp,#65536
+AS@CheckInventoryForOR	set	65584		; stack	frame total size
+%%BF	  
+%%SYM	  set,0,sym=89,size=232,cls=6,val=0,delete 
+%%SYM	  ret,0,type=5,cls=1,reg=R7,val=0,size=4
+%%SYM	  cntError,0,type=5,size=4,cls=6,val=0,delete 
+%%SYM	  totalBox,0,type=5,size=4,cls=6,val=0,delete 
+%%SYM	  boxScanned,0,type=5,size=4,cls=6,val=0,delete	
+%%SYM	  boxes,0,type=2,size=20480,cls=6,val=0,delete 
+%%SYM	  boxesTemp,0,type=2,cls=6,val=-20488,size=20480
+%%DTY	  
+%%DAR	  1,20480
+%%ENDD	  
+%%SYM	  tmp,0,type=2,cls=6,val=-24600,size=4096
+%%DTY	  
+%%DAR	  1,4096
+%%ENDD	  
+%%SYM	  boxNo,0,type=2,cls=6,val=-20504,size=14
+%%DTY	  
+%%DAR	  1,14
+%%ENDD	  
+%%SYM	  pallete,0,type=2,size=12,cls=6,val=0,delete 
+%%SYM	  r,0,type=2,size=4,cls=6,val=0,delete 
+%%SYM	  mnPallete,0,type=2,cls=6,val=-45080,size=20480
+%%DTY	  
+%%DAR	  1,20480
+%%ENDD	  
+%%SYM	  mnPalleteTemp,0,type=2,cls=6,val=-65560,size=20480
+%%DTY	  
+%%DAR	  1,20480
+%%ENDD	  
+%%SYM	  totalPallete,0,type=5,cls=6,val=-4,size=4
+%%SYM	  palleteScanned,0,type=5,cls=6,val=-8,size=4
+%%SYM	  shippingTo,0,type=2,cls=6,val=-65580,size=18
+%%DTY	  
+%%DAR	  1,18
+%%ENDD	  
+%%SCOPE	  init
+		mov	  r12,#0
+		mov	  r10,#20480
+		mov	  r6,#0
+%%LINE	  000320
+;Expr(324): 20480
+%%SCOPE	  init
+		adrl	  r4,sp,AS@CheckInventoryForOR-8
+		str	  r12,[r4,#0]
+%%LINE	  000328
+;Expr(328): btmemset(loc,0,sizeof(loc))	
+		mov	  r2,#4
+		mov	  r1,r6
+		ldr	  r0,S1__loc
+%%CALL
+		bl	  @btmemset
+%%LINE	  000329
+;Expr(329): btmemset(userId,0,sizeof(userId))	
+		mov	  r2,#10
+		mov	  r1,r6
+		ldr	  r0,S1__userId
+%%CALL
+		bl	  @btmemset
+%%LINE	  000330
+;Expr(330): btmemset(msg,0,sizeof(msg))	
+		mov	  r2,#128
+		mov	  r1,r6
+		ldr	  r0,S1__msg
+%%CALL
+		bl	  @btmemset
+%%LINE	  000331
+;Expr(331): btmemset(boxesTemp,0,sizeof(boxesTemp))	
+		mov	  r2,r10
+		mov	  r1,r6
+		adrl	  r0,sp,AS@CheckInventoryForOR-20488
+%%CALL
+		bl	  @btmemset
+%%LINE	  000333
+;Expr(333): MasterFind("location",loc)	
+		ldr	  r1,S1__loc
+		ldr	  r0,S_S54
+%%CALL
+		bl	  @MasterFind
+%%LINE	  000334
+;Expr(334): MasterFind("user",userId)	
+		ldr	  r1,S1__userId
+		ldr	  r0,S_S55
+%%CALL
+		bl	  @MasterFind
+L196:
+; - do -
+%%LINE	  000338
+;Expr(338): btmemset(boxNo,0,sizeof(boxNo))	
+%%SCOPE	  init
+		mov	  r2,#14
+		mov	  r1,r6
+		adrl	  r0,sp,AS@CheckInventoryForOR-20504
+%%CALL
+		bl	  @btmemset
+%%LINE	  000339
+;Expr(339): ret=ReadData(boxNo,boxesTemp,msg,0,3)	 - if -
+		mov	  r0,#3
+		stmfd	  sp!,{r0}
+		mov	  r3,#0
+		ldr	  r2,S1__msg
+		adrl	  r1,sp,AS@CheckInventoryForOR-20488+4
+		adrl	  r0,sp,AS@CheckInventoryForOR-20504+4
+%%CALL
+		bl	  @ReadData
+		mov	  r7,r0
+%%LINE	  000341
+;Expr(341): ret==2&&btstrlen(boxesTemp)>0	
+%%SCOPE	  on,ret
+		add	  sp,#4
+		cmp	  r7,#2
+		bne.x	  L201
+	b.x	L425
+
+; DATA-LIST after block
+	bnd	4
+S_S2:	dd	S2
+S_S1:	dd	S1
+S__msg2:	dd	_msg2
+S1__userId:	dd	_userId
+S1__loc:	dd	_loc
+S1__msg:	dd	_msg
+S_S3:	dd	S3
+S_S5:	dd	S5
+S_S4:	dd	S4
+S_S13:	dd	S13
+S_S6:	dd	S6
+S_S15:	dd	S15
+S_S16:	dd	S16
+S_S18:	dd	S18
+S_S17:	dd	S17
+S_S20:	dd	S20
+S2__send:	dd	_send
+S_S22:	dd	S22
+S_S21:	dd	S21
+S_S24:	dd	S24
+S_S25:	dd	S25
+S_S34:	dd	S34
+S_S27:	dd	S27
+S_S26:	dd	S26
+S_S37:	dd	S37
+S_S35:	dd	S35
+S_S39:	dd	S39
+S_S40:	dd	S40
+S1__keyCode:	dd	_keyCode
+S_S50:	dd	S50
+S_S43:	dd	S43
+S_S42:	dd	S42
+S_S41:	dd	S41
+S_S53:	dd	S53
+S_S51:	dd	S51
+S_S55:	dd	S55
+S_S54:	dd	S54
+L425:
+
+%%SCOPE	  init,ret
+		adrl	  r0,sp,AS@CheckInventoryForOR-20488
+%%CALL
+		bl	  @btstrlen
+		cmp	  r0,r12
+		bgt.x	  L217
+L201:
+; - else - - if	-
+%%LINE	  000343
+;Expr(343): ret==2&&btstrlen(boxNo)==0	
+%%SCOPE	  init,ret
+		cmp	  r7,#2
+		bne.x	  L207
+%%SCOPE	  init
+		adrl	  r0,sp,AS@CheckInventoryForOR-20504
+%%CALL
+		bl	  @btstrlen
+		cmp	  r0,#0
+		beq.x	  L196
+L207:
+; - endif -
+%%LINE	  000347
+;Expr(347): btmemset(send,0,sizeof(send))	
+%%SCOPE	  init
+		mov	  r2,r10
+		mov	  r1,r6
+		ldr	  r0,S1__send
+%%CALL
+		bl	  @btmemset
+%%LINE	  000349
+;Expr(349): MakeDataToSend("M306","R01",boxNo,send)	
+		ldr	  r3,S1__send
+		adrl	  r2,sp,AS@CheckInventoryForOR-20504
+		ldr	  r1,S_S57
+		sub	  r0,r1,#5		; ldr r0,S_S56
+%%CALL
+		bl	  @MakeDataToSend
+%%LINE	  000351
+;Expr(351): ret=DataSend(send,btstrlen(send),rcv,sizeof(rcv),(0))	 - if -
+		stmfd	  sp!,{r12}
+		ldr	  r0,S1__send
+%%CALL
+		bl	  @btstrlen
+		str	  r0,[sp,#AS@CheckInventoryForOR-65584+4]
+		mov	  r3,r10
+		ldr	  r2,S1__rcv
+		mov	  r1,r0
+		ldr	  r0,S1__send
+%%CALL
+		bl	  @DataSend
+		mov	  r7,r0
+%%LINE	  000353
+;Expr(353): ret&&!btmemcmp(rcv,"NG",2)	
+%%SCOPE	  on,ret
+		add	  sp,#4
+		cmp	  r7,#0
+		beq.x	  L212
+	b.x	L426
+
+; DATA-LIST after block
+	bnd	4
+S_S57:	dd	S57
+S1__rcv:	dd	_rcv
+L426:
+
+%%SCOPE	  init,ret
+		mov	  r2,#2
+		ldr	  r1,S_S58
+		ldr	  r0,S__rcv
+%%CALL
+		bl	  @btmemcmp
+		cmp	  r0,#0
+		beq.x	  L196
+L212:
+; - endif - - if -
+%%LINE	  000356
+;Expr(356): ret==2	
+%%SCOPE	  init,ret
+		cmp	  r7,#2
+		bne.x	  L217
+; - then -
+%%LINE	  000360
+;Expr(360): btmemset(tmp,0,sizeof(tmp))	
+%%SCOPE	  init
+		mov	  r2,#4096
+		mov	  r1,r6
+		adrl	  r0,sp,AS@CheckInventoryForOR-24600
+%%CALL
+		bl	  @btmemset
+%%LINE	  000361
+;Expr(361): btsprintf(tmp,"%s",boxesTemp)	
+		adrl	  r0,sp,AS@CheckInventoryForOR-20488
+		stmfd	  sp!,{r0}
+		ldr	  r1,S_S59
+		stmfd	  sp!,{r1}
+		adrl	  r2,sp,AS@CheckInventoryForOR-24600+8
+		stmfd	  sp!,{r2}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000363
+;Expr(363): btmemset(boxesTemp,0,sizeof(boxesTemp))	
+		mov	  r2,r10
+		mov	  r1,r6
+		adrl	  r0,sp,AS@CheckInventoryForOR-20488+12
+%%CALL
+		bl	  @btmemset
+%%LINE	  000364
+;Expr(364): btsprintf(boxesTemp,"%s%s",tmp,boxNo)	 - continue -
+		adrl	  r0,sp,AS@CheckInventoryForOR-20504+12
+		stmfd	  sp!,{r0}
+		adrl	  r1,sp,AS@CheckInventoryForOR-24600+16
+		stmfd	  sp!,{r1}
+		ldr	  r2,S_S60
+		stmfd	  sp!,{r2}
+		adrl	  r0,sp,AS@CheckInventoryForOR-20488+24
+		stmfd	  sp!,{r0}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000365
+		add	  sp,#28
+		b.x	  L196
+L217:
+%%LINE	  000369
+;Expr(369): btmemset(send,0,sizeof(send))	
+%%SCOPE	  init
+		mov	  r2,r10
+		mov	  r1,r6
+		ldr	  r0,S1__send
+%%CALL
+		bl	  @btmemset
+%%LINE	  000371
+;Expr(371): MakeDataToSend("M306","R02",boxNo,send)	
+		ldr	  r3,S1__send
+		adrl	  r2,sp,AS@CheckInventoryForOR-20504
+		ldr	  r1,S_S62
+		sub	  r0,r1,#5		; ldr r0,S_S61
+%%CALL
+		bl	  @MakeDataToSend
+%%LINE	  000373
+;Expr(373): ret=DataSend(send,btstrlen(send),rcv,sizeof(rcv),(0))	
+		stmfd	  sp!,{r12}
+		ldr	  r0,S1__send
+%%CALL
+		bl	  @btstrlen
+		mov	  r7,r0
+		mov	  r3,r10
+		ldr	  r2,S__rcv
+		mov	  r1,r7
+		ldr	  r0,S1__send
+%%CALL
+		bl	  @DataSend
+%%LINE	  000375
+;Expr(375): btmemcpy(mnPallete,rcv,sizeof(mnPallete))	
+		mov	  r2,r10
+		ldr	  r1,S__rcv
+		adrl	  r0,sp,AS@CheckInventoryForOR-45080+4
+%%CALL
+		bl	  @btmemcpy
+%%LINE	  000376
+;Expr(376): totalPallete=btstrlen((char*)mnPallete)/15	 - if -
+		adrl	  r0,sp,AS@CheckInventoryForOR-45080+4
+%%CALL
+		bl	  @btstrlen
+		mov	  r1,#15
+		bl	  cslldiv
+		adrl	  r4,sp,AS@CheckInventoryForOR-4+4
+		str	  r0,[r4,#0]
+%%LINE	  000378
+;Expr(378): totalPallete>0	
+		add	  sp,#4
+		cmp	  r0,r12
+		ble.x	  L258
+; - then -
+%%LINE	  000380
+;Expr(380): btmemset(mnPalleteTemp,0,sizeof(mnPalleteTemp))	
+%%SCOPE	  init
+		mov	  r2,r10
+		mov	  r1,r6
+		adrl	  r0,sp,AS@CheckInventoryForOR-65560
+%%CALL
+		bl	  @btmemset
+L221:
+; - do -
+%%LINE	  000384
+;Expr(384): btsprintf(msg,"To  [%ld/%ld]",palleteScanned,totalPallete)	
+%%SCOPE	  init
+		adrl	  r4,sp,AS@CheckInventoryForOR-4
+		ldr	  r0,[r4,#0]
+		stmfd	  sp!,{r0}
+		adrl	  r4,sp,AS@CheckInventoryForOR-8+4
+		ldr	  r1,[r4,#0]
+		stmfd	  sp!,{r1}
+		ldr	  r0,S_S63
+		stmfd	  sp!,{r0}
+		ldr	  r1,S__msg
+		stmfd	  sp!,{r1}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000385
+;Expr(385): btmemset(shippingTo,0,sizeof(shippingTo))	
+		mov	  r2,#18
+		mov	  r1,r6
+		adrl	  r0,sp,AS@CheckInventoryForOR-65580+16
+%%CALL
+		bl	  @btmemset
+%%LINE	  000387
+;Expr(387): ret=ReadData(shippingTo,mnPalleteTemp,msg,0,4)	 - if -
+		mov	  r0,#4
+		stmfd	  sp!,{r0}
+		mov	  r3,#0
+		ldr	  r2,S__msg
+		adrl	  r1,sp,AS@CheckInventoryForOR-65560+20
+		adrl	  r0,sp,AS@CheckInventoryForOR-65580+20
+%%CALL
+		bl	  @ReadData
+		mov	  r7,r0
+%%LINE	  000389
+;Expr(389): ret==2&&btstrlen(mnPalleteTemp)>0	
+%%SCOPE	  on,ret
+		add	  sp,#20
+		cmp	  r7,#2
+		bne.x	  L226
+%%SCOPE	  init,ret
+		adrl	  r0,sp,AS@CheckInventoryForOR-65560
+%%CALL
+		bl	  @btstrlen
+		cmp	  r0,r12
+		bgt.x	  L245
+L226:
+; - else - - if	-
+%%LINE	  000391
+;Expr(391): ret==2&&btstrlen(shippingTo)==0	
+%%SCOPE	  init,ret
+		cmp	  r7,#2
+		bne.x	  L241
+%%SCOPE	  init
+		adrl	  r0,sp,AS@CheckInventoryForOR-65580
+%%CALL
+		bl	  @btstrlen
+		cmp	  r0,#0
+		beq.x	  L221
+L241:
+%%LINE	  000394
+;Expr(394): ret=CheckDataExistInString(mnPallete,shippingTo,4)	
+%%SCOPE	  init
+		mov	  r2,#4
+		adrl	  r1,sp,AS@CheckInventoryForOR-65580
+		adrl	  r0,sp,AS@CheckInventoryForOR-45080
+%%CALL
+		bl	  @CheckDataExistInString
+%%LINE	  000395
+;Expr(395): ret	
+		cmp	  r0,#13
+		beq.x	  L221
+		cmp	  r0,#16
+		beq.x	  L221
+		cmp	  r0,#25
+		beq.x	  L234
+		b.x	  L242
+L234:
+; - case - 
+%%LINE	  000398
+;Expr(398): - 2	
+%%SCOPE	  init
+		mvn	  r0,#1
+		b.x	  L263
+L242:
+%%LINE	  000406
+;Expr(406): btmemset(tmp,0,sizeof(tmp))	
+%%SCOPE	  init
+		mov	  r2,#4096
+		mov	  r1,r6
+		adrl	  r0,sp,AS@CheckInventoryForOR-24600
+%%CALL
+		bl	  @btmemset
+%%LINE	  000407
+;Expr(407): btsprintf(tmp,"%s@%s",mnPalleteTemp,shippingTo)	
+		adrl	  r0,sp,AS@CheckInventoryForOR-65580
+		stmfd	  sp!,{r0}
+		adrl	  r1,sp,AS@CheckInventoryForOR-65560+4
+		stmfd	  sp!,{r1}
+		ldr	  r2,S_S64
+		stmfd	  sp!,{r2}
+		adrl	  r0,sp,AS@CheckInventoryForOR-24600+12
+		stmfd	  sp!,{r0}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000409
+;Expr(409): btmemset(mnPalleteTemp,0,sizeof(mnPalleteTemp))	
+		mov	  r2,r10
+		mov	  r1,r6
+		adrl	  r0,sp,AS@CheckInventoryForOR-65560+16
+%%CALL
+		bl	  @btmemset
+%%LINE	  000410
+;Expr(410): btsprintf(mnPalleteTemp,"%s",tmp)	
+		adrl	  r0,sp,AS@CheckInventoryForOR-24600+16
+		stmfd	  sp!,{r0}
+		ldr	  r1,S_S65
+		stmfd	  sp!,{r1}
+		adrl	  r2,sp,AS@CheckInventoryForOR-65560+24
+		stmfd	  sp!,{r2}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000412
+;Expr(412): palleteScanned++	
+		adrl	  r4,sp,AS@CheckInventoryForOR-8+28
+		ldr	  r0,[r4,#0]
+		adds	  r0,r0,#1
+		str	  r0,[r4,#0]
+%%LINE	  000414
+;Expr(414): btsprintf(msg,"  [%ld/%ld]",palleteScanned,totalPallete)	
+		ldr	  r1,[r4,#4]
+		stmfd	  sp!,{r1}
+		stmfd	  sp!,{r0}
+		ldr	  r2,S_S66
+		stmfd	  sp!,{r2}
+		ldr	  r1,S__msg
+		stmfd	  sp!,{r1}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000415
+;Expr(415): keyCode=StartDisplay("VNN NOK","Quet Shipping To","ke tiep:",shippingTo,"","",""," C:Thoat - ENT:Gui ")	 - if -
+		ldr	  r0,S_S73
+		stmfd	  sp!,{r0}
+		sub	  r1,r0,#1		; ldr r1,S_S72
+		stmfd	  sp!,{r1}
+		sub	  r2,r0,#2		; ldr r2,S_S71
+		stmfd	  sp!,{r2}
+		sub	  r0,r0,#3		; ldr r0,S_S70
+		stmfd	  sp!,{r0}
+		adrl	  r3,sp,AS@CheckInventoryForOR-65580+60
+		sub	  r2,r2,#10		; ldr r2,S_S69
+		sub	  r1,r1,#28		; ldr r1,S_S68
+		sub	  r0,r0,#34		; ldr r0,S_S67
+%%CALL
+		bl	  @StartDisplay
+		ldr	  r4,S__keyCode
+		str	  r0,[r4,#0]
+%%LINE	  000417
+;Expr(417): keyCode==(000d)	
+		add	  sp,#60
+		ldr	  r1,[r4,#0]
+		cmp	  r1,#13
+		bne.x	  L221
+L245:
+%%LINE	  000420
+;Expr(420): btmemset(send,0,sizeof(send))	
+%%SCOPE	  init
+		mov	  r2,r10
+		mov	  r1,r6
+		ldr	  r0,S1__send
+%%CALL
+		bl	  @btmemset
+%%LINE	  000421
+;Expr(421): MakeDataToSend("M306","R03",mnPalleteTemp,send)	
+		ldr	  r3,S1__send
+		adrl	  r2,sp,AS@CheckInventoryForOR-65560
+		ldr	  r1,S_S75
+		sub	  r0,r1,#5		; ldr r0,S_S74
+%%CALL
+		bl	  @MakeDataToSend
+%%LINE	  000423
+;Expr(423): ret=DataSend(send,btstrlen(send),rcv,sizeof(rcv),(0))	 - if -
+		stmfd	  sp!,{r12}
+		ldr	  r0,S1__send
+%%CALL
+		bl	  @btstrlen
+		str	  r0,[sp,#AS@CheckInventoryForOR-65584+4]
+		mov	  r3,r10
+		ldr	  r2,S__rcv
+		mov	  r1,r0
+		ldr	  r0,S1__send
+%%CALL
+		bl	  @DataSend
+		mov	  r7,r0
+%%LINE	  000425
+;Expr(425): ret	
+%%SCOPE	  on,ret
+		add	  sp,#4
+		cmp	  r7,#0
+; - then - - return -
+%%LINE	  000426
+;Expr(426): - 1	
+%%SCOPE	  init
+		mvnne	  r0,#0
+		bne.x	  L263
+; - endif - - if -
+%%LINE	  000428
+;Expr(428): !ret	
+%%SCOPE	  init,ret
+		bne.x	  L221
+; - then - - return -
+%%LINE	  000429
+;Expr(429): 0	
+%%SCOPE	  init
+		mov	  r0,r12
+		b.x	  L263
+L258:
+; - else -
+%%LINE	  000436
+;Expr(436): Buzzer()	
+%%SCOPE	  init
+%%CALL
+		bl	  @Buzzer
+%%LINE	  000437
+;Expr(437): btMessageBoxEx("Hoan Thanh!!!",(000001),"",((24)))	
+		mov	  r3,#24
+		ldr	  r2,S_S77
+		mov	  r1,#1
+		sub	  r0,r2,#14		; ldr r0,S_S76
+%%CALL
+		bl	  @btMessageBoxEx
+		b.x	  L196
+L263:
+; RET
+%%LINE	  000441
+%%SCOPE	init
+%%EF	  
+		add	  sp,#48
+		add	  sp,#65536
+%%RESTORE	R6
+%%RESTORE	R7
+%%RESTORE	R10
+%%RESTORE	R12
+%%RETURN
+		ldmfd	  sp!,{r6,r7,r10,r11,r12,pc}
+		bnd	  4
+; DATA-LIST after block
+	bnd	4
+S1__send:	dd	_send
+%%FEND	  
+;	totalPallete ->	offset -4	 int
+;	palleteScanned -> offset -8	 int
+;	ret -> regid  8	 int
+;	boxesTemp -> offset -20488	 array
+;	boxNo -> offset	-20504	 array
+;	tmp -> offset -24600	 array
+;	mnPallete -> offset -45080	 array
+;	mnPalleteTemp -> offset	-65560	 array
+;	shippingTo -> offset -65580	 array
+%%LINE	  000448
+%%FUNC	  PrintPCLOR,3,cls=2,type=5,ftype=1
+%%RVALUE  kind=direct,register=R0,atype=2
+@PrintPCLOR: ;entry
+		stmfd	  sp!,{r6,r7,r10,r11,r12,lr}
+		mov	  r11,sp
+%%SAVE	R6,kind=direct,base=R11,offset=0,atype=6
+%%SAVE	R7,kind=direct,base=R11,offset=4,atype=6
+%%SAVE	R10,kind=direct,base=R11,offset=8,atype=6
+%%SAVE	R12,kind=direct,base=R11,offset=16,atype=6
+AS@PrintPCLOR	set	0		; stack	frame total size
+%%BF	  
+%%SCOPE	  init
+		mov	  r6,#0
+%%LINE	  000449
+;Expr(449): GetUserAndLocation()	
+%%SCOPE	  init
+%%CALL
+		bl	  @GetUserAndLocation
+%%LINE	  000451
+;Expr(451): btmemset(send,0,sizeof(send))	
+		mov	  r2,#20480
+		mov	  r1,#0
+		ldr	  r0,S__send
+%%CALL
+		bl	  @btmemset
+%%LINE	  000452
+;Expr(452): MakeDataToSend("M300","",buf,send)	
+		ldr	  r3,S__send
+		ldr	  r2,S__buf
+		ldr	  r1,S_S79
+		sub	  r0,r1,#5		; ldr r0,S_S78
+%%CALL
+		bl	  @MakeDataToSend
+%%LINE	  000454
+;Expr(454): ret=DataSend(send,btstrlen(send),rcv,sizeof(rcv),(0))	 - if -
+		stmfd	  sp!,{r6}
+		ldr	  r0,S__send
+%%CALL
+		bl	  @btstrlen
+		mov	  r7,r0
+		mov	  r3,#20480
+		ldr	  r2,S__rcv
+		mov	  r1,r7
+		ldr	  r0,S__send
+%%CALL
+		bl	  @DataSend
+		ldr	  r4,S__ret
+		str	  r0,[r4,#0]
+%%LINE	  000456
+;Expr(456): ret==2	
+		add	  sp,#4
+		ldr	  r1,[r4,#0]
+		cmp	  r1,#2
+		bne.x	  L270
+; - then -
+%%LINE	  000458
+;Expr(458): Beep(0)	 - return -
+%%SCOPE	  init
+		mov	  r0,r6
+%%CALL
+		bl	  @Beep
+%%LINE	  000459
+;Expr(459): - 1	
+		mvn	  r0,#0
+		b.x	  L272
+L270:
+; - endif - - return -
+%%LINE	  000461
+;Expr(461): 0	
+%%SCOPE	  init
+		mov	  r0,r6
+L272:
+; RET
+%%LINE	  000462
+%%SCOPE	init
+%%EF	  
+%%RESTORE	R6
+%%RESTORE	R7
+%%RESTORE	R10
+%%RESTORE	R12
+%%RETURN
+		ldmfd	  sp!,{r6,r7,r10,r11,r12,pc}
+		bnd	  4
+%%FEND	  
+%%LINE	  000469
+%%FUNC	  Reservation,3,cls=2,type=5,ftype=1
+%%RVALUE  kind=direct,register=R0,atype=2
+@Reservation: ;entry
+		stmfd	  sp!,{r6,r7,r10,r11,r12,lr}
+		mov	  r11,sp
+%%SAVE	R6,kind=direct,base=R11,offset=0,atype=6
+%%SAVE	R7,kind=direct,base=R11,offset=4,atype=6
+%%SAVE	R10,kind=direct,base=R11,offset=8,atype=6
+%%SAVE	R12,kind=direct,base=R11,offset=16,atype=6
+		sub	  sp,#196
+		sub	  sp,#5120
+AS@Reservation	set	5316		; stack	frame total size
+%%BF	  
+%%SYM	  ret,0,type=5,cls=1,reg=R6,val=0,size=4
+%%SYM	  countPallete,0,type=5,cls=6,val=-4,size=4
+%%SYM	  arrPallete,0,type=2,cls=6,val=-5316,size=2468
+%%DTY	  
+%%DAR	  1,2468
+%%ENDD	  
+%%SYM	  message,0,type=2,cls=6,val=-132,size=128
+%%DTY	  
+%%DAR	  1,128
+%%ENDD	  
+%%SYM	  currentPallete,0,type=2,cls=6,val=-148,size=16
+%%DTY	  
+%%DAR	  1,16
+%%ENDD	  
+%%SYM	  sendPallete,0,type=2,cls=6,val=-2616,size=2468
+%%DTY	  
+%%DAR	  1,2468
+%%ENDD	  
+%%SYM	  checkDuplication,0,type=5,size=4,cls=6,val=0,delete 
+%%SYM	  set,0,sym=89,cls=6,val=-2848,size=232
+%%SCOPE	  init
+		adrl	  r12,sp,AS@Reservation-5316
+		adrl	  r10,sp,AS@Reservation-2848
+		mov	  r7,#0
+%%LINE	  000470
+;Expr(471): 2468
+%%SCOPE	  init
+		adrl	  r4,sp,AS@Reservation-4
+		str	  r7,[r4,#0]
+%%LINE	  000476
+;Expr(476): btmemset(loc,0,sizeof(loc))	
+		mov	  r2,#4
+		mov	  r1,r7
+		ldr	  r0,S__loc
+%%CALL
+		bl	  @btmemset
+%%LINE	  000477
+;Expr(477): btmemset(userId,0,sizeof(userId))	
+		mov	  r2,#10
+		mov	  r1,r7
+		ldr	  r0,S__userId
+%%CALL
+		bl	  @btmemset
+%%LINE	  000479
+;Expr(479): MasterFind("location",loc)	
+		ldr	  r1,S__loc
+		ldr	  r0,S_S80
+%%CALL
+		bl	  @MasterFind
+%%LINE	  000480
+;Expr(480): MasterFind("user",userId)	
+		ldr	  r1,S__userId
+		ldr	  r0,S_S81
+%%CALL
+		bl	  @MasterFind
+%%LINE	  000483
+;Expr(483): btmemset(arrPallete,0,sizeof(arrPallete))	
+		ldr	  r2,S_2468
+		mov	  r1,r7
+		mov	  r0,r12
+%%CALL
+		bl	  @btmemset
+L279:
+%%LINE	  000488
+;Expr(488): btmemset(buf,0,sizeof(buf))	
+%%SCOPE	  init
+		mov	  r2,#512
+		mov	  r1,r7
+		ldr	  r0,S__buf
+%%CALL
+		bl	  @btmemset
+%%LINE	  000489
+;Expr(489): btmemset(&set,0,sizeof(set))	
+		mov	  r2,#232
+		mov	  r1,r7
+		mov	  r0,r10
+%%CALL
+		bl	  @btmemset
+%%LINE	  000490
+;Expr(490): set.mode=1	
+		mov	  r0,#1
+		str	  r0,[r10,#0]
+%%LINE	  000491
+;Expr(491): set.buffer=buf	
+		ldr	  r1,S__buf
+		str	  r1,[r10,#172]
+%%LINE	  000492
+;Expr(492): set.bufsize=sizeof(buf)	
+		mov	  r2,#512
+		str	  r2,[r10,#176]
+L280:
+; - do -
+%%LINE	  000496
+;Expr(496): btmemset(message,0,sizeof(message))	
+%%SCOPE	  init
+		mov	  r2,#128
+		mov	  r1,r7
+		adrl	  r0,sp,AS@Reservation-132
+%%CALL
+		bl	  @btmemset
+%%LINE	  000497
+;Expr(497): btsprintf(message,"Thu [%d]",countPallete)	
+		adrl	  r4,sp,AS@Reservation-4
+		ldr	  r0,[r4,#0]
+		stmfd	  sp!,{r0}
+		ldr	  r1,S_S82
+		stmfd	  sp!,{r1}
+		adrl	  r0,sp,AS@Reservation-132+8
+		stmfd	  sp!,{r0}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000499
+;Expr(499): btstrcpy(set.title,"VNN NOK")	
+		adds	  r0,r10,#4
+		ldr	  r1,S_S83
+%%CALL
+		bl	  @btstrcpy
+%%LINE	  000500
+;Expr(500): btstrcpy(set.l1,"Quet Pallete CX")	
+		adds	  r0,r10,#25
+		ldr	  r1,S_S84
+%%CALL
+		bl	  @btstrcpy
+%%LINE	  000501
+;Expr(501): btstrcpy(set.l2,message)	
+		adds	  r0,r10,#46
+		adrl	  r1,sp,AS@Reservation-132+12
+%%CALL
+		bl	  @btstrcpy
+%%LINE	  000502
+;Expr(502): btstrcpy(set.l7,"  [    R:Gui    ]")	
+		adds	  r0,r10,#151
+		ldr	  r1,S_S85
+%%CALL
+		bl	  @btstrcpy
+%%LINE	  000504
+;Expr(504): ret=DataInputBt(&set)	 - if -
+		mov	  r0,r10
+%%CALL
+		bl	  @DataInputBt
+		mov	  r6,r0
+%%LINE	  000505
+;Expr(505): ret	
+%%SCOPE	  on,ret
+		add	  sp,#12
+		cmp	  r6,#0
+		bne.x	  L325
+; - endif - - if -
+%%LINE	  000508
+;Expr(508): ret==0&&btstrlen(arrPallete)>0&&btstrlen(buf)<1	
+%%SCOPE	  init,ret
+		bne.x	  L291
+%%SCOPE	  init
+		mov	  r0,r12
+%%CALL
+		bl	  @btstrlen
+		cmp	  r0,#0
+		ble.x	  L291
+%%SCOPE	  init
+		ldr	  r0,S__buf
+%%CALL
+		bl	  @btstrlen
+		cmp	  r0,#1
+		blt.x	  L319
+L291:
+%%LINE	  000511
+;Expr(511): btmemcmp(buf,"TOS1",4)	
+%%SCOPE	  init
+		mov	  r2,#4
+		ldr	  r1,S_S86
+		ldr	  r0,S__buf
+%%CALL
+		bl	  @btmemcmp
+		cmp	  r0,#0
+		bne.x	  L280
+%%LINE	  000514
+;Expr(514): ret=CheckDataByType(loc,buf,4)	
+%%SCOPE	  init
+		mov	  r2,#4
+		ldr	  r1,S__buf
+		ldr	  r0,S__loc
+%%CALL
+		bl	  @CheckDataByType
+%%LINE	  000515
+;Expr(515): ret	
+		cmp	  r0,#13
+		beq.x	  L279
+		cmp	  r0,#16
+		beq.x	  L279
+		cmp	  r0,#25
+		beq.x	  L326
+		b.x	  L313
+L313:
+%%LINE	  000526
+;Expr(526): btmemset(currentPallete,0,sizeof(currentPallete))	
+%%SCOPE	  init
+		mov	  r2,#16
+		mov	  r1,r7
+		adrl	  r0,sp,AS@Reservation-148
+%%CALL
+		bl	  @btmemset
+%%LINE	  000527
+;Expr(527): btmemcpy(currentPallete,buf,sizeof(currentPallete))	
+		mov	  r2,#16
+		ldr	  r1,S__buf
+		adrl	  r0,sp,AS@Reservation-148
+%%CALL
+		bl	  @btmemcpy
+%%LINE	  000530
+;Expr(530): checkDuplication=CheckDuplicate(arrPallete,buf,4)	
+		mov	  r2,#4
+		ldr	  r1,S__buf
+		mov	  r0,r12
+%%CALL
+		bl	  @CheckDuplicate
+%%LINE	  000531
+;Expr(531): checkDuplication	
+		cmp	  r0,#13
+		beq.x	  L279
+		cmp	  r0,#16
+		beq.x	  L279
+		cmp	  r0,#25
+		beq.x	  L326
+		b.x	  L315
+L326:
+;winch object
+;Expr(534): - 2	
+%%SCOPE	  init
+		mvn	  r0,#1
+		b.x	  L324
+L315:
+%%LINE	  000542
+;Expr(542): btsprintf(arrPallete,"%s%s@",arrPallete,currentPallete)	
+%%SCOPE	  init
+		adrl	  r1,sp,AS@Reservation-148
+		stmfd	  sp!,{r1}
+		stmfd	  sp!,{r12}
+		ldr	  r0,S_S87
+		stmfd	  sp!,{r0}
+		stmfd	  sp!,{r12}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000544
+;Expr(544): countPallete++	
+		adrl	  r4,sp,AS@Reservation-4+16
+		ldr	  r0,[r4,#0]
+		adds	  r0,r0,#1
+		str	  r0,[r4,#0]
+%%LINE	  000546
+;Expr(546): keyCode=StartDisplay("VNN NOK","[Reservation]","Quet Pallete tiep ","theo",""," ","","ENT: Hoan Thanh")	
+		ldr	  r1,S_S95
+		stmfd	  sp!,{r1}
+		sub	  r0,r1,#1		; ldr r0,S_S94
+		stmfd	  sp!,{r0}
+		sub	  r2,r0,#2		; ldr r2,S_S93
+		stmfd	  sp!,{r2}
+		sub	  r1,r1,#4		; ldr r1,S_S92
+		stmfd	  sp!,{r1}
+		sub	  r3,r0,#8		; ldr r3,S_S91
+		sub	  r2,r2,#25		; ldr r2,S_S90
+		sub	  r1,r1,#38		; ldr r1,S_S89
+		sub	  r0,r0,#49		; ldr r0,S_S88
+%%CALL
+		bl	  @StartDisplay
+		ldr	  r4,S__keyCode
+		str	  r0,[r4,#0]
+%%LINE	  000548
+;Expr(548): keyCode!=(000d)	
+		add	  sp,#32
+		ldr	  r1,[r4,#0]
+		cmp	  r1,#13
+		bne.x	  L279
+L319:
+%%LINE	  000553
+;Expr(553): btmemset(sendPallete,0,sizeof(sendPallete))	
+%%SCOPE	  init
+		ldr	  r2,S_2468
+		mov	  r1,r7
+		adrl	  r0,sp,AS@Reservation-2616
+%%CALL
+		bl	  @btmemset
+%%LINE	  000554
+;Expr(554): btmemcpy(sendPallete,arrPallete,strlen(arrPallete)-	1)	
+		mov	  r0,r12
+%%CALL
+		bl	  @strlen
+		subs	  r2,r0,#1
+		mov	  r1,r12
+		adrl	  r0,sp,AS@Reservation-2616
+%%CALL
+		bl	  @btmemcpy
+%%LINE	  000556
+;Expr(556): btmemset(send,0,sizeof(send))	
+		mov	  r2,#20480
+		mov	  r1,r7
+		ldr	  r0,S__send
+%%CALL
+		bl	  @btmemset
+%%LINE	  000558
+;Expr(558): MakeDataToSend("M304","",sendPallete,send)	
+		ldr	  r3,S__send
+		adrl	  r2,sp,AS@Reservation-2616
+		ldr	  r1,S_S97
+		sub	  r0,r1,#5		; ldr r0,S_S96
+%%CALL
+		bl	  @MakeDataToSend
+%%LINE	  000560
+;Expr(560): ret=DataSend(send,btstrlen(send),rcv,sizeof(rcv),(0))	 - if -
+		mov	  r0,#0
+		stmfd	  sp!,{r0}
+		ldr	  r0,S__send
+%%CALL
+		bl	  @btstrlen
+		mov	  r6,r0
+		mov	  r3,#20480
+		ldr	  r2,S__rcv
+		mov	  r1,r6
+		ldr	  r0,S__send
+%%CALL
+		bl	  @DataSend
+%%LINE	  000562
+;Expr(562): ret==1	
+		add	  sp,#4
+		cmp	  r0,#1
+		bne.x	  L324
+L325:
+;winch object
+;Expr(563): - 1	
+%%SCOPE	  init
+		mvn	  r0,#0
+L324:
+; RET
+%%LINE	  000565
+%%SCOPE	init
+%%EF	  
+		add	  sp,#196
+		add	  sp,#5120
+%%RESTORE	R6
+%%RESTORE	R7
+%%RESTORE	R10
+%%RESTORE	R12
+%%RETURN
+		ldmfd	  sp!,{r6,r7,r10,r11,r12,pc}
+		bnd	  4
+%%FEND	  
+;	countPallete ->	offset -4	 int
+;	ret -> regid  7	 int
+;	message	-> offset -132	 array
+;	currentPallete -> offset -148	 array
+;	sendPallete -> offset -2616	 array
+;	set -> offset -2848	 struct
+;	arrPallete -> offset -5316	 array
+%%LINE	  000578
+%%FUNC	  ArrangeBoxToPallet,3,cls=2,type=5,ftype=1
+%%RVALUE  kind=direct,register=R0,atype=2
+@ArrangeBoxToPallet: ;entry
+		stmfd	  sp!,{r6,r7,r10,r11,r12,lr}
+		mov	  r11,sp
+%%SAVE	R6,kind=direct,base=R11,offset=0,atype=6
+%%SAVE	R7,kind=direct,base=R11,offset=4,atype=6
+%%SAVE	R10,kind=direct,base=R11,offset=8,atype=6
+%%SAVE	R12,kind=direct,base=R11,offset=16,atype=6
+AS@ArrangeBoxToPallet	set	0		; stack	frame total size
+%%BF	  
+%%LINE	  000579
+;Expr(579): btmemset(loc,0,sizeof(loc))	
+%%SCOPE	  init
+		mov	  r2,#4
+		mov	  r1,#0
+		ldr	  r0,S__loc
+%%CALL
+		bl	  @btmemset
+%%LINE	  000580
+;Expr(580): btmemset(userId,0,sizeof(userId))	
+		mov	  r2,#10
+		mov	  r1,#0
+		ldr	  r0,S__userId
+%%CALL
+		bl	  @btmemset
+%%LINE	  000582
+;Expr(582): MasterFind("location",loc)	
+		ldr	  r1,S__loc
+		ldr	  r0,S_S98
+%%CALL
+		bl	  @MasterFind
+%%LINE	  000583
+;Expr(583): MasterFind("user",userId)	 - if -
+		ldr	  r1,S__userId
+		ldr	  r0,S_S99
+%%CALL
+		bl	  @MasterFind
+%%LINE	  000585
+;Expr(585): !btmemcmp(loc,"OS1",btstrlen("OS1"))	
+		ldr	  r0,S_S101
+%%CALL
+		bl	  @btstrlen
+		mov	  r2,r0
+		ldr	  r1,S_S100
+		ldr	  r0,S__loc
+%%CALL
+		bl	  @btmemcmp
+		cmp	  r0,#0
+		bne.x	  L332
+; - then -
+%%LINE	  000587
+;Expr(587): ArrangeToPalletOS()	
+%%SCOPE	  init
+%%CALL
+		bl	  @ArrangeToPalletOS
+		b.x	  L337
+L332:
+; - else - - if	-
+%%LINE	  000589
+;Expr(589): !btmemcmp(loc,"OR1",btstrlen("OR1"))	
+%%SCOPE	  init
+		ldr	  r0,S_S103
+%%CALL
+		bl	  @btstrlen
+		mov	  r2,r0
+		ldr	  r1,S_S102
+		ldr	  r0,S__loc
+%%CALL
+		bl	  @btmemcmp
+		cmp	  r0,#0
+		bne.x	  L335
+; - then -
+%%LINE	  000591
+;Expr(591): ArrangeToPalletOR()	
+%%SCOPE	  init
+%%CALL
+		bl	  @ArrangeToPalletOR
+		b.x	  L337
+L335:
+; - else -
+%%LINE	  000595
+;Expr(595): btMessageBoxEx("This function doesn't exists!!!",(000001),"Command Dist.",((24)))	
+%%SCOPE	  init
+		mov	  r3,#24
+		ldr	  r2,S_S105
+		mov	  r1,#1
+		sub	  r0,r2,#32		; ldr r0,S_S104
+%%CALL
+		bl	  @btMessageBoxEx
+L337:
+; - endif -
+%%LINE	  000599
+%%SCOPE	init
+%%EF	  
+%%RESTORE	R6
+%%RESTORE	R7
+%%RESTORE	R10
+%%RESTORE	R12
+%%RETURN
+		ldmfd	  sp!,{r6,r7,r10,r11,r12,pc}
+		bnd	  4
+%%FEND	  
+%%LINE	  000602
+%%FUNC	  ArrangeToPalletOS,3,cls=2,type=5,ftype=1
+%%RVALUE  kind=direct,register=R0,atype=2
+@ArrangeToPalletOS: ;entry
+		stmfd	  sp!,{r6,r7,r10,r11,r12,lr}
+		mov	  r11,sp
+%%SAVE	R6,kind=direct,base=R11,offset=0,atype=6
+%%SAVE	R7,kind=direct,base=R11,offset=4,atype=6
+%%SAVE	R10,kind=direct,base=R11,offset=8,atype=6
+%%SAVE	R12,kind=direct,base=R11,offset=16,atype=6
+		sub	  sp,#264
+		sub	  sp,#20480
+AS@ArrangeToPalletOS	set	20744		; stack	frame total size
+%%BF	  
+%%SYM	  ret,0,type=5,cls=1,reg=R6,val=0,size=4
+%%SYM	  pallete,0,type=2,cls=6,val=-10272,size=15
+%%DTY	  
+%%DAR	  1,15
+%%ENDD	  
+%%SYM	  dataSend,0,type=2,cls=6,val=-20512,size=10240
+%%DTY	  
+%%DAR	  1,10240
+%%ENDD	  
+%%SYM	  boxes,0,type=2,cls=6,val=-10256,size=10240
+%%DTY	  
+%%DAR	  1,10240
+%%ENDD	  
+%%SYM	  totalBox,0,type=5,cls=1,reg=R12,val=0,size=4
+%%SYM	  boxNo,0,type=2,cls=6,val=-16,size=14
+%%DTY	  
+%%DAR	  1,14
+%%ENDD	  
+%%SYM	  set,0,sym=89,cls=6,val=-20744,size=232
+%%SCOPE	  init
+		mov	  r10,#0
+		adrl	  r7,sp,AS@ArrangeToPalletOS-20744
+;Expr(605): 10240
+%%LINE	  000606
+;Expr(607): 12+	2
+%%SCOPE	  init
+		mov	  r12,#0
+%%LINE	  000611
+;Expr(611): btmemset(boxNo,0,sizeof(boxNo))	
+%%SCOPE	  on,totalBox
+		mov	  r2,#14
+		mov	  r1,r10
+		adrl	  r0,sp,AS@ArrangeToPalletOS-16
+%%CALL
+		bl	  @btmemset
+%%LINE	  000612
+;Expr(612): btmemset(buf,0,sizeof(buf))	
+		mov	  r2,#512
+		mov	  r1,r10
+		ldr	  r0,S__buf
+%%CALL
+		bl	  @btmemset
+%%LINE	  000613
+;Expr(613): btmemset(&set,0,sizeof(set))	
+		mov	  r2,#232
+		mov	  r1,r10
+		mov	  r0,r7
+%%CALL
+		bl	  @btmemset
+%%LINE	  000614
+;Expr(614): set.mode=1	
+		mov	  r0,#1
+		str	  r0,[r7,#0]
+%%LINE	  000615
+;Expr(615): set.buffer=buf	
+		ldr	  r1,S__buf
+		str	  r1,[r7,#172]
+%%LINE	  000616
+;Expr(616): set.bufsize=sizeof(buf)	
+		mov	  r2,#512
+		str	  r2,[r7,#176]
+%%LINE	  000618
+;Expr(618): btstrcpy(set.title,"VNN NOK")	
+		adds	  r0,r7,#4
+		ldr	  r1,S_S106
+%%CALL
+		bl	  @btstrcpy
+%%LINE	  000619
+;Expr(619): btstrcpy(set.l1,"Pallete Can Chuyen")	
+		adds	  r0,r7,#25
+		ldr	  r1,S_S107
+%%CALL
+		bl	  @btstrcpy
+%%LINE	  000620
+;Expr(620): btstrcpy(set.l2,"")	
+		adds	  r0,r7,#46
+		ldr	  r1,S_S108
+%%CALL
+		bl	  @btstrcpy
+L342:
+; - do -
+%%LINE	  000623
+;Expr(623): btmemset(buf,0,sizeof(buf))	
+%%SCOPE	  init,totalBox
+		mov	  r2,#512
+		mov	  r1,r10
+		ldr	  r0,S__buf
+%%CALL
+		bl	  @btmemset
+%%LINE	  000624
+;Expr(624): ret=DataInputBt(&set)	 - if -
+		mov	  r0,r7
+%%CALL
+		bl	  @DataInputBt
+%%LINE	  000625
+;Expr(625): ret	
+		cmp	  r0,#0
+		bne.x	  L401
+; - endif -
+%%LINE	  000627
+;Expr(627): ret=CheckDataByType(loc,buf,2)	 - if -
+%%SCOPE	  init,totalBox
+		mov	  r2,#2
+		ldr	  r1,S__buf
+		ldr	  r0,S__loc
+%%CALL
+		bl	  @CheckDataByType
+		mov	  r6,r0
+%%LINE	  000629
+;Expr(629): ret==(0019)	
+%%SCOPE	  on,ret
+		cmp	  r6,#25
+		beq.x	  L402
+%%LINE	  000631
+;Expr(631): ret!=0	
+%%SCOPE	  init,totalBox,ret
+		cmp	  r6,#0
+		bne.x	  L342
+%%LINE	  000633
+;Expr(633): btmemset(boxes,0,sizeof(boxes))	
+%%SCOPE	  init,totalBox
+		mov	  r2,#10240
+		mov	  r1,r10
+		adrl	  r0,sp,AS@ArrangeToPalletOS-10256
+%%CALL
+		bl	  @btmemset
+%%LINE	  000634
+;Expr(634): btmemset(pallete,0,sizeof(pallete))	
+		mov	  r2,#15
+		mov	  r1,r10
+		adrl	  r0,sp,AS@ArrangeToPalletOS-10272
+%%CALL
+		bl	  @btmemset
+%%LINE	  000635
+;Expr(635): btmemcpy(pallete,buf,btstrlen(buf))	
+		ldr	  r0,S__buf
+%%CALL
+		bl	  @btstrlen
+		mov	  r2,r0
+		ldr	  r1,S__buf
+		adrl	  r0,sp,AS@ArrangeToPalletOS-10272
+%%CALL
+		bl	  @btmemcpy
+%%LINE	  000637
+;Expr(637): btsprintf(dataSend,"%s",pallete)	
+		adrl	  r0,sp,AS@ArrangeToPalletOS-10272
+		stmfd	  sp!,{r0}
+		ldr	  r1,S_S109
+		stmfd	  sp!,{r1}
+		adrl	  r2,sp,AS@ArrangeToPalletOS-20512+8
+		stmfd	  sp!,{r2}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000638
+;Expr(638): MakeDataToSend("M302","S01",dataSend,send)	
+		ldr	  r3,S__send
+		adrl	  r2,sp,AS@ArrangeToPalletOS-20512+12
+		ldr	  r1,S_S111
+		sub	  r0,r1,#5		; ldr r0,S_S110
+%%CALL
+		bl	  @MakeDataToSend
+%%LINE	  000639
+;Expr(639): ret=DataSend(send,btstrlen(send),rcv,sizeof(rcv),(0))	 - if -
+		mov	  r0,#0
+		stmfd	  sp!,{r0}
+		ldr	  r0,S__send
+%%CALL
+		bl	  @btstrlen
+		mov	  r6,r0
+		mov	  r3,#20480
+		ldr	  r2,S__rcv
+		mov	  r1,r6
+		ldr	  r0,S__send
+%%CALL
+		bl	  @DataSend
+%%LINE	  000640
+;Expr(640): ret==1	
+		add	  sp,#16
+		cmp	  r0,#1
+		beq.x	  L401
+%%LINE	  000644
+;Expr(644): btmemset(&set,0,sizeof(set))	
+%%SCOPE	  init,totalBox
+		mov	  r2,#232
+		mov	  r1,r10
+		mov	  r0,r7
+%%CALL
+		bl	  @btmemset
+%%LINE	  000645
+;Expr(645): set.mode=1	
+		mov	  r0,#1
+		str	  r0,[r7,#0]
+%%LINE	  000646
+;Expr(646): set.buffer=buf	
+		ldr	  r1,S__buf
+		str	  r1,[r7,#172]
+%%LINE	  000647
+;Expr(647): set.bufsize=sizeof(buf)	
+		mov	  r2,#512
+		str	  r2,[r7,#176]
+%%LINE	  000648
+;Expr(648): btstrcpy(set.l1,"Quet Box sap xep")	
+		adds	  r0,r7,#25
+		ldr	  r1,S_S112
+%%CALL
+		bl	  @btstrcpy
+%%LINE	  000649
+;Expr(649): btstrcpy(set.l2,"")	
+		adds	  r0,r7,#46
+		ldr	  r1,S_S113
+%%CALL
+		bl	  @btstrcpy
+%%LINE	  000650
+;Expr(650): btstrcpy(set.l3,"")	
+		adds	  r0,r7,#67
+		ldr	  r1,S_S114
+%%CALL
+		bl	  @btstrcpy
+%%LINE	  000651
+;Expr(651): btstrcpy(set.l4,msg)	
+		adds	  r0,r7,#88
+		ldr	  r1,S__msg
+%%CALL
+		bl	  @btstrcpy
+L360:
+; - do -
+%%LINE	  000654
+;Expr(654): btsprintf(msg,"Tong	so Box:	%ld",totalBox)	
+%%SCOPE	  init,totalBox
+		stmfd	  sp!,{r12}
+		ldr	  r0,S_S115
+		stmfd	  sp!,{r0}
+		ldr	  r1,S__msg
+		stmfd	  sp!,{r1}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000655
+;Expr(655): btstrcpy(set.l4,msg)	
+		adds	  r0,r7,#88
+		ldr	  r1,S__msg
+%%CALL
+		bl	  @btstrcpy
+%%LINE	  000656
+;Expr(656): btmemset(buf,0,sizeof(buf))	
+		mov	  r2,#512
+		mov	  r1,r10
+		ldr	  r0,S__buf
+%%CALL
+		bl	  @btmemset
+%%LINE	  000657
+;Expr(657): ret=DataInputBt(&set)	 - if -
+		mov	  r0,r7
+%%CALL
+		bl	  @DataInputBt
+%%LINE	  000658
+;Expr(658): ret	
+		add	  sp,#12
+		cmp	  r0,#0
+		bne.x	  L401
+%%LINE	  000660
+;Expr(660): GetBoxNoFromString(buf,boxNo)	
+%%SCOPE	  init,totalBox
+		adrl	  r1,sp,AS@ArrangeToPalletOS-16
+		ldr	  r0,S__buf
+%%CALL
+		bl	  @GetBoxNoFromString
+%%LINE	  000661
+;Expr(661): ret=CheckDataByType(loc,boxNo,3)	
+		mov	  r2,#3
+		adrl	  r1,sp,AS@ArrangeToPalletOS-16
+		ldr	  r0,S__loc
+%%CALL
+		bl	  @CheckDataByType
+%%LINE	  000663
+;Expr(663): ret	
+		cmp	  r0,#13
+		beq.x	  L392
+		cmp	  r0,#16
+		beq.x	  L392
+		cmp	  r0,#25
+		beq.x	  L402
+		b.x	  L374
+L374:
+%%LINE	  000673
+;Expr(673): keyCode=0	 - if -
+%%SCOPE	  init,totalBox
+		mov	  r1,#0
+		ldr	  r4,S__keyCode
+		str	  r1,[r4,#0]
+%%LINE	  000675
+;Expr(675): btstrlen(boxes)>0	
+		adrl	  r0,sp,AS@ArrangeToPalletOS-10256
+%%CALL
+		bl	  @btstrlen
+		cmp	  r0,#0
+		ble.x	  L387
+%%LINE	  000677
+;Expr(677): ret=CheckDuplicate(boxes,boxNo,3)	
+%%SCOPE	  init,totalBox
+		mov	  r2,#3
+		adrl	  r1,sp,AS@ArrangeToPalletOS-16
+		adrl	  r0,sp,AS@ArrangeToPalletOS-10256
+%%CALL
+		bl	  @CheckDuplicate
+%%LINE	  000678
+;Expr(678): ret	
+		cmp	  r0,#13
+		beq.x	  L382
+		cmp	  r0,#16
+		beq.x	  L382
+		cmp	  r0,#25
+		beq.x	  L402
+		b.x	  L387
+L382:
+; - case - 
+%%LINE	  000685
+;Expr(685): keyCode=0	 - continue -
+%%SCOPE	  init,totalBox
+		mov	  r1,#0
+		ldr	  r4,S__keyCode
+		str	  r1,[r4,#0]
+%%LINE	  000686
+		b.x	  L360
+L387:
+; - endif -
+%%LINE	  000692
+;Expr(692): btsprintf(boxes,"%s@%s",boxes,boxNo)	
+%%SCOPE	  init,totalBox
+		adrl	  r0,sp,AS@ArrangeToPalletOS-16
+		stmfd	  sp!,{r0}
+		adrl	  r1,sp,AS@ArrangeToPalletOS-10256+4
+		stmfd	  sp!,{r1}
+		ldr	  r2,S_S116
+		stmfd	  sp!,{r2}
+		stmfd	  sp!,{r1}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000693
+;Expr(693): totalBox=totalBox+ 1	
+		adds	  r12,r12,#1
+%%LINE	  000694
+;Expr(694): btsprintf(msg,"Tong	so Box:	%ld",totalBox)	
+		stmfd	  sp!,{r12}
+		ldr	  r0,S_S117
+		stmfd	  sp!,{r0}
+		ldr	  r1,S__msg
+		stmfd	  sp!,{r1}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000695
+;Expr(695): btstrcpy(set.l4,msg)	
+		adds	  r0,r7,#88
+		ldr	  r1,S__msg
+%%CALL
+		bl	  @btstrcpy
+%%LINE	  000696
+;Expr(696): keyCode=StartDisplay("VNN NOK","[Thong tin]",buf,msg,"","","C: Thoat","ENT:	Gui")	 - if -
+		ldr	  r0,S_S123
+		stmfd	  sp!,{r0}
+		sub	  r1,r0,#9		; ldr r1,S_S122
+		stmfd	  sp!,{r1}
+		sub	  r2,r0,#10		; ldr r2,S_S121
+		stmfd	  sp!,{r2}
+		sub	  r0,r0,#11		; ldr r0,S_S120
+		stmfd	  sp!,{r0}
+		ldr	  r3,S__msg
+		ldr	  r2,S__buf
+		sub	  r1,r1,#14		; ldr r1,S_S119
+		sub	  r0,r0,#20		; ldr r0,S_S118
+%%CALL
+		bl	  @StartDisplay
+		ldr	  r4,S__keyCode
+		str	  r0,[r4,#0]
+%%LINE	  000698
+;Expr(698): keyCode==(0019)	
+		add	  sp,#44
+		ldr	  r1,[r4,#0]
+		cmp	  r1,#25
+		bne.x	  L392
+L402:
+;winch object
+;Expr(699): - 2	
+%%SCOPE	  init
+		mvn	  r0,#1
+		b.x	  L400
+L392:
+%%LINE	  000701
+;Expr(701): keyCode!=(000d)	
+%%SCOPE	  init,totalBox
+		ldr	  r4,S__keyCode
+		ldr	  r0,[r4,#0]
+		cmp	  r0,#13
+		bne.x	  L360
+%%LINE	  000703
+;Expr(703): btsprintf(dataSend,"%s%s",pallete,boxes)	
+%%SCOPE	  init
+		adrl	  r1,sp,AS@ArrangeToPalletOS-10256
+		stmfd	  sp!,{r1}
+		adrl	  r0,sp,AS@ArrangeToPalletOS-10272+4
+		stmfd	  sp!,{r0}
+		ldr	  r2,S_S124
+		stmfd	  sp!,{r2}
+		adrl	  r1,sp,AS@ArrangeToPalletOS-20512+12
+		stmfd	  sp!,{r1}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000704
+;Expr(704): MakeDataToSend("M302","S02",dataSend,send)	
+		ldr	  r3,S__send
+		adrl	  r2,sp,AS@ArrangeToPalletOS-20512+16
+		ldr	  r1,S_S126
+		sub	  r0,r1,#5		; ldr r0,S_S125
+%%CALL
+		bl	  @MakeDataToSend
+%%LINE	  000705
+;Expr(705): ret=DataSend(send,btstrlen(send),rcv,sizeof(rcv),(0))	 - if -
+		mov	  r0,#0
+		stmfd	  sp!,{r0}
+		ldr	  r0,S__send
+%%CALL
+		bl	  @btstrlen
+		mov	  r6,r0
+		mov	  r3,#20480
+		ldr	  r2,S__rcv
+		mov	  r1,r6
+		ldr	  r0,S__send
+%%CALL
+		bl	  @DataSend
+%%LINE	  000706
+;Expr(706): ret==1	
+		add	  sp,#20
+		cmp	  r0,#1
+		bne.x	  L400
+L401:
+;winch object
+;Expr(708): - 1	
+%%SCOPE	  init
+		mvn	  r0,#0
+L400:
+; RET
+%%LINE	  000710
+%%SCOPE	init
+%%EF	  
+		add	  sp,#264
+		add	  sp,#20480
+%%RESTORE	R6
+%%RESTORE	R7
+%%RESTORE	R10
+%%RESTORE	R12
+%%RETURN
+		ldmfd	  sp!,{r6,r7,r10,r11,r12,pc}
+		bnd	  4
+%%FEND	  
+;	totalBox -> regid  13	 int
+;	ret -> regid  7	 int
+;	boxNo -> offset	-16	 array
+;	boxes -> offset	-10256	 array
+;	pallete	-> offset -10272	 array
+;	dataSend -> offset -20512	 array
+;	set -> offset -20744	 struct
+%%LINE	  000713
+%%FUNC	  ArrangeToPalletOR,3,cls=2,type=5,ftype=1
+%%RVALUE  kind=direct,register=R0,atype=2
+@ArrangeToPalletOR: ;entry
+		stmfd	  sp!,{r6,r7,r10,r11,r12,lr}
+		mov	  r11,sp
+%%SAVE	R6,kind=direct,base=R11,offset=0,atype=6
+%%SAVE	R7,kind=direct,base=R11,offset=4,atype=6
+%%SAVE	R10,kind=direct,base=R11,offset=8,atype=6
+%%SAVE	R12,kind=direct,base=R11,offset=16,atype=6
+		sub	  sp,#448
+AS@ArrangeToPalletOR	set	448		; stack	frame total size
+%%BF	  
+%%SYM	  ret,0,type=5,size=4,cls=6,val=0,delete 
+%%SYM	  dataSend,0,type=2,cls=6,val=-200,size=200
+%%DTY	  
+%%DAR	  1,200
+%%ENDD	  
+%%SYM	  boxNo,0,type=2,cls=6,val=-448,size=14
+%%DTY	  
+%%DAR	  1,14
+%%ENDD	  
+%%SYM	  set,0,sym=89,cls=6,val=-432,size=232
+%%SCOPE	  init
+		adrl	  r10,sp,AS@ArrangeToPalletOR-448
+		mov	  r7,#0
+		adrl	  r6,sp,AS@ArrangeToPalletOR-432
+;Expr(716): 12+	2
+%%LINE	  000720
+;Expr(720): btmemset(boxNo,0,sizeof(boxNo))	
+%%SCOPE	  init
+		mov	  r2,#14
+		mov	  r1,r7
+		mov	  r0,r10
+%%CALL
+		bl	  @btmemset
+%%LINE	  000721
+;Expr(721): btmemset(buf,0,sizeof(buf))	
+		mov	  r2,#512
+		mov	  r1,r7
+		ldr	  r0,S__buf
+%%CALL
+		bl	  @btmemset
+%%LINE	  000722
+;Expr(722): btmemset(&set,0,sizeof(set))	
+		mov	  r2,#232
+		mov	  r1,r7
+		mov	  r0,r6
+%%CALL
+		bl	  @btmemset
+%%LINE	  000723
+;Expr(723): btmemset(&msg,0,sizeof(msg))	
+		mov	  r2,#128
+		mov	  r1,r7
+		ldr	  r0,S__msg
+%%CALL
+		bl	  @btmemset
+%%LINE	  000724
+;Expr(724): set.mode=1	
+		mov	  r0,#1
+		str	  r0,[r6,#0]
+%%LINE	  000725
+;Expr(725): set.buffer=buf	
+		ldr	  r1,S__buf
+		str	  r1,[r6,#172]
+%%LINE	  000726
+;Expr(726): set.bufsize=sizeof(buf)	
+		mov	  r2,#512
+		str	  r2,[r6,#176]
+%%LINE	  000728
+;Expr(728): btstrcpy(set.l1,"Quet Box sap xep")	
+		adds	  r0,r6,#25
+		ldr	  r1,S_S127
+%%CALL
+		bl	  @btstrcpy
+%%LINE	  000729
+;Expr(729): btstrcpy(set.l2,"")	
+		adds	  r0,r6,#46
+		ldr	  r1,S_S128
+%%CALL
+		bl	  @btstrcpy
+%%LINE	  000730
+;Expr(730): btstrcpy(set.l3,"")	
+		adds	  r0,r6,#67
+		ldr	  r1,S_S129
+%%CALL
+		bl	  @btstrcpy
+%%LINE	  000731
+;Expr(731): btstrcpy(set.l7,"	  [L] Thoat")	
+		adds	  r0,r6,#151
+		ldr	  r1,S_S130
+%%CALL
+		bl	  @btstrcpy
+L407:
+; - do -
+%%LINE	  000734
+;Expr(734): btmemset(buf,0,sizeof(buf))	
+%%SCOPE	  init
+		mov	  r2,#512
+		mov	  r1,r7
+		ldr	  r0,S__buf
+%%CALL
+		bl	  @btmemset
+%%LINE	  000735
+;Expr(735): ret=DataInputBt(&set)	 - if -
+		mov	  r0,r6
+%%CALL
+		bl	  @DataInputBt
+%%LINE	  000736
+;Expr(736): ret	
+		cmp	  r0,#0
+; - then - - return -
+%%LINE	  000737
+;Expr(737): (- 1)	
+%%SCOPE	  init
+		mvnne	  r0,#0
+		bne.x	  L424
+%%LINE	  000738
+;Expr(738): GetBoxNoFromString(buf,boxNo)	
+%%SCOPE	  init
+		mov	  r1,r10
+		ldr	  r0,S__buf
+%%CALL
+		bl	  @GetBoxNoFromString
+%%LINE	  000739
+;Expr(739): ret=CheckDataByType(loc,boxNo,3)	
+		mov	  r2,#3
+		mov	  r1,r10
+		ldr	  r0,S__loc
+%%CALL
+		bl	  @CheckDataByType
+%%LINE	  000740
+;Expr(740): ret	
+		cmp	  r0,#13
+		beq.x	  L407
+		cmp	  r0,#25
+		beq.x	  L413
+		b.x	  L420
+L413:
+; - case - 
+%%LINE	  000743
+;Expr(743): - 2	
+%%SCOPE	  init
+		mvn	  r0,#1
+		b.x	  L424
+L420:
+%%LINE	  000749
+;Expr(749): btsprintf(dataSend,"%s",boxNo)	
+%%SCOPE	  init
+		stmfd	  sp!,{r10}
+		ldr	  r1,S_S131
+		stmfd	  sp!,{r1}
+		adrl	  r0,sp,AS@ArrangeToPalletOR-200+8
+		stmfd	  sp!,{r0}
+%%CALL
+		bl	  @btsprintf
+%%LINE	  000750
+;Expr(750): MakeDataToSend("M302","S03",dataSend,send)	
+		ldr	  r3,S__send
+		adrl	  r2,sp,AS@ArrangeToPalletOR-200+12
+		ldr	  r1,S_S133
+		sub	  r0,r1,#5		; ldr r0,S_S132
+%%CALL
+		bl	  @MakeDataToSend
+%%LINE	  000751
+;Expr(751): ret=DataSend(send,btstrlen(send),rcv,sizeof(rcv),(0))	
+		mov	  r0,#0
+		stmfd	  sp!,{r0}
+		ldr	  r0,S__send
+%%CALL
+		bl	  @btstrlen
+		mov	  r12,r0
+		mov	  r3,#20480
+		ldr	  r2,S__rcv
+		mov	  r1,r12
+		ldr	  r0,S__send
+%%CALL
+		bl	  @DataSend
+%%LINE	  000752
+;Expr(752): keyCode=0	
+		mov	  r0,#0
+		ldr	  r4,S__keyCode
+		str	  r0,[r4,#0]
+		add	  sp,#16
+		b.x	  L407
+L424:
+; RET
+%%LINE	  000756
+%%SCOPE	init
+%%EF	  
+		add	  sp,#448
+%%RESTORE	R6
+%%RESTORE	R7
+%%RESTORE	R10
+%%RESTORE	R12
+%%RETURN
+		ldmfd	  sp!,{r6,r7,r10,r11,r12,pc}
+		bnd	  4
+%%FEND	  
+;	dataSend -> offset -200	 array
+;	set -> offset -432	 struct
+;	boxNo -> offset	-448	 array
+%%EFILE	  
+		extnal	  cslldiv
+; DATA-LIST before block
+	bnd	4
+S_S58:	dd	S58
+S_S60:	dd	S60
+S_S59:	dd	S59
+S__rcv:	dd	_rcv
+S_S62:	dd	S62
+S__send:	dd	_send
+S_S63:	dd	S63
+S_S73:	dd	S73
+S_S66:	dd	S66
+S_S65:	dd	S65
+S_S64:	dd	S64
+S_S75:	dd	S75
+S_S77:	dd	S77
+S__ret:	dd	_ret
+S_S79:	dd	S79
+S_S81:	dd	S81
+S_S80:	dd	S80
+S_S85:	dd	S85
+S_S84:	dd	S84
+S_S83:	dd	S83
+S_S82:	dd	S82
+S_S86:	dd	S86
+S_S95:	dd	S95
+S_S87:	dd	S87
+S_S97:	dd	S97
+S_2468:	dd	2468
+S_S100:	dd	S100
+S_S101:	dd	S101
+S_S99:	dd	S99
+S_S98:	dd	S98
+S__userId:	dd	_userId
+S_S102:	dd	S102
+S_S103:	dd	S103
+S_S105:	dd	S105
+S_S108:	dd	S108
+S_S107:	dd	S107
+S_S106:	dd	S106
+S_S111:	dd	S111
+S_S109:	dd	S109
+S_S114:	dd	S114
+S_S113:	dd	S113
+S_S112:	dd	S112
+S_S115:	dd	S115
+S_S123:	dd	S123
+S_S117:	dd	S117
+S_S116:	dd	S116
+S_S126:	dd	S126
+S_S124:	dd	S124
+S_S130:	dd	S130
+S_S129:	dd	S129
+S_S128:	dd	S128
+S_S127:	dd	S127
+S__msg:	dd	_msg
+S__loc:	dd	_loc
+S__buf:	dd	_buf
+S__keyCode:	dd	_keyCode
+S_S133:	dd	S133
+S_S131:	dd	S131
+		end

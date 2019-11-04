@@ -1,0 +1,96 @@
+;********************************************************
+;*  startup program for ARM9E                           *
+;********************************************************
+        code32
+;-------------------------------+
+;  Stack area(RAM)              |       ｽﾀｯｸｾｸｼｮﾝの定義
+;-------------------------------+
+;_STACK          sect    stak
+;        ds      200H                    ;割込みｽﾀｯｸｻｲｽﾞ
+;IRQSTK_END:
+;        ds      400H                    ;ﾕｰｻﾞｽﾀｯｸｻｲｽﾞ
+;USRSTK_END:
+;-------------------------------+
+;  Init section(ROM)            |       初期値格納用のｾｸｼｮﾝ定義
+;-------------------------------+
+_INIT_DATA      sect    comm            ;変数用  (ROM上配置)
+;-------------------------------+
+;  Lib error number area        |       数学ﾗｲﾌﾞﾗﾘ用変数定義
+;-------------------------------+
+D_DATA          sect    comm
+        global  _errno
+_errno: dd      0                       ;ｴﾗｰ番号設定領域
+
+;-------------------------------+
+;  Interrupt/exception Vectors  |       割込みﾍﾞｸﾀﾃｰﾌﾞﾙ定義
+;-------------------------------+
+;INTVCT          sect    code,org=000000h
+;        b       start
+;        :
+;-------------------------------+
+;  Startup routine              |
+;-------------------------------+
+C_start         sect    code
+start:
+;***  ｽﾀｯｸﾎﾟｲﾝﾀの初期化  ***
+;        mov     r0,#10010b
+;        msr     cpsr,r0 
+;        ldr     sp,S_IRQSTK_END     ;割込みｽﾀｯｸﾎﾟｲﾝﾀの設定
+;        mov     r0,#10000b
+;        msr     cpsr,r0
+;        ldr     sp,S_USRSTK_END     ;ﾕｰｻﾞｽﾀｯｸﾎﾟｲﾝﾀの設定
+;=======  初期値のない変数領域の初期化  =======
+;***  変数領域(B)  ***
+        EXTNAL  _BSS_TOP,_BSS_SIZE
+        mov     r3,#0         
+        ldr     r0,S_BSS_TOP
+        ldr     r2,S_BSS_SIZE
+        cmp     r2,#0
+        beq     100_next$
+100$:
+        strb    r3,[r0],#1
+        subs    r2,r2,#1
+        bne     100$
+100_next$:
+;=======  初期値のある変数への初期値データのコピー　=======
+;***  変数領域(D)  ***
+        EXTNAL  _DATA_TOP,_DATA_SIZE
+        ldr     r0,S_DATA_TOP
+        ldr     r1,S_INIT_DATA
+        ldr     r2,S_DATA_SIZE
+        cmp     r2,#0
+        beq     200_next$
+200$:
+        ldrb    r3,[r1],#1
+        strb    r3,[r0],#1
+        subs    r2,r2,#1
+        bne     200$
+200_next$:
+
+;=======  メイン関数の呼び出し  =======
+        EXTNAL  @bt_main
+        EXTNAL  @main
+        mov     r0,#0
+        ldr     r1,S_errno
+        str     r0,[r1,#0]              ;ｴﾗｰ番号設定領域の初期化
+        bl      @bt_main                   ;メイン関数の呼び出し
+        bl      @main                   ;メイン関数の呼び出し
+;start_end:
+        NOP
+;        b       start_end
+        b       start					;無限ループにしました！
+
+        bnd     4
+
+global S_BSS_SIZE
+global S_DATA_SIZE
+
+S_errno          dd      _errno
+;S_IRQSTK_END     dd      IRQSTK_END
+;S_USRSTK_END     dd      USRSTK_END
+S_BSS_TOP        dd      _BSS_TOP
+S_BSS_SIZE       dd      _BSS_SIZE
+S_DATA_TOP       dd      _DATA_TOP
+S_DATA_SIZE      dd      _DATA_SIZE
+S_INIT_DATA      dd      _INIT_DATA
+         end     start
